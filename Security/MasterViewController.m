@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Blauzvern Gilkinson Kutsko Valentine. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MasterViewController.h"
 
 @interface ViewController ()
 
