@@ -14,6 +14,12 @@
 		5D3D538619E8A9E5009F3E7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D538519E8A9E5009F3E7C /* Images.xcassets */; };
 		5D3D538919E8A9E5009F3E7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D3D538719E8A9E5009F3E7C /* LaunchScreen.xib */; };
 		5D3D539519E8A9E5009F3E7C /* SecurityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D539419E8A9E5009F3E7C /* SecurityTests.m */; };
+		5D3D53A019E8AE10009F3E7C /* MasterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D539F19E8AE10009F3E7C /* MasterModel.m */; };
+		5D3D53A319E8AE34009F3E7C /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D53A219E8AE34009F3E7C /* StartScreenViewController.m */; };
+		5D3D53A619E8AEC6009F3E7C /* StartScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3D53A519E8AEC6009F3E7C /* StartScreenView.m */; };
+		5D627BBA19EB354E00F918AC /* LevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D627BB919EB354E00F918AC /* LevelViewController.m */; };
+		5D627BBD19EB356800F918AC /* LevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D627BBC19EB356800F918AC /* LevelView.m */; };
+		5D627BC019EB357600F918AC /* LevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D627BBF19EB357600F918AC /* LevelModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,18 @@
 		5D3D538E19E8A9E5009F3E7C /* SecurityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecurityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3D539319E8A9E5009F3E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D3D539419E8A9E5009F3E7C /* SecurityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecurityTests.m; sourceTree = "<group>"; };
+		5D3D539E19E8AE10009F3E7C /* MasterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterModel.h; sourceTree = "<group>"; };
+		5D3D539F19E8AE10009F3E7C /* MasterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterModel.m; sourceTree = "<group>"; };
+		5D3D53A119E8AE34009F3E7C /* StartScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenViewController.h; sourceTree = "<group>"; };
+		5D3D53A219E8AE34009F3E7C /* StartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
+		5D3D53A419E8AEC6009F3E7C /* StartScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenView.h; sourceTree = "<group>"; };
+		5D3D53A519E8AEC6009F3E7C /* StartScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenView.m; sourceTree = "<group>"; };
+		5D627BB819EB354E00F918AC /* LevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelViewController.h; sourceTree = "<group>"; };
+		5D627BB919EB354E00F918AC /* LevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelViewController.m; sourceTree = "<group>"; };
+		5D627BBB19EB356800F918AC /* LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelView.h; sourceTree = "<group>"; };
+		5D627BBC19EB356800F918AC /* LevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelView.m; sourceTree = "<group>"; };
+		5D627BBE19EB357600F918AC /* LevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelModel.h; sourceTree = "<group>"; };
+		5D627BBF19EB357600F918AC /* LevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +103,22 @@
 				5D3D537D19E8A9E5009F3E7C /* AppDelegate.m */,
 				5D3D537F19E8A9E5009F3E7C /* MasterViewController.h */,
 				5D3D538019E8A9E5009F3E7C /* MasterViewController.m */,
+				5D627BB819EB354E00F918AC /* LevelViewController.h */,
+				5D627BB919EB354E00F918AC /* LevelViewController.m */,
+				5D627BBE19EB357600F918AC /* LevelModel.h */,
+				5D627BBF19EB357600F918AC /* LevelModel.m */,
+				5D627BBB19EB356800F918AC /* LevelView.h */,
+				5D627BBC19EB356800F918AC /* LevelView.m */,
+				5D3D539E19E8AE10009F3E7C /* MasterModel.h */,
+				5D3D539F19E8AE10009F3E7C /* MasterModel.m */,
 				5D3D538219E8A9E5009F3E7C /* Main.storyboard */,
 				5D3D538519E8A9E5009F3E7C /* Images.xcassets */,
 				5D3D538719E8A9E5009F3E7C /* LaunchScreen.xib */,
 				5D3D537819E8A9E5009F3E7C /* Supporting Files */,
+				5D3D53A119E8AE34009F3E7C /* StartScreenViewController.h */,
+				5D3D53A419E8AEC6009F3E7C /* StartScreenView.h */,
+				5D3D53A519E8AEC6009F3E7C /* StartScreenView.m */,
+				5D3D53A219E8AE34009F3E7C /* StartScreenViewController.m */,
 			);
 			path = Security;
 			sourceTree = "<group>";
@@ -220,8 +250,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D3D538119E8A9E5009F3E7C /* MasterViewController.m in Sources */,
+				5D627BBD19EB356800F918AC /* LevelView.m in Sources */,
+				5D627BBA19EB354E00F918AC /* LevelViewController.m in Sources */,
+				5D3D53A019E8AE10009F3E7C /* MasterModel.m in Sources */,
 				5D3D537E19E8A9E5009F3E7C /* AppDelegate.m in Sources */,
 				5D3D537B19E8A9E5009F3E7C /* main.m in Sources */,
+				5D3D53A319E8AE34009F3E7C /* StartScreenViewController.m in Sources */,
+				5D3D53A619E8AEC6009F3E7C /* StartScreenView.m in Sources */,
+				5D627BC019EB357600F918AC /* LevelModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +450,7 @@
 				5D3D539A19E8A9E5009F3E7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D3D539B19E8A9E5009F3E7C /* Build configuration list for PBXNativeTarget "SecurityTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +459,7 @@
 				5D3D539D19E8A9E5009F3E7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
