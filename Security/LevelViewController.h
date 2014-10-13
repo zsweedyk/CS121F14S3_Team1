@@ -10,4 +10,11 @@
 
 @interface LevelViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIImageView* chair;
+@property (nonatomic, weak) IBOutlet UIImageView* desk;
+@property (nonatomic, weak) IBOutlet UIImageView* paper;
+@property (nonatomic, weak) IBOutlet UIImageView* laptop;
+
+-(IBAction)viewTapped: (UITapGestureRecognizer*) recognizer;
+
 @end

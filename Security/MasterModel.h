@@ -10,4 +10,6 @@
 
 @interface MasterModel : NSObject
 
+- (NSString*) getLevelData: (NSString*) level;
+
 @end

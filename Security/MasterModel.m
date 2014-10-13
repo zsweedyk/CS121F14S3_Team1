@@ -10,4 +10,10 @@
 
 @implementation MasterModel
 
+- (NSString*) getLevelData: (NSString*) level
+{
+    NSLog(@"I am the MasterModel, passing up the data");
+    return [@"Got current data for level " stringByAppendingString:level];
+}
+
 @end

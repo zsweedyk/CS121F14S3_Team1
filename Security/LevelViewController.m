@@ -7,8 +7,11 @@
 //
 
 #import "LevelViewController.h"
+#import "LevelModel.h"
 
-@interface LevelViewController ()
+@interface LevelViewController () {
+    LevelModel* _model;
+}
 
 @end
 
@@ -16,22 +19,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _model = [LevelModel alloc];
+    
+    NSMutableArray* views = [[NSMutableArray alloc] init];
+    [views addObject:self.chair];
+    [views addObject:self.laptop];
+    [views addObject:self.desk];
+    [views addObject:self.paper];
+    
+    for (UIImageView* view in views) {
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+        tap.numberOfTapsRequired = 1;
+        [view addGestureRecognizer:tap];
+    }
+}
+
+-(void)viewTapped: (UITapGestureRecognizer*) recognizer
+{
+    NSString* tappedItem = @"";
+    switch (recognizer.view.tag) {
+        case 0:
+            tappedItem = @"Desk";
+            break;
+        case 1:
+            tappedItem = @"Paper";
+            break;
+        case 2:
+            tappedItem = @"Chair";
+            break;
+        case 3:
+            tappedItem = @"Laptop";
+            break;
+    }
+    NSLog(@"The tapped item is: %@", tappedItem);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

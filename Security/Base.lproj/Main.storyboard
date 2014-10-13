@@ -15,16 +15,48 @@
                     <view key="view" contentMode="scaleToFill" id="O5t-QZ-T3b">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-jF-mHJ">
+                                <rect key="frame" x="190" y="170" width="220" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="290" y="175" width="220" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Kxu-JA-SMj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FK-pj-dji">
+                                <rect key="frame" x="227" y="208" width="147" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="326" y="213" width="148" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-Sk-5h6">
+                                <rect key="frame" x="256" y="246" width="88" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="About">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="356" y="251" width="88" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="790-9w-YPp"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="SegueToMasterViewController" id="LLO-mR-200"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PV2-Lo-CD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="835"/>
+            <point key="canvasLocation" x="2983.5" y="473.25"/>
         </scene>
         <!--Master View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -37,13 +69,118 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWq-4j-TFT">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="352" y="358" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28I-w5-2VI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Start On Level">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="319" y="396" width="162" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startLevelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6k6-D0-BXE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tWq-4j-TFT"/>
+                                <exclude reference="28I-w5-2VI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="tWq-4j-TFT"/>
+                                <include reference="28I-w5-2VI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Rn5-ZU-dX5"/>
+                    <connections>
+                        <outlet property="textField" destination="tWq-4j-TFT" id="AVi-HD-mNJ"/>
+                        <segue destination="VgE-yJ-iBP" kind="show" identifier="SegueToLevelView" id="0Zg-pY-6uO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2687" y="840"/>
+            <point key="canvasLocation" x="2317.5" y="1281.75"/>
+        </scene>
+        <!--Level View Controller-->
+        <scene sceneID="u8L-cz-Dg0">
+            <objects>
+                <viewController id="VgE-yJ-iBP" customClass="LevelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wxs-de-deN"/>
+                        <viewControllerLayoutGuide type="bottom" id="cBd-Ws-gTq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jtz-ou-Qys">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wooden-chair" translatesAutoresizingMaskIntoConstraints="NO" id="CMa-av-cZc">
+                                <rect key="frame" x="365" y="128" width="219" height="247"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="506" y="221" width="220" height="248"/>
+                                </variation>
+                            </imageView>
+                            <imageView tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="computer-laptop" translatesAutoresizingMaskIntoConstraints="NO" id="dKz-vG-ALc">
+                                <rect key="frame" x="82" y="313" width="239" height="219"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="81" y="430" width="240" height="220"/>
+                                </variation>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wooden-table" translatesAutoresizingMaskIntoConstraints="NO" id="giC-Fd-UAv">
+                                <rect key="frame" x="43" y="112" width="305" height="186"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="108" y="124" width="306" height="186"/>
+                                </variation>
+                            </imageView>
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loose-leaf-paper" translatesAutoresizingMaskIntoConstraints="NO" id="2ik-0u-VGi">
+                                <rect key="frame" x="107" y="137" width="44" height="52"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="308" y="336" width="44" height="52"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CMa-av-cZc"/>
+                                <exclude reference="dKz-vG-ALc"/>
+                                <exclude reference="giC-Fd-UAv"/>
+                                <exclude reference="2ik-0u-VGi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="CMa-av-cZc"/>
+                                <include reference="dKz-vG-ALc"/>
+                                <include reference="giC-Fd-UAv"/>
+                                <include reference="2ik-0u-VGi"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="chair" destination="CMa-av-cZc" id="dXU-3Q-eKT"/>
+                        <outlet property="desk" destination="giC-Fd-UAv" id="Vla-j6-5Vh"/>
+                        <outlet property="laptop" destination="dKz-vG-ALc" id="ptR-L0-v9X"/>
+                        <outlet property="paper" destination="2ik-0u-VGi" id="Vw9-fM-NLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLo-TB-oD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3198" y="1265.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fwc-go-hb4">
@@ -61,7 +198,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gJE-7U-cMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="835"/>
+            <point key="canvasLocation" x="2046" y="453.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="computer-laptop" width="800" height="800"/>
+        <image name="loose-leaf-paper" width="245" height="300"/>
+        <image name="wooden-chair" width="212" height="300"/>
+        <image name="wooden-table" width="800" height="495"/>
+    </resources>
 </document>

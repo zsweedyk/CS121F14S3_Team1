@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MasterViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UITextField* textField;
+
+-(IBAction)startLevelButtonPressed:(id) selector;
 
 @end
 
