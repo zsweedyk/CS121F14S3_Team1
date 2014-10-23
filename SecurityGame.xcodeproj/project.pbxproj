@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC71826319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
+		AC71826519F5F30D001EFA4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826419F5F30D001EFA4B /* CoreGraphics.framework */; };
+		AC71826719F5F30D001EFA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826619F5F30D001EFA4B /* UIKit.framework */; };
+		AC71826D19F5F30D001EFA4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC71826B19F5F30D001EFA4B /* InfoPlist.strings */; };
+		AC71826F19F5F30D001EFA4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71826E19F5F30D001EFA4B /* main.m */; };
+		AC71827319F5F30D001EFA4B /* BGKVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71827219F5F30D001EFA4B /* BGKVAppDelegate.m */; };
+		AC71827619F5F30D001EFA4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC71827419F5F30D001EFA4B /* Main.storyboard */; };
+		AC71827919F5F30D001EFA4B /* BGKVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71827819F5F30D001EFA4B /* BGKVViewController.m */; };
+		AC71827B19F5F30D001EFA4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC71827A19F5F30D001EFA4B /* Images.xcassets */; };
+		AC71828219F5F30D001EFA4B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71828119F5F30D001EFA4B /* XCTest.framework */; };
+		AC71828319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
+		AC71828419F5F30D001EFA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826619F5F30D001EFA4B /* UIKit.framework */; };
+		AC71828C19F5F30D001EFA4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC71828A19F5F30D001EFA4B /* InfoPlist.strings */; };
+		AC71828E19F5F30D001EFA4B /* SecurityGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71828D19F5F30D001EFA4B /* SecurityGameTests.m */; };
+		AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */; };
+		ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640919F75C550088346D /* RBStoryboardLink.m */; };
+		ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640C19F75C550088346D /* RBStoryboardModalSegue.m */; };
+		ACE3641719F75C550088346D /* RBStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640E19F75C550088346D /* RBStoryboardPopoverSegue.m */; };
+		ACE3641819F75C550088346D /* RBStoryboardPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3641019F75C550088346D /* RBStoryboardPushSegue.m */; };
+		ACE3641919F75C550088346D /* RBStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3641219F75C550088346D /* RBStoryboardSegue.m */; };
+		ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3641419F75C550088346D /* UIViewController+RBStoryboardLink.m */; };
+		ACE3641D19F75CBA0088346D /* Level1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641C19F75CBA0088346D /* Level1Storyboard.storyboard */; };
+		ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */; };
+		ACE3642319F77C520088346D /* BGKVLevel1PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3642219F77C520088346D /* BGKVLevel1PasswordViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC71828519F5F30D001EFA4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC71825719F5F30D001EFA4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC71825E19F5F30D001EFA4B;
+			remoteInfo = SecurityGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC71825F19F5F30D001EFA4B /* SecurityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC71826219F5F30D001EFA4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AC71826419F5F30D001EFA4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AC71826619F5F30D001EFA4B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AC71826A19F5F30D001EFA4B /* SecurityGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecurityGame-Info.plist"; sourceTree = "<group>"; };
+		AC71826C19F5F30D001EFA4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC71826E19F5F30D001EFA4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC71827019F5F30D001EFA4B /* SecurityGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecurityGame-Prefix.pch"; sourceTree = "<group>"; };
+		AC71827119F5F30D001EFA4B /* BGKVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGKVAppDelegate.h; sourceTree = "<group>"; };
+		AC71827219F5F30D001EFA4B /* BGKVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGKVAppDelegate.m; sourceTree = "<group>"; };
+		AC71827519F5F30D001EFA4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC71827719F5F30D001EFA4B /* BGKVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGKVViewController.h; sourceTree = "<group>"; };
+		AC71827819F5F30D001EFA4B /* BGKVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGKVViewController.m; sourceTree = "<group>"; };
+		AC71827A19F5F30D001EFA4B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC71828019F5F30D001EFA4B /* SecurityGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecurityGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC71828119F5F30D001EFA4B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AC71828919F5F30D001EFA4B /* SecurityGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecurityGameTests-Info.plist"; sourceTree = "<group>"; };
+		AC71828B19F5F30D001EFA4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC71828D19F5F30D001EFA4B /* SecurityGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecurityGameTests.m; sourceTree = "<group>"; };
+		AC71829719F5FDE7001EFA4B /* BGKVLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelViewController.h; sourceTree = "<group>"; };
+		AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelViewController.m; sourceTree = "<group>"; };
+		ACE3640819F75C550088346D /* RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLink.h; sourceTree = "<group>"; };
+		ACE3640919F75C550088346D /* RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardLink.m; sourceTree = "<group>"; };
+		ACE3640A19F75C550088346D /* RBStoryboardLinkSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLinkSource.h; sourceTree = "<group>"; };
+		ACE3640B19F75C550088346D /* RBStoryboardModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardModalSegue.h; sourceTree = "<group>"; };
+		ACE3640C19F75C550088346D /* RBStoryboardModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardModalSegue.m; sourceTree = "<group>"; };
+		ACE3640D19F75C550088346D /* RBStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		ACE3640E19F75C550088346D /* RBStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		ACE3640F19F75C550088346D /* RBStoryboardPushSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardPushSegue.h; sourceTree = "<group>"; };
+		ACE3641019F75C550088346D /* RBStoryboardPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardPushSegue.m; sourceTree = "<group>"; };
+		ACE3641119F75C550088346D /* RBStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardSegue.h; sourceTree = "<group>"; };
+		ACE3641219F75C550088346D /* RBStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardSegue.m; sourceTree = "<group>"; };
+		ACE3641319F75C550088346D /* UIViewController+RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RBStoryboardLink.h"; sourceTree = "<group>"; };
+		ACE3641419F75C550088346D /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
+		ACE3641C19F75CBA0088346D /* Level1Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level1Storyboard.storyboard; sourceTree = "<group>"; };
+		ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RBStoryboardLICENSE; sourceTree = "<group>"; };
+		ACE3642119F77C520088346D /* BGKVLevel1PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel1PasswordViewController.h; sourceTree = "<group>"; };
+		ACE3642219F77C520088346D /* BGKVLevel1PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel1PasswordViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC71825C19F5F30D001EFA4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC71826519F5F30D001EFA4B /* CoreGraphics.framework in Frameworks */,
+				AC71826719F5F30D001EFA4B /* UIKit.framework in Frameworks */,
+				AC71826319F5F30D001EFA4B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC71827D19F5F30D001EFA4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC71828219F5F30D001EFA4B /* XCTest.framework in Frameworks */,
+				AC71828419F5F30D001EFA4B /* UIKit.framework in Frameworks */,
+				AC71828319F5F30D001EFA4B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC71825619F5F30D001EFA4B = {
+			isa = PBXGroup;
+			children = (
+				AC71826819F5F30D001EFA4B /* SecurityGame */,
+				AC71828719F5F30D001EFA4B /* SecurityGameTests */,
+				AC71826119F5F30D001EFA4B /* Frameworks */,
+				AC71826019F5F30D001EFA4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC71826019F5F30D001EFA4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC71825F19F5F30D001EFA4B /* SecurityGame.app */,
+				AC71828019F5F30D001EFA4B /* SecurityGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC71826119F5F30D001EFA4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC71826219F5F30D001EFA4B /* Foundation.framework */,
+				AC71826419F5F30D001EFA4B /* CoreGraphics.framework */,
+				AC71826619F5F30D001EFA4B /* UIKit.framework */,
+				AC71828119F5F30D001EFA4B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC71826819F5F30D001EFA4B /* SecurityGame */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3642019F75EB10088346D /* Main */,
+				ACE3641B19F75C9C0088346D /* Level1 */,
+				ACE3640719F75C550088346D /* RBStoryboardClasses */,
+				AC71827A19F5F30D001EFA4B /* Images.xcassets */,
+				AC71826919F5F30D001EFA4B /* Supporting Files */,
+			);
+			path = SecurityGame;
+			sourceTree = "<group>";
+		};
+		AC71826919F5F30D001EFA4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC71826A19F5F30D001EFA4B /* SecurityGame-Info.plist */,
+				AC71826B19F5F30D001EFA4B /* InfoPlist.strings */,
+				AC71826E19F5F30D001EFA4B /* main.m */,
+				AC71827019F5F30D001EFA4B /* SecurityGame-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC71828719F5F30D001EFA4B /* SecurityGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC71828D19F5F30D001EFA4B /* SecurityGameTests.m */,
+				AC71828819F5F30D001EFA4B /* Supporting Files */,
+			);
+			path = SecurityGameTests;
+			sourceTree = "<group>";
+		};
+		AC71828819F5F30D001EFA4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC71828919F5F30D001EFA4B /* SecurityGameTests-Info.plist */,
+				AC71828A19F5F30D001EFA4B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACE3640719F75C550088346D /* RBStoryboardClasses */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */,
+				ACE3640819F75C550088346D /* RBStoryboardLink.h */,
+				ACE3640919F75C550088346D /* RBStoryboardLink.m */,
+				ACE3640A19F75C550088346D /* RBStoryboardLinkSource.h */,
+				ACE3640B19F75C550088346D /* RBStoryboardModalSegue.h */,
+				ACE3640C19F75C550088346D /* RBStoryboardModalSegue.m */,
+				ACE3640D19F75C550088346D /* RBStoryboardPopoverSegue.h */,
+				ACE3640E19F75C550088346D /* RBStoryboardPopoverSegue.m */,
+				ACE3640F19F75C550088346D /* RBStoryboardPushSegue.h */,
+				ACE3641019F75C550088346D /* RBStoryboardPushSegue.m */,
+				ACE3641119F75C550088346D /* RBStoryboardSegue.h */,
+				ACE3641219F75C550088346D /* RBStoryboardSegue.m */,
+				ACE3641319F75C550088346D /* UIViewController+RBStoryboardLink.h */,
+				ACE3641419F75C550088346D /* UIViewController+RBStoryboardLink.m */,
+			);
+			name = RBStoryboardClasses;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		ACE3641B19F75C9C0088346D /* Level1 */ = {
+			isa = PBXGroup;
+			children = (
+				ACE3641C19F75CBA0088346D /* Level1Storyboard.storyboard */,
+				ACE3642119F77C520088346D /* BGKVLevel1PasswordViewController.h */,
+				ACE3642219F77C520088346D /* BGKVLevel1PasswordViewController.m */,
+			);
+			name = Level1;
+			sourceTree = "<group>";
+		};
+		ACE3642019F75EB10088346D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AC71829719F5FDE7001EFA4B /* BGKVLevelViewController.h */,
+				AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */,
+				AC71827719F5F30D001EFA4B /* BGKVViewController.h */,
+				AC71827819F5F30D001EFA4B /* BGKVViewController.m */,
+				AC71827119F5F30D001EFA4B /* BGKVAppDelegate.h */,
+				AC71827219F5F30D001EFA4B /* BGKVAppDelegate.m */,
+				AC71827419F5F30D001EFA4B /* Main.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC71825E19F5F30D001EFA4B /* SecurityGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC71829119F5F30D001EFA4B /* Build configuration list for PBXNativeTarget "SecurityGame" */;
+			buildPhases = (
+				AC71825B19F5F30D001EFA4B /* Sources */,
+				AC71825C19F5F30D001EFA4B /* Frameworks */,
+				AC71825D19F5F30D001EFA4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecurityGame;
+			productName = SecurityGame;
+			productReference = AC71825F19F5F30D001EFA4B /* SecurityGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC71827F19F5F30D001EFA4B /* SecurityGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC71829419F5F30D001EFA4B /* Build configuration list for PBXNativeTarget "SecurityGameTests" */;
+			buildPhases = (
+				AC71827C19F5F30D001EFA4B /* Sources */,
+				AC71827D19F5F30D001EFA4B /* Frameworks */,
+				AC71827E19F5F30D001EFA4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC71828619F5F30D001EFA4B /* PBXTargetDependency */,
+			);
+			name = SecurityGameTests;
+			productName = SecurityGameTests;
+			productReference = AC71828019F5F30D001EFA4B /* SecurityGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC71825719F5F30D001EFA4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BGKV;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = BGKV;
+				TargetAttributes = {
+					AC71827F19F5F30D001EFA4B = {
+						TestTargetID = AC71825E19F5F30D001EFA4B;
+					};
+				};
+			};
+			buildConfigurationList = AC71825A19F5F30D001EFA4B /* Build configuration list for PBXProject "SecurityGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC71825619F5F30D001EFA4B;
+			productRefGroup = AC71826019F5F30D001EFA4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC71825E19F5F30D001EFA4B /* SecurityGame */,
+				AC71827F19F5F30D001EFA4B /* SecurityGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC71825D19F5F30D001EFA4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE3641D19F75CBA0088346D /* Level1Storyboard.storyboard in Resources */,
+				AC71827B19F5F30D001EFA4B /* Images.xcassets in Resources */,
+				ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */,
+				AC71826D19F5F30D001EFA4B /* InfoPlist.strings in Resources */,
+				AC71827619F5F30D001EFA4B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC71827E19F5F30D001EFA4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC71828C19F5F30D001EFA4B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC71825B19F5F30D001EFA4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE3641819F75C550088346D /* RBStoryboardPushSegue.m in Sources */,
+				ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */,
+				AC71827319F5F30D001EFA4B /* BGKVAppDelegate.m in Sources */,
+				ACE3641919F75C550088346D /* RBStoryboardSegue.m in Sources */,
+				AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */,
+				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
+				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
+				AC71826F19F5F30D001EFA4B /* main.m in Sources */,
+				ACE3642319F77C520088346D /* BGKVLevel1PasswordViewController.m in Sources */,
+				AC71827919F5F30D001EFA4B /* BGKVViewController.m in Sources */,
+				ACE3641719F75C550088346D /* RBStoryboardPopoverSegue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC71827C19F5F30D001EFA4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC71828E19F5F30D001EFA4B /* SecurityGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC71828619F5F30D001EFA4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC71825E19F5F30D001EFA4B /* SecurityGame */;
+			targetProxy = AC71828519F5F30D001EFA4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC71826B19F5F30D001EFA4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC71826C19F5F30D001EFA4B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC71827419F5F30D001EFA4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC71827519F5F30D001EFA4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC71828A19F5F30D001EFA4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC71828B19F5F30D001EFA4B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC71828F19F5F30D001EFA4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		AC71829019F5F30D001EFA4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC71829219F5F30D001EFA4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
+				INFOPLIST_FILE = "SecurityGame/SecurityGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AC71829319F5F30D001EFA4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
+				INFOPLIST_FILE = "SecurityGame/SecurityGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AC71829519F5F30D001EFA4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SecurityGame.app/SecurityGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SecurityGameTests/SecurityGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AC71829619F5F30D001EFA4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SecurityGame.app/SecurityGame";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
+				INFOPLIST_FILE = "SecurityGameTests/SecurityGameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC71825A19F5F30D001EFA4B /* Build configuration list for PBXProject "SecurityGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC71828F19F5F30D001EFA4B /* Debug */,
+				AC71829019F5F30D001EFA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC71829119F5F30D001EFA4B /* Build configuration list for PBXNativeTarget "SecurityGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC71829219F5F30D001EFA4B /* Debug */,
+				AC71829319F5F30D001EFA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC71829419F5F30D001EFA4B /* Build configuration list for PBXNativeTarget "SecurityGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC71829519F5F30D001EFA4B /* Debug */,
+				AC71829619F5F30D001EFA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC71825719F5F30D001EFA4B /* Project object */;
+}
