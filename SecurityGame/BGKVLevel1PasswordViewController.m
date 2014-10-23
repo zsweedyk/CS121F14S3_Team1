@@ -21,7 +21,7 @@
     if ([guess isEqualToString:password]) {
         UIAlertView * alert = [[UIAlertView alloc]
                                initWithTitle:@"You guessed right!"
-                               message:@"Good work!"
+                               message:@"Good work! See how easy it is to guess a password with hints like that? Make sure your password isn't easily guessable by people who know you. This means it shouldn't be your name, birthday, or your favorite animal."
                                delegate:nil
                                cancelButtonTitle:@"Next level" otherButtonTitles:nil];
         [alert show];
