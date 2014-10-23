@@ -10,6 +10,8 @@
 
 @interface BGKVLevel1PasswordViewController : BGKVLevelViewController
 
+@property (weak, nonatomic) IBOutlet UITextField* passwordField;
+
 - (IBAction)checkPassword:(UITextField *)sender;
 
 @end

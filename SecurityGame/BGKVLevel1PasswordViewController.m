@@ -8,7 +8,7 @@
 
 #import "BGKVLevel1PasswordViewController.h"
 
-@interface BGKVLevel1PasswordViewController ()
+@interface BGKVLevel1PasswordViewController () <UITextFieldDelegate>
 
 @end
 
@@ -36,6 +36,15 @@
     }
 }
 
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.passwordField) {
+        [textField resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,7 +57,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.passwordField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
