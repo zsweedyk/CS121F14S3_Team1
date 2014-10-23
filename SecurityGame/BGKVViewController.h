@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@import AVFoundation;
 
 @interface BGKVViewController : UIViewController
-
-@property(nonatomic, strong) AVAudioPlayer *backgroundMusic;
 
 - (IBAction) goToMainMenu:(UIStoryboardSegue *)segue;
 
