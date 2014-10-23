@@ -21,16 +21,16 @@
     if ([guess isEqualToString:password]) {
         UIAlertView * alert = [[UIAlertView alloc]
                                initWithTitle:@"You guessed right!"
-                               message:@"Good for you, you little shit."
+                               message:@"Good work!"
                                delegate:nil
-                               cancelButtonTitle:@"Fuck off" otherButtonTitles:nil];
+                               cancelButtonTitle:@"Next level" otherButtonTitles:nil];
         [alert show];
     } else {
         UIAlertView * alert = [[UIAlertView alloc]
-                               initWithTitle:@"You guessed WRONG!"
-                               message:@"Hahaha, why are you even alive!"
+                               initWithTitle:@"Incorrect"
+                               message:@"Try again!"
                                delegate:nil
-                               cancelButtonTitle:@"Okay..." otherButtonTitles:nil];
+                               cancelButtonTitle:@"Okay" otherButtonTitles:nil];
         sender.text = @"";
         [alert show];
     }
