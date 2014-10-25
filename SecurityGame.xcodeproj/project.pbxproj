@@ -24,6 +24,8 @@
 		AC71828C19F5F30D001EFA4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC71828A19F5F30D001EFA4B /* InfoPlist.strings */; };
 		AC71828E19F5F30D001EFA4B /* SecurityGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71828D19F5F30D001EFA4B /* SecurityGameTests.m */; };
 		AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */; };
+		ACD1BC3E19FB345F006F36D2 /* BGKVWithinLevelSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD1BC3D19FB345F006F36D2 /* BGKVWithinLevelSegue.m */; };
+		ACD1BC4119FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD1BC4019FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m */; };
 		ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640919F75C550088346D /* RBStoryboardLink.m */; };
 		ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640C19F75C550088346D /* RBStoryboardModalSegue.m */; };
 		ACE3641719F75C550088346D /* RBStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640E19F75C550088346D /* RBStoryboardPopoverSegue.m */; };
@@ -70,6 +72,10 @@
 		AC71828D19F5F30D001EFA4B /* SecurityGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecurityGameTests.m; sourceTree = "<group>"; };
 		AC71829719F5FDE7001EFA4B /* BGKVLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelViewController.h; sourceTree = "<group>"; };
 		AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelViewController.m; sourceTree = "<group>"; };
+		ACD1BC3C19FB345F006F36D2 /* BGKVWithinLevelSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVWithinLevelSegue.h; sourceTree = "<group>"; };
+		ACD1BC3D19FB345F006F36D2 /* BGKVWithinLevelSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVWithinLevelSegue.m; sourceTree = "<group>"; };
+		ACD1BC3F19FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CacheKeyAttribute.h"; sourceTree = "<group>"; };
+		ACD1BC4019FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CacheKeyAttribute.m"; sourceTree = "<group>"; };
 		ACE3640819F75C550088346D /* RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLink.h; sourceTree = "<group>"; };
 		ACE3640919F75C550088346D /* RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardLink.m; sourceTree = "<group>"; };
 		ACE3640A19F75C550088346D /* RBStoryboardLinkSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLinkSource.h; sourceTree = "<group>"; };
@@ -229,6 +235,10 @@
 				AC71827419F5F30D001EFA4B /* Main.storyboard */,
 				5D908D2219F8CE300054DF2D /* BGKVMusicPlayer.h */,
 				5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */,
+				ACD1BC3C19FB345F006F36D2 /* BGKVWithinLevelSegue.h */,
+				ACD1BC3D19FB345F006F36D2 /* BGKVWithinLevelSegue.m */,
+				ACD1BC3F19FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.h */,
+				ACD1BC4019FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -341,8 +351,10 @@
 				5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */,
 				AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */,
 				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
+				ACD1BC3E19FB345F006F36D2 /* BGKVWithinLevelSegue.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
 				AC71826F19F5F30D001EFA4B /* main.m in Sources */,
+				ACD1BC4119FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m in Sources */,
 				ACE3642319F77C520088346D /* BGKVLevel1PasswordViewController.m in Sources */,
 				AC71827919F5F30D001EFA4B /* BGKVViewController.m in Sources */,
 				ACE3641719F75C550088346D /* RBStoryboardPopoverSegue.m in Sources */,
