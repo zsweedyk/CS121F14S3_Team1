@@ -7,8 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "BGKVLevel1PasswordViewController.h"
 
-@interface Level1Tests : XCTestCase
+@interface Level1Tests : XCTestCase {
+    BGKVLevel1PasswordViewController* controller;
+}
 
 @end
 
@@ -17,18 +20,20 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    controller = [BGKVLevel1PasswordViewController alloc];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample
+// Tests checkPassword method for correct password
+- (void)testCheckPassword
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertFalse([controller checkPassword:@"dog"]);
+    XCTAssertFalse([controller checkPassword:@"hog"]);
+    XCTAssertTrue([controller checkPassword:@"frog"]);
 }
 
 @end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D908D2119F8BB7B0054DF2D /* spy_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D908D2019F8BB7B0054DF2D /* spy_music.mp3 */; };
 		5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */; };
+		5DD50EC81A084C700049B512 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD50EC71A084C700049B512 /* MusicTests.m */; };
 		AC71826319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
 		AC71826519F5F30D001EFA4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826419F5F30D001EFA4B /* CoreGraphics.framework */; };
 		AC71826719F5F30D001EFA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826619F5F30D001EFA4B /* UIKit.framework */; };
@@ -49,6 +50,7 @@
 		5D908D2019F8BB7B0054DF2D /* spy_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spy_music.mp3; sourceTree = "<group>"; };
 		5D908D2219F8CE300054DF2D /* BGKVMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVMusicPlayer.h; sourceTree = "<group>"; };
 		5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVMusicPlayer.m; sourceTree = "<group>"; };
+		5DD50EC71A084C700049B512 /* MusicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTests.m; sourceTree = "<group>"; };
 		AC71825F19F5F30D001EFA4B /* SecurityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC71826219F5F30D001EFA4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC71826419F5F30D001EFA4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,6 +172,7 @@
 		AC71828719F5F30D001EFA4B /* SecurityGameTests */ = {
 			isa = PBXGroup;
 			children = (
+				5DD50EC71A084C700049B512 /* MusicTests.m */,
 				AC71828D19F5F30D001EFA4B /* Level1Tests.m */,
 				AC71828819F5F30D001EFA4B /* Supporting Files */,
 			);
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC71828E19F5F30D001EFA4B /* Level1Tests.m in Sources */,
+				5DD50EC81A084C700049B512 /* MusicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
