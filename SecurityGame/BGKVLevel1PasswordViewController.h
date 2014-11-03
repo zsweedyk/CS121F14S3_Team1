@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField* passwordField;
 
-- (IBAction)checkPassword:(UITextField *)sender;
+- (BOOL)checkPassword:(NSString *)guess;
 
 @end
