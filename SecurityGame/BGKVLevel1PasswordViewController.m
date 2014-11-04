@@ -14,35 +14,35 @@
 
 @implementation BGKVLevel1PasswordViewController
 
-- (IBAction)checkPassword:(UITextField *)sender {
-    NSString * password = @"frog";
-    NSString * guess = sender.text;
-    
-    if ([guess isEqualToString:password]) {
-        UIAlertView * alert = [[UIAlertView alloc]
-                               initWithTitle:@"You guessed right!"
-                               message:@"Good work! See how easy it is to guess a password with hints like that? Make sure your password isn't easily guessable by people who know you. This means it shouldn't be your name, birthday, or your favorite animal."
-                               delegate:nil
-                               cancelButtonTitle:@"Next level" otherButtonTitles:nil];
-        [alert show];
-    } else {
-        UIAlertView * alert = [[UIAlertView alloc]
-                               initWithTitle:@"Incorrect"
-                               message:@"Try again!"
-                               delegate:nil
-                               cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-        sender.text = @"";
-        [alert show];
-    }
+- (BOOL)checkPassword:(NSString *)guess
+{
+    NSString* password = @"frog";
+    return [guess isEqualToString:password];
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField
 {
     if (textField == self.passwordField) {
         [textField resignFirstResponder];
-        return NO;
+        if ([self checkPassword:self.passwordField.text]) {
+            UIAlertView * alert = [[UIAlertView alloc]
+                                   initWithTitle:@"You guessed right!"
+                                   message:@"Good work! See how easy it is to guess a password with hints like that? Make sure your password isn't easily guessable by people who know you. This means it shouldn't be your name, birthday, or your favorite animal."
+                                   delegate:nil
+                                   cancelButtonTitle:@"Next level" otherButtonTitles:nil];
+            [alert show];
+        } else {
+            UIAlertView * alert = [[UIAlertView alloc]
+                                   initWithTitle:@"Incorrect"
+                                   message:@"Try again!"
+                                   delegate:nil
+                                   cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+            self.passwordField.text = @"";
+            [alert show];
+        }
+        return YES;
     }
-    return YES;
+    return NO;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
