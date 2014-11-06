@@ -246,6 +246,7 @@
 				AC71825B19F5F30D001EFA4B /* Sources */,
 				AC71825C19F5F30D001EFA4B /* Frameworks */,
 				AC71825D19F5F30D001EFA4B /* Resources */,
+				0A9A4E681A0856FA00862F16 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -331,6 +332,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A9A4E681A0856FA00862F16 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source ${SRCROOT}/XcodeCoverage/run_code_coverage_post.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC71825B19F5F30D001EFA4B /* Sources */ = {
@@ -476,6 +493,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
 				INFOPLIST_FILE = "SecurityGame/SecurityGame-Info.plist";
@@ -489,6 +508,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
 				INFOPLIST_FILE = "SecurityGame/SecurityGame-Info.plist";
