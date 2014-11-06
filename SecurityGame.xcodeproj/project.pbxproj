@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D908D2119F8BB7B0054DF2D /* spy_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D908D2019F8BB7B0054DF2D /* spy_music.mp3 */; };
 		5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */; };
+		AC4DB60D1A0BC4870010F5D4 /* BGKVViewControllerCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4DB60C1A0BC4870010F5D4 /* BGKVViewControllerCache.m */; };
+		AC4DB6121A0BCDEF0010F5D4 /* BGKVCachedModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4DB6111A0BCDEF0010F5D4 /* BGKVCachedModalSegue.m */; };
 		AC71826319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
 		AC71826519F5F30D001EFA4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826419F5F30D001EFA4B /* CoreGraphics.framework */; };
 		AC71826719F5F30D001EFA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826619F5F30D001EFA4B /* UIKit.framework */; };
@@ -57,6 +59,10 @@
 		5D908D2019F8BB7B0054DF2D /* spy_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spy_music.mp3; sourceTree = "<group>"; };
 		5D908D2219F8CE300054DF2D /* BGKVMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVMusicPlayer.h; sourceTree = "<group>"; };
 		5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVMusicPlayer.m; sourceTree = "<group>"; };
+		AC4DB60B1A0BC4870010F5D4 /* BGKVViewControllerCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVViewControllerCache.h; sourceTree = "<group>"; };
+		AC4DB60C1A0BC4870010F5D4 /* BGKVViewControllerCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVViewControllerCache.m; sourceTree = "<group>"; };
+		AC4DB6101A0BCDEF0010F5D4 /* BGKVCachedModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCachedModalSegue.h; sourceTree = "<group>"; };
+		AC4DB6111A0BCDEF0010F5D4 /* BGKVCachedModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCachedModalSegue.m; sourceTree = "<group>"; };
 		AC71825F19F5F30D001EFA4B /* SecurityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC71826219F5F30D001EFA4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC71826419F5F30D001EFA4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +142,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC4DB60A1A0BC4510010F5D4 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				ACD1BC3F19FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.h */,
+				ACD1BC4019FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m */,
+				AC4DB60B1A0BC4870010F5D4 /* BGKVViewControllerCache.h */,
+				AC4DB60C1A0BC4870010F5D4 /* BGKVViewControllerCache.m */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		AC4DB60F1A0BCDC00010F5D4 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				AC4DB6101A0BCDEF0010F5D4 /* BGKVCachedModalSegue.h */,
+				AC4DB6111A0BCDEF0010F5D4 /* BGKVCachedModalSegue.m */,
+			);
+			name = Segue;
+			sourceTree = "<group>";
+		};
 		AC71825619F5F30D001EFA4B = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +238,10 @@
 		AC7BDB2219FC8E06006C7C42 /* Cached Segues */ = {
 			isa = PBXGroup;
 			children = (
+				AC4DB60F1A0BCDC00010F5D4 /* Segue */,
+				AC4DB60A1A0BC4510010F5D4 /* Cache */,
 				ACD1BC3C19FB345F006F36D2 /* BGKVWithinLevelSegue.h */,
 				ACD1BC3D19FB345F006F36D2 /* BGKVWithinLevelSegue.m */,
-				ACD1BC3F19FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.h */,
-				ACD1BC4019FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m */,
 				AC7BDB2319FC8EA3006C7C42 /* BGKVNavigationReplaceSegue.h */,
 				AC7BDB2419FC8EA3006C7C42 /* BGKVNavigationReplaceSegue.m */,
 				AC7BDB2619FC90B4006C7C42 /* BGKVCachedController.h */,
@@ -381,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4DB6121A0BCDEF0010F5D4 /* BGKVCachedModalSegue.m in Sources */,
 				D8D161921A02D24B00E54500 /* BGKVCachedController2.m in Sources */,
 				ACE3641819F75C550088346D /* RBStoryboardPushSegue.m in Sources */,
 				ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */,
@@ -390,6 +417,7 @@
 				AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */,
 				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
 				D8D161961A02D62E00E54500 /* BGKVCacheSegue2.m in Sources */,
+				AC4DB60D1A0BC4870010F5D4 /* BGKVViewControllerCache.m in Sources */,
 				AC7BDB2819FC90B4006C7C42 /* BGKVCachedController.m in Sources */,
 				ACD1BC3E19FB345F006F36D2 /* BGKVWithinLevelSegue.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
