@@ -216,9 +216,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Z7H-vO-4j9"/>
         <segue reference="nSy-gD-jIh"/>
         <segue reference="khb-7q-iOD"/>
+        <segue reference="eMh-nI-qxU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
