@@ -159,7 +159,7 @@ Have fun!
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level1Storyboard"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="TutorialLevelStoryboard"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKg-ga-Vip" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jno-3d-Cp4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="jno-3d-Cp4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -14,32 +14,32 @@
                         <viewControllerLayoutGuide type="bottom" id="bCv-3s-rfq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c8p-ed-8JR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="hcZ-ko-6lN">
-                                <rect key="frame" x="-11" y="0.0" width="611" height="600"/>
+                                <rect key="frame" x="-11" y="0.0" width="1035" height="800"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvd-xk-p0Z">
-                                <rect key="frame" x="120" y="316" width="456" height="264"/>
+                                <rect key="frame" x="327" y="504" width="456" height="264"/>
                                 <state key="normal" title="Button" image="Level1WoodenTable">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzt-iE-tTJ">
-                                <rect key="frame" x="284" y="269" width="142" height="133"/>
+                                <rect key="frame" x="484" y="455" width="142" height="133"/>
                                 <state key="normal" title="Button" image="Level1Computer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="758-bD-WB7" kind="show" id="Ga6-Za-Pr7"/>
+                                    <segue destination="758-bD-WB7" kind="modal" id="Ga6-Za-Pr7"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77c-PL-vf6">
-                                <rect key="frame" x="186" y="72" width="240" height="138"/>
+                                <rect key="frame" x="386" y="221" width="240" height="138"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Welcome to SPICE! You're part of an elite security company, and have been hired by Vita Brevis to test their computer security.  Click the computer to begin!</string>
+                                <string key="text">Welcome to SPICE! You're part of an elite security company, and have been hired by Vita Brevis to find who has been leaking their documents. You plan to start by investigating Sam. Click Sam's computer to begin!</string>
                                 <color key="textColor" red="0.0" green="0.7843137255" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQm-eB-1G7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="219" y="246"/>
+            <point key="canvasLocation" x="280" y="419"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3sU-yG-41R">
@@ -62,35 +62,38 @@
                         <viewControllerLayoutGuide type="bottom" id="QGY-Ir-brr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OCa-Bu-Va8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-8G-KAT">
-                                <rect key="frame" x="-200" y="-300" width="1000" height="1000"/>
+                                <rect key="frame" x="-200" y="-300" width="1237" height="1106"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="hY1-la-8VK">
-                                <rect key="frame" x="-132" y="254" width="1000" height="800"/>
+                                <rect key="frame" x="-132" y="274" width="1000" height="800"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qao-AE-dxp">
-                                <rect key="frame" x="142" y="104" width="379" height="206"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEa-qQ-T1o">
+                                <rect key="frame" x="91" y="36" width="539" height="505"/>
+                                <state key="normal" title="Button" image="Level1Computer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qao-AE-dxp">
+                                <rect key="frame" x="171" y="96" width="378" height="208"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Uh oh! They left their computer unlocked! You'll need to make a note of that for your report. Everyone should have a password for their computer and lock it whenever they are away.  Click OK to continue.</string>
+                                <string key="text">Sam left his computer unlocked! You see that there are some weird deposits to Sam's account from Erika. Let's check her computer next!  Click OK to continue.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Nl-qI-eM7">
-                                <rect key="frame" x="307" y="274" width="46" height="30"/>
+                                <rect key="frame" x="337" y="274" width="46" height="30"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEa-qQ-T1o">
-                                <rect key="frame" x="61" y="36" width="539" height="505"/>
-                                <state key="normal" title="Button" image="Level1Computer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <segue destination="hJf-NO-FzX" kind="custom" customClass="RBStoryboardModalSegue" id="BTF-ab-Y9O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,7 +102,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBt-4e-cQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="-133"/>
+            <point key="canvasLocation" x="752" y="-218"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="l0Y-e3-Rna">
+            <objects>
+                <viewController id="hJf-NO-FzX" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eJy-w6-ull"/>
+                        <viewControllerLayoutGuide type="bottom" id="IVx-yB-aKs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KFm-uK-eJw">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level1Storyboard"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTk-y7-llk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1867" y="-101"/>
         </scene>
     </scenes>
     <resources>
@@ -107,4 +132,9 @@
         <image name="Level1WoodenTable" width="800" height="495"/>
         <image name="LibraryBackground1" width="1024" height="778"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
 </document>
