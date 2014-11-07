@@ -40,6 +40,10 @@
 		ACE3641D19F75CBA0088346D /* Level1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641C19F75CBA0088346D /* Level1Storyboard.storyboard */; };
 		ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */; };
 		ACE3642319F77C520088346D /* BGKVLevel1PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3642219F77C520088346D /* BGKVLevel1PasswordViewController.m */; };
+		ACF69EE31A0C805300CC6D1D /* BGKVSillyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF69EE11A0C805300CC6D1D /* BGKVSillyViewController.m */; };
+		ACF69EE41A0C805300CC6D1D /* BGKVSillyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF69EE21A0C805300CC6D1D /* BGKVSillyViewController.xib */; };
+		ACF69EE71A0C854C00CC6D1D /* BGKVJustASegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF69EE61A0C854B00CC6D1D /* BGKVJustASegue.m */; };
+		ACF69EEB1A0C8B4300CC6D1D /* BGKVJustBSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF69EEA1A0C8B4300CC6D1D /* BGKVJustBSegue.m */; };
 		D8D161921A02D24B00E54500 /* BGKVCachedController2.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D161901A02D24B00E54500 /* BGKVCachedController2.m */; };
 		D8D161931A02D24B00E54500 /* BGKVCachedController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D161911A02D24B00E54500 /* BGKVCachedController2.xib */; };
 		D8D161961A02D62E00E54500 /* BGKVCacheSegue2.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D161951A02D62E00E54500 /* BGKVCacheSegue2.m */; };
@@ -111,6 +115,13 @@
 		ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RBStoryboardLICENSE; sourceTree = "<group>"; };
 		ACE3642119F77C520088346D /* BGKVLevel1PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel1PasswordViewController.h; sourceTree = "<group>"; };
 		ACE3642219F77C520088346D /* BGKVLevel1PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel1PasswordViewController.m; sourceTree = "<group>"; };
+		ACF69EE01A0C805300CC6D1D /* BGKVSillyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVSillyViewController.h; sourceTree = "<group>"; };
+		ACF69EE11A0C805300CC6D1D /* BGKVSillyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVSillyViewController.m; sourceTree = "<group>"; };
+		ACF69EE21A0C805300CC6D1D /* BGKVSillyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVSillyViewController.xib; sourceTree = "<group>"; };
+		ACF69EE51A0C854B00CC6D1D /* BGKVJustASegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVJustASegue.h; sourceTree = "<group>"; };
+		ACF69EE61A0C854B00CC6D1D /* BGKVJustASegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVJustASegue.m; sourceTree = "<group>"; };
+		ACF69EE91A0C8B4300CC6D1D /* BGKVJustBSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVJustBSegue.h; sourceTree = "<group>"; };
+		ACF69EEA1A0C8B4300CC6D1D /* BGKVJustBSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVJustBSegue.m; sourceTree = "<group>"; };
 		D8D1618F1A02D24B00E54500 /* BGKVCachedController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCachedController2.h; sourceTree = "<group>"; };
 		D8D161901A02D24B00E54500 /* BGKVCachedController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCachedController2.m; sourceTree = "<group>"; };
 		D8D161911A02D24B00E54500 /* BGKVCachedController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVCachedController2.xib; sourceTree = "<group>"; };
@@ -149,6 +160,13 @@
 				ACD1BC4019FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m */,
 				AC4DB60B1A0BC4870010F5D4 /* BGKVViewControllerCache.h */,
 				AC4DB60C1A0BC4870010F5D4 /* BGKVViewControllerCache.m */,
+				ACF69EE01A0C805300CC6D1D /* BGKVSillyViewController.h */,
+				ACF69EE11A0C805300CC6D1D /* BGKVSillyViewController.m */,
+				ACF69EE21A0C805300CC6D1D /* BGKVSillyViewController.xib */,
+				ACF69EE51A0C854B00CC6D1D /* BGKVJustASegue.h */,
+				ACF69EE61A0C854B00CC6D1D /* BGKVJustASegue.m */,
+				ACF69EE91A0C8B4300CC6D1D /* BGKVJustBSegue.h */,
+				ACF69EEA1A0C8B4300CC6D1D /* BGKVJustBSegue.m */,
 			);
 			name = Cache;
 			sourceTree = "<group>";
@@ -384,6 +402,7 @@
 			files = (
 				ACE3641D19F75CBA0088346D /* Level1Storyboard.storyboard in Resources */,
 				D8D161931A02D24B00E54500 /* BGKVCachedController2.xib in Resources */,
+				ACF69EE41A0C805300CC6D1D /* BGKVSillyViewController.xib in Resources */,
 				AC71827B19F5F30D001EFA4B /* Images.xcassets in Resources */,
 				ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */,
 				AC71826D19F5F30D001EFA4B /* InfoPlist.strings in Resources */,
@@ -421,12 +440,15 @@
 				AC7BDB2819FC90B4006C7C42 /* BGKVCachedController.m in Sources */,
 				ACD1BC3E19FB345F006F36D2 /* BGKVWithinLevelSegue.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
+				ACF69EE71A0C854C00CC6D1D /* BGKVJustASegue.m in Sources */,
 				AC7BDB2B19FC9520006C7C42 /* BGKVDrainCacheSegue.m in Sources */,
 				AC71826F19F5F30D001EFA4B /* main.m in Sources */,
 				ACD1BC4119FB3C87006F36D2 /* UIViewController+CacheKeyAttribute.m in Sources */,
 				ACE3642319F77C520088346D /* BGKVLevel1PasswordViewController.m in Sources */,
+				ACF69EE31A0C805300CC6D1D /* BGKVSillyViewController.m in Sources */,
 				AC71827919F5F30D001EFA4B /* BGKVViewController.m in Sources */,
 				AC7BDB2519FC8EA3006C7C42 /* BGKVNavigationReplaceSegue.m in Sources */,
+				ACF69EEB1A0C8B4300CC6D1D /* BGKVJustBSegue.m in Sources */,
 				ACE3641719F75C550088346D /* RBStoryboardPopoverSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +580,7 @@
 				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
 				INFOPLIST_FILE = "SecurityGame/SecurityGame-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -571,6 +594,7 @@
 				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
 				INFOPLIST_FILE = "SecurityGame/SecurityGame-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

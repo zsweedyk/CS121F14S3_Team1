@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class BGKVSillyViewController;
+
 @interface BGKVLevelViewController : UIViewController
 
 - (IBAction) goToPreviousScene:(UIStoryboardSegue *)segue;
+
+@property (nonatomic, weak) BGKVSillyViewController *levelMaster;
 
 @end
