@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A98371E1A0C32FB00013F08 /* TutorialLevelStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A98371D1A0C32FB00013F08 /* TutorialLevelStoryboard.storyboard */; };
+		0AA3C7B81A0DE780000B0E7C /* Level3Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA3C7B71A0DE780000B0E7C /* Level3Storyboard.storyboard */; };
+		0AA3C7BB1A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3C7BA1A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.m */; };
 		5D908D2119F8BB7B0054DF2D /* spy_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D908D2019F8BB7B0054DF2D /* spy_music.mp3 */; };
 		5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */; };
 		5DD50EC81A084C700049B512 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD50EC71A084C700049B512 /* MusicTests.m */; };
@@ -49,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		0A98371D1A0C32FB00013F08 /* TutorialLevelStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorialLevelStoryboard.storyboard; sourceTree = "<group>"; };
+		0AA3C7B71A0DE780000B0E7C /* Level3Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level3Storyboard.storyboard; sourceTree = "<group>"; };
+		0AA3C7B91A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel3PasswordViewController.h; sourceTree = "<group>"; };
+		0AA3C7BA1A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel3PasswordViewController.m; sourceTree = "<group>"; };
 		5D908D2019F8BB7B0054DF2D /* spy_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spy_music.mp3; sourceTree = "<group>"; };
 		5D908D2219F8CE300054DF2D /* BGKVMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVMusicPlayer.h; sourceTree = "<group>"; };
 		5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVMusicPlayer.m; sourceTree = "<group>"; };
@@ -125,6 +130,16 @@
 			name = TutorialLevel;
 			sourceTree = "<group>";
 		};
+		0AA3C7B61A0DE763000B0E7C /* Level3 */ = {
+			isa = PBXGroup;
+			children = (
+				0AA3C7B71A0DE780000B0E7C /* Level3Storyboard.storyboard */,
+				0AA3C7B91A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.h */,
+				0AA3C7BA1A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.m */,
+			);
+			name = Level3;
+			sourceTree = "<group>";
+		};
 		AC71825619F5F30D001EFA4B = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +173,7 @@
 		AC71826819F5F30D001EFA4B /* SecurityGame */ = {
 			isa = PBXGroup;
 			children = (
+				0AA3C7B61A0DE763000B0E7C /* Level3 */,
 				0A98371C1A0C32DB00013F08 /* TutorialLevel */,
 				ACE3642019F75EB10088346D /* Main */,
 				ACE3641B19F75C9C0088346D /* Level1 */,
@@ -330,6 +346,7 @@
 				AC71826D19F5F30D001EFA4B /* InfoPlist.strings in Resources */,
 				0A98371E1A0C32FB00013F08 /* TutorialLevelStoryboard.storyboard in Resources */,
 				AC71827619F5F30D001EFA4B /* Main.storyboard in Resources */,
+				0AA3C7B81A0DE780000B0E7C /* Level3Storyboard.storyboard in Resources */,
 				5D908D2119F8BB7B0054DF2D /* spy_music.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE3641819F75C550088346D /* RBStoryboardPushSegue.m in Sources */,
+				0AA3C7BB1A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.m in Sources */,
 				ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */,
 				AC71827319F5F30D001EFA4B /* BGKVAppDelegate.m in Sources */,
 				ACE3641919F75C550088346D /* RBStoryboardSegue.m in Sources */,
