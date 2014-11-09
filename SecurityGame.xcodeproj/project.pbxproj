@@ -310,13 +310,13 @@
 		ACE3642019F75EB10088346D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AC71827419F5F30D001EFA4B /* Main.storyboard */,
 				AC71829719F5FDE7001EFA4B /* BGKVLevelViewController.h */,
 				AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */,
 				AC71827719F5F30D001EFA4B /* BGKVViewController.h */,
 				AC71827819F5F30D001EFA4B /* BGKVViewController.m */,
 				AC71827119F5F30D001EFA4B /* BGKVAppDelegate.h */,
 				AC71827219F5F30D001EFA4B /* BGKVAppDelegate.m */,
-				AC71827419F5F30D001EFA4B /* Main.storyboard */,
 				5D908D2219F8CE300054DF2D /* BGKVMusicPlayer.h */,
 				5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */,
 			);

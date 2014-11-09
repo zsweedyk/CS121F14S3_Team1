@@ -5,13 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Silly View Controller-->
         <scene sceneID="Omz-4u-XTg">
             <objects>
-                <viewController id="D2F-sG-NZJ" sceneMemberID="viewController">
+                <viewController id="D2F-sG-NZJ" customClass="BGKVSillyViewController" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <segue destination="pGY-WJ-pig" kind="custom" customClass="BGKVJustBSegue" id="Zor-Vo-PhD"/>
+                        <segue destination="pGY-WJ-pig" kind="custom" identifier="InitialContentView" customClass="BGKVJustBSegue" id="Zor-Vo-PhD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAT-Nu-fuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -52,7 +52,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVCachedModalSegue" id="B3M-hb-7mt"/>
+                                    <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVJustASegue" id="B3M-hb-7mt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-vT-DUp">
@@ -62,7 +62,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVCachedModalSegue" id="exo-Ak-q7C"/>
+                                    <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVJustASegue" id="exo-Ak-q7C"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,7 +121,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVCachedModalSegue" id="nEZ-0u-YCv"/>
+                                    <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVJustASegue" id="nEZ-0u-YCv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6u-36-f8t">
@@ -132,7 +132,7 @@
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pGY-WJ-pig" kind="custom" customClass="BGKVCachedModalSegue" id="YhH-Z5-3WV"/>
+                                    <segue destination="pGY-WJ-pig" kind="custom" customClass="BGKVJustASegue" id="YhH-Z5-3WV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -182,7 +182,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVCachedModalSegue" id="e2N-jZ-UFN"/>
+                                    <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVJustASegue" id="e2N-jZ-UFN"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX4-OM-5vk">
@@ -207,7 +207,7 @@
                                 <items>
                                     <barButtonItem title="Back" id="imz-fh-WbC">
                                         <connections>
-                                            <segue destination="pGY-WJ-pig" kind="custom" customClass="BGKVCachedModalSegue" id="hWi-MV-eX2"/>
+                                            <segue destination="pGY-WJ-pig" kind="custom" customClass="BGKVJustASegue" id="hWi-MV-eX2"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="XfV-zu-JqQ"/>
@@ -248,7 +248,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Zor-Vo-PhD"/>
-        <segue reference="exo-Ak-q7C"/>
         <segue reference="B3M-hb-7mt"/>
+        <segue reference="exo-Ak-q7C"/>
     </inferredMetricsTieBreakers>
 </document>
