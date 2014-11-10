@@ -138,7 +138,7 @@
 			name = TutorialLevel;
 			sourceTree = "<group>";
 		};
-		AC5AB8B41A10373E00EB74C9 /* Custom Container */ = {
+		AC5AB8B41A10373E00EB74C9 /* Level Container */ = {
 			isa = PBXGroup;
 			children = (
 				AC5AB8B51A10377B00EB74C9 /* BGKVLevelContainer.h */,
@@ -150,7 +150,7 @@
 				ACEC1EB41A10891D00C90A88 /* BGKVLevelViewControllerCache.h */,
 				ACEC1EB51A10891D00C90A88 /* BGKVLevelViewControllerCache.m */,
 			);
-			name = "Custom Container";
+			name = "Level Container";
 			sourceTree = "<group>";
 		};
 		AC71825619F5F30D001EFA4B = {
@@ -186,7 +186,7 @@
 		AC71826819F5F30D001EFA4B /* SecurityGame */ = {
 			isa = PBXGroup;
 			children = (
-				AC5AB8B41A10373E00EB74C9 /* Custom Container */,
+				AC5AB8B41A10373E00EB74C9 /* Level Container */,
 				0A98371C1A0C32DB00013F08 /* TutorialLevel */,
 				ACE3642019F75EB10088346D /* Main */,
 				ACE3641B19F75C9C0088346D /* Level1 */,

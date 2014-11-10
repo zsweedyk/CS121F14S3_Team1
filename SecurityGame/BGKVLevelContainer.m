@@ -21,7 +21,7 @@
     if (! _initialSegueName) {
         _initialSegueName = @"initial";
     }
-    return @"initial";
+    return _initialSegueName;
 }
 
 - (BGKVLevelContainer *)levelContainer
@@ -31,8 +31,56 @@
 
 - (IBAction)menuButtonAction:(UIBarButtonItem *)sender
 {
-    [self performSegueWithIdentifier:@"goToMainMenu" sender:sender];
+    UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Options Menu" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:
+             @"Quit Game",
+             @"How to play",
+             @"Reset Level",
+             @"Settings", nil];
+    menu.tag = 1;
+    [menu showInView:self.view];
 }
+
+- (void)actionSheet:(UIActionSheet*) actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0: {
+            NSString *expectedButtonTitle = @"Quit Game";
+            NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
+                     @"Action sheet %@: index %d was expected to be '%@', was actually '%@'",
+                     actionSheet, buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
+            
+            // This is to fix an issue with iOS, help from
+            // http://stackoverflow.com/questions/24854802/presenting-a-view-controller-modally-from-an-action-sheets-delegate-in-ios8
+            // It MAY OR MAY NOT be necessary.
+            // It was in Sudoku, but it seems to work even without the dispatch_async here.
+            dispatch_async(dispatch_get_main_queue(), ^ {
+                [self performSegueWithIdentifier:@"goToMainMenu" sender:self];
+            });
+            break;
+        }
+        case 1: {
+            break;
+        }
+        case 2: {
+            NSString *expectedButtonTitle = @"Reset Level";
+            NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
+                     @"Action sheet %@: index %d was expected to be '%@', was actually '%@'",
+                     actionSheet, buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
+            
+            [self resetCache];
+            [self showInitialLevelViewController];
+            
+            break;
+        }
+        case 3: {
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,16 +97,36 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    if (! self.currentLevelVC) {
+        [self showInitialLevelViewController];
+    }
+    [self maskLevelView];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+}
+
+- (void)maskLevelView
+{
+    // From StackOverflow
+    // Create a mask layer and the frame to determine what will be visible in the view.
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    CGRect maskRect = self.levelView.bounds;
     
-    if (! self.currentLevelVC) {
-        [self showInitialLevelViewController];
-    }
+    // Create a path with the rectangle in it.
+    CGPathRef path = CGPathCreateWithRect(maskRect, NULL);
+    
+    // Set the path to the mask layer.
+    maskLayer.path = path;
+    
+    // Release the path since it's not covered by ARC.
+    CGPathRelease(path);
+    
+    // Set the mask of the view.
+    self.levelView.layer.mask = maskLayer;
 }
 
 - (BGKVLevelViewController *)representativeForController:(BGKVLevelViewController *)controller
@@ -107,14 +175,7 @@
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC
 {
-    BGKVLevelViewController *oldVC = self.currentLevelVC;
- 
-    // If one exists, remove previous level view controller
-    if (oldVC) {
-        [oldVC removeFromParentViewController];
-        [oldVC.view removeFromSuperview];
-        oldVC.levelContainer = nil;
-    }
+    
     
     // Put the (possibly cached) controller in place
     newVC = [self representativeForController:newVC];
@@ -126,6 +187,26 @@
     self.currentLevelVC = newVC;
     newVC.levelContainer = self;
 }
+
+/*
+- (BOOL)hideCurrentLevelViewController
+{
+    // Returns YES if there was one to hide,
+    // returns NO but is still successful otherwise
+    
+    BGKVLevelViewController *oldVC = self.currentLevelVC;
+    
+    // If one exists, remove previous level view controller
+    if (oldVC) {
+        [oldVC removeFromParentViewController];
+        [oldVC.view removeFromSuperview];
+        oldVC.levelContainer = nil;
+        return YES;
+    }
+    
+    return NO;
+}
+*/
 
 - (void)resizeViewToFitLevelView:(UIView *)view
 {

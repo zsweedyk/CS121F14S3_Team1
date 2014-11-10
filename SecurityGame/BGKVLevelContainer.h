@@ -11,7 +11,7 @@
 @class BGKVLevelViewController;
 @class BGKVLevelViewControllerCache;
 
-@interface BGKVLevelContainer : UIViewController
+@interface BGKVLevelContainer : UIViewController <UIActionSheetDelegate>
 
 @property (nonatomic) NSString *initialSegueName;
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
