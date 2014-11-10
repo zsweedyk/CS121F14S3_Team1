@@ -39,6 +39,7 @@
 		ACE3641D19F75CBA0088346D /* Level1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641C19F75CBA0088346D /* Level1Storyboard.storyboard */; };
 		ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */; };
 		ACE3642319F77C520088346D /* BGKVLevel1PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3642219F77C520088346D /* BGKVLevel1PasswordViewController.m */; };
+		ACEC1EB61A10891D00C90A88 /* BGKVLevelViewControllerCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEC1EB51A10891D00C90A88 /* BGKVLevelViewControllerCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RBStoryboardLICENSE; sourceTree = "<group>"; };
 		ACE3642119F77C520088346D /* BGKVLevel1PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel1PasswordViewController.h; sourceTree = "<group>"; };
 		ACE3642219F77C520088346D /* BGKVLevel1PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel1PasswordViewController.m; sourceTree = "<group>"; };
+		ACEC1EB41A10891D00C90A88 /* BGKVLevelViewControllerCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelViewControllerCache.h; sourceTree = "<group>"; };
+		ACEC1EB51A10891D00C90A88 /* BGKVLevelViewControllerCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelViewControllerCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				AC5AB8BA1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard */,
 				AC5AB8BC1A10467400EB74C9 /* BGKVWithinLevelSegue.h */,
 				AC5AB8BD1A10467400EB74C9 /* BGKVWithinLevelSegue.m */,
+				ACEC1EB41A10891D00C90A88 /* BGKVLevelViewControllerCache.h */,
+				ACEC1EB51A10891D00C90A88 /* BGKVLevelViewControllerCache.m */,
 			);
 			name = "Custom Container";
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				ACE3641919F75C550088346D /* RBStoryboardSegue.m in Sources */,
 				AC5AB8BE1A10467400EB74C9 /* BGKVWithinLevelSegue.m in Sources */,
 				5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */,
+				ACEC1EB61A10891D00C90A88 /* BGKVLevelViewControllerCache.m in Sources */,
 				AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */,
 				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,

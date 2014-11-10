@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class BGKVLevelViewController;
+@class BGKVLevelViewControllerCache;
 
 @interface BGKVLevelContainer : UIViewController
 
+@property (nonatomic) NSString *initialSegueName;
+@property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;
 
 @property (nonatomic, weak) BGKVLevelViewController *currentLevelVC;
@@ -26,5 +29,7 @@
  */
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC;
+
+- (IBAction)menuButtonAction:(UIBarButtonItem *)sender;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "BGKVLevelContainer.h"
 #import "BGKVLevelViewController.h"
+#import "BGKVLevelViewControllerCache.h"
 
 @interface BGKVLevelContainer ()
 
@@ -15,15 +16,27 @@
 
 @implementation BGKVLevelContainer
 
-NSString *_initialSegueName = @"Initial Level View";
+- (NSString *)initialSegueName
+{
+    if (! _initialSegueName) {
+        _initialSegueName = @"initial";
+    }
+    return @"initial";
+}
 
 - (BGKVLevelContainer *)levelContainer
 {
     return self;
 }
 
+- (IBAction)menuButtonAction:(UIBarButtonItem *)sender
+{
+    [self performSegueWithIdentifier:@"goToMainMenu" sender:sender];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+    // I don't think this method ever gets called ...
     NSLog(@"Initializing...");
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -46,6 +59,23 @@ NSString *_initialSegueName = @"Initial Level View";
     if (! self.currentLevelVC) {
         [self showInitialLevelViewController];
     }
+}
+
+- (BGKVLevelViewController *)representativeForController:(BGKVLevelViewController *)controller
+{
+    if (! self.cache) {
+        self.cache = [[BGKVLevelViewControllerCache alloc] init];
+    }
+    
+    return [self.cache representativeForController:controller];
+}
+
+- (void)resetCache
+{
+//    if (_cache) {
+//        [_cache resetCache];
+//    }
+    self.cache = nil;
 }
 
 /*
@@ -72,40 +102,41 @@ NSString *_initialSegueName = @"Initial Level View";
 
 - (void)showInitialLevelViewController
 {
-    NSLog(@"Showing initial...");
-    [self performSegueWithIdentifier:_initialSegueName sender:nil];
-    NSLog(@"Done.");
+    [self performSegueWithIdentifier:self.initialSegueName sender:nil];
 }
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC
 {
-    NSLog(@"Showing controller %@...", newVC);
     BGKVLevelViewController *oldVC = self.currentLevelVC;
  
+    // If one exists, remove previous level view controller
     if (oldVC) {
-        NSLog(@"\tRemoving controller %@...", oldVC);
         [oldVC removeFromParentViewController];
         [oldVC.view removeFromSuperview];
         oldVC.levelContainer = nil;
-        NSLog(@"\tDone.");
     }
     
-    //[self resizeViewToFitLevelView:newVC.view];
+    // Put the (possibly cached) controller in place
+    newVC = [self representativeForController:newVC];
+    [self resizeViewToFitLevelView:newVC.view];
     
     [self addChildViewController: newVC];
     [self.levelView addSubview: newVC.view];
+
+    self.currentLevelVC = newVC;
     newVC.levelContainer = self;
-    NSLog(@"Done.");
 }
 
 - (void)resizeViewToFitLevelView:(UIView *)view
 {
     view.frame = [BGKVLevelContainer frameInLandscape:view.frame];
     
-    CGFloat sx = CGRectGetWidth(self.levelView.bounds) / CGRectGetWidth(view.bounds);
-    CGFloat sy = CGRectGetHeight(self.levelView.bounds) / CGRectGetWidth(view.bounds);
-    
-    view.transform = CGAffineTransformScale(CGAffineTransformIdentity, sx, sy);
+    if (! CGRectEqualToRect(view.bounds, self.levelView.bounds)) {
+        CGFloat sx = CGRectGetWidth(self.levelView.bounds) / CGRectGetWidth(view.bounds);
+        CGFloat sy = CGRectGetHeight(self.levelView.bounds) / CGRectGetHeight(view.bounds);
+        
+        view.transform = CGAffineTransformScale(CGAffineTransformIdentity, sx, sy);
+    }
     
     view.frame = CGRectMake(0,0, view.frame.size.width, view.frame.size.height);
 }

@@ -12,6 +12,7 @@
 
 @interface BGKVLevelViewController : UIViewController
 
+@property (nonatomic) NSString *cacheKey;
 @property (nonatomic, weak) BGKVLevelContainer *levelContainer;
 
 - (IBAction) goToPreviousScene:(UIStoryboardSegue *)segue;
