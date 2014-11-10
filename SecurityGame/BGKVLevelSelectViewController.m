@@ -24,7 +24,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-////Not currently used, but potential automatic way to link storyboards in Level Select Screen
+//// Not currently used, but potential automatic way to link storyboards in Level Select Screen
 //-(IBAction)action:(id)sender{
 //    
 //    UIButton *button=(UIButton*)sender;
