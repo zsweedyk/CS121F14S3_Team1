@@ -11,6 +11,10 @@
 		5D908D2119F8BB7B0054DF2D /* spy_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D908D2019F8BB7B0054DF2D /* spy_music.mp3 */; };
 		5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */; };
 		5DD50EC81A084C700049B512 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD50EC71A084C700049B512 /* MusicTests.m */; };
+		AC5AB8B81A10377B00EB74C9 /* BGKVLevelContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5AB8B61A10377B00EB74C9 /* BGKVLevelContainer.m */; };
+		AC5AB8B91A10377B00EB74C9 /* BGKVLevelContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5AB8B71A10377B00EB74C9 /* BGKVLevelContainer.xib */; };
+		AC5AB8BB1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5AB8BA1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard */; };
+		AC5AB8BE1A10467400EB74C9 /* BGKVWithinLevelSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5AB8BD1A10467400EB74C9 /* BGKVWithinLevelSegue.m */; };
 		AC71826319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
 		AC71826519F5F30D001EFA4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826419F5F30D001EFA4B /* CoreGraphics.framework */; };
 		AC71826719F5F30D001EFA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826619F5F30D001EFA4B /* UIKit.framework */; };
@@ -53,6 +57,12 @@
 		5D908D2219F8CE300054DF2D /* BGKVMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVMusicPlayer.h; sourceTree = "<group>"; };
 		5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVMusicPlayer.m; sourceTree = "<group>"; };
 		5DD50EC71A084C700049B512 /* MusicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTests.m; sourceTree = "<group>"; };
+		AC5AB8B51A10377B00EB74C9 /* BGKVLevelContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelContainer.h; sourceTree = "<group>"; };
+		AC5AB8B61A10377B00EB74C9 /* BGKVLevelContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelContainer.m; sourceTree = "<group>"; };
+		AC5AB8B71A10377B00EB74C9 /* BGKVLevelContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVLevelContainer.xib; sourceTree = "<group>"; };
+		AC5AB8BA1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LevelContainerSandboxStoryboard.storyboard; sourceTree = "<group>"; };
+		AC5AB8BC1A10467400EB74C9 /* BGKVWithinLevelSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVWithinLevelSegue.h; sourceTree = "<group>"; };
+		AC5AB8BD1A10467400EB74C9 /* BGKVWithinLevelSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVWithinLevelSegue.m; sourceTree = "<group>"; };
 		AC71825F19F5F30D001EFA4B /* SecurityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC71826219F5F30D001EFA4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC71826419F5F30D001EFA4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +135,19 @@
 			name = TutorialLevel;
 			sourceTree = "<group>";
 		};
+		AC5AB8B41A10373E00EB74C9 /* Custom Container */ = {
+			isa = PBXGroup;
+			children = (
+				AC5AB8B51A10377B00EB74C9 /* BGKVLevelContainer.h */,
+				AC5AB8B61A10377B00EB74C9 /* BGKVLevelContainer.m */,
+				AC5AB8B71A10377B00EB74C9 /* BGKVLevelContainer.xib */,
+				AC5AB8BA1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard */,
+				AC5AB8BC1A10467400EB74C9 /* BGKVWithinLevelSegue.h */,
+				AC5AB8BD1A10467400EB74C9 /* BGKVWithinLevelSegue.m */,
+			);
+			name = "Custom Container";
+			sourceTree = "<group>";
+		};
 		AC71825619F5F30D001EFA4B = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +181,7 @@
 		AC71826819F5F30D001EFA4B /* SecurityGame */ = {
 			isa = PBXGroup;
 			children = (
+				AC5AB8B41A10373E00EB74C9 /* Custom Container */,
 				0A98371C1A0C32DB00013F08 /* TutorialLevel */,
 				ACE3642019F75EB10088346D /* Main */,
 				ACE3641B19F75C9C0088346D /* Level1 */,
@@ -326,8 +350,10 @@
 			files = (
 				ACE3641D19F75CBA0088346D /* Level1Storyboard.storyboard in Resources */,
 				AC71827B19F5F30D001EFA4B /* Images.xcassets in Resources */,
+				AC5AB8BB1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard in Resources */,
 				ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */,
 				AC71826D19F5F30D001EFA4B /* InfoPlist.strings in Resources */,
+				AC5AB8B91A10377B00EB74C9 /* BGKVLevelContainer.xib in Resources */,
 				0A98371E1A0C32FB00013F08 /* TutorialLevelStoryboard.storyboard in Resources */,
 				AC71827619F5F30D001EFA4B /* Main.storyboard in Resources */,
 				5D908D2119F8BB7B0054DF2D /* spy_music.mp3 in Resources */,
@@ -350,9 +376,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACE3641819F75C550088346D /* RBStoryboardPushSegue.m in Sources */,
+				AC5AB8B81A10377B00EB74C9 /* BGKVLevelContainer.m in Sources */,
 				ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */,
 				AC71827319F5F30D001EFA4B /* BGKVAppDelegate.m in Sources */,
 				ACE3641919F75C550088346D /* RBStoryboardSegue.m in Sources */,
+				AC5AB8BE1A10467400EB74C9 /* BGKVWithinLevelSegue.m in Sources */,
 				5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */,
 				AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */,
 				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
