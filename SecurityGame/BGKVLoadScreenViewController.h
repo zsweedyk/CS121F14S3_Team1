@@ -11,5 +11,6 @@
 @interface BGKVLoadScreenViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (weak, nonatomic) IBOutlet UIButton *nextLevelButton;
 
 @end

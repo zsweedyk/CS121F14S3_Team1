@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.nextLevelButton.hidden = YES;
     self.spinner.hidesWhenStopped = YES;
     [self.view addSubview:self.spinner];
     [self.spinner startAnimating];
@@ -32,6 +33,7 @@
         // do any UI stuff on the main UI thread
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.spinner stopAnimating];
+            self.nextLevelButton.hidden = NO;
         });
         
     });
