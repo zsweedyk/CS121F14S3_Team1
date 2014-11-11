@@ -1,14 +1,14 @@
 //
-//  BGKVLevel2PasswordViewController.h
+//  BGKVLevel3PasswordViewController.h
 //  SecurityGame
 //
-//  Created by Guest User on 10/21/14.
+//  Created by Sarah Gilkinson on 11/7/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
 #import "BGKVLevelViewController.h"
 
-@interface BGKVLevel2PasswordViewController : BGKVLevelViewController
+@interface BGKVLevel3PasswordViewController : BGKVLevelViewController
 
 @property (weak, nonatomic) IBOutlet UITextField* passwordField;
 
