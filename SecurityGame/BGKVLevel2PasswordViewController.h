@@ -1,5 +1,5 @@
 //
-//  BGKVLevel1PasswordViewController.h
+//  BGKVLevel2PasswordViewController.h
 //  SecurityGame
 //
 //  Created by Guest User on 10/21/14.

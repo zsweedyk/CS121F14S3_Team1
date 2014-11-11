@@ -7,15 +7,15 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "BGKVLevel1PasswordViewController.h"
+#import "BGKVLevel2PasswordViewController.h"
 
-@interface Level1Tests : XCTestCase {
+@interface Level2Tests : XCTestCase {
     BGKVLevel1PasswordViewController* controller;
 }
 
 @end
 
-@implementation Level1Tests
+@implementation Level2Tests
 
 - (void)setUp
 {
