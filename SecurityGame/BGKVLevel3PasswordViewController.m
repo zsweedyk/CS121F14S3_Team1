@@ -27,7 +27,7 @@
         if ([self checkPassword:self.passwordField.text]) {
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"You guessed right!"
-                                   message:@"Taylor used her name as her password."
+                                   message:@"Taylor used her name as her password. That's not a good decision!"
                                    delegate:nil
                                    cancelButtonTitle:@"Next level" otherButtonTitles:nil];
             [alert show];

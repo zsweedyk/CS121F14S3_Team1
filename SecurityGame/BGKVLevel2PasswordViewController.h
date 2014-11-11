@@ -8,7 +8,7 @@
 
 #import "BGKVLevelViewController.h"
 
-@interface BGKVLevel1PasswordViewController : BGKVLevelViewController
+@interface BGKVLevel2PasswordViewController : BGKVLevelViewController
 
 @property (weak, nonatomic) IBOutlet UITextField* passwordField;
 

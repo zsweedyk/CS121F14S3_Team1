@@ -8,11 +8,11 @@
 
 #import "BGKVLevel2PasswordViewController.h"
 
-@interface BGKVLevel1PasswordViewController () <UITextFieldDelegate>
+@interface BGKVLevel2PasswordViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation BGKVLevel1PasswordViewController
+@implementation BGKVLevel2PasswordViewController
 
 - (BOOL)checkPassword:(NSString *)guess
 {
