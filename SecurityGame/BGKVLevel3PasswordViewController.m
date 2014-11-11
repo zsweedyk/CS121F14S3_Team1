@@ -28,7 +28,7 @@
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"You guessed right!"
                                    message:@"Taylor used her name as her password. That's not a good decision!"
-                                   delegate:nil
+                                   delegate:self
                                    cancelButtonTitle:@"Next level" otherButtonTitles:nil];
             [alert show];
         } else {
@@ -43,6 +43,11 @@
         return YES;
     }
     return NO;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self performSegueWithIdentifier:@"SegueToLoadScreen" sender:self];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
