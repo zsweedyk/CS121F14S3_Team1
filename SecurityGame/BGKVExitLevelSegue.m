@@ -1,25 +1,27 @@
 //
-//  BGKVWithinLevelSegue.m
+//  BGKVExitLevelSegue.m
 //  SecurityGame
 //
-//  Created by Guest User on 11/9/14.
+//  Created by Guest User on 11/11/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
-#import "BGKVWithinLevelSegue.h"
+#import "BGKVExitLevelSegue.h"
 #import "BGKVLevelViewController.h"
 #import "BGKVLevelContainer.h"
 
-@implementation BGKVWithinLevelSegue
+@implementation BGKVExitLevelSegue
 
 - (void) perform
 {
     BGKVLevelViewController *source = self.sourceViewController;
     BGKVLevelContainer *container = source.levelContainer;
     
-    BGKVLevelViewController *destination = self.destinationViewController;
+    UIViewController *destination = self.destinationViewController;
     
-    [container showLevelViewController:destination];
+
+    [container presentViewController:destination animated:YES completion:nil];
+    [container resetCache];
 }
 
 @end

@@ -17,6 +17,7 @@
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;
 
+// It's possible this should not be weak!
 @property (nonatomic, weak) BGKVLevelViewController *currentLevelVC;
 
 @property (nonatomic, weak) IBOutlet UIView *levelView;
@@ -31,5 +32,7 @@
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC;
 
 - (IBAction)menuButtonAction:(UIBarButtonItem *)sender;
+
+- (void)resetCache;
 
 @end
