@@ -106,6 +106,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="passwordField" destination="X3H-A9-0UW" id="fxE-mV-rjO"/>
+                        <segue destination="7UU-Ky-p5v" kind="modal" identifier="SegueToLoadScreen" id="lPj-eq-IfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY8-mo-W9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -160,6 +161,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsN-vx-Mk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1202" y="888"/>
+        </scene>
+        <!--Load Screen View Controller-->
+        <scene sceneID="2Qf-YG-yti">
+            <objects>
+                <viewController id="7UU-Ky-p5v" customClass="BGKVLoadScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mdk-7u-hNL"/>
+                        <viewControllerLayoutGuide type="bottom" id="p4m-Ho-2Uf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LZm-hO-LYp">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3A0-Iy-JfJ">
+                                <rect key="frame" x="494" y="550" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyh-ti-y5N">
+                                <rect key="frame" x="476" y="557" width="73" height="30"/>
+                                <state key="normal" title="Next Level">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lbv-mY-flX" kind="custom" customClass="RBStoryboardModalSegue" id="Pzp-8M-5ch"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Names are well-known and easy to guess! Don't use your name as a password!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sQ1-Tu-xQ4">
+                                <rect key="frame" x="340" y="339" width="345" height="90"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="nextLevelButton" destination="dyh-ti-y5N" id="t7R-y0-SDj"/>
+                        <outlet property="spinner" destination="3A0-Iy-JfJ" id="xNQ-4r-IGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqo-6G-Hvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="1767"/>
+        </scene>
+        <!--Level4Link-->
+        <scene sceneID="SP8-ts-kmA">
+            <objects>
+                <viewController title="Level4Link" id="lbv-mY-flX" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19Y-j2-X5r"/>
+                        <viewControllerLayoutGuide type="bottom" id="7aJ-Hf-ffA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mFa-g5-IHh">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level4Storyboard"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SV7-OO-4nZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="2839"/>
         </scene>
     </scenes>
     <resources>

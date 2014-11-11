@@ -1,22 +1,22 @@
 //
-//  BGKVLevel3PasswordViewController.m
+//  BGKVLevel4PasswordViewController.m
 //  SecurityGame
 //
-//  Created by Sarah Gilkinson on 11/7/14.
+//  Created by Hayden Blauzvern on 11/10/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
-#import "BGKVLevel3PasswordViewController.h"
+#import "BGKVLevel4PasswordViewController.h"
 
-@interface BGKVLevel3PasswordViewController () <UITextFieldDelegate>
+@interface BGKVLevel4PasswordViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation BGKVLevel3PasswordViewController
+@implementation BGKVLevel4PasswordViewController
 
 - (BOOL)checkPassword:(NSString *)guess
 {
-    NSString* password = @"Taylor";
+    NSString* password = @"1234";
     return [guess isEqualToString:password];
 }
 
@@ -27,7 +27,7 @@
         if ([self checkPassword:self.passwordField.text]) {
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"You guessed right!"
-                                   message:@"Taylor used her name as her password. That's not a good decision!"
+                                   message:@"Good work!"
                                    delegate:self
                                    cancelButtonTitle:@"Next level" otherButtonTitles:nil];
             [alert show];
@@ -72,14 +72,13 @@
 }
 
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
