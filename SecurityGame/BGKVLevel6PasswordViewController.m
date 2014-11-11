@@ -16,7 +16,7 @@
 
 - (BOOL)checkPassword:(NSString *)guess
 {
-    NSString* password = @"Taylor";
+    NSString* password = @"password1!";
     return [guess isEqualToString:password];
 }
 
@@ -27,7 +27,7 @@
         if ([self checkPassword:self.passwordField.text]) {
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"You guessed right!"
-                                   message:@"Taylor used her name as her password. That's not a good decision!"
+                                   message:@"Good job!"
                                    delegate:nil
                                    cancelButtonTitle:@"Next level" otherButtonTitles:nil];
             [alert show];
