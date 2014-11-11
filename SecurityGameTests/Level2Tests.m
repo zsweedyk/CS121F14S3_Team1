@@ -10,7 +10,7 @@
 #import "BGKVLevel2PasswordViewController.h"
 
 @interface Level2Tests : XCTestCase {
-    BGKVLevel1PasswordViewController* controller;
+    BGKVLevel2PasswordViewController* controller;
 }
 
 @end
@@ -20,7 +20,7 @@
 - (void)setUp
 {
     [super setUp];
-    controller = [BGKVLevel1PasswordViewController alloc];
+    controller = [BGKVLevel2PasswordViewController alloc];
 }
 
 - (void)tearDown

@@ -1,22 +1,22 @@
 //
-//  BGKVLevel2PasswordViewController.m
+//  BGKVLevel3PasswordViewController.m
 //  SecurityGame
 //
-//  Created by Guest User on 10/21/14.
+//  Created by Sarah Gilkinson on 11/7/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
-#import "BGKVLevel2PasswordViewController.h"
+#import "BGKVLevel3PasswordViewController.h"
 
-@interface BGKVLevel2PasswordViewController () <UITextFieldDelegate>
+@interface BGKVLevel3PasswordViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation BGKVLevel2PasswordViewController
+@implementation BGKVLevel3PasswordViewController
 
 - (BOOL)checkPassword:(NSString *)guess
 {
-    NSString* password = @"frog";
+    NSString* password = @"Taylor";
     return [guess isEqualToString:password];
 }
 
@@ -27,7 +27,7 @@
         if ([self checkPassword:self.passwordField.text]) {
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"You guessed right!"
-                                   message:@"Good work! See how easy it is to guess a password with hints like that? Make sure your password isn't easily guessable by people who know you. This means it shouldn't be your name, birthday, or your favorite animal."
+                                   message:@"Taylor used her name as her password. That's not a good decision!"
                                    delegate:nil
                                    cancelButtonTitle:@"Next level" otherButtonTitles:nil];
             [alert show];
@@ -67,14 +67,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
