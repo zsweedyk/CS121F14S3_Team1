@@ -195,12 +195,48 @@
                     <navigationItem key="navigationItem" id="0qb-6F-zT6"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="passwordField" destination="zX4-OM-5vk" id="CHo-yk-chK"/>
+                        <outlet property="passwordField" destination="zX4-OM-5vk" id="2dl-cx-VyR"/>
+                        <segue destination="yIi-ZG-xuq" kind="modal" identifier="SegueToLoadScreen" id="KVE-rq-bVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276" y="47"/>
+            <point key="canvasLocation" x="2250" y="15"/>
+        </scene>
+        <!--Load Screen View Controller-->
+        <scene sceneID="hNu-KQ-i0b">
+            <objects>
+                <viewController id="yIi-ZG-xuq" customClass="BGKVLoadScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KUM-rS-aey"/>
+                        <viewControllerLayoutGuide type="bottom" id="ybM-jH-eN8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0S0-N7-0FQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wHh-Ay-RdF">
+                                <rect key="frame" x="494" y="550" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
+                                <rect key="frame" x="340" y="303" width="345" height="161"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <string key="text">See how easy it is to guess a password with hints like that? Make sure your password isn't easily guessable by people who know you. This means it shouldn't be your name, birthday, or your favorite animal.</string>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="spinner" destination="wHh-Ay-RdF" id="eI3-Z2-af4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbt-Ak-FC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3584" y="87"/>
         </scene>
     </scenes>
     <resources>
@@ -216,9 +252,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Z7H-vO-4j9"/>
         <segue reference="nSy-gD-jIh"/>
         <segue reference="khb-7q-iOD"/>
-        <segue reference="eMh-nI-qxU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
