@@ -8,33 +8,35 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "BGKVLevel4PasswordViewController.h"
 
-@interface Level4Tests : XCTestCase
+@interface Level4Tests : XCTestCase {
+    BGKVLevel4PasswordViewController* controller;
+}
 
 @end
 
 @implementation Level4Tests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    controller = [BGKVLevel4PasswordViewController alloc];
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)tearDown
+{
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+// Tests checkPassword method for correct password
+- (void)testCheckPassword
+{
+    XCTAssertFalse([controller checkPassword:@"taylor"]);
+    XCTAssertFalse([controller checkPassword:@"frog"]);
+    XCTAssertFalse([controller checkPassword:@"1245"]);
+    XCTAssertFalse([controller checkPassword:@"12345"]);
+    XCTAssertTrue([controller checkPassword:@"1234"]);
 }
 
 @end
