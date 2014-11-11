@@ -125,6 +125,9 @@
                                 <state key="normal" title="Level 2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="YLH-TT-wsr" kind="custom" customClass="RBStoryboardModalSegue" id="cFJ-o6-fMC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njX-Ux-Rkj">
                                 <rect key="frame" x="798" y="62" width="49" height="30"/>
@@ -179,9 +182,6 @@
                                 <state key="normal" title="Level 1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="YLH-TT-wsr" kind="custom" customClass="RBStoryboardModalSegue" id="w9n-tM-DJI"/>
-                                </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWc-ag-VP6">
                                 <rect key="frame" x="354" y="219" width="49" height="30"/>
@@ -279,7 +279,7 @@ Have fun!
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level1Storyboard"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level2Storyboard"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKg-ga-Vip" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,12 +1,12 @@
 //
-//  BGKVLevel1PasswordViewController.m
+//  BGKVLevel2PasswordViewController.m
 //  SecurityGame
 //
 //  Created by Guest User on 10/21/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
-#import "BGKVLevel1PasswordViewController.h"
+#import "BGKVLevel2PasswordViewController.h"
 
 @interface BGKVLevel1PasswordViewController () <UITextFieldDelegate>
 
