@@ -1,22 +1,22 @@
 //
-//  BGKVLevel3PasswordViewController.m
+//  BGKVLevel1PasswordViewController.m
 //  SecurityGame
 //
-//  Created by Sarah Gilkinson on 11/7/14.
+//  Created by CS121 on 11/10/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
-#import "BGKVLevel3PasswordViewController.h"
+#import "BGKVLevel1PasswordViewController.h"
 
-@interface BGKVLevel3PasswordViewController () <UITextFieldDelegate>
+@interface BGKVLevel1PasswordViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation BGKVLevel3PasswordViewController
+@implementation BGKVLevel1PasswordViewController
 
 - (BOOL)checkPassword:(NSString *)guess
 {
-    NSString* password = @"Taylor";
+    NSString* password = @"Password";
     return [guess isEqualToString:password];
 }
 
@@ -27,13 +27,13 @@
         if ([self checkPassword:self.passwordField.text]) {
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"You guessed right!"
-                                   message:@"Taylor used her name as her password. That's not a good decision!"
+                                   message:@"Good work!"
                                    delegate:self
                                    cancelButtonTitle:@"Next level" otherButtonTitles:nil];
             [alert show];
         } else {
             UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"Incorrect"
+                                   initWithTitle:@"Incorrect!"
                                    message:@"Try again!"
                                    delegate:nil
                                    cancelButtonTitle:@"Okay" otherButtonTitles:nil];
