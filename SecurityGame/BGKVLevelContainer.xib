@@ -35,7 +35,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="SPL-bp-Esu"/>
-                        <barButtonItem enabled="NO" title="Back  " id="CIf-LJ-nzB">
+                        <barButtonItem enabled="NO" systemItem="cancel" id="CIf-LJ-nzB">
                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="backButtonAction:" destination="-1" id="1bP-X4-Sms"/>

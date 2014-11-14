@@ -9,8 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class BGKVLevelViewController;
+@class BGKVLevelViewControllerCache;
+@class BGKVHintViewController;
 
 @interface BGKVLevelContainer : UIViewController <UIActionSheetDelegate>
+
+@property (nonatomic) BGKVLevelViewControllerCache *cache;
+@property (nonatomic) BGKVHintViewController *hintVC;
+
+@property (nonatomic) NSString *hintControllerName;
 
 @property (nonatomic) NSString *initialSegueName;
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;

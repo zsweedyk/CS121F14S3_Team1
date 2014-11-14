@@ -9,16 +9,13 @@
 #import "BGKVLevelContainer.h"
 #import "BGKVLevelViewController.h"
 #import "BGKVLevelViewControllerCache.h"
-//#import "BGKVHintViewController.h"
+#import "BGKVHintViewController.h"
 
 @interface BGKVLevelContainer ()
 
 @end
 
-@implementation BGKVLevelContainer {
-    BGKVLevelViewControllerCache *_cache;
-//    BGKVHintViewController *_hintVC;
-}
+@implementation BGKVLevelContainer
 
 #pragma mark -
 #pragma mark Custom Property Getters
@@ -37,13 +34,27 @@
 }
 
 #pragma mark -
-#pragma mark Hint Button
+#pragma mark Hints
+- (void)initializeHints
+{
+    if (self.hintControllerName) {
+        self.hintButton.enabled = YES;
+        self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:self.hintControllerName];
+        [self.hintVC initialize];
+    } else {
+        self.hintButton.enabled = NO;
+    }
+}
+
 - (IBAction)hintButtonAction:(UIBarButtonItem *)sender
 {
-//    [self presentViewController:_hintVC animated:YES completion:^{
-//        [self setNewHintAvailable:NO];
-//    }];
+    NSAssert(self.hintVC, @"Must have a HintViewController to view hints!");
+    
+    [self presentViewController:self.hintVC animated:YES completion:^{
+        [self setNewHintAvailable:NO];
+    }];
 }
+
 - (void)setHintButtonEnabled:(BOOL)enabled
 {
     self.hintButton.enabled = enabled;
@@ -125,25 +136,20 @@
 #pragma mark -
 #pragma mark Initialization
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    // I don't think this method ever gets called ...
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    if (! self.currentLevelVC) {
+    // I don't know what initializer to use since it's from storyboard.
+    // initWithCoder is likely, but apparently it's possible to be called
+    // more than once? Either way, for now this works fine.
+    
+    dispatch_once_t once_token = 0;
+    dispatch_once(&once_token, ^{
+        [self initializeHints];
+        [self maskLevelView];
         [self showInitialLevelViewController];
-    }
-    [self maskLevelView];
+    });
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -176,11 +182,11 @@
 
 - (BGKVLevelViewController *)representativeForController:(BGKVLevelViewController *)controller
 {
-    if (! _cache) {
-        _cache = [[BGKVLevelViewControllerCache alloc] init];
+    if (! self.cache) {
+        self.cache = [[BGKVLevelViewControllerCache alloc] init];
     }
     
-    return [_cache representativeForController:controller];
+    return [self.cache representativeForController:controller];
 }
 
 - (void)resetCache
@@ -188,7 +194,7 @@
 //    if (_cache) {
 //        [_cache resetCache];
 //    }
-    _cache = nil;
+    self.cache = nil;
 }
 
 /*
