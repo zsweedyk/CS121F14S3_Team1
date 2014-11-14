@@ -9,21 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @class BGKVLevelViewController;
-@class BGKVLevelViewControllerCache;
 
 @interface BGKVLevelContainer : UIViewController <UIActionSheetDelegate>
 
 @property (nonatomic) NSString *initialSegueName;
-@property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;
 
-// It's possible this should not be weak!
-@property (nonatomic, weak) BGKVLevelViewController *currentLevelVC;
+// It's possible this should be weak!
+@property (nonatomic) BGKVLevelViewController *currentLevelVC;
 
 @property (nonatomic, weak) IBOutlet UIView *levelView;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *menuButton;
-/*
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *backButton;
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *hintButton;
+/*
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *inventoryButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *leftButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *rightButton;
@@ -31,7 +30,7 @@
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC;
 
-- (IBAction)menuButtonAction:(UIBarButtonItem *)sender;
+//- (IBAction)menuButtonAction:(UIBarButtonItem *)sender;
 
 - (void)resetCache;
 

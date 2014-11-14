@@ -9,12 +9,19 @@
 #import "BGKVLevelContainer.h"
 #import "BGKVLevelViewController.h"
 #import "BGKVLevelViewControllerCache.h"
+//#import "BGKVHintViewController.h"
 
 @interface BGKVLevelContainer ()
 
 @end
 
-@implementation BGKVLevelContainer
+@implementation BGKVLevelContainer {
+    BGKVLevelViewControllerCache *_cache;
+//    BGKVHintViewController *_hintVC;
+}
+
+#pragma mark -
+#pragma mark Custom Property Getters
 
 - (NSString *)initialSegueName
 {
@@ -29,6 +36,41 @@
     return self;
 }
 
+#pragma mark -
+#pragma mark Hint Button
+- (IBAction)hintButtonAction:(UIBarButtonItem *)sender
+{
+//    [self presentViewController:_hintVC animated:YES completion:^{
+//        [self setNewHintAvailable:NO];
+//    }];
+}
+- (void)setHintButtonEnabled:(BOOL)enabled
+{
+    self.hintButton.enabled = enabled;
+}
+- (void)setNewHintAvailable:(BOOL)newHintAvailable
+{
+    self.hintButton.style = (newHintAvailable ?
+                              UIBarButtonItemStyleDone
+                             :UIBarButtonItemStyleBordered);
+}
+
+#pragma mark Back Button
+
+- (IBAction)backButtonAction:(UIBarButtonItem *)sender
+{
+    // Back button should not be active if the level view has nowhere to go back to
+    NSAssert(self.currentLevelVC.backSegueName, @"Back button activated when level view has no back segue.");
+    
+    [self.currentLevelVC performSegueWithIdentifier:self.currentLevelVC.backSegueName sender:sender];
+}
+- (void)setBackButtonEnabled:(BOOL)enabled
+{
+    self.backButton.enabled = enabled;
+}
+
+#pragma mark Menu Button
+
 - (IBAction)menuButtonAction:(UIBarButtonItem *)sender
 {
     UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Options Menu" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:
@@ -39,7 +81,6 @@
     menu.tag = 1;
     [menu showInView:self.view];
 }
-
 - (void)actionSheet:(UIActionSheet*) actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     switch (buttonIndex) {
@@ -81,17 +122,18 @@
     }
 }
 
+#pragma mark -
+#pragma mark Initialization
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     // I don't think this method ever gets called ...
-    NSLog(@"Initializing...");
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
     return self;
-    NSLog(@"Done.");
 }
 
 - (void)viewDidLoad
@@ -129,13 +171,16 @@
     self.levelView.layer.mask = maskLayer;
 }
 
+#pragma mark -
+#pragma mark Caching
+
 - (BGKVLevelViewController *)representativeForController:(BGKVLevelViewController *)controller
 {
-    if (! self.cache) {
-        self.cache = [[BGKVLevelViewControllerCache alloc] init];
+    if (! _cache) {
+        _cache = [[BGKVLevelViewControllerCache alloc] init];
     }
     
-    return [self.cache representativeForController:controller];
+    return [_cache representativeForController:controller];
 }
 
 - (void)resetCache
@@ -143,7 +188,7 @@
 //    if (_cache) {
 //        [_cache resetCache];
 //    }
-    self.cache = nil;
+    _cache = nil;
 }
 
 /*
@@ -168,6 +213,9 @@
  }
  */
 
+#pragma mark -
+#pragma mark Switching Level Views
+
 - (void)showInitialLevelViewController
 {
     [self performSegueWithIdentifier:self.initialSegueName sender:nil];
@@ -175,7 +223,14 @@
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC
 {
+    BGKVLevelViewController *oldVC = self.currentLevelVC;
     
+    // If one exists, remove previous level view controller
+    if (oldVC) {
+        [oldVC removeFromParentViewController];
+        [oldVC.view removeFromSuperview];
+        oldVC.levelContainer = nil;
+    }
     
     // Put the (possibly cached) controller in place
     newVC = [self representativeForController:newVC];
@@ -183,8 +238,10 @@
     
     [self addChildViewController: newVC];
     [self.levelView addSubview: newVC.view];
-
     self.currentLevelVC = newVC;
+
+    [self setBackButtonEnabled: (self.currentLevelVC.backSegueName ? YES : NO)];
+
     newVC.levelContainer = self;
 }
 
@@ -195,7 +252,7 @@
     // returns NO but is still successful otherwise
     
     BGKVLevelViewController *oldVC = self.currentLevelVC;
-    
+ 
     // If one exists, remove previous level view controller
     if (oldVC) {
         [oldVC removeFromParentViewController];
