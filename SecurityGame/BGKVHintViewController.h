@@ -13,5 +13,6 @@
 @interface BGKVHintViewController : UITabBarController <UITabBarControllerDelegate>
 
 - (void)initialize;
+- (BOOL)makeHintAtIndexAvailable:(int)index;
 
 @end

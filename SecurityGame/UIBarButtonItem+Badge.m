@@ -145,6 +145,7 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 -(void) setBadgeValue:(NSString *)badgeValue
 {
+    
     objc_setAssociatedObject(self, &UIBarButtonItem_badgeValueKey, badgeValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     // When changing the badge value check if we need to remove the badge

@@ -10,6 +10,7 @@
 #import "BGKVLevelViewController.h"
 #import "BGKVLevelViewControllerCache.h"
 #import "BGKVHintViewController.h"
+#import "UIBarButtonItem+Badge.h"
 
 @interface BGKVLevelContainer ()
 
@@ -19,14 +20,6 @@
 
 #pragma mark -
 #pragma mark Custom Property Getters
-
-- (NSString *)initialSegueName
-{
-    if (! _initialSegueName) {
-        _initialSegueName = @"initial";
-    }
-    return _initialSegueName;
-}
 
 - (BGKVLevelContainer *)levelContainer
 {
@@ -38,7 +31,7 @@
 - (void)initializeHints
 {
     @try {
-        self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:@"hint"];
+        self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:self.hintControllerName];
         [self.hintVC initialize];
         self.hintButton.enabled = YES;
     }
@@ -72,6 +65,13 @@
     self.hintButton.style = (newHintAvailable ?
                               UIBarButtonItemStyleDone
                              :UIBarButtonItemStyleBordered);
+}
+
+- (BOOL)makeHintAtIndexAvailable:(int)index
+{
+    BOOL changedAvailability = [self.hintVC makeHintAtIndexAvailable:index];
+    [self setNewHintAvailable:changedAvailability];
+    return changedAvailability;
 }
 
 #pragma mark Back Button
@@ -151,15 +151,16 @@
     
     dispatch_once_t once_token = 0;
     dispatch_once(&once_token, ^{
+        if (! self.hintControllerName) { self.hintControllerName = @"hint"; }
+        if (! self.initialSegueName) { self.initialSegueName = @"initial"; }
+        
+        // Not working!
+        // self.menuButton.badgeValue = @"HELLO?";
+        
         [self initializeHints];
         [self maskLevelView];
         [self showInitialLevelViewController];
     });
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
 }
 
 - (void)maskLevelView

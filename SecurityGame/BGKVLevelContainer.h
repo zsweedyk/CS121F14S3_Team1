@@ -17,9 +17,9 @@
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic) BGKVHintViewController *hintVC;
 
-//@property (nonatomic) NSString *hintControllerName;
-
+@property (nonatomic) NSString *hintControllerName;
 @property (nonatomic) NSString *initialSegueName;
+
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;
 
 // It's possible this should be weak!
@@ -34,6 +34,8 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *leftButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *rightButton;
  */
+
+- (BOOL)makeHintAtIndexAvailable:(int)index;
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC;
 

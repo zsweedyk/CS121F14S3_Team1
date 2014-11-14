@@ -47,7 +47,6 @@
     ((UITabBarItem *)self.tabBar.items[1]).title = @"Objective";
     ((UITabBarItem *)self.tabBar.items[1]).tag = 1;
     
-    
     NSArray *items = self.tabBar.items;
     for (int i=2; i < [items count]; i++) {
         [_is_available addObject:@NO];
@@ -58,13 +57,13 @@
         item.enabled = NO;
         item.tag = i;
         
-        [self markHintAtIndexAsAvailable:i];
+        //[self makeHintAtIndexAvailable:i];
     }
     
     [self setSelectedViewController:self.viewControllers[1]];
 }
 
-- (void)markHintAtIndexAsAvailable:(int)index
+- (BOOL)makeHintAtIndexAvailable:(int)index
 {
     UITabBarItem *item = self.tabBar.items[index];
     _is_available[index] = @YES;
@@ -74,6 +73,10 @@
     if (! [_is_viewed[index] boolValue]) {
         item.badgeValue = @"NEW";
     }
+    
+    // Eventually, this should only return yes if the hint was actually
+    // not available to begin with.
+    return YES;
 }
 
 - (void)markHintAtIndexAsViewed:(int)index

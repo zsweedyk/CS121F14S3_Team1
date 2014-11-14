@@ -7,6 +7,7 @@
 //
 
 #import "BGKVLevel5PasswordViewController.h"
+#import "BGKVLevelContainer.h"
 
 @interface BGKVLevel5PasswordViewController ()
 
@@ -15,14 +16,15 @@
 @implementation BGKVLevel5PasswordViewController {
     BOOL _deactivated;
     NSMutableArray *_password;
+    int _attemptCount;
 }
 
 - (IBAction)pushIPhoneButton:(UIButton *)sender
 {
-    if (!_password) {
+    if (! _password) {
         _password = [[NSMutableArray alloc] init];
     }
-    NSLog(@"Pushed %d with current password %@. (Deactivated? %d)", sender.tag, _password, _deactivated);
+    //NSLog(@"Pushed %d with current password %@. (Deactivated? %d)", sender.tag, _password, _deactivated);
     NSAssert([_password count] <= 3, @"Tried to add to password when password already full!");
     
     // Hmm, could there be a problem if buttons are mashed
@@ -41,6 +43,7 @@
 - (void)checkPassword
 {
     _deactivated = YES;
+    _attemptCount += 1;
     
     BOOL passwordCorrect = [_password isEqualToArray:@[@1,@1,@2,@1]];
     
@@ -54,6 +57,10 @@
                                cancelButtonTitle:@"Okay" otherButtonTitles:nil];
         _password = nil;
         [alert show];
+    }
+    
+    if (_attemptCount == 3) {
+        [self.levelContainer makeHintAtIndexAvailable:2];
     }
     
     _deactivated = NO;
