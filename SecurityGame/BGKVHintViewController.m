@@ -44,6 +44,10 @@
     _is_available = [[NSMutableArray alloc] initWithObjects:@YES, @YES, nil];
     _is_viewed = [[NSMutableArray alloc] initWithObjects:@YES, @YES, nil];
     
+    ((UITabBarItem *)self.tabBar.items[1]).title = @"Objective";
+    ((UITabBarItem *)self.tabBar.items[1]).tag = 1;
+    
+    
     NSArray *items = self.tabBar.items;
     for (int i=2; i < [items count]; i++) {
         [_is_available addObject:@NO];
@@ -64,7 +68,7 @@
 {
     UITabBarItem *item = self.tabBar.items[index];
     _is_available[index] = @YES;
-    item.title = [NSString stringWithFormat:@"Hint %d", index];
+    item.title = [NSString stringWithFormat:@"Hint %d", index-1];
     item.enabled = YES;
     
     if (! [_is_viewed[index] boolValue]) {
