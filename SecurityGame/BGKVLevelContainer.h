@@ -17,7 +17,7 @@
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic) BGKVHintViewController *hintVC;
 
-@property (nonatomic) NSString *hintControllerName;
+//@property (nonatomic) NSString *hintControllerName;
 
 @property (nonatomic) NSString *initialSegueName;
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;

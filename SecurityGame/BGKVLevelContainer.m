@@ -37,12 +37,20 @@
 #pragma mark Hints
 - (void)initializeHints
 {
-    if (self.hintControllerName) {
-        self.hintButton.enabled = YES;
-        self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:self.hintControllerName];
+    @try {
+        self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:@"hint"];
         [self.hintVC initialize];
-    } else {
-        self.hintButton.enabled = NO;
+        self.hintButton.enabled = YES;
+    }
+    @catch (NSException *exception) {
+        if ([exception.name isEqualToString:NSInvalidArgumentException])
+        {
+            self.hintButton.enabled = NO;
+        }
+        else
+        {
+            @throw;
+        }
     }
 }
 
@@ -89,7 +97,7 @@
              @"How to play",
              @"Reset Level",
              @"Settings", nil];
-    menu.tag = 1;
+    //menu.tag = 1;
     [menu showInView:self.view];
 }
 - (void)actionSheet:(UIActionSheet*) actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -101,13 +109,10 @@
                      @"Action sheet %@: index %d was expected to be '%@', was actually '%@'",
                      actionSheet, buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
             
-            // This is to fix an issue with iOS, help from
-            // http://stackoverflow.com/questions/24854802/presenting-a-view-controller-modally-from-an-action-sheets-delegate-in-ios8
-            // It MAY OR MAY NOT be necessary.
-            // It was in Sudoku, but it seems to work even without the dispatch_async here.
-            dispatch_async(dispatch_get_main_queue(), ^ {
-                [self performSegueWithIdentifier:@"goToMainMenu" sender:self];
-            });
+            // This selector is declared in BGKVViewController
+            UIViewController *mainMenuVC = [self targetForAction:@selector(goToMainMenu:) withSender:self];
+            [mainMenuVC dismissViewControllerAnimated:YES completion:nil];
+            
             break;
         }
         case 1: {

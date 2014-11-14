@@ -19,7 +19,6 @@
 		AC4AA20A1A1201AB009DD03F /* BGKVExitLevelSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4AA2091A1201AB009DD03F /* BGKVExitLevelSegue.m */; };
 		AC5AB8B81A10377B00EB74C9 /* BGKVLevelContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5AB8B61A10377B00EB74C9 /* BGKVLevelContainer.m */; };
 		AC5AB8B91A10377B00EB74C9 /* BGKVLevelContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5AB8B71A10377B00EB74C9 /* BGKVLevelContainer.xib */; };
-		AC5AB8BB1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5AB8BA1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard */; };
 		AC5AB8BE1A10467400EB74C9 /* BGKVWithinLevelSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5AB8BD1A10467400EB74C9 /* BGKVWithinLevelSegue.m */; };
 		AC71826319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
 		AC71826519F5F30D001EFA4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826419F5F30D001EFA4B /* CoreGraphics.framework */; };
@@ -78,7 +77,6 @@
 		AC5AB8B51A10377B00EB74C9 /* BGKVLevelContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelContainer.h; sourceTree = "<group>"; };
 		AC5AB8B61A10377B00EB74C9 /* BGKVLevelContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelContainer.m; sourceTree = "<group>"; };
 		AC5AB8B71A10377B00EB74C9 /* BGKVLevelContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVLevelContainer.xib; sourceTree = "<group>"; };
-		AC5AB8BA1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LevelContainerSandboxStoryboard.storyboard; sourceTree = "<group>"; };
 		AC5AB8BC1A10467400EB74C9 /* BGKVWithinLevelSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVWithinLevelSegue.h; sourceTree = "<group>"; };
 		AC5AB8BD1A10467400EB74C9 /* BGKVWithinLevelSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVWithinLevelSegue.m; sourceTree = "<group>"; };
 		AC71825F19F5F30D001EFA4B /* SecurityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,7 +216,6 @@
 		AC5AB8B41A10373E00EB74C9 /* Level Container */ = {
 			isa = PBXGroup;
 			children = (
-				AC5AB8BA1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard */,
 				AC34DAA31A15C70C00136769 /* Container */,
 				AC34DAA21A15C6EB00136769 /* Hints */,
 				AC34DAA41A15C72500136769 /* Cache */,
@@ -434,7 +431,6 @@
 				AC4AA1CF1A11E4BD009DD03F /* Level5Storyboard.storyboard in Resources */,
 				ACE3641D19F75CBA0088346D /* Level1Storyboard.storyboard in Resources */,
 				AC71827B19F5F30D001EFA4B /* Images.xcassets in Resources */,
-				AC5AB8BB1A10430400EB74C9 /* LevelContainerSandboxStoryboard.storyboard in Resources */,
 				ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */,
 				AC71826D19F5F30D001EFA4B /* InfoPlist.strings in Resources */,
 				AC5AB8B91A10377B00EB74C9 /* BGKVLevelContainer.xib in Resources */,

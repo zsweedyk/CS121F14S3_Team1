@@ -24,17 +24,11 @@ NSMutableDictionary *_cache;
 
 - (void) resetCache
 {
-    NSLog(@"Resetting, cache:%@", _cache);
     _cache = [[NSMutableDictionary alloc] init];
-    NSLog(@"Now cache is:%@", _cache);
 }
 
 - (BOOL) hasRepresentativeForKey:(NSString *)key
 {
-    NSLog(@"Hello");
-    NSLog(@"CCache: %@", self);
-    NSLog(@"Real cache: %@", _cache);
-    NSLog(@"%@", _cache.allKeys);
     return [_cache.allKeys containsObject:key];
 }
 
