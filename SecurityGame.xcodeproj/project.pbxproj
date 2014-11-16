@@ -18,6 +18,8 @@
 		5D4E1CAA1A11DA9600C50D71 /* BGKVLevel4PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4E1CA91A11DA9600C50D71 /* BGKVLevel4PasswordViewController.m */; };
 		5D908D2119F8BB7B0054DF2D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */; };
+		5DA172301A181A4E00E63BD0 /* Level9Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA1722F1A181A4E00E63BD0 /* Level9Storyboard.storyboard */; };
+		5DA172371A181AA600E63BD0 /* BGKVLevel9PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA172361A181AA600E63BD0 /* BGKVLevel9PasswordViewController.m */; };
 		5DD50EC81A084C700049B512 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD50EC71A084C700049B512 /* MusicTests.m */; };
 		93A159E21A11EAA700118451 /* Level1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A159E11A11EAA700118451 /* Level1Storyboard.storyboard */; };
 		93A159E51A11EB7200118451 /* BGKVLevel1PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A159E41A11EB7200118451 /* BGKVLevel1PasswordViewController.m */; };
@@ -74,6 +76,9 @@
 		5D4E1CA81A11DA9500C50D71 /* BGKVLevel4PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel4PasswordViewController.h; sourceTree = "<group>"; };
 		5D4E1CA91A11DA9600C50D71 /* BGKVLevel4PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel4PasswordViewController.m; sourceTree = "<group>"; };
 		5D908D2319F8CE300054DF2D /* BGKVMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVMusicPlayer.m; sourceTree = "<group>"; };
+		5DA1722F1A181A4E00E63BD0 /* Level9Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level9Storyboard.storyboard; sourceTree = "<group>"; };
+		5DA172351A181AA600E63BD0 /* BGKVLevel9PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel9PasswordViewController.h; sourceTree = "<group>"; };
+		5DA172361A181AA600E63BD0 /* BGKVLevel9PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel9PasswordViewController.m; sourceTree = "<group>"; };
 		5DD50EC71A084C700049B512 /* MusicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTests.m; sourceTree = "<group>"; };
 		93A159E11A11EAA700118451 /* Level1Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level1Storyboard.storyboard; sourceTree = "<group>"; };
 		93A159E31A11EB7200118451 /* BGKVLevel1PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel1PasswordViewController.h; sourceTree = "<group>"; };
@@ -173,6 +178,16 @@
 			name = Level4;
 			sourceTree = "<group>";
 		};
+		5DA1722E1A181A2800E63BD0 /* Level9 */ = {
+			isa = PBXGroup;
+			children = (
+				5DA1722F1A181A4E00E63BD0 /* Level9Storyboard.storyboard */,
+				5DA172351A181AA600E63BD0 /* BGKVLevel9PasswordViewController.h */,
+				5DA172361A181AA600E63BD0 /* BGKVLevel9PasswordViewController.m */,
+			);
+			name = Level9;
+			sourceTree = "<group>";
+		};
 		93A159E01A11EA9000118451 /* Level1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +237,7 @@
 				ACE3641B19F75C9C0088346D /* Level2 */,
 				0AA3C7B61A0DE763000B0E7C /* Level3 */,
 				5D4E1CA31A11D99100C50D71 /* Level4 */,
+				5DA1722E1A181A2800E63BD0 /* Level9 */,
 				ACE3640719F75C550088346D /* RBStoryboardClasses */,
 				AC71827A19F5F30D001EFA4B /* Images.xcassets */,
 				AC71826919F5F30D001EFA4B /* Supporting Files */,
@@ -392,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA172301A181A4E00E63BD0 /* Level9Storyboard.storyboard in Resources */,
 				ACE3641D19F75CBA0088346D /* Level2Storyboard.storyboard in Resources */,
 				AC71827B19F5F30D001EFA4B /* Images.xcassets in Resources */,
 				5D4E1C9C1A11CE9900C50D71 /* spy_music.mp3 in Resources */,
@@ -423,6 +440,7 @@
 			files = (
 				ACE3641819F75C550088346D /* RBStoryboardPushSegue.m in Sources */,
 				0AA3C7BB1A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.m in Sources */,
+				5DA172371A181AA600E63BD0 /* BGKVLevel9PasswordViewController.m in Sources */,
 				ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */,
 				AC71827319F5F30D001EFA4B /* BGKVAppDelegate.m in Sources */,
 				ACE3641919F75C550088346D /* RBStoryboardSegue.m in Sources */,
