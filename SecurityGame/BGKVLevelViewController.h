@@ -16,6 +16,7 @@
 @property (nonatomic) NSString *backSegueName;
 @property (nonatomic, weak) BGKVLevelContainer *levelContainer;
 
-- (IBAction) goToPreviousScene:(UIStoryboardSegue *)segue;
+
+// - (IBAction) goToPreviousScene:(UIStoryboardSegue *)segue;
 
 @end

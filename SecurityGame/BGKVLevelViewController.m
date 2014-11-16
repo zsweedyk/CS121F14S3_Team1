@@ -39,9 +39,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 - (IBAction) goToPreviousScene:(UIStoryboardSegue *)segue {
     
 }
+*/
 
 /*
 #pragma mark - Navigation
