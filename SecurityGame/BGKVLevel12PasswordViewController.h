@@ -10,6 +10,13 @@
 
 @interface BGKVLevel12PasswordViewController : BGKVLevelViewController
 
-- (BOOL)checkComputerPassword:(NSString *)guess;
+@property (weak, nonatomic) IBOutlet UITextField* informationField;
+@property (weak, nonatomic) IBOutlet UIButton* continueOrReturnButton;
+
+@property (weak, nonatomic) IBOutlet UIButton* httpButton;
+@property (weak, nonatomic) IBOutlet UIButton* httpsButton;
+
+@property (weak, nonatomic) IBOutlet UITextField* httpInformationField;
+@property (weak, nonatomic) IBOutlet UITextField* httpsInformationField;
 
 @end

@@ -8,64 +8,22 @@
 
 #import "BGKVLevel12PasswordViewController.h"
 
-@interface BGKVLevel12PasswordViewController () <UITextFieldDelegate>
-
-@end
-
 @implementation BGKVLevel12PasswordViewController
-/*
 
-- (BOOL)checkComputerPassword:(NSString *)guess
+- (IBAction)showHttpOption:(id)sender
 {
-    NSString* password = @"alphabet";
-    return [guess isEqualToString:password];
+    self.informationField.hidden = YES;
+    self.httpInformationField.hidden = NO;
+    self.httpButton.hidden = YES;
+    self.httpsButton.hidden = YES;
 }
 
-- (BOOL)checkPhonePassword:(NSString *)guess
+- (IBAction)showHttpsOption:(id)sender
 {
-    NSString* password = @"8443";
-    return [guess isEqualToString:password];
-}
-
-- (BOOL) textFieldShouldReturn:(UITextField *)textField
-{
-    if (textField == self.passwordField) {
-        [textField resignFirstResponder];
-        if ([self checkComputerPassword:self.passwordField.text]) {
-            UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"You guessed right!"
-                                   message:@"Good work!"
-                                   delegate:self
-                                   cancelButtonTitle:@"Next level" otherButtonTitles:nil];
-            [alert show];
-        } else {
-            UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"Incorrect"
-                                   message:@"Try again!"
-                                   delegate:nil
-                                   cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-            self.passwordField.text = @"";
-            [alert show];
-        }
-        return YES;
-    }
-    else if (textField == self.phonePasswordField) {
-        [textField resignFirstResponder];
-        if ([self checkPhonePassword:self.phonePasswordField.text]) {
-            // Reveal the hidden password for the computer
-            self.phonePasswordInformationField.hidden = NO;
-        } else {
-            UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"Incorrect"
-                                   message:@"Try again!"
-                                   delegate:nil
-                                   cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-            self.passwordField.text = @"";
-            [alert show];
-        }
-        return YES;
-    }
-    return NO;
+    self.informationField.hidden = YES;
+    self.httpsInformationField.hidden = NO;
+    self.httpButton.hidden = YES;
+    self.httpsButton.hidden = YES;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -85,16 +43,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.passwordField.delegate = self;
-    self.phonePasswordField.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-*/
 /*
  #pragma mark - Navigation
  
