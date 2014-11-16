@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class BGKVLevelContainer;
+
 @interface BGKVLevelViewController : UIViewController
+
+@property (nonatomic) NSString *cacheKey;
+@property (nonatomic) NSString *backSegueName;
+@property (nonatomic, weak) BGKVLevelContainer *levelContainer;
 
 - (IBAction) goToPreviousScene:(UIStoryboardSegue *)segue;
 
