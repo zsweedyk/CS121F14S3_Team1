@@ -58,7 +58,7 @@
 
 - (BOOL)checkPassword:(NSString *)guess
 {
-    NSString* password = @"gbnDfbN52";
+    NSString* password = @"CgF3n8x6";
     return [guess isEqualToString:password];
 }
 
