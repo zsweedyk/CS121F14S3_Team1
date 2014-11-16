@@ -106,6 +106,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="passwordField" destination="X3H-A9-0UW" id="fxE-mV-rjO"/>
+                        <segue destination="BcU-cE-9vE" kind="modal" identifier="SegueToLoadScreen" id="asu-AQ-OkF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY8-mo-W9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,6 +162,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsN-vx-Mk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1202" y="888"/>
+        </scene>
+        <!--Load Screen View Controller-->
+        <scene sceneID="0Mh-GJ-kLg">
+            <objects>
+                <viewController id="BcU-cE-9vE" customClass="BGKVLoadScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bOd-UC-chu"/>
+                        <viewControllerLayoutGuide type="bottom" id="7GK-Lz-C8h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XTR-Hi-T6b">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="I9u-9V-nzF">
+                                <rect key="frame" x="494" y="550" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnp-MM-IuG">
+                                <rect key="frame" x="476" y="557" width="73" height="30"/>
+                                <state key="normal" title="Next Level">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZxO-XF-aJL" kind="custom" customClass="RBStoryboardModalSegue" id="xfZ-Ni-XwM"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5L6-Jp-nEg">
+                                <rect key="frame" x="340" y="339" width="345" height="127"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <string key="text">That password would have been harder to guess! Using a mix of capital letters, lowercase letters, numbers and special symbols makes your password more secure!</string>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="nextLevelButton" destination="rnp-MM-IuG" id="h49-IS-qpU"/>
+                        <outlet property="spinner" destination="I9u-9V-nzF" id="3s8-xg-Lk2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LrW-jL-qZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="1975"/>
+        </scene>
+        <!--Level 7 Link-->
+        <scene sceneID="8Bd-KV-Y4v">
+            <objects>
+                <viewController title="Level7Link" id="ZxO-XF-aJL" userLabel="Level 7 Link" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="km2-nN-LPq"/>
+                        <viewControllerLayoutGuide type="bottom" id="lmK-LS-u6C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ush-3v-oS8">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level7Storyboard"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnW-SY-HYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2904" y="2573"/>
         </scene>
     </scenes>
     <resources>

@@ -19,7 +19,6 @@
     NSString* password = @"password1!";
     return [guess isEqualToString:password];
 }
-
 - (BOOL) textFieldShouldReturn:(UITextField *)textField
 {
     if (textField == self.passwordField) {
@@ -27,8 +26,8 @@
         if ([self checkPassword:self.passwordField.text]) {
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"You guessed right!"
-                                   message:@"Good job!"
-                                   delegate:nil
+                                   message:@"Good work!"
+                                   delegate:self
                                    cancelButtonTitle:@"Next level" otherButtonTitles:nil];
             [alert show];
         } else {
@@ -43,6 +42,11 @@
         return YES;
     }
     return NO;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self performSegueWithIdentifier:@"SegueToLoadScreen" sender:self];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
