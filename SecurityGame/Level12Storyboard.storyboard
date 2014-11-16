@@ -45,7 +45,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="3Xe-rb-phB" kind="custom" customClass="RBStoryboardModalSegue" id="MFu-Sv-lyL"/>
+                                            <segue destination="3Xe-rb-phB" kind="modal" id="MFu-Sv-lyL"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Uh oh!  Data sent via HTTP isn't encrypted. You should always use https when it is available.  Let's try that again." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGA-gR-kr9">
@@ -104,7 +104,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="r6K-sS-4fM" kind="custom" customClass="RBStoryboardModalSegue" id="l3x-Hf-PMu"/>
+                                    <segue destination="r6K-sS-4fM" kind="modal" id="l3x-Hf-PMu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIf-ni-1fy">
@@ -114,7 +114,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Whh-qS-cMP" kind="custom" customClass="RBStoryboardModalSegue" id="2v8-fz-iGA"/>
+                                    <segue destination="Whh-qS-cMP" kind="modal" id="2v8-fz-iGA"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="This site can be viewed as http or https. Please select a format:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHR-cb-0qe">
@@ -139,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2070" y="-397"/>
+            <point key="canvasLocation" x="2110" y="-119"/>
         </scene>
         <!--https-->
         <scene sceneID="cGS-Om-e8F">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqY-u5-ZD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2779" y="156"/>
+            <point key="canvasLocation" x="2721" y="916"/>
         </scene>
         <!--Load Screen View Controller-->
         <scene sceneID="hNu-KQ-i0b">
