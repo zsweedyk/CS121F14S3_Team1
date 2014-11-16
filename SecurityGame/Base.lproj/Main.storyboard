@@ -154,6 +154,9 @@
                                 <state key="normal" title="Level 6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="V6d-2t-vyY" kind="custom" customClass="RBStoryboardModalSegue" id="yoC-8d-Gry"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmo-7y-vn7">
                                 <rect key="frame" x="798" y="219" width="49" height="30"/>
