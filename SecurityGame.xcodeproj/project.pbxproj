@@ -368,6 +368,7 @@
 		AC71828719F5F30D001EFA4B /* SecurityGameTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */,
 				5DA172401A1859DC00E63BD0 /* Level10Tests.m */,
 				5DA172381A182C5000E63BD0 /* Level9Tests.m */,
 				5D4E1CA61A11D9BC00C50D71 /* Level4Tests.m */,
@@ -567,6 +568,7 @@
 				5D4E1CAA1A11DA9600C50D71 /* BGKVLevel4PasswordViewController.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
 				AC71826F19F5F30D001EFA4B /* main.m in Sources */,
+				AC1C88631A186A5900CFA7B5 /* UIButton+Badge.m in Sources */,
 				5DA1723F1A18310500E63BD0 /* BGKVLevel10PasswordViewController.m in Sources */,
 				ACE3642319F77C520088346D /* BGKVLevel2PasswordViewController.m in Sources */,
 				AC1C88541A186A3100CFA7B5 /* BGKVHintViewController.m in Sources */,
