@@ -10,13 +10,15 @@
 
 @interface BGKVLevel12PasswordViewController : BGKVLevelViewController
 
-@property (weak, nonatomic) IBOutlet UITextField* informationField;
-@property (weak, nonatomic) IBOutlet UIButton* continueOrReturnButton;
+@property (weak, nonatomic) IBOutlet UITextView* informationField;
+@property (weak, nonatomic) IBOutlet UIButton* continueButton;
+@property (weak, nonatomic) IBOutlet UIButton* returnButton;
+@property (weak, nonatomic) IBOutlet UITextView* explanationField;
 
 @property (weak, nonatomic) IBOutlet UIButton* httpButton;
 @property (weak, nonatomic) IBOutlet UIButton* httpsButton;
 
-@property (weak, nonatomic) IBOutlet UITextField* httpInformationField;
-@property (weak, nonatomic) IBOutlet UITextField* httpsInformationField;
+@property (weak, nonatomic) IBOutlet UITextView* httpInformationField;
+@property (weak, nonatomic) IBOutlet UITextView* httpsInformationField;
 
 @end
