@@ -14,31 +14,32 @@
 
 @implementation BGKVLevelSelectViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (IBAction)goToLevelOfTag:(UIControl *)sender
+{
+    [self presentViewController:[BGKVLevelSelectViewController initialVCForLevel:sender.tag]
+                       animated:YES
+                     completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
++ (UIViewController *)initialVCForLevel:(int)level
+{
+    NSString *storyboardName;
+    
+    switch (level) {
+        case 0: {
+            storyboardName = @"TutorialLevelStoryboard";
+            break;
+        }
+            
+        default: {
+            storyboardName = [NSString stringWithFormat:@"Level%dStoryboard", level];
+            break;
+        }
+    }
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+    return [storyboard instantiateInitialViewController];
 }
-
-//// Not currently used, but potential automatic way to link storyboards in Level Select Screen
-//-(IBAction)action:(id)sender{
-//    
-//    UIButton *button=(UIButton*)sender;
-//    
-//    if(button.tag==0){
-//        
-//        //Tutorial link here
-//    }
-//    else {
-//        //Create string to level link from tag
-//        //Segue to that storyboard (not sure how to do this part)
-//    }
-//    
-//}
 
 /*
 #pragma mark - Navigation
