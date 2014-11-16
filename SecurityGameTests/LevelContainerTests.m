@@ -25,7 +25,7 @@
     
     // Has to be try-caught because LevelContainer expects to have an 'initial' segue
     @try {
-        container.view; //forces view to be loaded
+        [container loadView]; //forces view to be loaded.
     }
     @catch (NSException *exception) {
         if ([exception.name isEqualToString:NSInvalidArgumentException])

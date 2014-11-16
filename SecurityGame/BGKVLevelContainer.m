@@ -12,6 +12,9 @@
 #import "BGKVHintViewController.h"
 #import "UIBarButtonItem+Badge.h"
 
+// Only to avoid 'undeclared selector "goToMainMenu"'
+#import "BGKVViewController.h"
+
 @interface BGKVLevelContainer ()
 
 @end
@@ -149,7 +152,7 @@
     // initWithCoder is likely, but apparently it's possible to be called
     // more than once? Either way, for now this works fine.
     
-    dispatch_once_t once_token = 0;
+    static dispatch_once_t once_token = 0;
     dispatch_once(&once_token, ^{
         if (! self.hintControllerName) { self.hintControllerName = @"hint"; }
         if (! self.initialSegueName) { self.initialSegueName = @"initial"; }
