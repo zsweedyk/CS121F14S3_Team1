@@ -45,6 +45,9 @@
 		AC1C88621A186A5900CFA7B5 /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C885F1A186A5900CFA7B5 /* UIBarButtonItem+Badge.m */; };
 		AC1C88631A186A5900CFA7B5 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88611A186A5900CFA7B5 /* UIButton+Badge.m */; };
 		AC1C88661A186BDA00CFA7B5 /* LevelContainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */; };
+		AC2B42B51A196FEA00DE86B0 /* BGKVLevel5PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2B42B41A196FEA00DE86B0 /* BGKVLevel5PasswordViewController.m */; };
+		AC2B42B71A196FF200DE86B0 /* Level5Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */; };
+		AC2B42B91A197EDD00DE86B0 /* Level5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */; };
 		AC71826319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
 		AC71826519F5F30D001EFA4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826419F5F30D001EFA4B /* CoreGraphics.framework */; };
 		AC71826719F5F30D001EFA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826619F5F30D001EFA4B /* UIKit.framework */; };
@@ -134,6 +137,10 @@
 		AC1C88601A186A5900CFA7B5 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
 		AC1C88611A186A5900CFA7B5 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
 		AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelContainerTests.m; sourceTree = "<group>"; };
+		AC2B42B31A196FEA00DE86B0 /* BGKVLevel5PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel5PasswordViewController.h; sourceTree = "<group>"; };
+		AC2B42B41A196FEA00DE86B0 /* BGKVLevel5PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel5PasswordViewController.m; sourceTree = "<group>"; };
+		AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level5Storyboard.storyboard; sourceTree = "<group>"; };
+		AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level5Tests.m; sourceTree = "<group>"; };
 		AC71825F19F5F30D001EFA4B /* SecurityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC71826219F5F30D001EFA4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC71826419F5F30D001EFA4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -338,6 +345,16 @@
 			name = Badges;
 			sourceTree = "<group>";
 		};
+		AC2B42B21A196F5A00DE86B0 /* Level5 */ = {
+			isa = PBXGroup;
+			children = (
+				AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */,
+				AC2B42B31A196FEA00DE86B0 /* BGKVLevel5PasswordViewController.h */,
+				AC2B42B41A196FEA00DE86B0 /* BGKVLevel5PasswordViewController.m */,
+			);
+			name = Level5;
+			sourceTree = "<group>";
+		};
 		AC71825619F5F30D001EFA4B = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +395,7 @@
 				ACE3641B19F75C9C0088346D /* Level2 */,
 				0AA3C7B61A0DE763000B0E7C /* Level3 */,
 				5D4E1CA31A11D99100C50D71 /* Level4 */,
+				AC2B42B21A196F5A00DE86B0 /* Level5 */,
 				0A1D068E1A11DA8E005BB7BE /* Level6 */,
 				5DA1722E1A181A2800E63BD0 /* Level9 */,
 				5DA1723A1A1830CD00E63BD0 /* Level10 */,
@@ -408,11 +426,12 @@
 				5DA172401A1859DC00E63BD0 /* Level10Tests.m */,
 				5DA172381A182C5000E63BD0 /* Level9Tests.m */,
 				0A1D06951A11DD0A005BB7BE /* Level6Tests.m */,
+				AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */,
 				5D4E1CA61A11D9BC00C50D71 /* Level4Tests.m */,
 				0A1D068C1A11B4D4005BB7BE /* Level3Tests.m */,
-				5DD50EC71A084C700049B512 /* MusicTests.m */,
 				AC71828D19F5F30D001EFA4B /* Level2Tests.m */,
 				93A159E81A11EEE500118451 /* Level1Tests.m */,
+				5DD50EC71A084C700049B512 /* MusicTests.m */,
 				AC71828819F5F30D001EFA4B /* Supporting Files */,
 			);
 			path = SecurityGameTests;
@@ -571,6 +590,7 @@
 				AC71827619F5F30D001EFA4B /* Main.storyboard in Resources */,
 				0A8D738C1A19476300E35321 /* Level12Storyboard.storyboard in Resources */,
 				0A1D06901A11DAB3005BB7BE /* Level6Storyboard.storyboard in Resources */,
+				AC2B42B71A196FF200DE86B0 /* Level5Storyboard.storyboard in Resources */,
 				0AA3C7B81A0DE780000B0E7C /* Level3Storyboard.storyboard in Resources */,
 				5D908D2119F8BB7B0054DF2D /* (null) in Resources */,
 				5D4E1CA51A11D9A100C50D71 /* Level4Storyboard.storyboard in Resources */,
@@ -594,6 +614,7 @@
 			files = (
 				ACE3641819F75C550088346D /* RBStoryboardPushSegue.m in Sources */,
 				0AA3C7BB1A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.m in Sources */,
+				AC2B42B51A196FEA00DE86B0 /* BGKVLevel5PasswordViewController.m in Sources */,
 				5DA172371A181AA600E63BD0 /* BGKVLevel9PasswordViewController.m in Sources */,
 				AC1C88501A186A2000CFA7B5 /* BGKVLevelContainer.m in Sources */,
 				0A8D73901A19479C00E35321 /* BGKVLevel12PasswordViewController.m in Sources */,
@@ -629,6 +650,7 @@
 			files = (
 				AC1C88661A186BDA00CFA7B5 /* LevelContainerTests.m in Sources */,
 				5DA172391A182C5000E63BD0 /* Level9Tests.m in Sources */,
+				AC2B42B91A197EDD00DE86B0 /* Level5Tests.m in Sources */,
 				0A1D068D1A11B4D4005BB7BE /* Level3Tests.m in Sources */,
 				0A1D06961A11DD0A005BB7BE /* Level6Tests.m in Sources */,
 				5DA172411A1859DC00E63BD0 /* Level10Tests.m in Sources */,
