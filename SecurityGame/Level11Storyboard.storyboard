@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Xe-rb-phB">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--Computer-->
+        <scene sceneID="USE-fa-yOi">
+            <objects>
+                <viewController id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevel11PasswordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6BE-dR-Uht"/>
+                        <viewControllerLayoutGuide type="bottom" id="ErL-3c-rav"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yTI-HG-vds">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-VO-Y8j">
+                                <rect key="frame" x="-471" y="-276" width="1495" height="1044"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="ruj-g5-ecr">
+                                <rect key="frame" x="-377" y="105" width="1890" height="1320"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-00-1LP" userLabel="Computer">
+                                <rect key="frame" x="312" y="-36" width="555" height="595"/>
+                                <state key="normal" image="Level1Computer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="computerTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="7Ge-WG-oqf"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Your boss asks you to submit your report up to this point. Submit your findings at www.whitehat.com" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFS-PM-bMn">
+                                <rect key="frame" x="27" y="68" width="300" height="150"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.7843137255" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="http://www.whitehat.com" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuH-PN-6c5" userLabel="AddressBar">
+                                <rect key="frame" x="392" y="39" width="395" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWN-qh-bJe" userLabel="Information">
+                                <rect key="frame" x="402" y="95" width="375" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Findings: Vita Brevis has several employees participating in suspicious activity, including holding anonymous Swiss bank accounts with large deposits in them, holding documents outside of their pay grade, and emails using non-standard encryption. The next stage in the investigation will be to pinpoint each of the various...</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3og-PA-hDE">
+                                <rect key="frame" x="561" y="247" width="56" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitPressed:" destination="3Xe-rb-phB" eventType="touchUpInside" id="g3o-6j-zjD"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezS-NG-1KL" userLabel="PostSubmit">
+                                <rect key="frame" x="400" y="95" width="375" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Uh oh! Data submitted via http can potentially be intercepted by other hackers! Be more careful next time! Only submit information to sites you trust and that use https.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AN7-tR-LrV">
+                                <rect key="frame" x="555" y="247" width="69" height="30"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yIi-ZG-xuq" kind="modal" id="ycJ-jx-pLT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0qb-6F-zT6"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="continueButton" destination="AN7-tR-LrV" id="kjb-iZ-4ei"/>
+                        <outlet property="informationField" destination="zWN-qh-bJe" id="cJA-Qq-F9I"/>
+                        <outlet property="postSubmitInfo" destination="ezS-NG-1KL" id="jZq-RE-AB8"/>
+                        <outlet property="submitButton" destination="3og-PA-hDE" id="0Xf-u1-OPI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2154" y="-77"/>
+        </scene>
+        <!--Load Screen View Controller-->
+        <scene sceneID="hNu-KQ-i0b">
+            <objects>
+                <viewController id="yIi-ZG-xuq" customClass="BGKVLoadScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KUM-rS-aey"/>
+                        <viewControllerLayoutGuide type="bottom" id="ybM-jH-eN8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0S0-N7-0FQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wHh-Ay-RdF">
+                                <rect key="frame" x="494" y="550" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWE-qn-ChN">
+                                <rect key="frame" x="476" y="557" width="73" height="30"/>
+                                <state key="normal" title="Next Level">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jFV-zL-6BU" kind="custom" customClass="RBStoryboardModalSegue" id="kGF-8c-0Lj"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Make sure that you always use HTTPS when you are submitting any personal information or passwords." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
+                                <rect key="frame" x="350" y="258" width="324" height="124"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="nextLevelButton" destination="tWE-qn-ChN" id="h34-u9-KUn"/>
+                        <outlet property="spinner" destination="wHh-Ay-RdF" id="eI3-Z2-af4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbt-Ak-FC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3313" y="40"/>
+        </scene>
+        <!--Level12Link-->
+        <scene sceneID="dHe-eL-yoi">
+            <objects>
+                <viewController title="Level12Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DxR-4l-rxf"/>
+                        <viewControllerLayoutGuide type="bottom" id="7L6-Wi-lyI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gPV-Sl-qsh">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level12Storyboard"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfi-ZO-AT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3614" y="1015"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Level1Computer" width="800" height="800"/>
+        <image name="Level1WoodenTable" width="800" height="495"/>
+        <image name="LibraryBackground1" width="1024" height="778"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+</document>
