@@ -35,7 +35,7 @@
     XCTAssertFalse([controller checkPassword:@"4"]);
     XCTAssertFalse([controller checkPassword:@"2"]);
     XCTAssertFalse([controller checkPassword:@"1"]);
-    XCTAssertTrue([controller checkPassword:@"5"]);
+    XCTAssertTrue([controller checkPassword:@"3"]);
 }
 
 @end
