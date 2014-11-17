@@ -133,7 +133,7 @@
         <!--Computer-->
         <scene sceneID="USE-fa-yOi">
             <objects>
-                <viewController id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevel2PasswordViewController" sceneMemberID="viewController">
+                <viewController id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevel8PasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6BE-dR-Uht"/>
                         <viewControllerLayoutGuide type="bottom" id="ErL-3c-rav"/>
@@ -265,7 +265,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level3Storyboard"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level9Storyboard"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfi-ZO-AT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
