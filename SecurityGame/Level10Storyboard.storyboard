@@ -30,7 +30,7 @@
                                 <rect key="frame" x="263" y="447" width="560" height="362"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-b8-985">
-                                <rect key="frame" x="538" y="396" width="170" height="160"/>
+                                <rect key="frame" x="572" y="386" width="170" height="160"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
@@ -42,12 +42,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-vT-DUp">
-                                <rect key="frame" x="393" y="493" width="104" height="92"/>
+                                <rect key="frame" x="488" y="509" width="76" height="66"/>
                                 <state key="normal" image="USBDrive">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="3Xe-rb-phB" kind="modal" id="pHw-9l-f2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz8-4F-hYD">
+                                <rect key="frame" x="369" y="394" width="90" height="181"/>
+                                <state key="normal" image="Phone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Iei-Aa-QcZ" kind="modal" id="fu1-5k-knO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,7 +73,7 @@
         <!--Computer-->
         <scene sceneID="USE-fa-yOi">
             <objects>
-                <viewController id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevel9PasswordViewController" sceneMemberID="viewController">
+                <viewController id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevel10PasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6BE-dR-Uht"/>
                         <viewControllerLayoutGuide type="bottom" id="ErL-3c-rav"/>
@@ -125,8 +134,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive inserted. Password is &quot;CgF3n8x6&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-s3-5nN">
-                                <rect key="frame" x="409" y="231" width="319" height="30"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive inserted. Password is &quot;8443&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-s3-5nN">
+                                <rect key="frame" x="432" y="231" width="272" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -173,9 +182,9 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
-                                <rect key="frame" x="340" y="322" width="345" height="124"/>
+                                <rect key="frame" x="350" y="322" width="324" height="124"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">Even if you pick a long, random password, leaving it around won't make it secure! USB drives are also easy to lose, so make sure you don't put sensitive information on them!</string>
+                                <string key="text">Good job with your creative security! Unfortunately, you still left passwords laying around. If you want to use your phone to store passwords, you should use a secure password manager.</string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -193,10 +202,10 @@
             </objects>
             <point key="canvasLocation" x="3392" y="-369"/>
         </scene>
-        <!--Level10Link-->
+        <!--Level11Link-->
         <scene sceneID="dHe-eL-yoi">
             <objects>
-                <viewController title="Level10Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Level11Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DxR-4l-rxf"/>
                         <viewControllerLayoutGuide type="bottom" id="7L6-Wi-lyI"/>
@@ -208,12 +217,86 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level10Storyboard"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level11Storyboard"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfi-ZO-AT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3664" y="525"/>
+        </scene>
+        <!--Computer-->
+        <scene sceneID="xla-iE-0ab">
+            <objects>
+                <viewController id="Iei-Aa-QcZ" userLabel="Computer" customClass="BGKVLevel10PasswordViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pxT-bZ-zkF"/>
+                        <viewControllerLayoutGuide type="bottom" id="rbC-lI-WHa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CKA-M1-Tnd">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="Iwx-FP-Q7A">
+                                <rect key="frame" x="-471" y="-276" width="1495" height="1044"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="geR-5P-grz">
+                                <rect key="frame" x="-377" y="105" width="1890" height="1320"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co8-yq-V04">
+                                <rect key="frame" x="904" y="724" width="63" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pGY-WJ-pig" kind="modal" id="Th4-4A-CrI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXB-xW-qEZ">
+                                <rect key="frame" x="130" y="28" width="499" height="539"/>
+                                <state key="normal" image="Phone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="computerTapped:" destination="Iei-Aa-QcZ" eventType="touchUpInside" id="xkQ-vc-2jl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-dL-o9j">
+                                <rect key="frame" x="758" y="270" width="188" height="168"/>
+                                <state key="normal" title="USB drive" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3Xe-rb-phB" kind="modal" id="PLc-19-Ca2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLx-hT-AFD">
+                                <rect key="frame" x="312" y="183" width="135" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your password is &quot;alphabet&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-MC-2uO">
+                                <rect key="frame" x="280" y="283" width="199" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bhX-CU-ITX"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="phonePasswordField" destination="qLx-hT-AFD" id="QeZ-a3-DFH"/>
+                        <outlet property="phonePasswordInformationField" destination="9q7-MC-2uO" id="D4H-PZ-dhb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYg-iW-ODa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="-1303"/>
         </scene>
     </scenes>
     <resources>
@@ -221,6 +304,7 @@
         <image name="Level1Computer" width="800" height="800"/>
         <image name="Level1WoodenTable" width="800" height="495"/>
         <image name="LibraryBackground1" width="1024" height="778"/>
+        <image name="Phone" width="308" height="618"/>
         <image name="USBDrive" width="638" height="444"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -229,7 +313,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="pHw-9l-f2Z"/>
+        <segue reference="PLc-19-Ca2"/>
+        <segue reference="Th4-4A-CrI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

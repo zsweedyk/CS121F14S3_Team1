@@ -11,6 +11,8 @@
 @interface BGKVLevelSelectViewController : UIViewController
 
 //Potential automatic storyboard method
-//-(IBAction)action:(id)sender;
+- (IBAction)goToLevelOfTag:(id)sender;
+
++ (UIViewController *)initialVCForLevel:(int)level;
 
 @end

@@ -1,18 +1,18 @@
 //
-//  BGKVLevel9PasswordViewController.m
+//  BGKVLevel10PasswordViewController.m
 //  SecurityGame
 //
 //  Created by Hayden Blauzvern on 11/15/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
-#import "BGKVLevel9PasswordViewController.h"
+#import "BGKVLevel10PasswordViewController.h"
 
-@interface BGKVLevel9PasswordViewController () <UITextFieldDelegate>
+@interface BGKVLevel10PasswordViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation BGKVLevel9PasswordViewController
+@implementation BGKVLevel10PasswordViewController
 
 - (IBAction)usbDriveTapped:(id)sender
 {
@@ -56,9 +56,15 @@
     self.usbDriveButton.layer.shadowOffset = CGSizeZero;
 }
 
-- (BOOL)checkPassword:(NSString *)guess
+- (BOOL)checkComputerPassword:(NSString *)guess
 {
-    NSString* password = @"CgF3n8x6";
+    NSString* password = @"alphabet";
+    return [guess isEqualToString:password];
+}
+
+- (BOOL)checkPhonePassword:(NSString *)guess
+{
+    NSString* password = @"8443";
     return [guess isEqualToString:password];
 }
 
@@ -66,13 +72,29 @@
 {
     if (textField == self.passwordField) {
         [textField resignFirstResponder];
-        if ([self checkPassword:self.passwordField.text]) {
+        if ([self checkComputerPassword:self.passwordField.text]) {
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"You guessed right!"
                                    message:@"Good work!"
                                    delegate:self
                                    cancelButtonTitle:@"Next level" otherButtonTitles:nil];
             [alert show];
+        } else {
+            UIAlertView * alert = [[UIAlertView alloc]
+                                   initWithTitle:@"Incorrect"
+                                   message:@"Try again!"
+                                   delegate:nil
+                                   cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+            self.passwordField.text = @"";
+            [alert show];
+        }
+        return YES;
+    }
+    else if (textField == self.phonePasswordField) {
+        [textField resignFirstResponder];
+        if ([self checkPhonePassword:self.phonePasswordField.text]) {
+            // Reveal the hidden password for the computer
+            self.phonePasswordInformationField.hidden = NO;
         } else {
             UIAlertView * alert = [[UIAlertView alloc]
                                    initWithTitle:@"Incorrect"
@@ -105,6 +127,7 @@
 {
     [super viewDidLoad];
     self.passwordField.delegate = self;
+    self.phonePasswordField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning

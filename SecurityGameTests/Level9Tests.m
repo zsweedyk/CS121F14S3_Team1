@@ -36,7 +36,7 @@
     XCTAssertFalse([controller checkPassword:@"frog"]);
     XCTAssertFalse([controller checkPassword:@"1245"]);
     XCTAssertFalse([controller checkPassword:@"12345"]);
-    XCTAssertTrue([controller checkPassword:@"gbnDfbN52"]);
+    XCTAssertTrue([controller checkPassword:@"CgF3n8x6"]);
 }
 
 @end
