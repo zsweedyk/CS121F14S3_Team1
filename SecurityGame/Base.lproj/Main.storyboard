@@ -122,6 +122,15 @@
                                     <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="dzp-Cq-ep3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uA-Yj-JTs">
+                                <rect key="frame" x="354" y="62" width="49" height="30"/>
+                                <state key="normal" title="Level 1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="HzZ-uG-jsm"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orQ-jg-8FJ">
                                 <rect key="frame" x="580" y="62" width="49" height="30"/>
                                 <state key="normal" title="Level 2">
@@ -149,6 +158,15 @@
                                     <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="EvD-Au-a2i"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWc-ag-VP6">
+                                <rect key="frame" x="354" y="219" width="49" height="30"/>
+                                <state key="normal" title="Level 5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="wYI-K8-8B7"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-Ke-Kek">
                                 <rect key="frame" x="580" y="219" width="49" height="30"/>
                                 <state key="normal" title="Level 6">
@@ -166,6 +184,15 @@
                                 <state key="normal" title="Level 8">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-ra-fFA">
+                                <rect key="frame" x="354" y="373" width="49" height="30"/>
+                                <state key="normal" title="Level 9">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="kci-EF-2BE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oZ-xx-HO4">
                                 <rect key="frame" x="580" y="373" width="58" height="30"/>
@@ -187,30 +214,6 @@
                                 <state key="normal" title="Level 12">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uA-Yj-JTs">
-                                <rect key="frame" x="354" y="62" width="49" height="30"/>
-                                <state key="normal" title="Level 1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="HzZ-uG-jsm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWc-ag-VP6">
-                                <rect key="frame" x="354" y="219" width="49" height="30"/>
-                                <state key="normal" title="Level 5">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-ra-fFA">
-                                <rect key="frame" x="354" y="373" width="49" height="30"/>
-                                <state key="normal" title="Level 9">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="kci-EF-2BE"/>
-                                </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnl-Qf-euc">
                                 <rect key="frame" x="349" y="531" width="58" height="30"/>
