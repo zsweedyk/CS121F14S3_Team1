@@ -26,7 +26,7 @@
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-00-1LP" userLabel="Computer">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-00-1LP" userLabel="Computer">
                                 <rect key="frame" x="312" y="-36" width="555" height="595"/>
                                 <state key="normal" image="Level1Computer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,7 +51,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWN-qh-bJe" userLabel="Information">
                                 <rect key="frame" x="402" y="95" width="375" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Findings: Vita Brevis has several employees participating in suspicious activity, including holding anonymous Swiss bank accounts with large deposits in them, holding documents outside of their pay grade, and emails using non-standard encryption. The next stage in the investigation will be to pinpoint each of the various...</mutableString>
+                                <string key="text">Findings: Vita Brevis has several employees participating in suspicious activity, including holding anonymous Swiss bank accounts with large deposits in them, holding documents outside of their pay grade, and emails using non-standard encryption. The next stage in the investigation will be to pinpoint each of the various...</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -61,6 +61,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitPressed:" destination="3Xe-rb-phB" eventType="touchUpInside" id="g3o-6j-zjD"/>
+                                </connections>
                             </button>
                             <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezS-NG-1KL" userLabel="PostSubmit">
                                 <rect key="frame" x="400" y="95" width="375" height="128"/>
@@ -70,7 +73,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AN7-tR-LrV">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AN7-tR-LrV">
                                 <rect key="frame" x="555" y="247" width="69" height="30"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,10 +88,10 @@
                     <navigationItem key="navigationItem" id="0qb-6F-zT6"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="continueButton" destination="AN7-tR-LrV" id="r1F-Wd-EwD"/>
-                        <outlet property="informationField" destination="zWN-qh-bJe" id="jYZ-2J-KZy"/>
-                        <outlet property="postSubmitInfo" destination="ezS-NG-1KL" id="2Md-97-xbP"/>
-                        <outlet property="submitButton" destination="3og-PA-hDE" id="Vft-wq-Qm3"/>
+                        <outlet property="continueButton" destination="AN7-tR-LrV" id="kjb-iZ-4ei"/>
+                        <outlet property="informationField" destination="zWN-qh-bJe" id="cJA-Qq-F9I"/>
+                        <outlet property="postSubmitInfo" destination="ezS-NG-1KL" id="jZq-RE-AB8"/>
+                        <outlet property="submitButton" destination="3og-PA-hDE" id="0Xf-u1-OPI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>

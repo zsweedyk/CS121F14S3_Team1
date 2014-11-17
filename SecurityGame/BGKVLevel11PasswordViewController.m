@@ -10,11 +10,12 @@
 
 @implementation BGKVLevel11PasswordViewController
 
-- (IBAction) submitPressed
+- (IBAction) submitPressed:(id)sender
 {
     self.informationField.hidden = YES;
-    self.postSubmitInfo.hidden = NO;
     self.submitButton.hidden = YES;
+    
+    self.postSubmitInfo.hidden = NO;
     self.continueButton.hidden = NO;
 }
 
@@ -27,19 +28,15 @@
     return self;
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self performSegueWithIdentifier:@"SegueToLoadScreen" sender:self];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
