@@ -186,6 +186,9 @@
                                 <state key="normal" title="Level 8">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="2IV-Yr-fnu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-ra-fFA">
                                 <rect key="frame" x="354" y="373" width="49" height="30"/>
