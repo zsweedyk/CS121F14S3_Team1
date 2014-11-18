@@ -21,7 +21,7 @@
                      completion:nil];
 }
 
-+ (UIViewController *)initialVCForLevel:(int)level
++ (UIViewController *)initialVCForLevel:(NSInteger)level
 {
     NSString *storyboardName;
     
