@@ -109,8 +109,8 @@
         case 0: {
             NSString *expectedButtonTitle = @"Quit Game";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
-                     @"Action sheet %@: index %d was expected to be '%@', was actually '%@'",
-                     actionSheet, buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
+                     @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
+                     actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
             
             // This selector is declared in BGKVViewController
             UIViewController *mainMenuVC = [self targetForAction:@selector(goToMainMenu:) withSender:self];
@@ -124,8 +124,8 @@
         case 2: {
             NSString *expectedButtonTitle = @"Reset Level";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
-                     @"Action sheet %@: index %d was expected to be '%@', was actually '%@'",
-                     actionSheet, buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
+                     @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
+                     actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
             
             [self resetCache];
             [self showInitialLevelViewController];

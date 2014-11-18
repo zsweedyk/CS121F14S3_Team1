@@ -93,8 +93,8 @@
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-JH-8Rl">
-                                <rect key="frame" x="346" y="202" width="275" height="367"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-JH-8Rl">
+                                <rect key="frame" x="343" y="201" width="275" height="355"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Search results for: "Bank account Policies US"  1) Enter Credit card number here and recieve FREE bank account!!  2) Create an account and donate 200 US dollars for a chance to win a secret prize!  3) Bank account policies in the US. Secure and safe savings!  4) Click here to download this easy program to increase your money!  5) Let us keep your money safe! Just enter your information and account number, and we will double your money in a year!! </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -295,8 +295,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="fFg-NZ-8cX"/>
+        <segue reference="Pk4-7q-BQk"/>
         <segue reference="Z7H-vO-4j9"/>
-        <segue reference="khb-7q-iOD"/>
+        <segue reference="fFg-NZ-8cX"/>
     </inferredMetricsTieBreakers>
 </document>

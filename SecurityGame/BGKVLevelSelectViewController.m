@@ -32,7 +32,7 @@
         }
             
         default: {
-            storyboardName = [NSString stringWithFormat:@"Level%dStoryboard", level];
+            storyboardName = [NSString stringWithFormat:@"Level%ldStoryboard", (long)level];
             break;
         }
     }
