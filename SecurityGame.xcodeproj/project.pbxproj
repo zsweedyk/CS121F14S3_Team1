@@ -40,6 +40,9 @@
 		93A159E91A11EEE500118451 /* Level1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A159E81A11EEE500118451 /* Level1Tests.m */; };
 		93EED58F1A19952200F1B61B /* BGKVLevel7PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EED58E1A19952200F1B61B /* BGKVLevel7PasswordViewController.m */; };
 		93EED5911A19A42000F1B61B /* Level7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EED5901A19A42000F1B61B /* Level7Tests.m */; };
+		93D23E1A1A19CF2700C82071 /* Level13Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D23E191A19CF2700C82071 /* Level13Storyboard.storyboard */; };
+		93D23E1D1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D23E1C1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m */; };
+		93D23E1F1A19D6AD00C82071 /* Level13Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D23E1E1A19D6AD00C82071 /* Level13Tests.m */; };
 		93D23E111A19A8BB00C82071 /* Level8Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D23E101A19A8BB00C82071 /* Level8Storyboard.storyboard */; };
 		93D23E141A19AA8700C82071 /* BGKVLevel8PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D23E131A19AA8700C82071 /* BGKVLevel8PasswordViewController.m */; };
 		93D23E161A19AC7A00C82071 /* Level8Tests.m in Resources */ = {isa = PBXBuildFile; fileRef = 93D23E151A19AC7A00C82071 /* Level8Tests.m */; };
@@ -134,6 +137,10 @@
 		93EED58D1A19952200F1B61B /* BGKVLevel7PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel7PasswordViewController.h; sourceTree = "<group>"; };
 		93EED58E1A19952200F1B61B /* BGKVLevel7PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel7PasswordViewController.m; sourceTree = "<group>"; };
 		93EED5901A19A42000F1B61B /* Level7Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level7Tests.m; sourceTree = "<group>"; };
+		93D23E191A19CF2700C82071 /* Level13Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level13Storyboard.storyboard; sourceTree = "<group>"; };
+		93D23E1B1A19D5A400C82071 /* BGKVLevel13PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel13PasswordViewController.h; sourceTree = "<group>"; };
+		93D23E1C1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel13PasswordViewController.m; sourceTree = "<group>"; };
+		93D23E1E1A19D6AD00C82071 /* Level13Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level13Tests.m; sourceTree = "<group>"; };
 		93D23E101A19A8BB00C82071 /* Level8Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level8Storyboard.storyboard; sourceTree = "<group>"; };
 		93D23E121A19AA8700C82071 /* BGKVLevel8PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel8PasswordViewController.h; sourceTree = "<group>"; };
 		93D23E131A19AA8700C82071 /* BGKVLevel8PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel8PasswordViewController.m; sourceTree = "<group>"; };
@@ -322,6 +329,16 @@
 			name = Level7;
 			sourceTree = "<group>";
 		};
+		93D23E181A19CE6200C82071 /* Level13 */ = {
+			isa = PBXGroup;
+			children = (
+				93D23E191A19CF2700C82071 /* Level13Storyboard.storyboard */,
+				93D23E1B1A19D5A400C82071 /* BGKVLevel13PasswordViewController.h */,
+				93D23E1C1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m */,
+			);
+			name = Level13;
+			sourceTree = "<group>";
+		};
 		93D23E0F1A19A79600C82071 /* Level8 */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +469,7 @@
 				5DA1723A1A1830CD00E63BD0 /* Level10 */,
 				0AAF58CA1A199BE0005984BE /* Level11 */,
 				0A8D738A1A19474500E35321 /* Level12 */,
+				93D23E181A19CE6200C82071 /* Level13 */,
 				ACE3640719F75C550088346D /* RBStoryboardClasses */,
 				AC71827A19F5F30D001EFA4B /* Images.xcassets */,
 				AC71826919F5F30D001EFA4B /* Supporting Files */,
@@ -486,6 +504,7 @@
 				AC71828D19F5F30D001EFA4B /* Level2Tests.m */,
 				93A159E81A11EEE500118451 /* Level1Tests.m */,
 				5DD50EC71A084C700049B512 /* MusicTests.m */,
+				93D23E1E1A19D6AD00C82071 /* Level13Tests.m */,
 				AC71828819F5F30D001EFA4B /* Supporting Files */,
 			);
 			path = SecurityGameTests;
@@ -647,6 +666,7 @@
 				0A1D06901A11DAB3005BB7BE /* Level6Storyboard.storyboard in Resources */,
 				93D23E111A19A8BB00C82071 /* Level8Storyboard.storyboard in Resources */,
 				AC2B42B71A196FF200DE86B0 /* Level5Storyboard.storyboard in Resources */,
+				93D23E1A1A19CF2700C82071 /* Level13Storyboard.storyboard in Resources */,
 				0AA3C7B81A0DE780000B0E7C /* Level3Storyboard.storyboard in Resources */,
 				0AAF58CF1A199CB9005984BE /* Level11Storyboard.storyboard in Resources */,
 				5D908D2119F8BB7B0054DF2D /* (null) in Resources */,
@@ -702,6 +722,7 @@
 				AC1C885D1A186A4E00CFA7B5 /* BGKVExitLevelSegue.m in Sources */,
 				5D4E1C991A11B24900C50D71 /* BGKVLoadScreenViewController.m in Sources */,
 				ACE3641719F75C550088346D /* RBStoryboardPopoverSegue.m in Sources */,
+				93D23E1D1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +735,7 @@
 				AC2B42B91A197EDD00DE86B0 /* Level5Tests.m in Sources */,
 				0A1D068D1A11B4D4005BB7BE /* Level3Tests.m in Sources */,
 				93EED5911A19A42000F1B61B /* Level7Tests.m in Sources */,
+				93D23E1F1A19D6AD00C82071 /* Level13Tests.m in Sources */,
 				0A1D06961A11DD0A005BB7BE /* Level6Tests.m in Sources */,
 				5DA172411A1859DC00E63BD0 /* Level10Tests.m in Sources */,
 				AC71828E19F5F30D001EFA4B /* Level2Tests.m in Sources */,

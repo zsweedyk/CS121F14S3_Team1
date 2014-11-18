@@ -222,6 +222,9 @@
                                 <state key="normal" title="Level 13">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToLevelOfTag:" destination="tVx-7B-OVs" eventType="touchUpInside" id="g93-Mr-ayh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swB-Nf-L8h">
                                 <rect key="frame" x="478" y="664" width="35" height="30"/>
