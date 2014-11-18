@@ -94,7 +94,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pGY-WJ-pig" kind="custom" customClass="RBStoryboardModalSegue" id="ev6-Mz-169"/>
+                                    <segue destination="pGY-WJ-pig" kind="modal" id="ev6-Mz-169"/>
                                 </connections>
                             </button>
                         </subviews>
