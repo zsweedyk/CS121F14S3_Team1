@@ -100,7 +100,7 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     NSAssert(viewController != self.viewControllers[0], @"Somehow shouldSelectViewController isn't doing its job.");
-    int index = viewController.tabBarItem.tag;
+    NSInteger index = viewController.tabBarItem.tag;
     [self markHintAtIndexAsViewed:index];
 }
 
