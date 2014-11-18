@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		93FDAADD1A1B1A05001C9A85 /* OClint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 93FDAAE01A1B1A05001C9A85 /* Build configuration list for PBXAggregateTarget "OClint" */;
+			buildPhases = (
+				93FDAAE11A1B1A2D001C9A85 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = OClint;
+			productName = OClint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0A0740E41A19A6B90087D770 /* BGKVLevel11PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0740E31A19A6B90087D770 /* BGKVLevel11PasswordViewController.m */; };
 		0A1D068D1A11B4D4005BB7BE /* Level3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1D068C1A11B4D4005BB7BE /* Level3Tests.m */; };
@@ -620,6 +634,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = BGKV;
 				TargetAttributes = {
+					93FDAADD1A1B1A05001C9A85 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
 					AC71827F19F5F30D001EFA4B = {
 						TestTargetID = AC71825E19F5F30D001EFA4B;
 					};
@@ -640,6 +657,7 @@
 			targets = (
 				AC71825E19F5F30D001EFA4B /* SecurityGame */,
 				AC71827F19F5F30D001EFA4B /* SecurityGameTests */,
+				93FDAADD1A1B1A05001C9A85 /* OClint */,
 			);
 		};
 /* End PBXProject section */
@@ -699,6 +717,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "~/Desktop/CS121F14S3_Team1/XcodeCoverage/exportenv.sh";
+		};
+		93FDAAE11A1B1A2D001C9A85 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source ~/.bashrc\n\nhash oclint &> /dev/null\nif [ $? -eq 1 ]; then\necho >&2 \"oclint not found, analyzing stopped\"\nexit 1\nfi\n\n\ncd ${TARGET_TEMP_DIR}\nif [ ! -f compile_commands.json ]; then\necho \"[*] compile_commands.json not found, possibly clean was performed\"\necho \"[*] starting xcodebuild to rebuild the project..\"\n# clean previous output\nif [ -f xcodebuild.log ]; then\nrm xcodebuild.log\nfi\n\ncd ${SRCROOT}\nxcodebuild clean\n\n#build xcodebuild.log\nxcodebuild | tee ${TARGET_TEMP_DIR}/xcodebuild.log\n#xcodebuild <options>| tee ${TARGET_TEMP_DIR}/xcodebuild.log\n\necho \"[*] transforming xcodebuild.log into compile_commands.json...\"\ncd ${TARGET_TEMP_DIR}\n#transform it into compile_commands.json\noclint-xcodebuild\n\necho \"[*] copy compile_commands.json to the project root...\"\ncp ${TARGET_TEMP_DIR}/compile_commands.json ${SRCROOT}/compile_commands.json\nfi\n\necho \"[*] starting analyzing\"\ncd ${TARGET_TEMP_DIR}\noclint-json-compilation-database | sed 's/\\(.*\\.\\m\\{1,2\\}:[0-9]*:[0-9]*:\\)/\\1 warning:/'";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -800,6 +831,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		93FDAADE1A1B1A05001C9A85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		93FDAADF1A1B1A05001C9A85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		AC71828F19F5F30D001EFA4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -945,6 +990,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		93FDAAE01A1B1A05001C9A85 /* Build configuration list for PBXAggregateTarget "OClint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93FDAADE1A1B1A05001C9A85 /* Debug */,
+				93FDAADF1A1B1A05001C9A85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AC71825A19F5F30D001EFA4B /* Build configuration list for PBXProject "SecurityGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
