@@ -13,6 +13,6 @@
 //Potential automatic storyboard method
 - (IBAction)goToLevelOfTag:(id)sender;
 
-+ (UIViewController *)initialVCForLevel:(int)level;
++ (UIViewController *)initialVCForLevel:(NSInteger)level;
 
 @end
