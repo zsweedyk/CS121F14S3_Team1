@@ -63,11 +63,11 @@
     [self setSelectedViewController:self.viewControllers[1]];
 }
 
-- (BOOL)makeHintAtIndexAvailable:(int)index
+- (BOOL)makeHintAtIndexAvailable:(NSInteger)index
 {
     UITabBarItem *item = self.tabBar.items[index];
     _is_available[index] = @YES;
-    item.title = [NSString stringWithFormat:@"Hint %d", index-1];
+    item.title = [NSString stringWithFormat:@"Hint %ld", (long)index-1];
     item.enabled = YES;
     
     if (! [_is_viewed[index] boolValue]) {
@@ -79,7 +79,7 @@
     return YES;
 }
 
-- (void)markHintAtIndexAsViewed:(int)index
+- (void)markHintAtIndexAsViewed:(NSInteger)index
 {
     _is_viewed[index] = @YES;
     UITabBarItem *item = self.tabBar.items[index];
@@ -100,7 +100,7 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     NSAssert(viewController != self.viewControllers[0], @"Somehow shouldSelectViewController isn't doing its job.");
-    int index = viewController.tabBarItem.tag;
+    NSInteger index = viewController.tabBarItem.tag;
     [self markHintAtIndexAsViewed:index];
 }
 

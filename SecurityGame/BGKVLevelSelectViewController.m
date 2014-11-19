@@ -21,7 +21,7 @@
                      completion:nil];
 }
 
-+ (UIViewController *)initialVCForLevel:(int)level
++ (UIViewController *)initialVCForLevel:(NSInteger)level
 {
     NSString *storyboardName;
     
@@ -32,7 +32,7 @@
         }
             
         default: {
-            storyboardName = [NSString stringWithFormat:@"Level%dStoryboard", level];
+            storyboardName = [NSString stringWithFormat:@"Level%ldStoryboard", (long)level];
             break;
         }
     }

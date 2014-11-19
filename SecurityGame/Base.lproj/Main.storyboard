@@ -266,13 +266,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BRb-7l-6T3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRb-7l-6T3">
                                 <rect key="frame" x="73" y="0.0" width="885" height="768"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">
 
 
-Welcome to SPICE, a group of highly trained security professionals which specializes in computer, phone, and internet security. For your first assignment, you have been hired by the CEO of Vita Brevis, a company attempting to allow people to live longer lives. The CEO believes that one of his employees has been leaking company secrets to their biggest competitor, Novam Vitam. Your job is to search for evidence to confirm the CEOs suspicions. 
+Welcome to WHITE HAT, a group of highly trained security professionals which specializes in computer, phone, and internet security. For your first assignment, you have been hired by the CEO of Vita Brevis, a company attempting to allow people to live longer lives. The CEO believes that one of his employees has been leaking company secrets to their biggest competitor, Novam Vitam. Your job is to search for evidence to confirm the CEOs suspicions. 
 
 Game Mechanics: In each room, there will be several objects you can interact with. To interact with an object, click on it. To return to the main screen, click on the back button outside of the object. You will gather clues in the room to figure out how to solve the challenge. After completing each challenge, you will be able to move on to the next level. 
 
