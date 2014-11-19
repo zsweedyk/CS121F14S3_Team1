@@ -31,9 +31,6 @@
                                 <state key="normal" image="Level1Computer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="computerTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="7Ge-WG-oqf"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZL-ki-Dtr">
                                 <rect key="frame" x="432" y="175" width="89" height="38"/>
