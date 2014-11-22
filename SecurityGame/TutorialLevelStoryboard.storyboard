@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="jno-3d-Cp4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="uyj-7B-T0H">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - TutorialLevelMain-->
+        <!--Level Container-->
+        <scene sceneID="GrA-WV-SXJ">
+            <objects>
+                <viewController id="uyj-7B-T0H" customClass="BGKVLevelContainer" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="jno-3d-Cp4" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="5Qg-Sq-Ps4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kf3-z0-Cnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="308"/>
+        </scene>
+        <!--Level View Controller - TutorialLevelMain-->
         <scene sceneID="Npe-92-YeQ">
             <objects>
-                <viewController title="TutorialLevelMain" id="jno-3d-Cp4" sceneMemberID="viewController">
+                <viewController title="TutorialLevelMain" id="jno-3d-Cp4" customClass="BGKVLevelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l8e-Mj-SeR"/>
                         <viewControllerLayoutGuide type="bottom" id="bCv-3s-rfq"/>
@@ -31,7 +43,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="758-bD-WB7" kind="modal" id="Ga6-Za-Pr7"/>
+                                    <segue destination="758-bD-WB7" kind="custom" customClass="BGKVWithinLevelSegue" id="Ga6-Za-Pr7"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77c-PL-vf6">
@@ -53,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="280" y="419"/>
         </scene>
-        <!--View Controller-->
+        <!--Level View Controller-->
         <scene sceneID="3sU-yG-41R">
             <objects>
-                <viewController id="758-bD-WB7" sceneMemberID="viewController">
+                <viewController id="758-bD-WB7" customClass="BGKVLevelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rfB-eJ-1aI"/>
                         <viewControllerLayoutGuide type="bottom" id="QGY-Ir-brr"/>
@@ -100,6 +112,9 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBt-4e-cQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

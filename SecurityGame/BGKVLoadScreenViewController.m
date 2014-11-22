@@ -28,7 +28,7 @@
     dispatch_async(downloadQueue, ^{
         
         // do our long running process here
-        [NSThread sleepForTimeInterval:6];
+        [NSThread sleepForTimeInterval:1];
         
         // do any UI stuff on the main UI thread
         dispatch_async(dispatch_get_main_queue(), ^{
