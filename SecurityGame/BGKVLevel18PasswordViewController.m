@@ -1,18 +1,18 @@
 //
-//  BGKVLevel10PasswordViewController.m
+//  BGKVLevel18PasswordViewController.m
 //  SecurityGame
 //
-//  Created by Hayden Blauzvern on 11/15/14.
+//  Created by Sarah Gilkinson on 11/21/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
-#import "BGKVLevel10PasswordViewController.h"
+#import "BGKVLevel18PasswordViewController.h"
 
-@interface BGKVLevel10PasswordViewController () <UITextFieldDelegate>
+@interface BGKVLevel18PasswordViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation BGKVLevel10PasswordViewController
+@implementation BGKVLevel18PasswordViewController
 
 - (IBAction)usbDriveTapped:(id)sender
 {

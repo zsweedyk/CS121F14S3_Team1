@@ -1,14 +1,14 @@
 //
-//  BGKVLevel10PasswordViewController.h
+//  BGKVLevel18PasswordViewController.h
 //  SecurityGame
 //
-//  Created by Hayden Blauzvern on 11/15/14.
+//  Created by Sarah Gilkinson on 11/21/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
 #import "BGKVLevelViewController.h"
 
-@interface BGKVLevel10PasswordViewController : BGKVLevelViewController
+@interface BGKVLevel18PasswordViewController : BGKVLevelViewController
 
 @property (weak, nonatomic) IBOutlet UITextField* passwordField;
 @property (weak, nonatomic) IBOutlet UIButton* usbDriveButton;
