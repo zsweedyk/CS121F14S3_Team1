@@ -18,9 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITextField* phonePasswordField;
 @property (weak, nonatomic) IBOutlet UITextField* phonePasswordInformationField;
 
-/*
-- (BOOL)checkComputerPassword:(NSString *)guess;
-- (BOOL)checkPhonePassword:(NSString *)guess;
-*/
+
+//- (BOOL)checkComputerPassword:(NSString *)guess;
+//- (BOOL)checkPhonePassword:(NSString *)guess;
+
 
 @end

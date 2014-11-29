@@ -133,9 +133,11 @@
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
             
-            // This selector is declared in BGKVViewController
-            UIViewController *mainMenuVC = [self targetForAction:@selector(goToMainMenu:) withSender:self];
-            [mainMenuVC dismissViewControllerAnimated:YES completion:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // This selector is declared in BGKVViewController
+                UIViewController *mainMenuVC = [self targetForAction:@selector(goToMainMenu:) withSender:self];
+                [mainMenuVC dismissViewControllerAnimated:YES completion:nil];
+            });
             
             break;
         }
