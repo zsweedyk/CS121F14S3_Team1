@@ -14,57 +14,131 @@
 
 @implementation BGKVLevel18PasswordViewController
 
-- (IBAction)usbDriveTapped:(id)sender
+- (IBAction)usbDriveTapped:(UIButton*)sender
 {
-    self.usbDriveButton.selected = YES;
     // http://stackoverflow.com/questions/16352523/glow-effect-to-custom-uibutton-like-info-uibutton
-    [self startButtonGlow];
+    if (sender.tag == 1) {
+        self.usbDriveButton1.selected = YES;
+        self.usbDriveButton2.selected = NO;
+        self.usbDriveButton3.selected = NO;
+        [self startButtonGlow: 1];
+    } else if (sender.tag == 2) {
+        self.usbDriveButton1.selected = NO;
+        self.usbDriveButton2.selected = YES;
+        self.usbDriveButton3.selected = NO;
+        [self startButtonGlow: 2];
+    } else {
+        self.usbDriveButton1.selected = NO;
+        self.usbDriveButton2.selected = NO;
+        self.usbDriveButton3.selected = YES;
+        [self startButtonGlow: 3];
+    }
 }
 
 - (IBAction)computerTapped:(id)sender
 {
-    if (self.usbDriveButton.selected) {
+    if (self.usbDriveButton1.selected) {
+        // Unhide random information
+        self.passwordInformationField.hidden = YES;
+        self.randomInformationField1.hidden = NO;
+        self.randomInformationField2.hidden = YES;
+    } else if (self.usbDriveButton2.selected) {
         // Unhide secret information
         self.passwordInformationField.hidden = NO;
-        self.ejectUsbDriveButton.hidden = NO;
+        self.randomInformationField1.hidden = YES;
+        self.randomInformationField2.hidden = YES;
+    } else {
+        // Unhide random information
+        self.passwordInformationField.hidden = YES;
+        self.randomInformationField1.hidden = YES;
+        self.randomInformationField2.hidden = NO;
     }
+    self.ejectUsbDriveButton.hidden = NO;
 }
 
 - (IBAction)ejectButtonTapped:(id)sender
 {
     self.passwordInformationField.hidden = YES;
+    self.randomInformationField1.hidden = YES;
+    self.randomInformationField2.hidden = YES;
     self.ejectUsbDriveButton.hidden = YES;
     
     // Unselect USB drive
-    self.usbDriveButton.selected = NO;
+    self.usbDriveButton1.selected = NO;
+    self.usbDriveButton2.selected = NO;
+    self.usbDriveButton3.selected = NO;
     [self removeButtonGlow];
 }
 
-- (void) startButtonGlow
+- (void) startButtonGlow:(int)drive
 {
-    self.usbDriveButton.layer.shadowColor = [UIColor cyanColor].CGColor;
-    self.usbDriveButton.layer.shadowRadius = 10.0f;
-    self.usbDriveButton.layer.shadowOpacity = 1.0f;
-    self.usbDriveButton.layer.shadowOffset = CGSizeZero;
+    if (drive == 1) {
+        self.usbDriveButton1.layer.shadowColor = [UIColor cyanColor].CGColor;
+        self.usbDriveButton1.layer.shadowRadius = 10.0f;
+        self.usbDriveButton1.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton1.layer.shadowOffset = CGSizeZero;
+        self.usbDriveButton2.layer.shadowColor = [UIColor clearColor].CGColor;
+        self.usbDriveButton2.layer.shadowRadius = 10.0f;
+        self.usbDriveButton2.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton2.layer.shadowOffset = CGSizeZero;
+        self.usbDriveButton3.layer.shadowColor = [UIColor clearColor].CGColor;
+        self.usbDriveButton3.layer.shadowRadius = 10.0f;
+        self.usbDriveButton3.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton3.layer.shadowOffset = CGSizeZero;
+    } else if (drive == 2) {
+        self.usbDriveButton2.layer.shadowColor = [UIColor cyanColor].CGColor;
+        self.usbDriveButton2.layer.shadowRadius = 10.0f;
+        self.usbDriveButton2.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton2.layer.shadowOffset = CGSizeZero;
+        self.usbDriveButton1.layer.shadowColor = [UIColor clearColor].CGColor;
+        self.usbDriveButton1.layer.shadowRadius = 10.0f;
+        self.usbDriveButton1.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton1.layer.shadowOffset = CGSizeZero;
+        self.usbDriveButton3.layer.shadowColor = [UIColor clearColor].CGColor;
+        self.usbDriveButton3.layer.shadowRadius = 10.0f;
+        self.usbDriveButton3.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton3.layer.shadowOffset = CGSizeZero;
+    } else {
+        self.usbDriveButton1.layer.shadowColor = [UIColor clearColor].CGColor;
+        self.usbDriveButton1.layer.shadowRadius = 10.0f;
+        self.usbDriveButton1.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton1.layer.shadowOffset = CGSizeZero;
+        self.usbDriveButton2.layer.shadowColor = [UIColor clearColor].CGColor;
+        self.usbDriveButton2.layer.shadowRadius = 10.0f;
+        self.usbDriveButton2.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton2.layer.shadowOffset = CGSizeZero;
+        self.usbDriveButton3.layer.shadowColor = [UIColor cyanColor].CGColor;
+        self.usbDriveButton3.layer.shadowRadius = 10.0f;
+        self.usbDriveButton3.layer.shadowOpacity = 1.0f;
+        self.usbDriveButton3.layer.shadowOffset = CGSizeZero;
+    }
 }
 
 - (void) removeButtonGlow
 {
-    self.usbDriveButton.layer.shadowColor = [UIColor clearColor].CGColor;
-    self.usbDriveButton.layer.shadowRadius = 10.0f;
-    self.usbDriveButton.layer.shadowOpacity = 1.0f;
-    self.usbDriveButton.layer.shadowOffset = CGSizeZero;
+    self.usbDriveButton1.layer.shadowColor = [UIColor clearColor].CGColor;
+    self.usbDriveButton1.layer.shadowRadius = 10.0f;
+    self.usbDriveButton1.layer.shadowOpacity = 1.0f;
+    self.usbDriveButton1.layer.shadowOffset = CGSizeZero;
+    self.usbDriveButton2.layer.shadowColor = [UIColor clearColor].CGColor;
+    self.usbDriveButton2.layer.shadowRadius = 10.0f;
+    self.usbDriveButton2.layer.shadowOpacity = 1.0f;
+    self.usbDriveButton2.layer.shadowOffset = CGSizeZero;
+    self.usbDriveButton3.layer.shadowColor = [UIColor clearColor].CGColor;
+    self.usbDriveButton3.layer.shadowRadius = 10.0f;
+    self.usbDriveButton3.layer.shadowOpacity = 1.0f;
+    self.usbDriveButton3.layer.shadowOffset = CGSizeZero;
 }
 
 - (BOOL)checkComputerPassword:(NSString *)guess
 {
-    NSString* password = @"alphabet";
+    NSString* password = @"celebrate";
     return [guess isEqualToString:password];
 }
 
 - (BOOL)checkPhonePassword:(NSString *)guess
 {
-    NSString* password = @"8443";
+    NSString* password = @"0110";
     return [guess isEqualToString:password];
 }
 
@@ -136,14 +210,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

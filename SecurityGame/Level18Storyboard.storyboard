@@ -41,15 +41,6 @@
                                     <segue destination="3Xe-rb-phB" kind="modal" id="nSy-gD-jIh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-vT-DUp">
-                                <rect key="frame" x="488" y="509" width="76" height="66"/>
-                                <state key="normal" image="USBDrive">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="3Xe-rb-phB" kind="modal" id="pHw-9l-f2Z"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz8-4F-hYD">
                                 <rect key="frame" x="369" y="394" width="90" height="181"/>
                                 <state key="normal" image="Phone">
@@ -58,6 +49,24 @@
                                 <connections>
                                     <segue destination="Iei-Aa-QcZ" kind="modal" id="fu1-5k-knO"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7b3-Mu-FSm">
+                                <rect key="frame" x="520" y="483" width="59" height="47"/>
+                                <state key="normal" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6By-J5-m8q">
+                                <rect key="frame" x="496" y="528" width="59" height="47"/>
+                                <state key="normal" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td0-Yk-uST">
+                                <rect key="frame" x="472" y="483" width="59" height="47"/>
+                                <state key="normal" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -111,15 +120,6 @@
                                     <action selector="computerTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="7Ge-WG-oqf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-fa-ZKs">
-                                <rect key="frame" x="68" y="377" width="188" height="168"/>
-                                <state key="normal" title="USB drive" image="USBDrive">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="usbDriveTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="SgR-sV-1hD"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kou-yt-R9e">
                                 <rect key="frame" x="620" y="269" width="108" height="30"/>
                                 <state key="normal" title="Eject USB drive">
@@ -134,11 +134,54 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive inserted. Password is &quot;8443&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-s3-5nN">
-                                <rect key="frame" x="432" y="231" width="272" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive inserted. Password is &quot;0110&quot;" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-s3-5nN">
+                                <rect key="frame" x="375" y="231" width="373" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive inserted. No data found." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIG-Ap-WRB">
+                                <rect key="frame" x="375" y="231" width="373" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive inserted. One homework file found." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzs-Ld-n4I">
+                                <rect key="frame" x="375" y="231" width="373" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8G-df-U95">
+                                <rect key="frame" x="151" y="291" width="188" height="168"/>
+                                <state key="normal" title="USB drive" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="usbDriveTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="Nnc-bG-w6E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-fa-ZKs">
+                                <rect key="frame" x="73" y="459" width="188" height="168"/>
+                                <state key="normal" title="USB drive" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="usbDriveTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="SgR-sV-1hD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="da8-Xf-pdf">
+                                <rect key="frame" x="-45" y="250" width="188" height="168"/>
+                                <state key="normal" title="USB drive" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="usbDriveTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="YGY-bi-KUE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -148,7 +191,11 @@
                         <outlet property="ejectUsbDriveButton" destination="Kou-yt-R9e" id="Apb-Ok-aOB"/>
                         <outlet property="passwordField" destination="zX4-OM-5vk" id="2dl-cx-VyR"/>
                         <outlet property="passwordInformationField" destination="vqB-s3-5nN" id="Hc2-Ol-lZO"/>
-                        <outlet property="usbDriveButton" destination="tcJ-fa-ZKs" id="jgg-Ho-Lzh"/>
+                        <outlet property="randomInformationField1" destination="mIG-Ap-WRB" id="QYz-7t-MrK"/>
+                        <outlet property="randomInformationField2" destination="kzs-Ld-n4I" id="km5-zL-KGA"/>
+                        <outlet property="usbDriveButton1" destination="tcJ-fa-ZKs" id="Glj-m4-bAO"/>
+                        <outlet property="usbDriveButton2" destination="Q8G-df-U95" id="mZi-xZ-zb7"/>
+                        <outlet property="usbDriveButton3" destination="da8-Xf-pdf" id="rzh-fF-vpP"/>
                         <segue destination="yIi-ZG-xuq" kind="modal" identifier="SegueToLoadScreen" id="KVE-rq-bVw"/>
                     </connections>
                 </viewController>
@@ -266,7 +313,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-dL-o9j">
-                                <rect key="frame" x="758" y="270" width="188" height="168"/>
+                                <rect key="frame" x="696" y="362" width="188" height="168"/>
                                 <state key="normal" title="USB drive" image="USBDrive">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -274,13 +321,25 @@
                                     <segue destination="3Xe-rb-phB" kind="modal" id="PLc-19-Ca2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3t-sE-ZFR">
+                                <rect key="frame" x="812" y="183" width="188" height="168"/>
+                                <state key="normal" title="USB drive" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLx-hT-AFD">
                                 <rect key="frame" x="312" y="183" width="135" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your password is &quot;alphabet&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-MC-2uO">
-                                <rect key="frame" x="280" y="283" width="199" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juA-Mi-c0c">
+                                <rect key="frame" x="607" y="197" width="188" height="168"/>
+                                <state key="normal" title="USB drive" image="USBDrive">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your password is &quot;celebrate&quot;" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-MC-2uO">
+                                <rect key="frame" x="269" y="283" width="221" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
