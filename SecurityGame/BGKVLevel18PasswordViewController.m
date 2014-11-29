@@ -132,7 +132,7 @@
 
 - (BOOL)checkComputerPassword:(NSString *)guess
 {
-    NSString* password = @"Celebrate!";
+    NSString* password = @"C3l3brat3!";
     return [guess isEqualToString:password];
 }
 

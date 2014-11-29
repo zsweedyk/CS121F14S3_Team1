@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton* usbDriveButton2;
 @property (weak, nonatomic) IBOutlet UIButton* usbDriveButton3;
 @property (weak, nonatomic) IBOutlet UITextField* passwordInformationField;
-@property (weak, nonatomic) IBOutlet UITextField* randomInformationField1;
+@property (weak, nonatomic) IBOutlet UITextView* randomInformationField1;
 @property (weak, nonatomic) IBOutlet UITextField* randomInformationField2;
 @property (weak, nonatomic) IBOutlet UIButton* ejectUsbDriveButton;
 
