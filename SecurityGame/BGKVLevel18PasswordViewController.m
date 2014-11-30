@@ -42,18 +42,20 @@
         self.passwordInformationField.hidden = YES;
         self.randomInformationField1.hidden = NO;
         self.randomInformationField2.hidden = YES;
+        self.ejectUsbDriveButton.hidden = NO;
     } else if (self.usbDriveButton2.selected) {
         // Unhide secret information
         self.passwordInformationField.hidden = NO;
         self.randomInformationField1.hidden = YES;
         self.randomInformationField2.hidden = YES;
-    } else {
+        self.ejectUsbDriveButton.hidden = NO;
+    } else if (self.usbDriveButton3.selected) {
         // Unhide random information
         self.passwordInformationField.hidden = YES;
         self.randomInformationField1.hidden = YES;
         self.randomInformationField2.hidden = NO;
+        self.ejectUsbDriveButton.hidden = NO;
     }
-    self.ejectUsbDriveButton.hidden = NO;
 }
 
 - (IBAction)ejectButtonTapped:(id)sender
