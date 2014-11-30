@@ -28,10 +28,6 @@
             <objects>
                 <viewController id="SeQ-vW-RqB" customClass="BGKVLevelContainer" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintControllerName" value="hint"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="initialSegueName" value="initial"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="Uey-xW-hlv" kind="unwind" unwindAction="goToMainMenu:" id="Nl7-sS-Hqa"/>
                         <segue destination="pGY-WJ-pig" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="X32-Sr-6EL"/>
@@ -60,9 +56,6 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="backSegueName" value="back"/>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Level1Chair" translatesAutoresizingMaskIntoConstraints="NO" id="Efr-Hl-rye">
                                 <rect key="frame" x="298" y="386" width="222" height="300"/>
@@ -111,9 +104,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="backSegueName" value="back"/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="tHM-vn-2xz"/>
                     <navigationItem key="navigationItem" title="Title" id="KEU-iW-NKg"/>
@@ -218,9 +208,6 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="backSegueName" value="back"/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Afm-qc-aOo"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -409,7 +396,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="PLc-19-Ca2"/>
+        <segue reference="nSy-gD-jIh"/>
         <segue reference="xDF-U6-HcN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
