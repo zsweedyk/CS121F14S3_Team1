@@ -12,11 +12,15 @@
 
 @interface BGKVLevelViewController : UIViewController
 
+@property (nonatomic) BOOL back;
 @property (nonatomic) NSString *cacheKey;
-@property (nonatomic) NSString *backSegueName;
+@property (nonatomic) NSString *password;
+
 @property (nonatomic, weak) BGKVLevelContainer *levelContainer;
 
+- (IBAction)enterPasswordFromTextField:(UITextField *)textField;
 
-// - (IBAction) goToPreviousScene:(UIStoryboardSegue *)segue;
+- (BOOL)checkPassword:(NSString *)guess;
+- (void)enteredCorrectPassword:(BOOL)correct sender:(id)sender;
 
 @end

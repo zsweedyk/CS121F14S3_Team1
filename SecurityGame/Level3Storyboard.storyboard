@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iKq-lf-sX9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="kyc-Tr-2Te">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Level Container-->
+        <scene sceneID="Hu4-eQ-D0I">
+            <objects>
+                <viewController id="kyc-Tr-2Te" customClass="BGKVLevelContainer" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="iKq-lf-sX9" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="UtD-Uz-oxB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8G-yO-cKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-938" y="549"/>
+        </scene>
+        <!--Initial-->
         <scene sceneID="gsR-dC-GFL">
             <objects>
-                <viewController id="iKq-lf-sX9" sceneMemberID="viewController">
+                <viewController id="iKq-lf-sX9" userLabel="Initial" customClass="BGKVLevelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7tE-VM-WkG"/>
                         <viewControllerLayoutGuide type="bottom" id="CCa-pf-JJd"/>
@@ -33,7 +44,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kj9-OB-cLw" kind="modal" id="cYM-Hd-HBo"/>
+                                    <segue destination="kj9-OB-cLw" kind="custom" customClass="BGKVWithinLevelSegue" id="cYM-Hd-HBo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meS-rl-h3h">
@@ -42,11 +53,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="g4R-r6-UoW" kind="modal" id="XnW-IB-5eG"/>
+                                    <segue destination="g4R-r6-UoW" kind="custom" customClass="BGKVWithinLevelSegue" id="XnW-IB-5eG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
@@ -54,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="28" y="736"/>
         </scene>
-        <!--Level3 Password View Controller-->
+        <!--Computer-->
         <scene sceneID="N3t-Ih-q9D">
             <objects>
-                <viewController id="g4R-r6-UoW" customClass="BGKVLevel3PasswordViewController" sceneMemberID="viewController">
+                <viewController id="g4R-r6-UoW" userLabel="Computer" customClass="BGKVLevelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ljr-nq-DUj"/>
                         <viewControllerLayoutGuide type="bottom" id="grU-SS-Slk"/>
@@ -81,18 +93,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X3H-A9-0UW">
                                 <rect key="frame" x="430" y="172" width="135" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u58-a0-Ndg">
-                                <rect key="frame" x="693" y="177" width="46" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <connections>
-                                    <segue destination="iKq-lf-sX9" kind="modal" id="KXw-k8-jBC"/>
+                                    <action selector="enterPasswordFromTextField:" destination="g4R-r6-UoW" eventType="editingDidEnd" id="2vb-jj-a0S"/>
+                                    <outlet property="delegate" destination="g4R-r6-UoW" id="AEc-VO-Ug0"/>
                                 </connections>
-                            </button>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hint: My name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGh-pt-3Nu">
                                 <rect key="frame" x="418" y="221" width="158" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -106,7 +112,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kj9-OB-cLw" kind="modal" id="ge9-UW-xHm"/>
+                                    <segue destination="kj9-OB-cLw" kind="custom" customClass="BGKVWithinLevelSegue" id="ge9-UW-xHm"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Taylor's Notes" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqc-bN-MgL">
@@ -117,21 +123,25 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="password" value="Taylor"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="passwordField" destination="X3H-A9-0UW" id="fxE-mV-rjO"/>
-                        <segue destination="7UU-Ky-p5v" kind="modal" identifier="SegueToLoadScreen" id="lPj-eq-IfS"/>
+                        <segue destination="7UU-Ky-p5v" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="lPj-eq-IfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY8-mo-W9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="198" y="1733"/>
         </scene>
-        <!--View Controller-->
+        <!--Notes-->
         <scene sceneID="FZa-pj-YBd">
             <objects>
-                <viewController id="kj9-OB-cLw" sceneMemberID="viewController">
+                <viewController id="kj9-OB-cLw" userLabel="Notes" customClass="BGKVLevelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1VE-aU-tXi"/>
                         <viewControllerLayoutGuide type="bottom" id="xTS-YM-zTq"/>
@@ -158,23 +168,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndb-wj-GbT">
-                                <rect key="frame" x="691" y="690" width="46" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iKq-lf-sX9" kind="modal" id="RhX-lF-tlA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeW-CW-84W">
                                 <rect key="frame" x="-125" y="134" width="429" height="519"/>
                                 <state key="normal" title="Button" image="Level1Computer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="g4R-r6-UoW" kind="modal" id="Gls-wY-Lrm"/>
+                                    <segue destination="g4R-r6-UoW" kind="custom" customClass="BGKVWithinLevelSegue" id="Gls-wY-Lrm"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hint: My name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpE-VH-AcV">
@@ -191,8 +191,12 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsN-vx-Mk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,6 +236,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -243,7 +248,7 @@
             </objects>
             <point key="canvasLocation" x="1536" y="1767"/>
         </scene>
-        <!--Level4Link-->
+        <!--Storyboard Link - Level4Link-->
         <scene sceneID="SP8-ts-kmA">
             <objects>
                 <viewController title="Level4Link" id="lbv-mY-flX" customClass="RBStoryboardLink" sceneMemberID="viewController">
@@ -255,6 +260,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -278,8 +284,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="cYM-Hd-HBo"/>
         <segue reference="Gls-wY-Lrm"/>
-        <segue reference="ge9-UW-xHm"/>
-        <segue reference="KXw-k8-jBC"/>
     </inferredMetricsTieBreakers>
 </document>

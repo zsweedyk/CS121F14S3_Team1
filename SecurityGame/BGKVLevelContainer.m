@@ -19,7 +19,9 @@
 
 @end
 
-@implementation BGKVLevelContainer
+@implementation BGKVLevelContainer {
+    dispatch_once_t _initialized_token;
+}
 
 #pragma mark -
 #pragma mark Custom Property Getters
@@ -31,10 +33,12 @@
 
 #pragma mark -
 #pragma mark Hints
+#pragma mark MAGIC STRING WARNING : hints
 - (void)initializeHints
 {
     @try {
-        self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:self.hintControllerName];
+        //self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:self.hintControllerName];
+        self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:@"hints"];
         [self.hintVC initialize];
         self.hintButton.enabled = YES;
     }
@@ -78,13 +82,30 @@
 }
 
 #pragma mark Back Button
-
+#pragma mark MAGIC STRING WARNING : back
+// "back" is the identifier of the segue that links a scene to another, that is followed when the back button is pressed
 - (IBAction)backButtonAction:(UIBarButtonItem *)sender
 {
     // Back button should not be active if the level view has nowhere to go back to
-    NSAssert(self.currentLevelVC.backSegueName, @"Back button activated when level view has no back segue.");
+    //NSAssert(self.currentLevelVC.backSegueName, @"Back button activated when level view has no back segue.");
     
-    [self.currentLevelVC performSegueWithIdentifier:self.currentLevelVC.backSegueName sender:sender];
+    //[self.currentLevelVC performSegueWithIdentifier:self.currentLevelVC.backSegueName sender:sender];
+    
+    //[self.currentLevelVC performSegueWithIdentifier:@"back" sender:sender];
+    @try {
+        //self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:self.hintControllerName];
+        [self.currentLevelVC performSegueWithIdentifier:@"back" sender:sender];
+    }
+    @catch (NSException *exception) {
+        if ([exception.name isEqualToString:NSInvalidArgumentException])
+        {
+            [self showInitialLevelViewController];
+        }
+        else
+        {
+            @throw;
+        }
+    }
 }
 - (void)setBackButtonEnabled:(BOOL)enabled
 {
@@ -112,9 +133,11 @@
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
             
-            // This selector is declared in BGKVViewController
-            UIViewController *mainMenuVC = [self targetForAction:@selector(goToMainMenu:) withSender:self];
-            [mainMenuVC dismissViewControllerAnimated:YES completion:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // This selector is declared in BGKVViewController
+                UIViewController *mainMenuVC = [self targetForAction:@selector(goToMainMenu:) withSender:self];
+                [mainMenuVC dismissViewControllerAnimated:YES completion:nil];
+            });
             
             break;
         }
@@ -152,10 +175,9 @@
     // initWithCoder is likely, but apparently it's possible to be called
     // more than once? Either way, for now this works fine.
     
-    static dispatch_once_t once_token = 0;
-    dispatch_once(&once_token, ^{
-        if (! self.hintControllerName) { self.hintControllerName = @"hint"; }
-        if (! self.initialSegueName) { self.initialSegueName = @"initial"; }
+    dispatch_once(&_initialized_token, ^{
+        //if (! self.hintControllerName) { self.hintControllerName = @"hints"; }
+        //if (! self.initialSegueName) { self.initialSegueName = @"initial"; }
         
         // Not working!
         // self.menuButton.badgeValue = @"HELLO?";
@@ -231,22 +253,29 @@
 #pragma mark -
 #pragma mark Switching Level Views
 
+#pragma mark MAGIC STRING WARNING : intial
+// "intial" is the identifier of the segue that links the LevelContainer to its first scene.
 - (void)showInitialLevelViewController
 {
+    [self performSegueWithIdentifier:@"initial" sender:self];
+    /*
     @try {
-        [self performSegueWithIdentifier:self.initialSegueName sender:nil];
+        //[self performSegueWithIdentifier:self.initialSegueName sender:nil];
+        [self performSegueWithIdentifier:@"initial" sender:nil];
     }
     @catch (NSException *exception) {
         if ([exception.name isEqualToString:NSInvalidArgumentException])
         {
             // Then, I suppose there isn't any initial view controller!
             // Very odd!
+            NSLog(@"No initial view controller");
         }
         else
         {
             @throw;
         }
     }
+     */
 }
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC
@@ -268,7 +297,8 @@
     [self.levelView addSubview: newVC.view];
     self.currentLevelVC = newVC;
 
-    [self setBackButtonEnabled: (self.currentLevelVC.backSegueName ? YES : NO)];
+    //[self setBackButtonEnabled: (self.currentLevelVC.backSegueName ? YES : NO)];
+    [self setBackButtonEnabled: self.currentLevelVC.back];
 
     newVC.levelContainer = self;
 }

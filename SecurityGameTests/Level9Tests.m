@@ -21,7 +21,13 @@
 - (void)setUp
 {
     [super setUp];
-    controller = [BGKVLevel9PasswordViewController alloc];
+    controller = [[UIStoryboard storyboardWithName:@"Level9Storyboard" bundle:nil]
+                  instantiateViewControllerWithIdentifier:@"PasswordController"];
+    //Alternatively:
+    /*
+    controller = [[BGKVLevel9PasswordViewController alloc] init];
+    controller.password = @"CgF3n8x6";
+     */
 }
 
 - (void)tearDown

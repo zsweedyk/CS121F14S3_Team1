@@ -8,52 +8,66 @@
 
 #import "BGKVLevelViewController.h"
 
-@interface BGKVLevelViewController ()
+@interface BGKVLevelViewController () <UITextFieldDelegate>
 
 @end
 
 @implementation BGKVLevelViewController
 
-- (BOOL) hidesBottomBarWhenPushed {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
     return YES;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (BOOL)checkPassword:(NSString *)guess
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    NSAssert(self.password, @"Tried to check password while there is no correct password set. %@", guess);
+    return [guess isEqualToString:self.password];
+}
+
+- (IBAction)enterPasswordFromTextField:(UITextField *)textField
+{
+    NSString *guess = textField.text;
+    if ([self checkPassword:guess]) {
+        [self enteredCorrectPassword:YES sender:textField];
+    } else {
+        [self enteredCorrectPassword:NO sender:textField];
+        textField.text = @"";
     }
-    return self;
 }
 
-- (void)viewDidLoad
+- (void)enteredCorrectPassword:(BOOL)correct sender:(id)sender
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if (correct) {
+        UIAlertView * alert = [[UIAlertView alloc]
+                               initWithTitle:@"You guessed right!"
+                               message:@"Good work!"
+                               
+                               // By setting delegate:self, dismissing this alert will run "alertView:clickedButtonAtIndex:"
+                               delegate:self
+                               
+                               cancelButtonTitle:@"Next level" otherButtonTitles:nil];
+        [alert show];
+        
+    } else {
+        UIAlertView * alert = [[UIAlertView alloc]
+                               initWithTitle:@"Incorrect"
+                               message:@"Try again!"
+                               
+                               // By setting delegate:nil, dismissing this alert will do nothing at all.
+                               delegate:nil
+                               
+                               cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        [alert show];
+    }
+
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark MAGIC STRING WARNING : correct
+// "correct" is the identifier of the segue that is run when the password is correct.
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self performSegueWithIdentifier:@"correct" sender:self];
 }
-
-/*
-- (IBAction) goToPreviousScene:(UIStoryboardSegue *)segue {
-    
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

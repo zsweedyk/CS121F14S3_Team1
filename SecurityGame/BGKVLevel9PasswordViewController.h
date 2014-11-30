@@ -15,6 +15,4 @@
 @property (weak, nonatomic) IBOutlet UITextField* passwordInformationField;
 @property (weak, nonatomic) IBOutlet UIButton* ejectUsbDriveButton;
 
-- (BOOL)checkPassword:(NSString *)guess;
-
 @end

@@ -21,7 +21,6 @@
 - (void)setUp
 {
     [super setUp];
-    controller = [BGKVLevel10PasswordViewController alloc];
 }
 
 - (void)tearDown
@@ -32,25 +31,29 @@
 // Tests checkComputerPassword method for correct password
 - (void)testCheckComputerPassword
 {
-    XCTAssertFalse([controller checkComputerPassword:@"taylor"]);
-    XCTAssertFalse([controller checkComputerPassword:@"frog"]);
-    XCTAssertFalse([controller checkComputerPassword:@"1245"]);
-    XCTAssertFalse([controller checkComputerPassword:@"12345"]);
-    XCTAssertFalse([controller checkComputerPassword:@"CgF3n8x6"]);
-    XCTAssertFalse([controller checkComputerPassword:@"8443"]);
-    XCTAssertTrue([controller checkComputerPassword:@"alphabet"]);
+    controller = [[UIStoryboard storyboardWithName:@"Level10Storyboard" bundle:nil]
+                  instantiateViewControllerWithIdentifier:@"ComputerPasswordController"];
+    XCTAssertFalse([controller checkPassword:@"taylor"]);
+    XCTAssertFalse([controller checkPassword:@"frog"]);
+    XCTAssertFalse([controller checkPassword:@"1245"]);
+    XCTAssertFalse([controller checkPassword:@"12345"]);
+    XCTAssertFalse([controller checkPassword:@"CgF3n8x6"]);
+    XCTAssertFalse([controller checkPassword:@"8443"]);
+    XCTAssertTrue([controller checkPassword:@"alphabet"]);
 }
 
 // Tests checkPassword method for correct password
 - (void)testCheckPhonePassword
 {
-    XCTAssertFalse([controller checkPhonePassword:@"taylor"]);
-    XCTAssertFalse([controller checkPhonePassword:@"frog"]);
-    XCTAssertFalse([controller checkPhonePassword:@"1245"]);
-    XCTAssertFalse([controller checkPhonePassword:@"12345"]);
-    XCTAssertFalse([controller checkPhonePassword:@"CgF3n8x6"]);
-    XCTAssertFalse([controller checkPhonePassword:@"alphabet"]);
-    XCTAssertTrue([controller checkPhonePassword:@"8443"]);
+    controller = [[UIStoryboard storyboardWithName:@"Level10Storyboard" bundle:nil]
+                  instantiateViewControllerWithIdentifier:@"PhonePasswordController"];
+    XCTAssertFalse([controller checkPassword:@"taylor"]);
+    XCTAssertFalse([controller checkPassword:@"frog"]);
+    XCTAssertFalse([controller checkPassword:@"1245"]);
+    XCTAssertFalse([controller checkPassword:@"12345"]);
+    XCTAssertFalse([controller checkPassword:@"CgF3n8x6"]);
+    XCTAssertFalse([controller checkPassword:@"alphabet"]);
+    XCTAssertTrue([controller checkPassword:@"8443"]);
 }
 
 @end
