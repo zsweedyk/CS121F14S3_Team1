@@ -129,7 +129,7 @@
         <!--IPhone-->
         <scene sceneID="USE-fa-yOi">
             <objects>
-                <viewController id="3Xe-rb-phB" userLabel="IPhone" customClass="BGKVLevel5PasswordViewController" sceneMemberID="viewController">
+                <viewController id="3Xe-rb-phB" userLabel="IPhone" customClass="BGKVLevelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6BE-dR-Uht"/>
                         <viewControllerLayoutGuide type="bottom" id="ErL-3c-rav"/>
@@ -147,136 +147,15 @@
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level5iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="E0t-sv-SGF">
-                                <rect key="frame" x="284" y="-56" width="411" height="760"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level5iPhonePasswordScreen" translatesAutoresizingMaskIntoConstraints="NO" id="8VT-TC-wpF">
-                                <rect key="frame" x="339" y="94" width="306" height="460"/>
-                            </imageView>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnX-7e-JVI" userLabel="Pad0">
-                                <rect key="frame" x="456" y="451" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="VPZ-2P-rNT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XW1-9b-kjq" userLabel="Pad1">
-                                <rect key="frame" x="365" y="199" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="N7A-RK-lXB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBs-ib-Fel" userLabel="Pad2">
-                                <rect key="frame" x="456" y="199" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="97P-Ui-IUV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZP-vD-iAC" userLabel="Pad3">
-                                <rect key="frame" x="547" y="199" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="J1p-t5-pG7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eql-4I-k2o" userLabel="Pad4">
-                                <rect key="frame" x="365" y="283" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="qnR-oq-xWY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQA-kx-o4m" userLabel="Pad5">
-                                <rect key="frame" x="456" y="283" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="MpU-iE-Hn8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-Ek-q2b" userLabel="Pad6">
-                                <rect key="frame" x="547" y="283" width="72" height="71"/>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="0Aa-nw-1Gc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3u-jH-Qeb" userLabel="Pad7">
-                                <rect key="frame" x="365" y="367" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="Wnt-cI-Q2C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5W-Aw-AUm" userLabel="Pad8">
-                                <rect key="frame" x="456" y="367" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="elD-I8-TAl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.5" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsT-eY-fwZ" userLabel="Pad9">
-                                <rect key="frame" x="547" y="367" width="72" height="71"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="WhiteCircle"/>
-                                <connections>
-                                    <action selector="pushIPhoneButton:" destination="3Xe-rb-phB" eventType="touchUpInside" id="huH-gg-ciO"/>
-                                </connections>
-                            </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteCircle" translatesAutoresizingMaskIntoConstraints="NO" id="TJp-gK-icr">
-                                <rect key="frame" x="434" y="168" width="11" height="11"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteCircle" translatesAutoresizingMaskIntoConstraints="NO" id="i5U-fc-5hZ">
-                                <rect key="frame" x="469" y="168" width="11" height="11"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteCircle" translatesAutoresizingMaskIntoConstraints="NO" id="nCj-ea-dLj">
-                                <rect key="frame" x="504" y="168" width="11" height="11"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WhiteCircle" translatesAutoresizingMaskIntoConstraints="NO" id="FXC-oz-SQW">
-                                <rect key="frame" x="539" y="168" width="11" height="11"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFu-au-IPV" customClass="BGKVPhoneControl">
-                                <rect key="frame" x="413" y="211" width="512" height="384"/>
+                                <rect key="frame" x="359" y="-32" width="411" height="760"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="1121"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="test" destination="3Xe-rb-phB" eventType="editingDidEndOnExit" id="JsN-Es-xrK"/>
+                                    <action selector="enterPassword:" destination="3Xe-rb-phB" eventType="valueChanged" id="yGc-WY-Y0W"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -289,12 +168,8 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outletCollection property="passwordCharacterEnteredIcons" destination="TJp-gK-icr" id="VdF-lh-VWb"/>
-                        <outletCollection property="passwordCharacterEnteredIcons" destination="i5U-fc-5hZ" id="HKX-u0-QTV"/>
-                        <outletCollection property="passwordCharacterEnteredIcons" destination="nCj-ea-dLj" id="FDi-zp-nHX"/>
-                        <outletCollection property="passwordCharacterEnteredIcons" destination="FXC-oz-SQW" id="DbN-OK-VAK"/>
                         <segue destination="pGY-WJ-pig" kind="custom" identifier="back" customClass="BGKVWithinLevelSegue" id="W0d-Yj-uXv"/>
-                        <segue destination="J2c-os-1Sl" kind="custom" identifier="password correct" customClass="BGKVExitLevelSegue" id="lBt-CS-6pw"/>
+                        <segue destination="J2c-os-1Sl" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="lBt-CS-6pw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -376,11 +251,8 @@ It's easy to learn and guess, even for people who don't know you!</string>
         <image name="Level1Chair" width="212" height="300"/>
         <image name="Level1WoodenTable" width="800" height="495"/>
         <image name="Level5Calendar" width="1600" height="1218"/>
-        <image name="Level5iPhone" width="569" height="1050"/>
-        <image name="Level5iPhonePasswordScreen" width="640" height="960"/>
         <image name="Level5iPhoneSlanted" width="569" height="414"/>
         <image name="LibraryBackground1" width="1024" height="778"/>
-        <image name="WhiteCircle" width="300" height="300"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

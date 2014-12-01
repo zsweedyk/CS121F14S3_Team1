@@ -7,7 +7,7 @@
 //
 
 #import "BGKVPhoneControlController.h"
-#import "BGKVPhoneControl.h"
+#import "BGKVPasswordControl.h"
 
 @interface BGKVPhoneControlController ()
 
@@ -16,6 +16,15 @@
 @implementation BGKVPhoneControlController {
     BOOL _deactivated; // Might be unnecessary. Probably is.
     NSMutableString *_password;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self reset];
+    }
+    return self;
 }
 
 - (void)reset

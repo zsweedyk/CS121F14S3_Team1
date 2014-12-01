@@ -51,11 +51,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-b8-985">
-                                <rect key="frame" x="575" y="393" width="79" height="160"/>
+                                <rect key="frame" x="585" y="455" width="98" height="113"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
-                                <state key="normal" image="Phone">
+                                <state key="normal" image="Level5iPhoneSlanted">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -165,21 +165,17 @@
                                     <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVWithinLevelSegue" id="Z7H-vO-4j9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-00-1LP">
-                                <rect key="frame" x="147" y="14" width="676" height="689"/>
-                                <state key="normal" image="Phone">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX4-OM-5vk">
-                                <rect key="frame" x="418" y="237" width="135" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-XE-Iln" customClass="BGKVPhoneControl">
+                                <rect key="frame" x="261" y="-73" width="411" height="760"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="1234"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="enterPasswordFromTextField:" destination="3Xe-rb-phB" eventType="editingDidEnd" id="htb-QA-gzM"/>
-                                    <outlet property="delegate" destination="3Xe-rb-phB" id="oK2-Fv-sTo"/>
+                                    <action selector="enterPassword:" destination="3Xe-rb-phB" eventType="valueChanged" id="D1y-Us-mZd"/>
                                 </connections>
-                            </textField>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -272,6 +268,7 @@
         <image name="Level1Chair" width="212" height="300"/>
         <image name="Level1Paper" width="245" height="300"/>
         <image name="Level1WoodenTable" width="800" height="495"/>
+        <image name="Level5iPhoneSlanted" width="569" height="414"/>
         <image name="LibraryBackground1" width="1024" height="778"/>
         <image name="Phone" width="308" height="618"/>
     </resources>
@@ -282,7 +279,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="fFg-NZ-8cX"/>
+        <segue reference="nSy-gD-jIh"/>
         <segue reference="Z7H-vO-4j9"/>
     </inferredMetricsTieBreakers>
 </document>

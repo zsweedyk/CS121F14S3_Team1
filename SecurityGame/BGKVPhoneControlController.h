@@ -6,18 +6,14 @@
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BGKVPasswordControlController.h"
 
-@class BGKVPhoneControl;
+@class BGKVPasswordControl;
 
-@interface BGKVPhoneControlController : UIViewController
+@interface BGKVPhoneControlController : BGKVPasswordControlController
 
-- (IBAction) pushIPhoneButton:(UIButton *)sender;
-- (void) reset;
+- (IBAction)pushIPhoneButton:(UIButton *)sender;
 
 @property (nonatomic) IBOutletCollection(UIImageView) NSArray *passwordCharacterEnteredIcons;
-@property (nonatomic, weak) BGKVPhoneControl *parentControl;
-
-
 
 @end

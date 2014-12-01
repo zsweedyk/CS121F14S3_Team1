@@ -19,11 +19,6 @@
     int _attemptCount;
 }
 
-- (IBAction)test
-{
-    NSLog(@"Gotcha!");
-}
-
 - (void)enterDigit:(NSInteger)digit
 {
     //NSLog(@"Pushed %d with current password %@. (Deactivated? %d)", sender.tag, _password, _deactivated);
