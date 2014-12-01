@@ -7,6 +7,7 @@
 //
 
 #import "BGKVLevelViewController.h"
+#import "BGKVPhoneControl.h"
 
 @interface BGKVLevelViewController () <UITextFieldDelegate>
 
@@ -24,6 +25,11 @@
 {
     NSAssert(self.password, @"Tried to check password while there is no correct password set. %@", guess);
     return [guess isEqualToString:self.password];
+}
+
+- (IBAction)enterPassword:(BGKVPhoneControl *)sender
+{
+    [self enteredCorrectPassword:sender.correct sender:sender];
 }
 
 - (IBAction)enterPasswordFromTextField:(UITextField *)textField

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="uTy-nI-adW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="uTy-nI-adW">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Level Container-->
@@ -64,7 +63,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz8-4F-hYD">
                                 <rect key="frame" x="369" y="394" width="90" height="181"/>
-                                <state key="normal" image="Phone">
+                                <state key="normal" image="Level5iPhone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -73,6 +72,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="tHM-vn-2xz"/>
                     <navigationItem key="navigationItem" id="QnM-su-Wf5"/>
@@ -146,6 +146,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="0qb-6F-zT6"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -199,6 +200,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -210,7 +212,7 @@
             </objects>
             <point key="canvasLocation" x="3392" y="-369"/>
         </scene>
-        <!--Level11Link-->
+        <!--Storyboard Link - Level11Link-->
         <scene sceneID="dHe-eL-yoi">
             <objects>
                 <viewController title="Level11Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
@@ -222,6 +224,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -253,15 +256,6 @@
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXB-xW-qEZ">
-                                <rect key="frame" x="130" y="28" width="499" height="539"/>
-                                <state key="normal" image="Phone">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="computerTapped:" destination="Iei-Aa-QcZ" eventType="touchUpInside" id="xkQ-vc-2jl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-dL-o9j">
                                 <rect key="frame" x="758" y="270" width="188" height="168"/>
                                 <state key="normal" title="USB drive" image="USBDrive">
@@ -271,22 +265,32 @@
                                     <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVWithinLevelSegue" id="PLc-19-Ca2"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLx-hT-AFD">
-                                <rect key="frame" x="312" y="183" width="135" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W24-5n-lRC" customClass="BGKVPhoneControl">
+                                <rect key="frame" x="174" y="-41" width="411" height="760"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="8443"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="enterPasswordFromTextField:" destination="Iei-Aa-QcZ" eventType="editingDidEnd" id="a8E-mT-nZe"/>
-                                    <outlet property="delegate" destination="Iei-Aa-QcZ" id="8XX-Qw-3Tl"/>
+                                    <action selector="enterPassword:" destination="Iei-Aa-QcZ" eventType="valueChanged" id="Efz-iU-PSb"/>
                                 </connections>
-                            </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your password is &quot;alphabet&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-MC-2uO">
-                                <rect key="frame" x="280" y="283" width="199" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-Xu-HbF">
+                                <rect key="frame" x="229" y="109" width="306" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your password is &quot;alphabet&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-MC-2uO">
+                                        <rect key="frame" x="54" y="215" width="199" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="bhX-CU-ITX"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -295,8 +299,8 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="8443"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="phonePasswordField" destination="qLx-hT-AFD" id="QeZ-a3-DFH"/>
-                        <outlet property="phonePasswordInformationField" destination="9q7-MC-2uO" id="D4H-PZ-dhb"/>
+                        <outlet property="phonePasswordField" destination="W24-5n-lRC" id="swJ-f4-Uh0"/>
+                        <outlet property="phonePasswordInformationField" destination="p9N-Xu-HbF" id="q7A-E2-F8Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYg-iW-ODa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,10 +312,11 @@
         <image name="Level1Chair" width="212" height="300"/>
         <image name="Level1Computer" width="800" height="800"/>
         <image name="Level1WoodenTable" width="800" height="495"/>
+        <image name="Level5iPhone" width="569" height="1050"/>
         <image name="LibraryBackground1" width="1024" height="778"/>
-        <image name="Phone" width="308" height="618"/>
         <image name="USBDrive" width="638" height="444"/>
     </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -320,5 +325,4 @@
     <inferredMetricsTieBreakers>
         <segue reference="PLc-19-Ca2"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
