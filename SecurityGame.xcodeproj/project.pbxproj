@@ -88,6 +88,9 @@
 		ACE3641D19F75CBA0088346D /* Level2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641C19F75CBA0088346D /* Level2Storyboard.storyboard */; };
 		ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */; };
 		ACE3642319F77C520088346D /* BGKVLevel2PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3642219F77C520088346D /* BGKVLevel2PasswordViewController.m */; };
+		ACFD18DB1A2C18320082D6DD /* BGKVPhoneControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFD18D91A2C18320082D6DD /* BGKVPhoneControlController.m */; };
+		ACFD18DC1A2C18320082D6DD /* BGKVPhoneControlController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACFD18DA1A2C18320082D6DD /* BGKVPhoneControlController.xib */; };
+		ACFD18E01A2C1B510082D6DD /* BGKVPhoneControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFD18DF1A2C1B510082D6DD /* BGKVPhoneControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +219,11 @@
 		ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RBStoryboardLICENSE; sourceTree = "<group>"; };
 		ACE3642119F77C520088346D /* BGKVLevel2PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel2PasswordViewController.h; sourceTree = "<group>"; };
 		ACE3642219F77C520088346D /* BGKVLevel2PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel2PasswordViewController.m; sourceTree = "<group>"; };
+		ACFD18D81A2C18320082D6DD /* BGKVPhoneControlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVPhoneControlController.h; sourceTree = "<group>"; };
+		ACFD18D91A2C18320082D6DD /* BGKVPhoneControlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVPhoneControlController.m; sourceTree = "<group>"; };
+		ACFD18DA1A2C18320082D6DD /* BGKVPhoneControlController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVPhoneControlController.xib; sourceTree = "<group>"; };
+		ACFD18DE1A2C1B510082D6DD /* BGKVPhoneControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVPhoneControl.h; sourceTree = "<group>"; };
+		ACFD18DF1A2C1B510082D6DD /* BGKVPhoneControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVPhoneControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +493,7 @@
 		AC71826819F5F30D001EFA4B /* SecurityGame */ = {
 			isa = PBXGroup;
 			children = (
+				ACFD18DD1A2C19330082D6DD /* PasswordControls */,
 				AC1C88471A1869E100CFA7B5 /* LevelContainer */,
 				ACE3642019F75EB10088346D /* Main */,
 				0A98371C1A0C32DB00013F08 /* TutorialLevel */,
@@ -604,6 +613,18 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		ACFD18DD1A2C19330082D6DD /* PasswordControls */ = {
+			isa = PBXGroup;
+			children = (
+				ACFD18D81A2C18320082D6DD /* BGKVPhoneControlController.h */,
+				ACFD18D91A2C18320082D6DD /* BGKVPhoneControlController.m */,
+				ACFD18DA1A2C18320082D6DD /* BGKVPhoneControlController.xib */,
+				ACFD18DE1A2C1B510082D6DD /* BGKVPhoneControl.h */,
+				ACFD18DF1A2C1B510082D6DD /* BGKVPhoneControl.m */,
+			);
+			name = PasswordControls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -705,6 +726,7 @@
 				0AA3C7B81A0DE780000B0E7C /* Level3Storyboard.storyboard in Resources */,
 				0AAF58CF1A199CB9005984BE /* Level11Storyboard.storyboard in Resources */,
 				0A872EB81A2011AE003C6BE2 /* Level18Storyboard.storyboard in Resources */,
+				ACFD18DC1A2C18320082D6DD /* BGKVPhoneControlController.xib in Resources */,
 				5D908D2119F8BB7B0054DF2D /* (null) in Resources */,
 				5D4E1CA51A11D9A100C50D71 /* Level4Storyboard.storyboard in Resources */,
 			);
@@ -726,6 +748,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFD18E01A2C1B510082D6DD /* BGKVPhoneControl.m in Sources */,
 				ACE3641819F75C550088346D /* RBStoryboardPushSegue.m in Sources */,
 				0AA3C7BB1A0DE7B6000B0E7C /* BGKVLevel3PasswordViewController.m in Sources */,
 				AC2B42B51A196FEA00DE86B0 /* BGKVLevel5PasswordViewController.m in Sources */,
@@ -735,6 +758,7 @@
 				AC1C88571A186A3E00CFA7B5 /* BGKVLevelViewControllerCache.m in Sources */,
 				0A872EBC1A2011D0003C6BE2 /* BGKVLevel18PasswordViewController.m in Sources */,
 				ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */,
+				ACFD18DB1A2C18320082D6DD /* BGKVPhoneControlController.m in Sources */,
 				0A1D06941A11DAE2005BB7BE /* BGKVLevel6PasswordViewController.m in Sources */,
 				93D23E141A19AA8700C82071 /* BGKVLevel8PasswordViewController.m in Sources */,
 				AC1C88621A186A5900CFA7B5 /* UIBarButtonItem+Badge.m in Sources */,

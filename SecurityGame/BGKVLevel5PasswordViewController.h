@@ -12,6 +12,7 @@
 
 - (IBAction)pushIPhoneButton:(UIButton *)sender;
 - (BOOL)checkPassword:(NSArray *)password;
+- (IBAction)test;
 
 @property (nonatomic) IBOutletCollection(UIImageView) NSArray *passwordCharacterEnteredIcons;
 
