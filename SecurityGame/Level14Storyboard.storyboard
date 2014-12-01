@@ -100,7 +100,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mga-VY-hBY">
-                                <rect key="frame" x="922" y="265" width="155" height="217"/>
+                                <rect key="frame" x="917" y="265" width="160" height="229"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Mr. Smith,   Please check your email, you have many unread messages, and have not responded to my request for your account information.  Sincerely, Your boss</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -477,7 +477,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="XnW-IB-5eG"/>
+        <segue reference="Hc8-do-zyH"/>
         <segue reference="hkB-7Z-UTB"/>
         <segue reference="2x6-2p-uDa"/>
         <segue reference="ztE-Z7-sn7"/>
