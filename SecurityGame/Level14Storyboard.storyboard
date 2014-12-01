@@ -112,6 +112,9 @@
                                 <state key="normal" title="Check Email">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="GaY-aB-LJp" kind="custom" customClass="BGKVWithinLevelSegue" id="08V-0y-JP1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXa-Mq-dnR">
                                 <rect key="frame" x="363" y="152" width="112" height="30"/>
@@ -120,7 +123,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XRi-eJ-weU" kind="custom" customClass="BGKVWithinLevelSegue" id="u3z-RQ-rE7"/>
+                                    <segue destination="XRi-eJ-weU" kind="modal" customClass="BGKVWithinLevelSegue" id="u3z-RQ-rE7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-qo-1DR">
@@ -130,7 +133,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XRi-eJ-weU" kind="custom" customClass="BGKVWithinLevelSegue" id="ncn-or-YhW"/>
+                                    <segue destination="XRi-eJ-weU" kind="modal" customClass="BGKVWithinLevelSegue" id="ncn-or-YhW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG5-lq-PjQ">
@@ -140,7 +143,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XRi-eJ-weU" kind="custom" customClass="BGKVWithinLevelSegue" id="2x6-2p-uDa"/>
+                                    <segue destination="XRi-eJ-weU" kind="modal" customClass="BGKVWithinLevelSegue" id="2x6-2p-uDa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,9 +155,6 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="password1!"/>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="BcU-cE-9vE" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="asu-AQ-OkF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY8-mo-W9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,7 +241,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L6-Jp-nEg">
                                 <rect key="frame" x="340" y="339" width="345" height="127"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">That password would have been harder to guess! Using a mix of capital letters, lowercase letters, numbers and special symbols makes your password more secure!</string>
+                                <string key="text">Good job! Large organizations have tech service offices that keep track of your account. Make sure to do so securely, and keep an eye out for people trying to trick you into thinking they are secure.</string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -258,12 +258,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrW-jL-qZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="1951"/>
+            <point key="canvasLocation" x="1386" y="1962"/>
         </scene>
-        <!--Level 7 Link-->
+        <!--Level 15 Link-->
         <scene sceneID="8Bd-KV-Y4v">
             <objects>
-                <viewController title="Level7Link" id="ZxO-XF-aJL" userLabel="Level 7 Link" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Level15Link" id="ZxO-XF-aJL" userLabel="Level 15 Link" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="km2-nN-LPq"/>
                         <viewControllerLayoutGuide type="bottom" id="lmK-LS-u6C"/>
@@ -276,7 +276,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level7Storyboard"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level15Storyboard"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnW-SY-HYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -305,7 +305,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="g4R-r6-UoW" kind="custom" customClass="BGKVWithinLevelSegue" id="44m-C2-GNu"/>
+                                    <segue destination="pIl-i3-vQP" kind="unwind" unwindAction="returnToLevelContainer:" id="HX5-4e-7Zb"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="You're at work right now! Playing games or watching videos is not a productive use of company time!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBG-bT-LSQ">
@@ -326,8 +326,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FP7-p4-zZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pIl-i3-vQP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1188" y="1951"/>
+            <point key="canvasLocation" x="-1258" y="1988"/>
         </scene>
         <!--Computer-->
         <scene sceneID="Y9N-Dl-oYa">
@@ -353,13 +354,54 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" text="Email Inbox:  Sign up here   " translatesAutoresizingMaskIntoConstraints="NO" id="HeE-je-J08">
-                                <rect key="frame" x="333" y="155" width="571" height="331"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-je-J08">
+                                <rect key="frame" x="301" y="102" width="633" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">Email Inbox:  Sign up here to support our company! Pay a small donation and recieve a portion of our profits!  Seeking help: I have a large sum of money in a suspended bank account, please send your account information so I can send you the money temporarily. Will compensate for your help!  To the respected Mr. Smith: Please send us your company account information here for our records:  http://vitabrevis.net/accountinformation  Mr. Smith: Vita Brevis' Computer services staff need your updated account information. Please sign up here (securely) to update our records: https://vitabrevis.com/accounts/resetinformation     </mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ff-OZ-w43">
+                                <rect key="frame" x="514" y="173" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-Respond-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cEG-HX-S5A" kind="modal" customClass="BGKVWithinLevelSegue" id="a7A-Hv-eKO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ft-in-TvD">
+                                <rect key="frame" x="688" y="265" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-Respond-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cEG-HX-S5A" kind="modal" customClass="BGKVWithinLevelSegue" id="9zV-HD-hy0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw9-Yc-PWY">
+                                <rect key="frame" x="793" y="453" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-Respond-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BcU-cE-9vE" kind="custom" customClass="BGKVExitLevelSegue" id="V1j-uI-az7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZH-QG-YOZ">
+                                <rect key="frame" x="659" y="369" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-Respond-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cEG-HX-S5A" kind="modal" customClass="BGKVWithinLevelSegue" id="ztE-Z7-sn7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -374,6 +416,54 @@
             </objects>
             <point key="canvasLocation" x="190" y="2635"/>
         </scene>
+        <!--Load Screen View Controller-->
+        <scene sceneID="UW4-Md-5KA">
+            <objects>
+                <viewController id="cEG-HX-S5A" customClass="BGKVLoadScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AbH-3y-KS7"/>
+                        <viewControllerLayoutGuide type="bottom" id="6SI-u7-gqd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P1N-tP-xZO">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="K29-2M-NJg">
+                                <rect key="frame" x="494" y="550" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMO-ER-HDv">
+                                <rect key="frame" x="476" y="557" width="59" height="30"/>
+                                <state key="normal" title="Go back">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DNU-9e-epM" kind="unwind" unwindAction="returnToLevelContainer:" id="Nu5-LS-l4d"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02a-HM-Z4v">
+                                <rect key="frame" x="340" y="339" width="345" height="127"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <string key="text">That was a spam email! Be careful with these, some of them seem like good ideas. Always make sure you only open emails from a trusted source. </string>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="nextLevelButton" destination="ZMO-ER-HDv" id="mHS-p1-wdN"/>
+                        <outlet property="spinner" destination="K29-2M-NJg" id="oQx-Z4-C1k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sv-Z5-TTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="DNU-9e-epM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-932" y="2918"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Level1Computer" width="800" height="800"/>
@@ -387,8 +477,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="44m-C2-GNu"/>
-        <segue reference="ncn-or-YhW"/>
+        <segue reference="XnW-IB-5eG"/>
         <segue reference="hkB-7Z-UTB"/>
+        <segue reference="2x6-2p-uDa"/>
+        <segue reference="ztE-Z7-sn7"/>
     </inferredMetricsTieBreakers>
 </document>
