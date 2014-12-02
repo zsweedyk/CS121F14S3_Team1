@@ -12,6 +12,5 @@
 
 @property (weak, nonatomic) IBOutlet UIButton* usbDriveButton;
 @property (weak, nonatomic) IBOutlet UITextField* usbNotPluggedInField;
-@property (weak, nonatomic) IBOutlet UIButton* goToEmailButton;
 
 @end

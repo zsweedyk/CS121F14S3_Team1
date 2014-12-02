@@ -46,6 +46,9 @@
                                 <state key="normal" image="USBDrive">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVWithinLevelSegue" id="k0m-FH-tpJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-b8-985">
                                 <rect key="frame" x="614" y="394" width="157" height="154"/>
@@ -69,8 +72,8 @@
                                     <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVWithinLevelSegue" id="eMh-nI-qxU"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="READ ME" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjU-Qh-AGH">
-                                <rect key="frame" x="443" y="460" width="59" height="50"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="READ ME FIRST" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjU-Qh-AGH">
+                                <rect key="frame" x="443" y="460" width="59" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -110,7 +113,7 @@
                                 </accessibility>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1Paper" translatesAutoresizingMaskIntoConstraints="NO" id="ufK-gW-8nP">
-                                <rect key="frame" x="281" y="163" width="368" height="412"/>
+                                <rect key="frame" x="219" y="77" width="430" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
@@ -125,13 +128,6 @@
                                     <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVWithinLevelSegue" id="fFg-NZ-8cX"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-JH-8Rl">
-                                <rect key="frame" x="350" y="200" width="242" height="375"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">I need you to install some monitoring software on this computer. Follow these steps to accomplish the task!  - Login to your email. You can log in when the USB stick is plugged in.  - Click on the link in the email I sent you. Make sure you use HTTPS!   - Make sure you click the right download link! We've set up decoy links in case anyone else ever gets in.  Good luck.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD5-ER-cB6">
                                 <rect key="frame" x="663" y="313" width="110" height="100"/>
                                 <state key="normal" image="USBDrive">
@@ -141,6 +137,13 @@
                                     <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVWithinLevelSegue" id="lJK-f5-lr6"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-JH-8Rl">
+                                <rect key="frame" x="288" y="123" width="242" height="451"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">I need you to install some monitoring software on this computer. Follow these steps to accomplish the task!  - Login to your email. You can log in when the USB stick is plugged in.  - Click on the link in the email I sent you. Make sure you use HTTPS!   - Make sure you click the right download link! We've set up decoy links in case anyone else ever gets in.  Good luck.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -206,8 +209,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToEmailTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="huj-wE-8VG"/>
-                                    <segue destination="aeS-3l-eYk" kind="custom" customClass="BGKVWithinLevelSegue" id="7rh-CW-3Dd"/>
+                                    <action selector="goToEmailTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="REf-x9-nDC"/>
                                 </connections>
                             </button>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Make sure to put your USB drive in the computer." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9S-Md-3xi">
@@ -224,9 +226,9 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="goToEmailButton" destination="hjf-0B-X6m" id="tVF-Cc-sce"/>
                         <outlet property="usbDriveButton" destination="u9c-F3-KbF" id="v40-dO-uxU"/>
                         <outlet property="usbNotPluggedInField" destination="I9S-Md-3xi" id="rCl-jr-g3I"/>
+                        <segue destination="aeS-3l-eYk" kind="custom" identifier="SegueToEmailList" customClass="BGKVWithinLevelSegue" id="xlV-LZ-g4h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -597,7 +599,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="lJK-f5-lr6"/>
-        <segue reference="Tpc-bY-5Ib"/>
+        <segue reference="eMh-nI-qxU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

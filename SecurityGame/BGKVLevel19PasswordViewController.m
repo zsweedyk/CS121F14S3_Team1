@@ -16,10 +16,27 @@
 
 - (IBAction)usbDriveTapped:(id)sender
 {
-    self.usbDriveButton.selected = YES;
     self.usbNotPluggedInField.hidden = YES;
-    // http://stackoverflow.com/questions/16352523/glow-effect-to-custom-uibutton-like-info-uibutton
-    [self startButtonGlow];
+
+    if (self.usbDriveButton.selected) {
+        self.usbDriveButton.selected = NO;
+        [self removeButtonGlow];
+    } else {
+        self.usbDriveButton.selected = YES;
+        [self startButtonGlow];
+    }
+}
+
+- (IBAction)goToEmailTapped:(id)sender
+{
+    if (self.usbDriveButton.selected) {
+        self.usbDriveButton.selected = NO;
+        [self removeButtonGlow];
+        [self performSegueWithIdentifier:@"SegueToEmailList" sender:self];
+    } else {
+        self.usbNotPluggedInField.hidden = NO;
+    }
+    
 }
 
 - (IBAction)finalDownloadLinkTapped:(id)sender
@@ -32,6 +49,7 @@
     [alert show];
 }
 
+// http://stackoverflow.com/questions/16352523/glow-effect-to-custom-uibutton-like-info-uibutton
 - (void) startButtonGlow
 {
     self.usbDriveButton.layer.shadowColor = [UIColor cyanColor].CGColor;
