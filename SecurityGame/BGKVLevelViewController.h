@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class BGKVLevelContainer;
+@class BGKVPasswordControl;
 
 @interface BGKVLevelViewController : UIViewController
 
@@ -18,6 +19,7 @@
 
 @property (nonatomic, weak) BGKVLevelContainer *levelContainer;
 
+- (IBAction)enterPassword:(BGKVPasswordControl *)control;
 - (IBAction)enterPasswordFromTextField:(UITextField *)textField;
 
 - (BOOL)checkPassword:(NSString *)guess;
