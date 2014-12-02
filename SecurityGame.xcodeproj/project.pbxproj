@@ -38,6 +38,8 @@
 		5DA1723C1A1830E800E63BD0 /* Level10Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA1723B1A1830E800E63BD0 /* Level10Storyboard.storyboard */; };
 		5DA1723F1A18310500E63BD0 /* BGKVLevel10PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1723E1A18310500E63BD0 /* BGKVLevel10PasswordViewController.m */; };
 		5DA172411A1859DC00E63BD0 /* Level10Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA172401A1859DC00E63BD0 /* Level10Tests.m */; };
+		5DB443961A2D5B8C004BBC83 /* Level19Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB443951A2D5B8C004BBC83 /* Level19Storyboard.storyboard */; };
+		5DB4439A1A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB443991A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m */; };
 		5DD50EC81A084C700049B512 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD50EC71A084C700049B512 /* MusicTests.m */; };
 		9325FDF51A18C0A0008E91D6 /* Level7Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9325FDF41A18C0A0008E91D6 /* Level7Storyboard.storyboard */; };
 		93A159E21A11EAA700118451 /* Level1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A159E11A11EAA700118451 /* Level1Storyboard.storyboard */; };
@@ -146,6 +148,9 @@
 		5DA1723D1A18310500E63BD0 /* BGKVLevel10PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel10PasswordViewController.h; sourceTree = "<group>"; };
 		5DA1723E1A18310500E63BD0 /* BGKVLevel10PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel10PasswordViewController.m; sourceTree = "<group>"; };
 		5DA172401A1859DC00E63BD0 /* Level10Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level10Tests.m; sourceTree = "<group>"; };
+		5DB443951A2D5B8C004BBC83 /* Level19Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level19Storyboard.storyboard; sourceTree = "<group>"; };
+		5DB443991A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel19PasswordViewController.m; sourceTree = "<group>"; };
+		5DB4439B1A2D6606004BBC83 /* BGKVLevel19PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel19PasswordViewController.h; sourceTree = "<group>"; };
 		5DD50EC71A084C700049B512 /* MusicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTests.m; sourceTree = "<group>"; };
 		9325FDF41A18C0A0008E91D6 /* Level7Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level7Storyboard.storyboard; sourceTree = "<group>"; };
 		93A159E11A11EAA700118451 /* Level1Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level1Storyboard.storyboard; sourceTree = "<group>"; };
@@ -359,6 +364,16 @@
 			name = Level10;
 			sourceTree = "<group>";
 		};
+		5DB443921A2D47C6004BBC83 /* Level19 */ = {
+			isa = PBXGroup;
+			children = (
+				5DB4439B1A2D6606004BBC83 /* BGKVLevel19PasswordViewController.h */,
+				5DB443991A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m */,
+				5DB443951A2D5B8C004BBC83 /* Level19Storyboard.storyboard */,
+			);
+			name = Level19;
+			sourceTree = "<group>";
+		};
 		93A159E01A11EA9000118451 /* Level1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +579,7 @@
 				AC576B621A2C09C0002F20C3 /* Level14 */,
 				5D8857DD1A1B1580002069D2 /* Level15 */,
 				0A872EB61A20116B003C6BE2 /* Level18 */,
+				5DB443921A2D47C6004BBC83 /* Level19 */,
 				ACE3640719F75C550088346D /* RBStoryboardClasses */,
 				AC71827A19F5F30D001EFA4B /* Images.xcassets */,
 				AC71826919F5F30D001EFA4B /* Supporting Files */,
@@ -756,6 +772,7 @@
 				0A1D06921A11DAD1005BB7BE /* BGKVLevel6PasswordViewController.h in Resources */,
 				5DA172301A181A4E00E63BD0 /* Level9Storyboard.storyboard in Resources */,
 				ACE3641D19F75CBA0088346D /* Level2Storyboard.storyboard in Resources */,
+				5DB443961A2D5B8C004BBC83 /* Level19Storyboard.storyboard in Resources */,
 				9325FDF51A18C0A0008E91D6 /* Level7Storyboard.storyboard in Resources */,
 				AC71827B19F5F30D001EFA4B /* Images.xcassets in Resources */,
 				5D4E1C9C1A11CE9900C50D71 /* spy_music.mp3 in Resources */,
@@ -817,6 +834,7 @@
 				AC71827319F5F30D001EFA4B /* BGKVAppDelegate.m in Sources */,
 				ACE3641919F75C550088346D /* RBStoryboardSegue.m in Sources */,
 				5D908D2419F8CE300054DF2D /* BGKVMusicPlayer.m in Sources */,
+				5DB4439A1A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m in Sources */,
 				AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */,
 				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
 				AC0B99061A2CF08E00E10F4B /* BGKVPasswordControlController.m in Sources */,
