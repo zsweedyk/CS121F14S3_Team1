@@ -32,10 +32,12 @@
     NSString* template = textField.text;
     BOOL correctTemplate = [template isEqualToString:_passwordTemplate];
     
-    for (int i=0; i<1000; i++) {
-        textField.text = [BGKVCrackerControl randomFromTemplate:template];
+    /* //Dunno
+    for (int i=0; i<10000; i++) {
+        [textField performSelectorOnMainThread:@selector(setText:) withObject:[BGKVCrackerControl randomFromTemplate:template] waitUntilDone:NO];
         [textField setNeedsDisplay];
     }
+     */
     
     if (correctTemplate) {
         textField.text = self.password;
