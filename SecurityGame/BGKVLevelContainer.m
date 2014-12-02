@@ -15,12 +15,19 @@
 // Only to avoid 'undeclared selector "goToMainMenu"'
 #import "BGKVViewController.h"
 
+#import "UIView+Scaling.h"
+
 @interface BGKVLevelContainer ()
 
 @end
 
 @implementation BGKVLevelContainer {
     dispatch_once_t _initialized_token;
+}
+
+- (IBAction)returnToLevelContainer:(id)sender
+{
+    
 }
 
 #pragma mark -
@@ -170,42 +177,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // I don't know what initializer to use since it's from storyboard.
-    // initWithCoder is likely, but apparently it's possible to be called
-    // more than once? Either way, for now this works fine.
-    
-    dispatch_once(&_initialized_token, ^{
-        //if (! self.hintControllerName) { self.hintControllerName = @"hints"; }
-        //if (! self.initialSegueName) { self.initialSegueName = @"initial"; }
-        
-        // Not working!
-        // self.menuButton.badgeValue = @"HELLO?";
-        
-        [self initializeHints];
-        [self maskLevelView];
-        [self showInitialLevelViewController];
-    });
-}
 
-- (void)maskLevelView
-{
-    // From StackOverflow
-    // Create a mask layer and the frame to determine what will be visible in the view.
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    CGRect maskRect = self.levelView.bounds;
-    
-    // Create a path with the rectangle in it.
-    CGPathRef path = CGPathCreateWithRect(maskRect, NULL);
-    
-    // Set the path to the mask layer.
-    maskLayer.path = path;
-    
-    // Release the path since it's not covered by ARC.
-    CGPathRelease(path);
-    
-    // Set the mask of the view.
-    self.levelView.layer.mask = maskLayer;
+    dispatch_once(&_initialized_token, ^{
+        [self initializeHints];
+        [self showInitialLevelViewController];
+        
+        self.menuButton.badgeValue = @"HELLO?";
+    });
 }
 
 #pragma mark -
@@ -222,9 +200,6 @@
 
 - (void)resetCache
 {
-//    if (_cache) {
-//        [_cache resetCache];
-//    }
     self.cache = nil;
 }
 
@@ -253,29 +228,11 @@
 #pragma mark -
 #pragma mark Switching Level Views
 
-#pragma mark MAGIC STRING WARNING : intial
-// "intial" is the identifier of the segue that links the LevelContainer to its first scene.
+#pragma mark MAGIC STRING WARNING : initial
+// "initial" is the identifier of the segue that links the LevelContainer to its first scene.
 - (void)showInitialLevelViewController
 {
     [self performSegueWithIdentifier:@"initial" sender:self];
-    /*
-    @try {
-        //[self performSegueWithIdentifier:self.initialSegueName sender:nil];
-        [self performSegueWithIdentifier:@"initial" sender:nil];
-    }
-    @catch (NSException *exception) {
-        if ([exception.name isEqualToString:NSInvalidArgumentException])
-        {
-            // Then, I suppose there isn't any initial view controller!
-            // Very odd!
-            NSLog(@"No initial view controller");
-        }
-        else
-        {
-            @throw;
-        }
-    }
-     */
 }
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC
@@ -303,49 +260,10 @@
     newVC.levelContainer = self;
 }
 
-/*
-- (BOOL)hideCurrentLevelViewController
-{
-    // Returns YES if there was one to hide,
-    // returns NO but is still successful otherwise
-    
-    BGKVLevelViewController *oldVC = self.currentLevelVC;
- 
-    // If one exists, remove previous level view controller
-    if (oldVC) {
-        [oldVC removeFromParentViewController];
-        [oldVC.view removeFromSuperview];
-        oldVC.levelContainer = nil;
-        return YES;
-    }
-    
-    return NO;
-}
-*/
-
 - (void)resizeViewToFitLevelView:(UIView *)view
 {
-    view.frame = [BGKVLevelContainer frameInLandscape:view.frame];
-    
-    if (! CGRectEqualToRect(view.bounds, self.levelView.bounds)) {
-        CGFloat sx = CGRectGetWidth(self.levelView.bounds) / CGRectGetWidth(view.bounds);
-        CGFloat sy = CGRectGetHeight(self.levelView.bounds) / CGRectGetHeight(view.bounds);
-        
-        view.transform = CGAffineTransformScale(CGAffineTransformIdentity, sx, sy);
-    }
-    
-    view.frame = CGRectMake(0,0, view.frame.size.width, view.frame.size.height);
-}
-
-+ (CGRect) frameInLandscape:(CGRect)frame
-{
-    // This is a rudimentary way to check if the frame is in portrait mode.
-    // If so, return a transpose of the frame.
-    if (CGRectGetWidth(frame) < CGRectGetHeight(frame)) {
-        frame = CGRectMake(frame.origin.y, frame.origin.x,
-                           frame.size.height, frame.size.width);
-    }
-    return frame;
+    [view ensureLandscape];
+    [view scaleToFrame:self.levelView.bounds];
 }
 
 @end
