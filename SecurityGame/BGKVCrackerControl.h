@@ -10,4 +10,7 @@
 
 @interface BGKVCrackerControl : BGKVTextFieldPasswordControl
 
++ (NSString *)templateFromString:(NSString *)string;
++ (NSString *)randomFromTemplate:(NSString *)template;
+
 @end

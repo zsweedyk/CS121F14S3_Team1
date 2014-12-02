@@ -36,7 +36,7 @@
     [textField resignFirstResponder];
     [self enterPassword:textField.text];
     textField.text = @"";
-    return YES;
+    return NO;
 }
 
 @end

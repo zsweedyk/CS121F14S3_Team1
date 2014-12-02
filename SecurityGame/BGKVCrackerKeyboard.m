@@ -16,7 +16,7 @@
 
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
-    NSLog(@"will move to superview of class: %@ with sibling views: %@", [newSuperview class], newSuperview.subviews);
+    //NSLog(@"will move to superview of class: %@ with sibling views: %@", [newSuperview class], newSuperview.subviews);
     
     if ([newSuperview isKindOfClass:NSClassFromString(@"UIPeripheralHostView")]) {
         UIView* aSiblingView;
@@ -26,6 +26,14 @@
             }
         }
     }
+    
+    /*
+    for (UIView *subview in ((UIView *)self.subviews[0]).subviews) {
+        if ([subview isKindOfClass:[UIControl class]]) {
+            NSLog(@"%@", ((UIButton *)subview).titleLabel.textColor);
+        }
+    }
+     */
 
 }
 
@@ -35,7 +43,10 @@
 }
 
 - (id<UITextInput>) delegate {
-    return self.textField;
+    if (!_delegate) {
+        return self.textField;
+    }
+    return _delegate;
 }
 
 - (void)setTextField:(UITextField *)tf {
@@ -44,7 +55,33 @@
 }
 
 - (IBAction)dataPress:(UIButton *)btn {
-    [self.delegate insertText:btn.titleLabel.text];
+    NSString *text;
+    
+    switch (btn.tag) {
+        case 1: {
+            text = @"a";
+            break;
+        }
+        case 2: {
+            text = @"A";
+            break;
+        }
+        case 3: {
+            text = @"1";
+            break;
+        }
+        case 4: {
+            text = @"!";
+            break;
+        }
+            
+        default: {
+            text = btn.titleLabel.text;
+            break;
+        }
+    }
+    
+    [self.delegate insertText:text];
 }
 
 - (IBAction)backPress {
