@@ -17,11 +17,9 @@
 
 @interface BGKVPasswordControl : UIControl
 
+- (void)reset;
 - (void)setup;
 - (void)enterPassword:(NSString *)guess;
-- (void)setupWithController:(BGKVPasswordControlController *)controller keepAspect:(BOOL)keepAspect;
-
-@property (nonatomic) BGKVPasswordControlController *controller;
 
 @property (nonatomic) NSString *password;
 @property (nonatomic) NSString *guess;

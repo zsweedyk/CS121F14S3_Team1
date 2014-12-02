@@ -8,6 +8,10 @@
 
 #import "BGKVPasswordControl.h"
 
+@class BGKVPhoneControlController;
+
 @interface BGKVPhoneControl : BGKVPasswordControl;
+
+@property (nonatomic) BGKVPhoneControlController *controller;
 
 @end

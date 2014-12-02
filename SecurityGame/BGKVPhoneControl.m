@@ -8,12 +8,33 @@
 
 #import "BGKVPhoneControl.h"
 #import "BGKVPhoneControlController.h"
+#import "UIView+Scaling.h"
 
 @implementation BGKVPhoneControl
+- (void)reset
+{
+    [super reset];
+    [self.controller reset];
+}
+
 - (void)setup
 {
     [self setupWithController:[[BGKVPhoneControlController alloc] init]
                    keepAspect:YES];
+}
+
+- (void)setupWithController:(BGKVPhoneControlController *)controller keepAspect:(BOOL)keepAspect
+{
+    self.backgroundColor = [UIColor clearColor];
+    self.attempts = [NSNumber numberWithInt:0];
+    
+    self.controller = controller;
+    controller.parentControl = self;
+    
+    [controller.view scaleToFrame:self.bounds keepAspect:keepAspect];
+    [self addSubview:controller.view];
+    
+    [self reset];
 }
 
 @end
