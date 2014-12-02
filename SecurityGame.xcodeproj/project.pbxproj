@@ -67,6 +67,9 @@
 		AC2B42B71A196FF200DE86B0 /* Level5Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */; };
 		AC2B42B91A197EDD00DE86B0 /* Level5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */; };
 		AC5543D81A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543D71A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m */; };
+		AC5543E21A2D83F2006F0BDA /* BGKVCrackerKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543E11A2D83F2006F0BDA /* BGKVCrackerKeyboard.m */; };
+		AC5543E51A2D8415006F0BDA /* BGKVCrackerKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5543E41A2D8415006F0BDA /* BGKVCrackerKeyboard.xib */; };
+		AC5543E91A2D8914006F0BDA /* BGKVCrackerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543E81A2D8914006F0BDA /* BGKVCrackerControl.m */; };
 		AC68BD061A2C0B860030A504 /* Level14Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC68BD051A2C0B860030A504 /* Level14Storyboard.storyboard */; };
 		AC68BD091A2C239B0030A504 /* Level16Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC68BD081A2C239B0030A504 /* Level16Storyboard.storyboard */; };
 		AC71826319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
@@ -192,6 +195,11 @@
 		AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level5Tests.m; sourceTree = "<group>"; };
 		AC5543D61A2D7380006F0BDA /* BGKVTextFieldPasswordControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVTextFieldPasswordControl.h; sourceTree = "<group>"; };
 		AC5543D71A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVTextFieldPasswordControl.m; sourceTree = "<group>"; };
+		AC5543E01A2D83F2006F0BDA /* BGKVCrackerKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCrackerKeyboard.h; sourceTree = "<group>"; };
+		AC5543E11A2D83F2006F0BDA /* BGKVCrackerKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCrackerKeyboard.m; sourceTree = "<group>"; };
+		AC5543E41A2D8415006F0BDA /* BGKVCrackerKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVCrackerKeyboard.xib; sourceTree = "<group>"; };
+		AC5543E71A2D8914006F0BDA /* BGKVCrackerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCrackerControl.h; sourceTree = "<group>"; };
+		AC5543E81A2D8914006F0BDA /* BGKVCrackerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCrackerControl.m; sourceTree = "<group>"; };
 		AC68BD051A2C0B860030A504 /* Level14Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level14Storyboard.storyboard; sourceTree = "<group>"; };
 		AC68BD081A2C239B0030A504 /* Level16Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level16Storyboard.storyboard; sourceTree = "<group>"; };
 		AC71825F19F5F30D001EFA4B /* SecurityGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -512,6 +520,18 @@
 			name = "Textfield Control";
 			sourceTree = "<group>";
 		};
+		AC5543DA1A2D8358006F0BDA /* Cracker Control */ = {
+			isa = PBXGroup;
+			children = (
+				AC5543E01A2D83F2006F0BDA /* BGKVCrackerKeyboard.h */,
+				AC5543E11A2D83F2006F0BDA /* BGKVCrackerKeyboard.m */,
+				AC5543E41A2D8415006F0BDA /* BGKVCrackerKeyboard.xib */,
+				AC5543E71A2D8914006F0BDA /* BGKVCrackerControl.h */,
+				AC5543E81A2D8914006F0BDA /* BGKVCrackerControl.m */,
+			);
+			name = "Cracker Control";
+			sourceTree = "<group>";
+		};
 		AC576B621A2C09C0002F20C3 /* Level14 */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,6 +708,7 @@
 			children = (
 				AC0B99011A2CEF9600E10F4B /* Base Classes */,
 				AC5543D51A2D70E9006F0BDA /* Textfield Control */,
+				AC5543DA1A2D8358006F0BDA /* Cracker Control */,
 				AC0B99021A2CEFAF00E10F4B /* Phone Control */,
 				AC0B99031A2CEFC300E10F4B /* UIView Scaling */,
 			);
@@ -771,6 +792,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5543E51A2D8415006F0BDA /* BGKVCrackerKeyboard.xib in Resources */,
 				0A872EBA1A2011BC003C6BE2 /* BGKVLevel18PasswordViewController.h in Resources */,
 				0A1D06921A11DAD1005BB7BE /* BGKVLevel6PasswordViewController.h in Resources */,
 				5DA172301A181A4E00E63BD0 /* Level9Storyboard.storyboard in Resources */,
@@ -841,8 +863,10 @@
 				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
 				AC0B98FD1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m in Sources */,
 				AC1C885C1A186A4E00CFA7B5 /* BGKVWithinLevelSegue.m in Sources */,
+				AC5543E21A2D83F2006F0BDA /* BGKVCrackerKeyboard.m in Sources */,
 				93FF564B1A10672500017536 /* BGKVLevelSelectViewController.m in Sources */,
 				5D4E1CAA1A11DA9600C50D71 /* BGKVLevel4PasswordViewController.m in Sources */,
+				AC5543E91A2D8914006F0BDA /* BGKVCrackerControl.m in Sources */,
 				AC5543D81A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
 				93EED58F1A19952200F1B61B /* BGKVLevel7PasswordViewController.m in Sources */,

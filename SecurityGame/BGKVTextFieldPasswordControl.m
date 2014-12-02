@@ -15,7 +15,8 @@
     self.backgroundColor = [UIColor clearColor];
     
     UITextField *passwordField = [[UITextField alloc] initWithFrame:self.bounds];
-    //passwordField.backgroundColor = [UIColor whiteColor];
+    self.passwordField = passwordField;
+    
     passwordField.returnKeyType = UIReturnKeyDone;
     passwordField.font = [self.passwordField.font fontWithSize:20];
     passwordField.autocapitalizationType = UITextAutocapitalizationTypeNone;
