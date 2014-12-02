@@ -7,7 +7,7 @@
 //
 
 #import "BGKVLevelViewController.h"
-#import "BGKVPhoneControl.h"
+#import "BGKVPasswordControl.h"
 
 @interface BGKVLevelViewController () <UITextFieldDelegate>
 
@@ -27,7 +27,7 @@
     return [guess isEqualToString:self.password];
 }
 
-- (IBAction)enterPassword:(BGKVPhoneControl *)sender
+- (IBAction)enterPassword:(BGKVPasswordControl *)sender
 {
     [self enteredCorrectPassword:sender.correct sender:sender];
 }
