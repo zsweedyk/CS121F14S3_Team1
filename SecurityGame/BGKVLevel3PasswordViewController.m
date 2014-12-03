@@ -59,7 +59,7 @@
     return NO;
 }
 
-// Segue from "Okay" button to loading screen
+// Segue from "Okay" button to loading screen 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [self performSegueWithIdentifier:@"SegueToLoadScreen" sender:self];
