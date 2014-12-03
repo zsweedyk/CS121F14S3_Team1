@@ -40,8 +40,6 @@
     }
     [self performSelector:@selector(finallyCheckPasswordAndReturn:) withObject:correctTemplate afterDelay:crackTime+0.1];
     
-    NSLog(@"%@",[@YES class]);
-    
     return NO;
 }
 
@@ -86,11 +84,8 @@
     [string getCharacters:buffer range:NSMakeRange(0, len)];
     
     for(int i = 0; i < len; i++) {
-        NSString *repChar = [[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:buffer[i]] ? @"a"
-        : [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:buffer[i]] ? @"A"
-        : [[NSCharacterSet decimalDigitCharacterSet] characterIsMember:buffer[i]] ? @"1"
-        : [[NSCharacterSet symbolCharacterSet] characterIsMember:buffer[i]] ? @"!"
-        : @"?";
+        NSString *repChar = [NSString stringWithFormat:@"%C",
+                             [BGKVCrackerControl templateRepresentativeForCharacter:buffer[i]]];
         
         [template appendString:repChar];
     }
@@ -107,19 +102,64 @@
     
     [template getCharacters:buffer range:NSMakeRange(0, len)];
     
+    NSLog(@"Is ! a symbol? : %d", [[NSCharacterSet symbolCharacterSet] characterIsMember:'!']);
+    
     for(int i = 0; i < len; i++) {
+        NSString *charSet;
+        switch ([BGKVCrackerControl templateRepresentativeForCharacter:buffer[i]]) {
+            case 'a': {
+                charSet = @"abcdefghijklmnopqrstuvwxyz";
+                break;
+            }
+            case 'A': {
+                charSet = @"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                break;
+            }
+            case '1': {
+                charSet = @"1234567890";
+                break;
+            }
+            case '!': {
+                charSet = @"!@#$%^&*?~+=-_/";
+                break;
+            }
+            default: {
+                charSet = [NSString stringWithFormat:@"%C", buffer[i]];
+                break;
+            }
+        }
+        
+        /*
         NSString *charSet = [[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:buffer[i]] ? @"abcdefghijklmnopqrstuvwxyz"
         : [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:buffer[i]] ? @"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         : [[NSCharacterSet decimalDigitCharacterSet] characterIsMember:buffer[i]] ? @"1234567890"
         : [[NSCharacterSet symbolCharacterSet] characterIsMember:buffer[i]] ? @"!@#$%^&*?~+=-_/"
         : [NSString stringWithFormat:@"%C", buffer[i]];
-        
+        */
+         
         NSUInteger rand = arc4random_uniform([charSet length]);
         NSString *repChar = [NSString stringWithFormat:@"%C", [charSet characterAtIndex:rand]];
         [random appendString:repChar];
     }
     
     return random;
+}
+
++ (unichar)templateRepresentativeForCharacter:(unichar)character
+{
+    static NSMutableCharacterSet *symbolSet;
+    static dispatch_once_t symbolSetToken;
+    dispatch_once(&symbolSetToken, ^{
+        symbolSet = [NSMutableCharacterSet characterSetWithCharactersInString:@""];
+        [symbolSet formUnionWithCharacterSet:[NSCharacterSet symbolCharacterSet]];
+        [symbolSet formUnionWithCharacterSet:[NSCharacterSet punctuationCharacterSet]];
+    });
+    
+    return [[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:character] ? 'a'
+    : [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character] ? 'A'
+    : [[NSCharacterSet decimalDigitCharacterSet] characterIsMember:character] ? '1'
+    : [symbolSet characterIsMember:character] ? '!'
+    : character;
 }
 
 @end

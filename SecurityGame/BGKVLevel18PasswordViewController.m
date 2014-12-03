@@ -132,85 +132,15 @@
     self.usbDriveButton3.layer.shadowOffset = CGSizeZero;
 }
 
-- (BOOL)checkComputerPassword:(NSString *)guess
+- (void)enteredCorrectPassword:(BOOL)correct sender:(id)sender
 {
-    NSString* password = @"C3l3brat3!";
-    return [guess isEqualToString:password];
-}
-
-- (BOOL)checkPhonePassword:(NSString *)guess
-{
-    NSString* password = @"0110";
-    return [guess isEqualToString:password];
-}
-
-- (BOOL) textFieldShouldReturn:(UITextField *)textField
-{
-    if (textField == self.passwordField) {
-        [textField resignFirstResponder];
-        if ([self checkComputerPassword:self.passwordField.text]) {
-            UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"You guessed right!"
-                                   message:@"Good work!"
-                                   delegate:self
-                                   cancelButtonTitle:@"Next level" otherButtonTitles:nil];
-            [alert show];
-        } else {
-            UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"Incorrect"
-                                   message:@"Try again!"
-                                   delegate:nil
-                                   cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-            self.passwordField.text = @"";
-            [alert show];
-        }
-        return YES;
+    if (correct && sender == self.phonePasswordField) {
+        self.phonePasswordInformationField.hidden = NO;
+    } else {
+        [super enteredCorrectPassword:correct sender:sender];
     }
-    else if (textField == self.phonePasswordField) {
-        [textField resignFirstResponder];
-        if ([self checkPhonePassword:self.phonePasswordField.text]) {
-            // Reveal the hidden password for the computer
-            self.phonePasswordInformationField.hidden = NO;
-        } else {
-            UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"Incorrect"
-                                   message:@"Try again!"
-                                   delegate:nil
-                                   cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-            self.passwordField.text = @"";
-            [alert show];
-        }
-        return YES;
-    }
-    return NO;
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    [self performSegueWithIdentifier:@"SegueToLoadScreen" sender:self];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.passwordField.delegate = self;
-    self.phonePasswordField.delegate = self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
