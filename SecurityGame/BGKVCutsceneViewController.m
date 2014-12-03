@@ -14,6 +14,34 @@
 
 @implementation BGKVCutsceneViewController
 
+int _dialogueNumber;
+int _currentDialogueLevel;
+int* _textArray[];
+
+- (IBAction)continueButton:(id)sender
+{
+    [self changeBackgroundImage];
+    [self updateTextFields];
+}
+
+- (void) changeBackgroundImage
+{
+    [self.view setBackgroundColor:[UIColor blueColor]];
+    
+}
+
+- (void) updateTextFields
+{
+    self.bossTextField.text = @"test";
+    self.hackerTextField.text = @"test2";
+    
+}
+
+- (IBAction)goToNextLevel
+{
+    
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +55,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning
