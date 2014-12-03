@@ -8,7 +8,13 @@
         <!--Cutscene View Controller-->
         <scene sceneID="PaA-oM-Uh4">
             <objects>
-                <viewController id="93e-mL-tt4" customClass="BGKVCutsceneViewController" sceneMemberID="viewController"/>
+                <viewController id="93e-mL-tt4" customClass="BGKVCutsceneViewController" sceneMemberID="viewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="levelProperty">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgh-j2-ADv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="320" y="-1005"/>

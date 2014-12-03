@@ -89,12 +89,15 @@ NSArray* _textArray;
     [super viewDidLoad];
     
     //load the level and model.
-    _currentLevel = 1; //TODO: Get the level from the storyboard
+    _currentLevel = [self.levelProperty integerValue];
     _model = [[BGKVCutsceneModel alloc] initWithLevel: _currentLevel];
+    _dialogueNumber = [_model getMaxDialogueLevel:_currentLevel];
     
     // Initialize the background and text.
+    _currentDialogueLevel = 0;
     [self changeBackgroundImage];
     [self updateTextFields];
+    _currentDialogueLevel++;  
     
     //Set the necessary attributes of the buttons and text.
     self.playLevelButton.hidden = YES;

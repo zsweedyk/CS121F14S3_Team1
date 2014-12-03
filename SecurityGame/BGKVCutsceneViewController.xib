@@ -36,6 +36,9 @@
                     <state key="normal" title="Play Level">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="goToNextLevel" destination="-1" eventType="touchUpInside" id="hd6-Px-mmA"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WED-Yy-QSs">
                     <rect key="frame" x="481" y="560" width="62" height="30"/>

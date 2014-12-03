@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton* continueButton;
 @property (weak, nonatomic) IBOutlet UIButton* playLevelButton;
 @property (weak, nonatomic) IBOutlet UITextView* bossTextField;
+@property (nonatomic, assign) NSNumber* levelProperty;
 
 
 @end
