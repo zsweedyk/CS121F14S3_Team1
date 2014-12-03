@@ -37,4 +37,10 @@
     [self reset];
 }
 
+- (void)enterPassword:(NSString *)guess
+{
+    [super enterPassword:guess];
+    [self reset];
+}
+
 @end

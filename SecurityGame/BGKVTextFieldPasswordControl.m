@@ -10,14 +10,22 @@
 
 @implementation BGKVTextFieldPasswordControl
 
+- (void)reset
+{
+    [super reset];
+    self.passwordField.text = @"";
+}
+
 - (void)setup
 {
     self.backgroundColor = [UIColor clearColor];
     
     UITextField *passwordField = [[UITextField alloc] initWithFrame:self.bounds];
-    //passwordField.backgroundColor = [UIColor whiteColor];
+    self.passwordField = passwordField;
+    
     passwordField.returnKeyType = UIReturnKeyDone;
     passwordField.font = [self.passwordField.font fontWithSize:20];
+    passwordField.tintColor = [UIColor blackColor];
     passwordField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     passwordField.borderStyle = UITextBorderStyleRoundedRect;
     passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -34,8 +42,8 @@
 {
     [textField resignFirstResponder];
     [self enterPassword:textField.text];
-    textField.text = @"";
-    return YES;
+    //textField.text = @"";
+    return NO;
 }
 
 @end

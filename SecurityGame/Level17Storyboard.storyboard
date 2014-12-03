@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="VW7-zp-X5c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="l5F-d0-uNw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Level Container-->
-        <scene sceneID="T6d-RA-WUy">
+        <scene sceneID="IlU-XU-7li">
             <objects>
-                <viewController id="VW7-zp-X5c" customClass="BGKVLevelContainer" sceneMemberID="viewController">
+                <viewController id="l5F-d0-uNw" customClass="BGKVLevelContainer" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="pGY-WJ-pig" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="ouh-XE-3FK"/>
+                        <segue destination="pGY-WJ-pig" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="2Vx-XG-FG2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bT7-6Y-bZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hyc-Ej-AT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="-224"/>
+            <point key="canvasLocation" x="-18" y="-223"/>
         </scene>
         <!--Initial-->
         <scene sceneID="GqE-Nh-wRD">
@@ -41,7 +41,7 @@
                                 <rect key="frame" x="263" y="447" width="560" height="362"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-b8-985">
-                                <rect key="frame" x="448" y="376" width="191" height="190"/>
+                                <rect key="frame" x="548" y="364" width="191" height="190"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
@@ -52,20 +52,92 @@
                                     <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVWithinLevelSegue" id="nSy-gD-jIh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-vT-DUp">
+                                <rect key="frame" x="416" y="461" width="104" height="124"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="Level1Paper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVWithinLevelSegue" id="eMh-nI-qxU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="tHM-vn-2xz"/>
+                    <navigationItem key="navigationItem" id="QnM-su-Wf5"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-pm-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="-96"/>
+            <point key="canvasLocation" x="964" y="-216"/>
+        </scene>
+        <!--Paper-->
+        <scene sceneID="nv6-48-O3z">
+            <objects>
+                <viewController id="TEc-oN-Tf9" userLabel="Paper" customClass="BGKVLevelViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ofe-H2-yVY"/>
+                        <viewControllerLayoutGuide type="bottom" id="YpV-Oc-m8i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZEN-Nb-bEt">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="hEy-Dm-hEo">
+                                <rect key="frame" x="-1000" y="-500" width="3000" height="1500"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1Chair" translatesAutoresizingMaskIntoConstraints="NO" id="dgI-Y0-85T">
+                                <rect key="frame" x="-51" y="77" width="440" height="592"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="sex-iS-Ohs">
+                                <rect key="frame" x="-285" y="163" width="1818" height="1270"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1Paper" translatesAutoresizingMaskIntoConstraints="NO" id="ufK-gW-8nP">
+                                <rect key="frame" x="281" y="163" width="368" height="412"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="Previous Passwords  AcfGi23  HnwLk52  QrtSb66" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-JH-8Rl">
+                                <rect key="frame" x="346" y="202" width="275" height="346"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vih-ab-raP">
+                                <rect key="frame" x="726" y="-67" width="503" height="513"/>
+                                <state key="normal" image="Level1Computer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVWithinLevelSegue" id="fFg-NZ-8cX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3kg-tN-r9h"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZW-0e-ZuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="-1158"/>
         </scene>
         <!--Computer-->
         <scene sceneID="USE-fa-yOi">
             <objects>
-                <viewController title="Level 1 password VC" id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevelViewController" sceneMemberID="viewController">
+                <viewController id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevelViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6BE-dR-Uht"/>
                         <viewControllerLayoutGuide type="bottom" id="ErL-3c-rav"/>
@@ -89,22 +161,32 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hint: Password is &quot;Password&quot;" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EvQ-jW-mCr">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-fa-ZKs">
+                                <rect key="frame" x="-146" y="351" width="246" height="305"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="Level1Paper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVWithinLevelSegue" id="Z7H-vO-4j9"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hint: Remember the format" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EvQ-jW-mCr">
                                 <rect key="frame" x="406" y="275" width="158" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pay-vl-ldn" customClass="BGKVTextFieldPasswordControl">
-                                <rect key="frame" x="418" y="237" width="135" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UWx-qf-bK3" customClass="BGKVCrackerControl">
+                                <rect key="frame" x="418" y="244" width="135" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="PghJk12"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="enterPassword:" destination="3Xe-rb-phB" eventType="valueChanged" id="YnQ-hV-iIk"/>
+                                    <action selector="enterPassword:" destination="3Xe-rb-phB" eventType="valueChanged" id="Vn9-BS-OTq"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -113,8 +195,8 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="password" value="Password"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="password" value="frog"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="yIi-ZG-xuq" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>
@@ -122,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2292" y="-1031"/>
+            <point key="canvasLocation" x="2250" y="15"/>
         </scene>
         <!--Load Screen View Controller-->
         <scene sceneID="hNu-KQ-i0b">
@@ -139,13 +221,10 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wHh-Ay-RdF">
                                 <rect key="frame" x="494" y="550" width="37" height="37"/>
                             </activityIndicatorView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
                                 <rect key="frame" x="340" y="303" width="345" height="161"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <string key="text">Never make your hint your password. Sometimes it's hard to remember your password, but there are definitely better ways to hint!</string>
+                                <string key="text">Computers can break passwords by just trying every possibility! But only if they have enough info, like the format. Capitals and numbers won't save you if you use a common format like Someword1</string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -174,10 +253,10 @@
             </objects>
             <point key="canvasLocation" x="3392" y="-369"/>
         </scene>
-        <!--Storyboard Link - Level2Link-->
+        <!--Storyboard Link - Level3Link-->
         <scene sceneID="dHe-eL-yoi">
             <objects>
-                <viewController title="Level2Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Level3Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DxR-4l-rxf"/>
                         <viewControllerLayoutGuide type="bottom" id="7L6-Wi-lyI"/>
@@ -190,7 +269,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level2Storyboard"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level18Storyboard"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfi-ZO-AT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,6 +280,7 @@
     <resources>
         <image name="Level1Chair" width="212" height="300"/>
         <image name="Level1Computer" width="800" height="800"/>
+        <image name="Level1Paper" width="245" height="300"/>
         <image name="Level1WoodenTable" width="800" height="495"/>
         <image name="LibraryBackground1" width="1024" height="778"/>
     </resources>
@@ -210,4 +290,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="fFg-NZ-8cX"/>
+        <segue reference="Z7H-vO-4j9"/>
+    </inferredMetricsTieBreakers>
 </document>
