@@ -140,7 +140,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-JH-8Rl">
                                 <rect key="frame" x="288" y="123" width="242" height="451"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">I need you to install some monitoring software on this computer. Follow these steps to accomplish the task!  - Login to your email. You can log in when the USB stick is plugged in.  - Click on the link in the email I sent you. Make sure you use HTTPS!   - Make sure you click the right download link! We've set up decoy links in case anyone else ever gets in.  Good luck.</mutableString>
+                                <string key="text">I need you to install some monitoring software on this computer. Follow these steps to accomplish the task!  - Login to your email. You can log in when the USB stick is plugged in.  - Click on the link in the email I sent you. Make sure you use HTTPS!   - Make sure you click the right download link! We've set up decoy links in case anyone else ever gets in.  Good luck.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -264,12 +264,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jFV-zL-6BU" kind="custom" customClass="RBStoryboardModalSegue" id="kGF-8c-0Lj"/>
+                                    <segue destination="Yxt-ET-bN9" kind="unwind" unwindAction="goToMainMenu:" id="0iw-Fw-ucd"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Z2e-MP-sf3"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="nextLevelButton" destination="tWE-qn-ChN" id="h34-u9-KUn"/>
@@ -277,30 +278,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbt-Ak-FC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Yxt-ET-bN9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3946" y="-177"/>
-        </scene>
-        <!--MainLink-->
-        <scene sceneID="dHe-eL-yoi">
-            <objects>
-                <viewController title="MainLink" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DxR-4l-rxf"/>
-                        <viewControllerLayoutGuide type="bottom" id="7L6-Wi-lyI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gPV-Sl-qsh">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Main"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rfi-ZO-AT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5074" y="-117"/>
         </scene>
         <!--Computer-->
         <scene sceneID="r7x-QC-bJJ">
