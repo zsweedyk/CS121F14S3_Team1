@@ -7,113 +7,96 @@
 //
 
 #import "BGKVHintViewController.h"
+#import "BGKVSingleHintViewController.h"
 #import "UIBarButtonItem+Badge.h"
 
-@interface BGKVHintViewController ()
+@implementation BGKVHintViewController
 
-@end
-
-@implementation BGKVHintViewController {
-    // Array of BOOLS
-    NSMutableArray *_is_available;
-    NSMutableArray *_is_viewed;
-    BOOL _initialized;
-}
-
-- (void)viewDidLoad
+- (instancetype)init
 {
-    [super viewDidLoad];
-    NSAssert(_initialized, @"Hint controller viewed without being properly initialized.");
-}
-
-- (void)initialize
-{
-    self.delegate = self;
-    _initialized = YES;
-    
-    NSAssert([self.tabBar.items count] > 0, @"Hint view controller needs an initial screen");
-    
-    UITabBarItem *backButton = [[UITabBarItem alloc] initWithTitle:@"Back" image:nil tag:0];
-    UIViewController *dummy  = [[UIViewController alloc] init];
-    dummy.tabBarItem = backButton;
-    
-    NSMutableArray *vcs_and_done = [[NSMutableArray alloc] initWithObjects:dummy, nil];
-    [vcs_and_done addObjectsFromArray:self.viewControllers];
-    self.viewControllers = vcs_and_done;
-    
-    _is_available = [[NSMutableArray alloc] initWithObjects:@YES, @YES, nil];
-    _is_viewed = [[NSMutableArray alloc] initWithObjects:@YES, @YES, nil];
-    
-    ((UITabBarItem *)self.tabBar.items[1]).title = @"Objective";
-    ((UITabBarItem *)self.tabBar.items[1]).tag = 1;
-    
-    NSArray *items = self.tabBar.items;
-    for (int i=2; i < [items count]; i++) {
-        [_is_available addObject:@NO];
-        [_is_viewed addObject:@NO];
-        
-        UITabBarItem *item = items[i];
-        item.title = @"Locked";
-        item.enabled = NO;
-        item.tag = i;
-        
-        //[self makeHintAtIndexAvailable:i];
+    self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    if (self) {
+        [self setup];
     }
-    
-    [self setSelectedViewController:self.viewControllers[1]];
+    return self;
 }
 
-- (BOOL)makeHintAtIndexAvailable:(NSInteger)index
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    UITabBarItem *item = self.tabBar.items[index];
-    _is_available[index] = @YES;
-    item.title = [NSString stringWithFormat:@"Hint %ld", (long)index-1];
-    item.enabled = YES;
-    
-    if (! [_is_viewed[index] boolValue]) {
-        item.badgeValue = @"NEW";
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setup];
     }
-    
-    // Eventually, this should only return yes if the hint was actually
-    // not available to begin with.
-    return YES;
+    return self;
 }
 
-- (void)markHintAtIndexAsViewed:(NSInteger)index
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    _is_viewed[index] = @YES;
-    UITabBarItem *item = self.tabBar.items[index];
-    item.badgeValue = nil;
-}
-
-
-- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
-{
-    if (viewController == self.viewControllers[0]) {
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-        return NO;
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self setup];
     }
-    
-    return YES;
+    return self;
 }
 
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text
 {
-    NSAssert(viewController != self.viewControllers[0], @"Somehow shouldSelectViewController isn't doing its job.");
-    NSInteger index = viewController.tabBarItem.tag;
-    [self markHintAtIndexAsViewed:index];
+    [self addNewHintWithController:[[BGKVSingleHintViewController alloc] initWithTitle:title andText:text]];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)addNewHintWithController:(UIViewController *)controller
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self.pages addObject:controller];
 }
-*/
+
+- (void)setup
+{
+    self.pages = [[NSMutableArray alloc] init];
+    self.dataSource = self;
+    [self addNewHintWithTitle:@"MISSION" andText:@"Crack that password!"];
+    [self addNewHintWithTitle:@"New Information!" andText:@"Maybe the password hint could give you ideas!"];
+    [self setViewControllers:@[self.pages[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    if (nil == viewController) {
+        return _pages[0];
+    }
+    NSInteger idx = [_pages indexOfObject:viewController];
+    NSParameterAssert(idx != NSNotFound);
+    if (idx >= [_pages count] - 1) {
+        // we're at the end of the _pages array
+        return nil;
+    }
+    // return the next page's view controller
+    return _pages[idx + 1];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    if (nil == viewController) {
+        return _pages[0];
+    }
+    NSInteger idx = [_pages indexOfObject:viewController];
+    NSParameterAssert(idx != NSNotFound);
+    if (idx <= 0) {
+        // we're at the end of the _pages array
+        return nil;
+    }
+    // return the previous page's view controller
+    return _pages[idx - 1];
+}
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+{
+    return [self.pages count];
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    return [self.pages indexOfObject:self.viewControllers[0]];
+}
+
 
 @end
