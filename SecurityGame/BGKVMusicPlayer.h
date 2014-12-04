@@ -15,5 +15,8 @@
 
 + (BGKVMusicPlayer*) sharedInstance;
 - (void) play;
+- (void) setVolume:(float) vol;
+- (void) mute;
+- (void) unmute;
 
 @end
