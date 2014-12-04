@@ -12,6 +12,7 @@
 
 - (NSUInteger)count;
 - (instancetype)initForLevel:(NSInteger)level;
+- (instancetype)initForLastLevel;
 - (NSString *)dialogueAtIndex:(NSUInteger)dialogueIndex;
 
 @end
