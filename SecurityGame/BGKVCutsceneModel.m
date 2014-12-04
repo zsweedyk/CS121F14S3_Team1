@@ -27,6 +27,7 @@ NSUInteger _maxDialogueLevel;
                 break;
                 
             default:
+                return nil;
                 break;
         }
         

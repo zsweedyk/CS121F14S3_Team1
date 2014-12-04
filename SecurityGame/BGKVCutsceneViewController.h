@@ -20,4 +20,6 @@
 @property (nonatomic, assign) NSNumber* levelProperty;
 
 
+- (instancetype)initWithLevel:(NSUInteger)level;
+
 @end
