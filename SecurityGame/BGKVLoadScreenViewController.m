@@ -7,6 +7,9 @@
 //
 
 #import "BGKVLoadScreenViewController.h"
+#import "UIViewController+Unwind.h"
+#import "BGKVLevelContainer.h"
+#import "BGKVCutsceneViewController.h"
 
 @interface BGKVLoadScreenViewController ()
 
@@ -18,6 +21,7 @@
     [super viewDidLoad];
     
     self.nextLevelButton.hidden = YES;
+    [self.nextLevelButton addTarget:self action:@selector(returnToLevelContainerAndGoToNextLevel) forControlEvents:UIControlEventTouchUpInside];
     self.spinner.hidesWhenStopped = YES;
     [self.view addSubview:self.spinner];
     [self.spinner startAnimating];
@@ -39,19 +43,17 @@
     });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)returnToLevelContainerAndGoToNextLevel
+{
+    BGKVLevelContainer *container = [self targetForAction:@selector(returnToLevelContainer:) withSender:self];
+    NSInteger nextLevel = container.level+1;
+    [container goToLevel:nextLevel andPlayCutscene:NO];
+    
+    if ([BGKVCutsceneViewController playCutsceneOnViewController:self ForLevel:nextLevel]) {
+        // Do nothing; the cutscene will take care of returning to the level container
+    } else {
+        [self unwind:@selector(returnToLevelContainer:)];
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

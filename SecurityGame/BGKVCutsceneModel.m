@@ -8,24 +8,20 @@
 
 #import "BGKVCutsceneModel.h"
 
-@implementation BGKVCutsceneModel
-{
-
-NSArray* _levelDialogues;
-NSUInteger _maxDialogueLevel;
+@implementation BGKVCutsceneModel {
+    NSArray* _levelDialogues;
 }
 
-- (id) initWithLevel:(NSUInteger)level
+- (instancetype)initForLevel:(NSInteger)level
 {
     self = [super init];
-    if (self){
+    if (self) {
         switch (level) {
-                //fill in the dialogues and how many elements there are here
+            //fill in the dialogues
             case 1:
                 _levelDialogues = @[@"One of the employees left his computer unlocked.",
                                     @"Oh? Did you find anything interesting?",
                                     @"I didn't find anything suspicious on his computer, but I found that one of the leaked documents had recently been accessed by Erica. I'm going to check her computer next."];
-                
                 break;
             case -1: // Tutorial Level
                 _levelDialogues = @[@"What are the details of my first assignment?",
@@ -41,19 +37,18 @@ NSUInteger _maxDialogueLevel;
                 return nil;
                 break;
         }
-        
     }
     return self;
 }
 
--(NSString*) getStringForDialogue:(NSUInteger)dialogue
-{
-    return _levelDialogues[dialogue];
-}
-
--(NSUInteger)getMaxDialogueLevel:(NSUInteger)level
+- (NSUInteger)count
 {
     return [_levelDialogues count];
+}
+
+- (NSString *)dialogueAtIndex:(NSUInteger)dialogueIndex
+{
+    return _levelDialogues[dialogueIndex];
 }
 
 @end

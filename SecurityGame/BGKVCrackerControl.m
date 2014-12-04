@@ -102,8 +102,6 @@
     
     [template getCharacters:buffer range:NSMakeRange(0, len)];
     
-    NSLog(@"Is ! a symbol? : %d", [[NSCharacterSet symbolCharacterSet] characterIsMember:'!']);
-    
     for(int i = 0; i < len; i++) {
         NSString *charSet;
         switch ([BGKVCrackerControl templateRepresentativeForCharacter:buffer[i]]) {

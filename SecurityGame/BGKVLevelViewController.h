@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BGKVPasswordControl.h"
+#import "BGKVSingleHintViewController.h"
 
 @class BGKVLevelContainer;
-@class BGKVPasswordControl;
 
 @interface BGKVLevelViewController : UIViewController
 
@@ -18,6 +19,8 @@
 @property (nonatomic) NSString *password;
 
 @property (nonatomic, weak) BGKVLevelContainer *levelContainer;
+
+@property (nonatomic) IBOutletCollection(BGKVSingleHintViewController) NSArray *hints;
 
 - (IBAction)enterPassword:(BGKVPasswordControl *)control;
 - (IBAction)enterPasswordFromTextField:(UITextField *)textField;

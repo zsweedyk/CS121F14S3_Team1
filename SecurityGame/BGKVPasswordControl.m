@@ -20,14 +20,12 @@
 
 - (void)setup
 {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                   reason:[NSString stringWithFormat:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)]
-                                 userInfo:nil];
+    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)enterPassword:(NSString *)guess
 {
-    self.attempts = [NSNumber numberWithInt:[self.attempts intValue] + 1];
+    self.attempts++;
     self.guess = guess;
     self.correct = guess && [guess isEqualToString:self.password];
     [self sendActionsForControlEvents:UIControlEventValueChanged];
