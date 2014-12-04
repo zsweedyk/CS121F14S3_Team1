@@ -9,6 +9,7 @@
 #import "BGKVCutsceneViewController.h"
 #import "BGKVCutsceneModel.h"
 #import "BGKVLevelContainer.h"
+#import "UIViewController+Unwind.h"
 
 @interface BGKVCutsceneViewController ()
 
@@ -24,7 +25,6 @@
     self = [super init];
     if (self) {
         _dialogue = [BGKVCutsceneModel dialogueForLevel:level];
-        NSLog(@"%@", _dialogue);
         if (!_dialogue) {
             return nil;
         }
@@ -32,10 +32,21 @@
     return self;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self updateDialogue];
+}
+
 - (IBAction)continueButton:(id)sender
 {
     _dialogueIndex++;
     [self updateDialogue];
+}
+
+- (IBAction)goToNextLevel
+{
+    [self unwind:@selector(returnToLevelContainer:)];
 }
 
 - (void)updateDialogue
@@ -56,16 +67,6 @@
     }
 }
 
-- (IBAction)goToNextLevel
-{
-    BGKVLevelContainer *container = [self targetForAction:@selector(returnToLevelContainer:) withSender:self];
-    [container dismissViewControllerAnimated:YES completion:nil];
-}
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self updateDialogue];
-}
 
 @end

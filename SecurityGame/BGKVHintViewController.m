@@ -12,6 +12,15 @@
 
 @implementation BGKVHintViewController
 
+- (void)setup
+{
+    self.pages = [[NSMutableArray alloc] init];
+    self.dataSource = self;
+    [self addNewHintWithTitle:@"MISSION" andText:@"Crack that password!"];
+    [self addNewHintWithTitle:@"New Information!" andText:@"Maybe the password hint could give you ideas!"];
+    [self setViewControllers:@[self.pages[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+}
+
 - (instancetype)init
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
@@ -39,23 +48,21 @@
     return self;
 }
 
-- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text
+- (BOOL)addNewHintWithTitle:(NSString *)title andText:(NSString *)text
 {
-    [self addNewHintWithController:[[BGKVSingleHintViewController alloc] initWithTitle:title andText:text]];
+    return [self addNewHintWithController:[[BGKVSingleHintViewController alloc] initWithTitle:title andText:text]];
 }
 
-- (void)addNewHintWithController:(UIViewController *)controller
+- (BOOL)addNewHintWithController:(UIViewController *)controller
 {
+    if ([self.pages containsObject:controller]) {
+        return NO;
+    }
+    
     [self.pages addObject:controller];
-}
-
-- (void)setup
-{
-    self.pages = [[NSMutableArray alloc] init];
-    self.dataSource = self;
-    [self addNewHintWithTitle:@"MISSION" andText:@"Crack that password!"];
-    [self addNewHintWithTitle:@"New Information!" andText:@"Maybe the password hint could give you ideas!"];
-    [self setViewControllers:@[self.pages[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [self setViewControllers:@[controller] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+    return YES;
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController

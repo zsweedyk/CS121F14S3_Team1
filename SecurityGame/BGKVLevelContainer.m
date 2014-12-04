@@ -16,6 +16,7 @@
 #import "BGKVViewController.h"
 
 #import "UIView+Scaling.h"
+#import "UIViewController+Unwind.h"
 
 @interface BGKVLevelContainer ()
 
@@ -46,7 +47,7 @@
 {
     self.hintVC = [[BGKVHintViewController alloc] init];
     self.hintButton.enabled = YES;
-    [self setNewHintAvailable:YES];
+    self.newHintAvailable = NO;
 }
 
 - (IBAction)hintButtonAction:(UIBarButtonItem *)sender
@@ -55,20 +56,14 @@
     NSAssert(self.hintButton.enabled, @"Expected hint button to be enabled if hints are being viewed!");
     
     [self presentViewController:self.hintVC animated:YES completion:^{
-        [self setNewHintAvailable:NO];
+        self.newHintAvailable = NO;
     }];
 }
 
 
-
-/*
-- (void)setHintButtonEnabled:(BOOL)enabled
-{
-    self.hintButton.enabled = enabled;
-}
- */
 - (void)setNewHintAvailable:(BOOL)newHintAvailable
 {
+    _newHintAvailable = newHintAvailable;
     if (newHintAvailable) {
         NSAssert(self.hintButton.enabled, @"If a new hint is available, hint button should be enabled!");
         self.hintButton.title = @"New Info!";
@@ -85,13 +80,29 @@
 
 - (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text
 {
-    [self.hintVC addNewHintWithTitle:title andText:text];
+    [self addNewHintWithTitle:title andText:text updateNewHintAvailable:YES];
+}
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text updateNewHintAvailable:(BOOL)update
+{
+    BOOL wasANewHint = [self.hintVC addNewHintWithTitle:title andText:text];
+    NSAssert(wasANewHint, @"Hint (title:%@, text:%@) had just been constructed, but was still somehow already contained in the hintVC! This should never happen.", title, text);
+    
     self.hintButton.enabled = YES;
+    if (update && wasANewHint) {
+        self.newHintAvailable = YES;
+    }
 }
 - (void)addNewHintWithController:(UIViewController *)controller
 {
-    [self.hintVC addNewHintWithController:controller];
+    [self addNewHintWithController:controller updateNewHintAvailable:YES];
+}
+- (void)addNewHintWithController:(UIViewController *)controller updateNewHintAvailable:(BOOL)update
+{
+    BOOL wasANewHint = [self.hintVC addNewHintWithController:controller];
     self.hintButton.enabled = YES;
+    if (update && wasANewHint) {
+        self.newHintAvailable = YES;
+    }
 }
 
 #pragma mark Back Button
@@ -149,8 +160,7 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 // This selector is declared in BGKVViewController
-                UIViewController *mainMenuVC = [self targetForAction:@selector(goToMainMenu:) withSender:self];
-                [mainMenuVC dismissViewControllerAnimated:YES completion:nil];
+                [self unwind:@selector(goToMainMenu:)];
             });
             
             break;

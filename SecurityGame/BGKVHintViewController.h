@@ -14,8 +14,10 @@
 
 - (void)setup;
 
-- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text;
-- (void)addNewHintWithController:(UIViewController *)controller;
+// Returns YES if hint is added
+// Returns NO if it was already one of the hints, and is therefore not added
+- (BOOL)addNewHintWithTitle:(NSString *)title andText:(NSString *)text;
+- (BOOL)addNewHintWithController:(UIViewController *)controller;
 
 @property (nonatomic) NSMutableArray *pages;
 

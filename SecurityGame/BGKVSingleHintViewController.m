@@ -8,6 +8,8 @@
 
 #import "BGKVSingleHintViewController.h"
 #import "BGKVLevelContainer.h"
+#import "BGKVPasswordControl.h"
+#import "UIViewController+Unwind.h"
 
 @implementation BGKVSingleHintViewController
 
@@ -29,8 +31,18 @@
 
 - (IBAction)returnToMission
 {
-    UIViewController *levelContainer = [self targetForAction:@selector(returnToLevelContainer:) withSender:self];
-    [levelContainer dismissViewControllerAnimated:YES completion:nil];
+    [self unwind:@selector(returnToLevelContainer:)];
+}
+
+- (BOOL)shouldBecomeAvailable:(BGKVPasswordControl *)control
+{
+    if (self.attempts == 0) {
+        return NO;
+    }
+    
+    BOOL correctAttempts = (control.attempts == self.attempts);
+    BOOL correctControl = !self.control || self.control == control;
+    return correctAttempts && correctControl;
 }
 
 @end

@@ -6,22 +6,15 @@
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
+#import "BGKVLevelContainer.h"
 #import "BGKVLevelViewController.h"
+#import "BGKVAlertViewDelegateTemplate.h"
 
 @interface BGKVLevelViewController () <UITextFieldDelegate>
 
 @end
 
 @implementation BGKVLevelViewController
-
-- (void)setTest:(NSInteger)test
-{
-    NSLog(@"%d", test);
-}
-- (void)setTest2:(NSInteger)test2
-{
-    NSLog(@"%d", test2);
-}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -51,37 +44,63 @@
     }
 }
 
+#pragma mark MAGIC STRING WARNING : correct
+// "correct" is the identifier of the segue that is run when the password is correct.
 - (void)enteredCorrectPassword:(BOOL)correct sender:(id)sender
 {
     if (correct) {
         UIAlertView * alert = [[UIAlertView alloc]
                                initWithTitle:@"You guessed right!"
                                message:@"Good work!"
-                               
-                               // By setting delegate:self, dismissing this alert will run "alertView:clickedButtonAtIndex:"
-                               delegate:self
-                               
+                               delegate:nil
                                cancelButtonTitle:@"Next level" otherButtonTitles:nil];
+        
+        // When this alert is dismissed, it will run the code block below
+        [BGKVAlertViewDelegateTemplate setActionOfAlertView:alert toAction:^{
+            [self correctPasswordAction:sender];
+        }];
         [alert show];
         
     } else {
         UIAlertView * alert = [[UIAlertView alloc]
                                initWithTitle:@"Incorrect"
                                message:@"Try again!"
-                               
-                               // By setting delegate:nil, dismissing this alert will do nothing at all.
                                delegate:nil
-                               
                                cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        
+        // When this alert is dismissed, it will run the code block below
+        [BGKVAlertViewDelegateTemplate setActionOfAlertView:alert toAction:^{
+            [self incorrectPasswordAction:sender];
+        }];
         [alert show];
     }
 
 }
 
-#pragma mark MAGIC STRING WARNING : correct
-// "correct" is the identifier of the segue that is run when the password is correct.
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)correctPasswordAction:(id)sender
 {
     [self performSegueWithIdentifier:@"correct" sender:self];
 }
+
+- (void)incorrectPasswordAction:(id)sender
+{
+    [self updateAvailableHints:sender];
+}
+
+- (void)updateAvailableHints:(id)sender
+{
+    if (!self.hints) {
+        return;
+    }
+    
+    if ([sender isKindOfClass:[BGKVPasswordControl class]]) {
+        BGKVPasswordControl *control = sender;
+        for (BGKVSingleHintViewController *hint in self.hints) {
+            if ([hint shouldBecomeAvailable:control]) {
+                [self.levelContainer addNewHintWithController:hint];
+            }
+        }
+    }
+}
+
 @end

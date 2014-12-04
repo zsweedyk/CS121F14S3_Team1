@@ -14,12 +14,14 @@
 
 @interface BGKVLevelContainer : UIViewController <UIActionSheetDelegate>
 
+// Set in Storyboard
 @property (nonatomic) NSInteger level;
 
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic) BGKVHintViewController *hintVC;
  
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;
+@property (nonatomic) BOOL newHintAvailable;
 
 // It's possible this should be weak!
 @property (nonatomic) BGKVLevelViewController *currentLevelVC;
@@ -34,5 +36,10 @@
 - (void)resetCache;
 
 - (IBAction)returnToLevelContainer:(UIStoryboardSegue *)segue;
+
+
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text updateNewHintAvailable:(BOOL)update;
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text;
+- (void)addNewHintWithController:(UIViewController *)controller;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "BGKVLevel1PasswordViewController.h"
+#import "BGKVLevelContainer.h"
 
 @interface BGKVLevel1PasswordViewController () <UITextFieldDelegate>
 
@@ -20,7 +21,7 @@
     
     BGKVPasswordControl *control = sender;
     if (!correct && control.attempts == 3) {
-        
+        [self.levelContainer addNewHintWithTitle:@"BLAH" andText:@"Take the Hint!"];
     }
 }
 

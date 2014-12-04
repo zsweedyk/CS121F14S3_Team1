@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BGKVPasswordControl.h"
+#import "BGKVSingleHintViewController.h"
 
 @class BGKVLevelContainer;
 
@@ -19,15 +20,12 @@
 
 @property (nonatomic, weak) BGKVLevelContainer *levelContainer;
 
+@property (nonatomic) IBOutletCollection(BGKVSingleHintViewController) NSArray *hints;
+
 - (IBAction)enterPassword:(BGKVPasswordControl *)control;
 - (IBAction)enterPasswordFromTextField:(UITextField *)textField;
 
 - (BOOL)checkPassword:(NSString *)guess;
 - (void)enteredCorrectPassword:(BOOL)correct sender:(id)sender;
-
-@property (nonatomic) NSInteger test;
-- (NSInteger)test UNAVAILABLE_ATTRIBUTE;
-@property (nonatomic) NSInteger test2;
-- (NSInteger)test2 UNAVAILABLE_ATTRIBUTE;
 
 @end
