@@ -24,6 +24,6 @@
 @property (nonatomic) NSString *password;
 @property (nonatomic) NSString *guess;
 @property (nonatomic) BOOL correct;
-@property (nonatomic) NSNumber *attempts;
+@property (nonatomic) NSInteger attempts;
 
 @end

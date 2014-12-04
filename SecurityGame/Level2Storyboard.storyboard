@@ -137,7 +137,7 @@
         <!--Computer-->
         <scene sceneID="USE-fa-yOi">
             <objects>
-                <viewController id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevelViewController" sceneMemberID="viewController">
+                <viewController id="3Xe-rb-phB" userLabel="Computer" customClass="BGKVLevel2PasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6BE-dR-Uht"/>
                         <viewControllerLayoutGuide type="bottom" id="ErL-3c-rav"/>
@@ -196,7 +196,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="password" value="frog"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="cacheKey" value="computerL2"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="yIi-ZG-xuq" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>

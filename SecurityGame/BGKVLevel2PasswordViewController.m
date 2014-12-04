@@ -7,79 +7,24 @@
 //
 
 #import "BGKVLevel2PasswordViewController.h"
+#import "BGKVPasswordControl.h"
+#import "BGKVLevelContainer.h"
 
-@interface BGKVLevel2PasswordViewController () <UITextFieldDelegate>
+@interface BGKVLevel2PasswordViewController ()
 
 @end
 
 @implementation BGKVLevel2PasswordViewController
 
-- (BOOL)checkPassword:(NSString *)guess
-{
-    NSString* password = @"frog";
-    return [guess isEqualToString:password];
-}
-
-- (BOOL) textFieldShouldReturn:(UITextField *)textField
-{
-    if (textField == self.passwordField) {
-        [textField resignFirstResponder];
-        if ([self checkPassword:self.passwordField.text]) {
-            UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"You guessed right!"
-                                   message:@"Good work!"
-                                   delegate:self
-                                   cancelButtonTitle:@"Next level" otherButtonTitles:nil];
-            [alert show];
-        } else {
-            UIAlertView * alert = [[UIAlertView alloc]
-                                   initWithTitle:@"Incorrect"
-                                   message:@"Try again!"
-                                   delegate:nil
-                                   cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-            self.passwordField.text = @"";
-            [alert show];
-        }
-        return YES;
+- (void)enteredCorrectPassword:(BOOL)correct sender:(id)sender{
+    [super enteredCorrectPassword:correct sender:sender];
+    
+    // Not always kosher...
+    BGKVPasswordControl *control = sender;
+    
+    if (!correct && control.attempts == 4) {
+        [self.levelContainer addNewHintWithTitle:@"BLAH" andText:@"Maybe it starts with 'f'"];
     }
-    return NO;
 }
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    [self performSegueWithIdentifier:@"SegueToLoadScreen" sender:self];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.passwordField.delegate = self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

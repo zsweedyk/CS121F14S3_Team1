@@ -33,4 +33,7 @@
 
 - (IBAction)returnToLevelContainer:(UIStoryboardSegue *)segue;
 
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text;
+- (void)addNewHintWithController:(UIViewController *)controller;
+
 @end

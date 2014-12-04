@@ -10,8 +10,4 @@
 
 @interface BGKVLevel2PasswordViewController : BGKVLevelViewController
 
-@property (weak, nonatomic) IBOutlet UITextField* passwordField;
-
-- (BOOL)checkPassword:(NSString *)guess;
-
 @end

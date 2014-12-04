@@ -8,6 +8,7 @@
 
 #import "BGKVSingleHintViewController.h"
 #import "BGKVLevelContainer.h"
+#import "UIViewController+Unwind.h"
 
 @implementation BGKVSingleHintViewController
 
@@ -29,8 +30,7 @@
 
 - (IBAction)returnToMission
 {
-    UIViewController *levelContainer = [self targetForAction:@selector(returnToLevelContainer:) withSender:self];
-    [levelContainer dismissViewControllerAnimated:YES completion:nil];
+    [self unwind:@selector(returnToLevelContainer:)];
 }
 
 @end

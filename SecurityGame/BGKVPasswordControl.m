@@ -27,7 +27,7 @@
 
 - (void)enterPassword:(NSString *)guess
 {
-    self.attempts = [NSNumber numberWithInt:[self.attempts intValue] + 1];
+    self.attempts++;
     self.guess = guess;
     self.correct = guess && [guess isEqualToString:self.password];
     [self sendActionsForControlEvents:UIControlEventValueChanged];

@@ -11,6 +11,7 @@
 #import "BGKVLevelViewControllerCache.h"
 #import "BGKVHintViewController.h"
 #import "UIBarButtonItem+Badge.h"
+#import "UIViewController+Unwind.h"
 
 // Only to avoid 'undeclared selector "goToMainMenu"'
 #import "BGKVViewController.h"
@@ -148,8 +149,7 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 // This selector is declared in BGKVViewController
-                UIViewController *mainMenuVC = [self targetForAction:@selector(goToMainMenu:) withSender:self];
-                [mainMenuVC dismissViewControllerAnimated:YES completion:nil];
+                [self unwind:@selector(goToMainMenu:)];
             });
             
             break;
