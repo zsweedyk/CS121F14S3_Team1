@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="wFw-fF-jg8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iKq-lf-sX9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Level Container-->
-        <scene sceneID="p9g-Iu-bYu">
-            <objects>
-                <viewController id="wFw-fF-jg8" customClass="BGKVLevelContainer" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="iKq-lf-sX9" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="jud-0w-QHa"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7yc-I9-IFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-946" y="717"/>
-        </scene>
         <!--Initial-->
         <scene sceneID="gsR-dC-GFL">
             <objects>
@@ -234,9 +222,6 @@
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="ZxO-XF-aJL" kind="custom" customClass="RBStoryboardModalSegue" id="xfZ-Ni-XwM"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L6-Jp-nEg">
                                 <rect key="frame" x="340" y="339" width="345" height="127"/>
@@ -259,29 +244,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrW-jL-qZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1386" y="1962"/>
-        </scene>
-        <!--Level 15 Link-->
-        <scene sceneID="8Bd-KV-Y4v">
-            <objects>
-                <viewController title="Level15Link" id="ZxO-XF-aJL" userLabel="Level 15 Link" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="km2-nN-LPq"/>
-                        <viewControllerLayoutGuide type="bottom" id="lmK-LS-u6C"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ush-3v-oS8">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level15Storyboard"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cnW-SY-HYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2904" y="2573"/>
         </scene>
         <!--Load Screen View Controller-->
         <scene sceneID="hJS-sy-8iA">
@@ -358,7 +320,7 @@
                                 <rect key="frame" x="301" y="102" width="633" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Email Inbox:  Sign up here to support our company! Pay a small donation and recieve a portion of our profits!  Seeking help: I have a large sum of money in a suspended bank account, please send your account information so I can send you the money temporarily. Will compensate for your help!  To the respected Mr. Smith: Please send us your company account information here for our records:  http://vitabrevis.net/accountinformation  Mr. Smith: Vita Brevis' Computer services staff need your updated account information. Please sign up here (securely) to update our records: https://vitabrevis.com/accounts/resetinformation     </mutableString>
+                                <string key="text">Email Inbox:  Sign up here to support our company! Pay a small donation and recieve a portion of our profits!  Seeking help: I have a large sum of money in a suspended bank account, please send your account information so I can send you the money temporarily. Will compensate for your help!  To the respected Mr. Smith: Please send us your company account information here for our records:  http://vitabrevis.net/accountinformation  Mr. Smith: Vita Brevis' Computer services staff need your updated account information. Please sign up here (securely) to update our records: https://vitabrevis.com/accounts/resetinformation     </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

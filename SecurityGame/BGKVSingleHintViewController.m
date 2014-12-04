@@ -8,6 +8,8 @@
 
 #import "BGKVSingleHintViewController.h"
 #import "BGKVLevelContainer.h"
+#import "BGKVPasswordControl.h"
+#import "UIViewController+Unwind.h"
 
 @implementation BGKVSingleHintViewController
 
@@ -23,14 +25,45 @@
 
 - (void)viewDidLoad
 {
-    self.hintTitleLabel.text = self.hintTitle;
-    self.hintTextTextView.text = self.hintText;
+    if (self.hintTitle) {
+        self.hintTitleLabel.text = self.hintTitle;
+    }
+    
+    if (self.hintText) {
+        self.hintTextTextView.text = self.hintText;
+    }
 }
 
 - (IBAction)returnToMission
 {
-    UIViewController *levelContainer = [self targetForAction:@selector(returnToLevelContainer:) withSender:self];
-    [levelContainer dismissViewControllerAnimated:YES completion:nil];
+    [self unwind:@selector(returnToLevelContainer:)];
 }
+
+- (BOOL)shouldBecomeAvailable:(BGKVPasswordControl *)control
+{
+    if (self.attempts == 0) {
+        return NO;
+    }
+    
+    BOOL correctAttempts = (control.attempts == self.attempts);
+    BOOL correctControl = !self.control || self.control == control;
+    return correctAttempts && correctControl;
+}
+
+- (BOOL)shouldBeInitiallyAvailable
+{
+    return self.attempts == -1;
+}
+
+
+- (BOOL)isEqual:(id)object
+{
+    if ([object isKindOfClass:[BGKVSingleHintViewController class]]) {
+        BGKVSingleHintViewController *otherHint = object;
+        return [otherHint.hintTitle isEqualToString:self.hintTitle] && [otherHint.hintText isEqualToString:self.hintText];
+    }
+    return NO;
+}
+
 
 @end

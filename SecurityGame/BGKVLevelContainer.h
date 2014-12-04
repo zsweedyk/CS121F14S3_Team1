@@ -11,28 +11,44 @@
 @class BGKVLevelViewController;
 @class BGKVLevelViewControllerCache;
 @class BGKVHintViewController;
+@class BGKVSingleHintViewController;
 
 @interface BGKVLevelContainer : UIViewController <UIActionSheetDelegate>
 
-@property (nonatomic) NSUInteger level;
+// Set in Storyboard via User Defined Runtime Attributes
+@property (nonatomic) NSInteger level;
+
+// Below should NOT be set in Storyboard
 
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic) BGKVHintViewController *hintVC;
  
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;
+@property (nonatomic) BOOL newHintAvailable;
 
 // It's possible this should be weak!
 @property (nonatomic) BGKVLevelViewController *currentLevelVC;
 
+// Set in xib
 @property (nonatomic, weak) IBOutlet UIView *levelView;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *menuButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *backButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *hintButton;
 
+- (void)goToLevel:(NSInteger)level;
+- (void)goToLevel:(NSInteger)level andPlayCutscene:(BOOL)cutscene;
+
+- (BOOL)playCutscene;
+
+- (void)showInitialLevelViewController;
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC;
 
-- (void)resetCache;
+- (void)reset;
 
 - (IBAction)returnToLevelContainer:(UIStoryboardSegue *)segue;
+
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text updateNewHintAvailable:(BOOL)update;
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text;
+- (void)addNewHintWithController:(UIViewController *)controller;
 
 @end

@@ -18,7 +18,7 @@
 
 - (void)setup
 {
-    self.backgroundColor = [UIColor clearColor];
+    [super setup];
     
     UITextField *passwordField = [[UITextField alloc] initWithFrame:self.bounds];
     self.passwordField = passwordField;
@@ -36,6 +36,7 @@
     passwordField.delegate = self;
     
     [self addSubview:passwordField];
+    [self reset];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
