@@ -60,6 +60,8 @@
 		AC1212B01A304F8500FEF6CA /* UIViewController+Unwind.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */; };
 		AC1212B31A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */; };
 		AC1212B61A3074EE00FEF6CA /* UIViewController+DismissSelf.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B51A3074EE00FEF6CA /* UIViewController+DismissSelf.m */; };
+		AC1212B91A307A0500FEF6CA /* BGKVAddHintSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B81A307A0500FEF6CA /* BGKVAddHintSegue.m */; };
+		AC1212BB1A30954E00FEF6CA /* BGKVSingleHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1212BA1A30954E00FEF6CA /* BGKVSingleHintViewController.xib */; };
 		AC1C88501A186A2000CFA7B5 /* BGKVLevelContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C884E1A186A2000CFA7B5 /* BGKVLevelContainer.m */; };
 		AC1C88511A186A2000CFA7B5 /* BGKVLevelContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1C884F1A186A2000CFA7B5 /* BGKVLevelContainer.xib */; };
 		AC1C88541A186A3100CFA7B5 /* BGKVHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88531A186A3100CFA7B5 /* BGKVHintViewController.m */; };
@@ -76,7 +78,6 @@
 		AC5543E51A2D8415006F0BDA /* BGKVCrackerKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5543E41A2D8415006F0BDA /* BGKVCrackerKeyboard.xib */; };
 		AC5543E91A2D8914006F0BDA /* BGKVCrackerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543E81A2D8914006F0BDA /* BGKVCrackerControl.m */; };
 		AC598F651A2ED0C9007E0A0F /* BGKVSingleHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC598F641A2ED0C9007E0A0F /* BGKVSingleHintViewController.m */; };
-		AC598F671A2ED0DF007E0A0F /* BGKVSingleHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC598F661A2ED0DF007E0A0F /* BGKVSingleHintViewController.xib */; };
 		AC6534F01A2D84280010CB04 /* BGKVCutsceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6534EE1A2D84280010CB04 /* BGKVCutsceneViewController.m */; };
 		AC6534F11A2D84280010CB04 /* BGKVCutsceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6534EF1A2D84280010CB04 /* BGKVCutsceneViewController.xib */; };
 		AC68BD061A2C0B860030A504 /* Level14Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC68BD051A2C0B860030A504 /* Level14Storyboard.storyboard */; };
@@ -195,6 +196,9 @@
 		AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVAlertViewDelegateTemplate.m; sourceTree = "<group>"; };
 		AC1212B41A3074EE00FEF6CA /* UIViewController+DismissSelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissSelf.h"; sourceTree = "<group>"; };
 		AC1212B51A3074EE00FEF6CA /* UIViewController+DismissSelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissSelf.m"; sourceTree = "<group>"; };
+		AC1212B71A307A0500FEF6CA /* BGKVAddHintSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVAddHintSegue.h; sourceTree = "<group>"; };
+		AC1212B81A307A0500FEF6CA /* BGKVAddHintSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVAddHintSegue.m; sourceTree = "<group>"; };
+		AC1212BA1A30954E00FEF6CA /* BGKVSingleHintViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVSingleHintViewController.xib; sourceTree = "<group>"; };
 		AC1C884D1A186A2000CFA7B5 /* BGKVLevelContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelContainer.h; sourceTree = "<group>"; };
 		AC1C884E1A186A2000CFA7B5 /* BGKVLevelContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelContainer.m; sourceTree = "<group>"; };
 		AC1C884F1A186A2000CFA7B5 /* BGKVLevelContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVLevelContainer.xib; sourceTree = "<group>"; };
@@ -222,7 +226,6 @@
 		AC5543E81A2D8914006F0BDA /* BGKVCrackerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCrackerControl.m; sourceTree = "<group>"; };
 		AC598F631A2ED0C9007E0A0F /* BGKVSingleHintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVSingleHintViewController.h; sourceTree = "<group>"; };
 		AC598F641A2ED0C9007E0A0F /* BGKVSingleHintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVSingleHintViewController.m; sourceTree = "<group>"; };
-		AC598F661A2ED0DF007E0A0F /* BGKVSingleHintViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVSingleHintViewController.xib; sourceTree = "<group>"; };
 		AC6534ED1A2D84280010CB04 /* BGKVCutsceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCutsceneViewController.h; sourceTree = "<group>"; };
 		AC6534EE1A2D84280010CB04 /* BGKVCutsceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCutsceneViewController.m; sourceTree = "<group>"; };
 		AC6534EF1A2D84280010CB04 /* BGKVCutsceneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVCutsceneViewController.xib; sourceTree = "<group>"; };
@@ -530,7 +533,9 @@
 				AC1C88531A186A3100CFA7B5 /* BGKVHintViewController.m */,
 				AC598F631A2ED0C9007E0A0F /* BGKVSingleHintViewController.h */,
 				AC598F641A2ED0C9007E0A0F /* BGKVSingleHintViewController.m */,
-				AC598F661A2ED0DF007E0A0F /* BGKVSingleHintViewController.xib */,
+				AC1212BA1A30954E00FEF6CA /* BGKVSingleHintViewController.xib */,
+				AC1212B71A307A0500FEF6CA /* BGKVAddHintSegue.h */,
+				AC1212B81A307A0500FEF6CA /* BGKVAddHintSegue.m */,
 			);
 			name = Hints;
 			sourceTree = "<group>";
@@ -876,6 +881,7 @@
 				ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */,
 				AC68BD061A2C0B860030A504 /* Level14Storyboard.storyboard in Resources */,
 				AC71826D19F5F30D001EFA4B /* InfoPlist.strings in Resources */,
+				AC1212BB1A30954E00FEF6CA /* BGKVSingleHintViewController.xib in Resources */,
 				0A8D738E1A19476E00E35321 /* BGKVLevel12PasswordViewController.h in Resources */,
 				AC1C88511A186A2000CFA7B5 /* BGKVLevelContainer.xib in Resources */,
 				0A98371E1A0C32FB00013F08 /* TutorialLevelStoryboard.storyboard in Resources */,
@@ -887,7 +893,6 @@
 				5D8857DF1A1B1592002069D2 /* Level15Storyboard.storyboard in Resources */,
 				AC68BD091A2C239B0030A504 /* Level16Storyboard.storyboard in Resources */,
 				93D23E1A1A19CF2700C82071 /* Level13Storyboard.storyboard in Resources */,
-				AC598F671A2ED0DF007E0A0F /* BGKVSingleHintViewController.xib in Resources */,
 				0AA3C7B81A0DE780000B0E7C /* Level3Storyboard.storyboard in Resources */,
 				0AAF58CF1A199CB9005984BE /* Level11Storyboard.storyboard in Resources */,
 				0A872EB81A2011AE003C6BE2 /* Level18Storyboard.storyboard in Resources */,
@@ -937,6 +942,7 @@
 				5DB4439A1A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m in Sources */,
 				AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */,
 				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
+				AC1212B91A307A0500FEF6CA /* BGKVAddHintSegue.m in Sources */,
 				AC0B98FD1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m in Sources */,
 				AC1C885C1A186A4E00CFA7B5 /* BGKVWithinLevelSegue.m in Sources */,
 				AC5543E21A2D83F2006F0BDA /* BGKVCrackerKeyboard.m in Sources */,

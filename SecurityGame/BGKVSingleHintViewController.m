@@ -50,4 +50,20 @@
     return correctAttempts && correctControl;
 }
 
+- (BOOL)shouldBeInitiallyAvailable
+{
+    return self.attempts == -1;
+}
+
+
+- (BOOL)isEqual:(id)object
+{
+    if ([object isKindOfClass:[BGKVSingleHintViewController class]]) {
+        BGKVSingleHintViewController *otherHint = object;
+        return [otherHint.hintTitle isEqualToString:self.hintTitle] && [otherHint.hintText isEqualToString:self.hintText];
+    }
+    return NO;
+}
+
+
 @end

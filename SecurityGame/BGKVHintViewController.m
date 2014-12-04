@@ -25,7 +25,7 @@
 
 - (instancetype)init
 {
-    self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self = [super initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     if (self) {
         [self setup];
     }
@@ -106,6 +106,5 @@
 {
     return [self.pages indexOfObject:self.viewControllers[0]];
 }
-
 
 @end

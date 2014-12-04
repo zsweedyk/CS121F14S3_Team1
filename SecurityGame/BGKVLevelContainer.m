@@ -26,6 +26,7 @@
 @implementation BGKVLevelContainer {
     dispatch_once_t _initialized_token;
     dispatch_once_t _cutscene_token;
+    NSDictionary *_disabledHintButtonTitleTextAttributes;
 }
 
 - (IBAction)returnToLevelContainer:(id)sender
@@ -48,10 +49,6 @@
 {
     self.hintVC = [[BGKVHintViewController alloc] init];
     
-    if (self.initialHint) {
-        [self.hintVC addNewHintWithController:self.initialHint];
-    }
-    
     self.hintButton.enabled = [self.hintVC hasHints];
     self.newHintAvailable = NO;
 }
@@ -72,20 +69,26 @@
     _newHintAvailable = newHintAvailable;
     if (newHintAvailable) {
         self.hintButton.enabled = YES;
+    }
+    [self updateHintButtonAppearance];
+    
+}
+
+- (void)updateHintButtonAppearance
+{
+    if (self.newHintAvailable) {
         NSAssert(self.hintButton.enabled, @"If a new hint is available, hint button should be enabled!");
         self.hintButton.title = @"New Info!";
         [self.hintButton setTitleTextAttributes:@{
                                                   NSForegroundColorAttributeName: [UIColor blueColor]
                                                   } forState:UIControlStateNormal];
-        
-    // If hints are already disabled, and we don't have a new hint available,
-    // we don't really need to change anything.
-    // (This preserves the greying-out of the hint button while not enabled.)
     } else if (self.hintButton.enabled) {
         self.hintButton.title = @" Mission ";
         [self.hintButton setTitleTextAttributes:@{
                                                   NSForegroundColorAttributeName: [UIColor blackColor]
                                                   } forState:UIControlStateNormal];
+    } else {
+        [self.hintButton setTitleTextAttributes:_disabledHintButtonTitleTextAttributes forState:UIControlStateNormal];
     }
 }
 
@@ -97,7 +100,6 @@
 {
     self.hintButton.enabled = YES;
     BOOL wasANewHint = [self.hintVC addNewHintWithTitle:title andText:text];
-    NSAssert(wasANewHint, @"Hint (title:%@, text:%@) had just been constructed, but was still somehow already contained in the hintVC! This should never happen.", title, text);
     
     if (update && wasANewHint) {
         self.newHintAvailable = YES;
@@ -117,7 +119,18 @@
     }
 }
 
-
+- (void)addAnyInitialHints
+{
+    if (!self.currentLevelVC) {
+        return;
+    }
+    
+    for (BGKVSingleHintViewController *hint in self.currentLevelVC.hints) {
+        if ([hint shouldBeInitiallyAvailable]) {
+            [self addNewHintWithController:hint];
+        }
+    }
+}
 
 #pragma mark Back Button
 #pragma mark MAGIC STRING WARNING : back
@@ -153,10 +166,10 @@
     UIActionSheet *menu = [[UIActionSheet alloc] initWithTitle:@"Options Menu" delegate:self cancelButtonTitle:@"Resume" destructiveButtonTitle:nil otherButtonTitles:
              @"Quit Game",
              @"How to Play",
-             @"Reset Level",
+             @"Restart Level",
              @"Mission Info",
-             @"Settings", nil];
-    //menu.tag = 1;
+             @"Settings",
+             @"Replay Cutscene", nil];
     [menu showInView:self.view];
 }
 - (void)actionSheet:(UIActionSheet*) actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -200,7 +213,7 @@
             break;
         }
         case 2: {
-            NSString *expectedButtonTitle = @"Reset Level";
+            NSString *expectedButtonTitle = @"Restart Level";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
@@ -208,7 +221,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 UIAlertView * alert = [[UIAlertView alloc]
                                        initWithTitle:@"Are you sure?"
-                                       message:@"You will lose your progess on this mission if you reset!"
+                                       message:@"You will lose your progess on this mission if you restart!"
                                        delegate:nil
                                        
                                        cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
@@ -216,6 +229,7 @@
                  ^(UIAlertView *alert, NSInteger index) {
                      if (index == 1) {
                          [self reset];
+                         [self setupHints];
                          [self showInitialLevelViewController];
                      }
                  }];
@@ -239,10 +253,7 @@
                     UIAlertView * alert = [[UIAlertView alloc]
                                            initWithTitle:@"Not Available"
                                            message:@"No mission info is currently available. Good luck!"
-                                           
-                                           // By setting delegate:self, dismissing this alert will run "alertView:clickedButtonAtIndex:"
                                            delegate:nil
-                                           
                                            cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     [alert show];
                 });
@@ -259,6 +270,28 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 UIViewController *settings = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Settings"];
                 [self presentViewController:settings animated:YES completion:nil];
+            });
+            
+            break;
+        }
+        case 5: {
+            NSString *expectedButtonTitle = @"Replay Cutscene";
+            NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
+                     @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
+                     actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                BOOL played = [self playCutscene];
+                if (!played) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        UIAlertView * alert = [[UIAlertView alloc]
+                                               initWithTitle:@"Not Available"
+                                               message:@"This mission doesn't have a cutscene!"
+                                               delegate:nil
+                                               cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                        [alert show];
+                    });
+                }
             });
             
             break;
@@ -287,11 +320,21 @@
     [super viewDidAppear:animated];
     
     dispatch_once(&_cutscene_token, ^{
-        BGKVCutsceneViewController *cutscene = [[BGKVCutsceneViewController alloc] initWithLevel:self.level];
-        if (cutscene) {
-            [self presentViewController:cutscene animated:YES completion:nil];
-        }
+        _disabledHintButtonTitleTextAttributes = [self.hintButton titleTextAttributesForState:UIControlStateNormal];
+        
+        [self playCutscene];
     });
+}
+
+// Returns NO if there is no cutscene to play
+- (BOOL)playCutscene
+{
+    BGKVCutsceneViewController *cutscene = [[BGKVCutsceneViewController alloc] initWithLevel:self.level];
+    if (cutscene) {
+        [self presentViewController:cutscene animated:YES completion:nil];
+        return YES;
+    }
+    return NO;
 }
 
 - (void)reset
@@ -326,7 +369,7 @@
 {
     BGKVLevelViewController *oldVC = self.currentLevelVC;
     
-    // If one exists, remove previous level view controller
+    // If one exists, remove previous level view controller.
     if (oldVC) {
         [oldVC removeFromParentViewController];
         [oldVC.view removeFromSuperview];
@@ -340,11 +383,10 @@
     [self addChildViewController: newVC];
     [self.levelView addSubview: newVC.view];
     self.currentLevelVC = newVC;
-
-    //[self setBackButtonEnabled: (self.currentLevelVC.backSegueName ? YES : NO)];
     [self setBackButtonEnabled: self.currentLevelVC.back];
-
     newVC.levelContainer = self;
+    
+    [self addAnyInitialHints];
 }
 
 /*

@@ -18,10 +18,6 @@
 // Set in Storyboard via User Defined Runtime Attributes
 @property (nonatomic) NSInteger level;
 
-// Set in Storyboard using normal IBOutlet connection in order to have an
-// initial 'hint' (though it will usually be a mission description)
-@property (nonatomic) IBOutlet BGKVSingleHintViewController *initialHint;
-
 
 
 // Below should NOT be set in Storyboard

@@ -62,8 +62,23 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="cacheKey" value="initial"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="hints" destination="IJN-84-gfQ" id="R9W-bP-iBv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-pm-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="IJN-84-gfQ" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="nil" keyPath="hintTitle"/>
+                        <userDefinedRuntimeAttribute type="nil" keyPath="hintText"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1502" y="-96"/>
         </scene>

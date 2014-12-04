@@ -21,6 +21,8 @@
 
 // Used to make the hint available automatically after a given number of attempts
 // (Functionality is disabled if attempts is the default value, 0)
+// If attempts is -1, then that means this hint should become available upon first
+// reaching the stage
 @property (nonatomic) NSInteger attempts;
 
 // Used to make the hint only take into account a certain control when deciding
@@ -29,5 +31,6 @@
 @property (nonatomic, weak) IBOutlet BGKVPasswordControl *control;
 
 - (BOOL)shouldBecomeAvailable:(BGKVPasswordControl *)control;
+- (BOOL)shouldBeInitiallyAvailable;
 
 @end
