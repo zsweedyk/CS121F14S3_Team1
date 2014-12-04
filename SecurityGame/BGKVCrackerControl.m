@@ -23,7 +23,7 @@
 {
     [super setup];
     
-    BGKVCrackerKeyboard *keyboard = [[BGKVCrackerKeyboard alloc] initDefault];//WithFrame:CGRectMake(0, 0, 1024, 352)];
+    BGKVCrackerKeyboard *keyboard = [[BGKVCrackerKeyboard alloc] initDefault];
     keyboard.textField = self.passwordField;
 }
 
@@ -128,14 +128,6 @@
                 break;
             }
         }
-        
-        /*
-        NSString *charSet = [[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:buffer[i]] ? @"abcdefghijklmnopqrstuvwxyz"
-        : [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:buffer[i]] ? @"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        : [[NSCharacterSet decimalDigitCharacterSet] characterIsMember:buffer[i]] ? @"1234567890"
-        : [[NSCharacterSet symbolCharacterSet] characterIsMember:buffer[i]] ? @"!@#$%^&*?~+=-_/"
-        : [NSString stringWithFormat:@"%C", buffer[i]];
-        */
          
         NSUInteger rand = arc4random_uniform([charSet length]);
         NSString *repChar = [NSString stringWithFormat:@"%C", [charSet characterAtIndex:rand]];

@@ -16,11 +16,6 @@
 
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic) BGKVHintViewController *hintVC;
-
-/*
-@property (nonatomic) NSString *hintControllerName;
-@property (nonatomic) NSString *initialSegueName;
-*/
  
 @property (nonatomic, weak, readonly) BGKVLevelContainer *levelContainer;
 
@@ -31,17 +26,8 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *menuButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *backButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *hintButton;
-/*
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *inventoryButton;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *leftButton;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *rightButton;
- */
-
-- (BOOL)makeHintAtIndexAvailable:(int)index;
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC;
-
-//- (IBAction)menuButtonAction:(UIBarButtonItem *)sender;
 
 - (void)resetCache;
 
