@@ -89,13 +89,33 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="password" value="password1!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="cacheKey" value="computer"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outletCollection property="hints" destination="W3m-dd-huc" id="JQ3-Sb-4bN"/>
+                        <outletCollection property="hints" destination="CLo-ip-HLT" id="KL1-Ce-2jg"/>
                         <segue destination="BcU-cE-9vE" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="asu-AQ-OkF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY8-mo-W9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="W3m-dd-huc" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="New Information!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Look at the exact wording of the question. What special character is used?"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="CLo-ip-HLT" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="New Information!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="The password ends in 1 and an exclamation point."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="198" y="1733"/>
         </scene>
