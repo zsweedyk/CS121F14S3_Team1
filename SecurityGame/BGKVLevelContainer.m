@@ -214,7 +214,6 @@
     dispatch_once(&_initialized_token, ^{
         [self setupHints];
         [self showInitialLevelViewController];
-        NSLog(@"%ld", (long)self.level);
     });
 }
 

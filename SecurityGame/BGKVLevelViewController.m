@@ -7,13 +7,21 @@
 //
 
 #import "BGKVLevelViewController.h"
-#import "BGKVPasswordControl.h"
 
 @interface BGKVLevelViewController () <UITextFieldDelegate>
 
 @end
 
 @implementation BGKVLevelViewController
+
+- (void)setTest:(NSInteger)test
+{
+    NSLog(@"%d", test);
+}
+- (void)setTest2:(NSInteger)test2
+{
+    NSLog(@"%d", test2);
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {

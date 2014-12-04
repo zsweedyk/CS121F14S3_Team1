@@ -25,8 +25,7 @@
 
 - (void)setupWithController:(BGKVPhoneControlController *)controller keepAspect:(BOOL)keepAspect
 {
-    self.backgroundColor = [UIColor clearColor];
-    self.attempts = [NSNumber numberWithInt:0];
+    [super setup];
     
     self.controller = controller;
     controller.parentControl = self;

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BGKVPasswordControl.h"
 
 @class BGKVLevelContainer;
-@class BGKVPasswordControl;
 
 @interface BGKVLevelViewController : UIViewController
 
@@ -24,5 +24,10 @@
 
 - (BOOL)checkPassword:(NSString *)guess;
 - (void)enteredCorrectPassword:(BOOL)correct sender:(id)sender;
+
+@property (nonatomic) NSInteger test;
+- (NSInteger)test UNAVAILABLE_ATTRIBUTE;
+@property (nonatomic) NSInteger test2;
+- (NSInteger)test2 UNAVAILABLE_ATTRIBUTE;
 
 @end

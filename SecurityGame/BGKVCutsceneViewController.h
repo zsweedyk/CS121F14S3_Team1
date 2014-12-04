@@ -17,9 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextView* bossTextField;
 @property (weak, nonatomic) IBOutlet UIImageView* bossImage;
 @property (weak, nonatomic) IBOutlet UIImageView* hackerImage;
-@property (nonatomic, assign) NSNumber* levelProperty;
 
 
-- (instancetype)initWithLevel:(NSUInteger)level;
+- (instancetype)initWithLevel:(NSInteger)level;
 
 @end
