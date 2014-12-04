@@ -18,8 +18,6 @@
 // Set in Storyboard via User Defined Runtime Attributes
 @property (nonatomic) NSInteger level;
 
-
-
 // Below should NOT be set in Storyboard
 
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
@@ -37,12 +35,17 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *backButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *hintButton;
 
+- (void)goToLevel:(NSInteger)level;
+- (void)goToLevel:(NSInteger)level andPlayCutscene:(BOOL)cutscene;
+
+- (BOOL)playCutscene;
+
+- (void)showInitialLevelViewController;
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC;
 
 - (void)reset;
 
 - (IBAction)returnToLevelContainer:(UIStoryboardSegue *)segue;
-
 
 - (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text updateNewHintAvailable:(BOOL)update;
 - (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text;

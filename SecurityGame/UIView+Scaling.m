@@ -35,7 +35,6 @@
 - (void)ensureLandscape
 {
     CGRect frame = self.frame;
-    
     if (CGRectGetWidth(frame) < CGRectGetHeight(frame)) {
         frame = CGRectMake(frame.origin.y, frame.origin.x,
                            frame.size.height, frame.size.width);

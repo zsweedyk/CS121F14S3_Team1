@@ -7,6 +7,7 @@
 //
 
 #import "BGKVLevelSelectViewController.h"
+#import "BGKVLevelContainer.h"
 
 @interface BGKVLevelSelectViewController ()
 
@@ -16,9 +17,14 @@
 
 - (IBAction)goToLevelOfTag:(UIControl *)sender
 {
-    [self presentViewController:[BGKVLevelSelectViewController initialVCForLevel:sender.tag]
+    BGKVLevelContainer *container = [[BGKVLevelContainer alloc] init];
+    [container loadView];
+    [container goToLevel:sender.tag andPlayCutscene:NO];
+    [self presentViewController:container
                        animated:YES
-                     completion:nil];
+                     completion:^{
+                         [container playCutscene];
+                     }];
 }
 
 + (UIViewController *)initialVCForLevel:(NSInteger)level
@@ -38,7 +44,8 @@
     }
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
-    return [storyboard instantiateInitialViewController];
+    UIViewController *vc = [storyboard instantiateInitialViewController];
+    return vc;
 }
 
 /*

@@ -10,6 +10,7 @@
 
 @interface UIViewController (DismissSelf)
 
-- (IBAction)dismissSelf:(UIStoryboardSegue *)segue;
+- (IBAction)dismissSelfSegueT:(UIStoryboardSegue *)segue;
+- (IBAction)dismissSelfT;
 
 @end

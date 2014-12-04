@@ -20,6 +20,21 @@
     NSUInteger _dialogueIndex;
 }
 
++ (BOOL)playCutsceneOnViewController:(UIViewController *)vc ForLevel:(NSInteger)level
+{
+    BGKVCutsceneViewController *cutscene = [[BGKVCutsceneViewController alloc] initWithLevel:level];
+    if (cutscene) {
+        [vc presentViewController:cutscene animated:YES completion:nil];
+        return YES;
+    }
+    return NO;
+}
+
+- (IBAction)goToLevelContainer:(id)sender
+{
+    [self unwind:@selector(returnToLevelContainer:)];
+}
+
 - (instancetype)initWithLevel:(NSInteger)level
 {
     self = [super init];
@@ -42,11 +57,6 @@
 {
     _dialogueIndex++;
     [self updateDialogue];
-}
-
-- (IBAction)goToNextLevel
-{
-    [self unwind:@selector(returnToLevelContainer:)];
 }
 
 - (void)updateDialogue

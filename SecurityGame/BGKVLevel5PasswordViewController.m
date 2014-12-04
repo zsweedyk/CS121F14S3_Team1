@@ -21,7 +21,6 @@
 
 - (void)enterDigit:(NSInteger)digit
 {
-    //NSLog(@"Pushed %d with current password %@. (Deactivated? %d)", sender.tag, _password, _deactivated);
     NSAssert([_password count] < 4, @"Tried to add to password when password already full!");
     
     [_password addObject:[NSNumber numberWithInteger:digit]];

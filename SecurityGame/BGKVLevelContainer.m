@@ -12,6 +12,7 @@
 #import "BGKVHintViewController.h"
 #import "BGKVCutsceneViewController.h"
 #import "BGKVAlertViewDelegateTemplate.h"
+#import "BGKVLevelSelectViewController.h"
 
 // Only to avoid 'undeclared selector "goToMainMenu"'
 #import "BGKVViewController.h"
@@ -51,6 +52,7 @@
     
     self.hintButton.enabled = [self.hintVC hasHints];
     self.newHintAvailable = NO;
+    [self updateHintButtonAppearance];
 }
 
 - (IBAction)hintButtonAction:(UIBarButtonItem *)sender
@@ -76,7 +78,7 @@
 
 - (void)updateHintButtonAppearance
 {
-    if (self.newHintAvailable) {
+    if (self.newHintAvailable && self.hintButton.enabled) {
         NSAssert(self.hintButton.enabled, @"If a new hint is available, hint button should be enabled!");
         self.hintButton.title = @"New Info!";
         [self.hintButton setTitleTextAttributes:@{
@@ -88,7 +90,10 @@
                                                   NSForegroundColorAttributeName: [UIColor blackColor]
                                                   } forState:UIControlStateNormal];
     } else {
-        [self.hintButton setTitleTextAttributes:_disabledHintButtonTitleTextAttributes forState:UIControlStateNormal];
+        self.hintButton.title = @" Mission ";
+        [self.hintButton setTitleTextAttributes:@{
+                                                  NSForegroundColorAttributeName: [UIColor colorWithWhite:0 alpha:0.5]
+                                                  } forState:UIControlStateNormal];
     }
 }
 
@@ -231,6 +236,7 @@
                          [self reset];
                          [self setupHints];
                          [self showInitialLevelViewController];
+                         [self playCutscene];
                      }
                  }];
                 [alert show];
@@ -303,8 +309,9 @@
 }
 
 #pragma mark -
-#pragma mark Initialization and Clean Up
+#pragma mark Initialization
 
+/*
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -325,16 +332,12 @@
         [self playCutscene];
     });
 }
+*/
 
 // Returns NO if there is no cutscene to play
 - (BOOL)playCutscene
 {
-    BGKVCutsceneViewController *cutscene = [[BGKVCutsceneViewController alloc] initWithLevel:self.level];
-    if (cutscene) {
-        [self presentViewController:cutscene animated:YES completion:nil];
-        return YES;
-    }
-    return NO;
+    return [BGKVCutsceneViewController playCutsceneOnViewController:self ForLevel:self.level];
 }
 
 - (void)reset
@@ -356,13 +359,30 @@
 }
 
 #pragma mark -
-#pragma mark Switching Level Views
+#pragma mark Switching Level Views and Levels
+- (void)goToLevel:(NSInteger)level
+{
+    [self goToLevel:level andPlayCutscene:YES];
+}
+
+- (void)goToLevel:(NSInteger)level andPlayCutscene:(BOOL)cutscene
+{
+    [self reset];
+    self.level = level;
+    [self setupHints];
+    [self showInitialLevelViewController];
+    if (cutscene) {
+        [self playCutscene];
+    }
+}
 
 #pragma mark MAGIC STRING WARNING : initial
 // "initial" is the identifier of the segue that links the LevelContainer to its first scene.
 - (void)showInitialLevelViewController
 {
-    [self performSegueWithIdentifier:@"initial" sender:self];
+    BGKVLevelViewController *initialVC = (BGKVLevelViewController *)[BGKVLevelSelectViewController initialVCForLevel:self.level];
+    [self showLevelViewController:initialVC];
+    //[self performSegueWithIdentifier:@"initial" sender:self];
 }
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC

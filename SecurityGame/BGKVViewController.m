@@ -15,18 +15,6 @@
 
 @implementation BGKVViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [[BGKVMusicPlayer sharedInstance] play];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)goToMainMenu:(UIStoryboardSegue *)segue { }
 
 @end

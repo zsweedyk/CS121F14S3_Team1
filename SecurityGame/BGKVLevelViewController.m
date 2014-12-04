@@ -44,6 +44,11 @@
     }
 }
 
+- (IBAction)stupid:(id)sender
+{
+    [self.levelContainer goToLevel:6];
+}
+
 #pragma mark MAGIC STRING WARNING : correct
 // "correct" is the identifier of the segue that is run when the password is correct.
 - (void)enteredCorrectPassword:(BOOL)correct sender:(id)sender

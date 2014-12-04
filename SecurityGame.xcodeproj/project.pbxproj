@@ -59,7 +59,6 @@
 		AC0B98FD1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0B98FC1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m */; };
 		AC1212B01A304F8500FEF6CA /* UIViewController+Unwind.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */; };
 		AC1212B31A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */; };
-		AC1212B61A3074EE00FEF6CA /* UIViewController+DismissSelf.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B51A3074EE00FEF6CA /* UIViewController+DismissSelf.m */; };
 		AC1212B91A307A0500FEF6CA /* BGKVAddHintSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B81A307A0500FEF6CA /* BGKVAddHintSegue.m */; };
 		AC1212BB1A30954E00FEF6CA /* BGKVSingleHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1212BA1A30954E00FEF6CA /* BGKVSingleHintViewController.xib */; };
 		AC1C88501A186A2000CFA7B5 /* BGKVLevelContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C884E1A186A2000CFA7B5 /* BGKVLevelContainer.m */; };
@@ -194,8 +193,6 @@
 		AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Unwind.m"; sourceTree = "<group>"; };
 		AC1212B11A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVAlertViewDelegateTemplate.h; sourceTree = "<group>"; };
 		AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVAlertViewDelegateTemplate.m; sourceTree = "<group>"; };
-		AC1212B41A3074EE00FEF6CA /* UIViewController+DismissSelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissSelf.h"; sourceTree = "<group>"; };
-		AC1212B51A3074EE00FEF6CA /* UIViewController+DismissSelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissSelf.m"; sourceTree = "<group>"; };
 		AC1212B71A307A0500FEF6CA /* BGKVAddHintSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVAddHintSegue.h; sourceTree = "<group>"; };
 		AC1212B81A307A0500FEF6CA /* BGKVAddHintSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVAddHintSegue.m; sourceTree = "<group>"; };
 		AC1212BA1A30954E00FEF6CA /* BGKVSingleHintViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVSingleHintViewController.xib; sourceTree = "<group>"; };
@@ -479,8 +476,6 @@
 				AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */,
 				AC1212B11A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.h */,
 				AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */,
-				AC1212B41A3074EE00FEF6CA /* UIViewController+DismissSelf.h */,
-				AC1212B51A3074EE00FEF6CA /* UIViewController+DismissSelf.m */,
 			);
 			name = "General Utilities";
 			sourceTree = "<group>";
@@ -952,7 +947,6 @@
 				AC5543D81A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
 				93EED58F1A19952200F1B61B /* BGKVLevel7PasswordViewController.m in Sources */,
-				AC1212B61A3074EE00FEF6CA /* UIViewController+DismissSelf.m in Sources */,
 				AC71826F19F5F30D001EFA4B /* main.m in Sources */,
 				AC1C88631A186A5900CFA7B5 /* UIButton+Badge.m in Sources */,
 				5DA1723F1A18310500E63BD0 /* BGKVLevel10PasswordViewController.m in Sources */,

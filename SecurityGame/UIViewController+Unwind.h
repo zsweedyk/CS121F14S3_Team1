@@ -12,4 +12,8 @@
 
 - (void)unwind:(SEL)selector;
 
+- (IBAction)dismissSelfSegue:(UIStoryboardSegue *)segue;
+- (IBAction)dismissSelf;
+- (void)dismissSelfCompletion:(void (^)())completion;
+
 @end

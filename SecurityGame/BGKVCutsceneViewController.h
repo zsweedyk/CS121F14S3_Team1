@@ -20,5 +20,7 @@
 
 
 - (instancetype)initWithLevel:(NSInteger)level;
+- (IBAction)goToLevelContainer:(id)sender;
++ (BOOL)playCutsceneOnViewController:(UIViewController *)vc ForLevel:(NSInteger)level;
 
 @end

@@ -33,7 +33,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="goToNextLevel" destination="-1" eventType="touchUpInside" id="hd6-Px-mmA"/>
+                        <action selector="goToLevelContainer:" destination="-1" eventType="touchUpInside" id="fUV-1N-vAD"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WED-Yy-QSs">

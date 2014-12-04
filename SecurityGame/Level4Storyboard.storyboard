@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qf6-pX-qvt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pGY-WJ-pig">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Level Container-->
-        <scene sceneID="z9K-YH-UxC">
-            <objects>
-                <viewController id="Qf6-pX-qvt" customClass="BGKVLevelContainer" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="pGY-WJ-pig" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="nVY-IJ-trb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sNj-cS-cbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="85" y="-165"/>
-        </scene>
         <!--Initial-->
         <scene sceneID="GqE-Nh-wRD">
             <objects>
@@ -112,8 +100,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vih-ab-raP">
-                                <rect key="frame" x="726" y="-67" width="503" height="513"/>
-                                <state key="normal" image="Phone">
+                                <rect key="frame" x="705" y="-286" width="411" height="760"/>
+                                <state key="normal" image="Level5iPhone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -124,7 +112,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3kg-tN-r9h"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
@@ -180,7 +167,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0qb-6F-zT6"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
@@ -215,9 +201,6 @@
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="jFV-zL-6BU" kind="custom" customClass="RBStoryboardModalSegue" id="kGF-8c-0Lj"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="When picking a password for your phone or tablet, don't pick one that is easy to guess! Pick random numbers!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
                                 <rect key="frame" x="340" y="339" width="345" height="90"/>
@@ -240,37 +223,14 @@
             </objects>
             <point key="canvasLocation" x="3392" y="-369"/>
         </scene>
-        <!--Storyboard Link - Level5Link-->
-        <scene sceneID="dHe-eL-yoi">
-            <objects>
-                <viewController title="Level5Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DxR-4l-rxf"/>
-                        <viewControllerLayoutGuide type="bottom" id="7L6-Wi-lyI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gPV-Sl-qsh">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level5Storyboard"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rfi-ZO-AT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3664" y="525"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Level1Chair" width="212" height="300"/>
         <image name="Level1Paper" width="245" height="300"/>
         <image name="Level1WoodenTable" width="800" height="495"/>
+        <image name="Level5iPhone" width="569" height="1050"/>
         <image name="Level5iPhoneSlanted" width="569" height="414"/>
         <image name="LibraryBackground1" width="1024" height="778"/>
-        <image name="Phone" width="308" height="618"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -279,7 +239,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nSy-gD-jIh"/>
         <segue reference="Z7H-vO-4j9"/>
+        <segue reference="fFg-NZ-8cX"/>
     </inferredMetricsTieBreakers>
 </document>

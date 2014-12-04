@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="jUa-1v-FAc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pGY-WJ-pig">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -61,18 +61,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-pm-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="-216"/>
-        </scene>
-        <!--Level Container-->
-        <scene sceneID="885-ir-wm5">
-            <objects>
-                <viewController id="jUa-1v-FAc" customClass="BGKVLevelContainer" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="pGY-WJ-pig" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="9cB-jU-ZQb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZkE-R1-aRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-43" y="51"/>
         </scene>
         <!--Paper-->
         <scene sceneID="nv6-48-O3z">
@@ -204,9 +192,6 @@
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="jFV-zL-6BU" kind="custom" customClass="RBStoryboardModalSegue" id="LXM-0U-ZbA"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -221,29 +206,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbt-Ak-FC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3624" y="-394"/>
-        </scene>
-        <!--Storyboard Link - Level8Link-->
-        <scene sceneID="dHe-eL-yoi">
-            <objects>
-                <viewController title="Level8Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DxR-4l-rxf"/>
-                        <viewControllerLayoutGuide type="bottom" id="7L6-Wi-lyI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gPV-Sl-qsh">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Level8Storyboard"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rfi-ZO-AT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3664" y="525"/>
         </scene>
     </scenes>
     <resources>

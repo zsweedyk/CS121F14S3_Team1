@@ -10,6 +10,11 @@
 
 @implementation UIViewController (DismissSelf)
 
-- (IBAction)dismissSelf:(UIStoryboardSegue *)segue { }
+- (IBAction)dismissSelfSegueT:(UIStoryboardSegue *)segue { }
+
+- (IBAction)dismissSelfT
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

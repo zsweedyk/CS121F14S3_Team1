@@ -16,8 +16,6 @@
 
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
-    //NSLog(@"will move to superview of class: %@ with sibling views: %@", [newSuperview class], newSuperview.subviews);
-    
     if ([newSuperview isKindOfClass:NSClassFromString(@"UIPeripheralHostView")]) {
         UIView* aSiblingView;
         for (aSiblingView in newSuperview.subviews) {
@@ -26,15 +24,6 @@
             }
         }
     }
-    
-    /*
-    for (UIView *subview in ((UIView *)self.subviews[0]).subviews) {
-        if ([subview isKindOfClass:[UIControl class]]) {
-            NSLog(@"%@", ((UIButton *)subview).titleLabel.textColor);
-        }
-    }
-     */
-
 }
 
     

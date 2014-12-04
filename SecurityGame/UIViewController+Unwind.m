@@ -16,4 +16,16 @@
     [destination dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)dismissSelfSegue:(UIStoryboardSegue *)segue { }
+
+- (IBAction)dismissSelf
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)dismissSelfCompletion:(void (^)())completion
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:completion];
+}
+
 @end
