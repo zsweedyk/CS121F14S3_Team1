@@ -41,51 +41,56 @@
 #pragma mark -
 #pragma mark Hints
 #pragma mark MAGIC STRING WARNING : hints
-- (void)initializeHints
+- (void)setupHints
 {
-    @try {
-        //self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:self.hintControllerName];
-        self.hintVC = [self.storyboard instantiateViewControllerWithIdentifier:@"hints"];
-        [self.hintVC initialize];
-        self.hintButton.enabled = YES;
-    }
-    @catch (NSException *exception) {
-        if ([exception.name isEqualToString:NSInvalidArgumentException])
-        {
-            self.hintButton.enabled = NO;
-        }
-        else
-        {
-            @throw;
-        }
-    }
+    self.hintVC = [[BGKVHintViewController alloc] init];
+    self.hintButton.enabled = YES;
+    [self setNewHintAvailable:YES];
 }
 
 - (IBAction)hintButtonAction:(UIBarButtonItem *)sender
 {
-    NSAssert(self.hintVC, @"Must have a HintViewController to view hints!");
+    NSAssert([self.hintVC.pages count] > 0, @"Must have hints to view hints!");
+    NSAssert(self.hintButton.enabled, @"Expected hint button to be enabled if hints are being viewed!");
     
     [self presentViewController:self.hintVC animated:YES completion:^{
         [self setNewHintAvailable:NO];
     }];
 }
 
+
+
+/*
 - (void)setHintButtonEnabled:(BOOL)enabled
 {
     self.hintButton.enabled = enabled;
 }
+ */
 - (void)setNewHintAvailable:(BOOL)newHintAvailable
 {
-    self.hintButton.style = (newHintAvailable ?
-                              UIBarButtonItemStyleDone
-                             :UIBarButtonItemStyleBordered);
+    if (newHintAvailable) {
+        NSAssert(self.hintButton.enabled, @"If a new hint is available, hint button should be enabled!");
+        self.hintButton.title = @"New Info!";
+        [self.hintButton setTitleTextAttributes:@{
+                                                  NSForegroundColorAttributeName: [UIColor blueColor]
+                                                  } forState:UIControlStateNormal];
+    } else {
+        self.hintButton.title = @" Mission ";
+        [self.hintButton setTitleTextAttributes:@{
+                                                  NSForegroundColorAttributeName: [UIColor blackColor]
+                                                  } forState:UIControlStateNormal];
+    }
 }
 
-- (BOOL)makeHintAtIndexAvailable:(int)index
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text
 {
-    BOOL changedAvailability = [self.hintVC makeHintAtIndexAvailable:index];
-    [self setNewHintAvailable:changedAvailability];
-    return changedAvailability;
+    [self.hintVC addNewHintWithTitle:title andText:text];
+    self.hintButton.enabled = YES;
+}
+- (void)addNewHintWithController:(UIViewController *)controller
+{
+    [self.hintVC addNewHintWithController:controller];
+    self.hintButton.enabled = YES;
 }
 
 #pragma mark Back Button
@@ -127,6 +132,7 @@
              @"Quit Game",
              @"How to play",
              @"Reset Level",
+             @"Mission Info",
              @"Settings", nil];
     //menu.tag = 1;
     [menu showInView:self.view];
@@ -163,6 +169,32 @@
             break;
         }
         case 3: {
+            NSString *expectedButtonTitle = @"Mission Info";
+            NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
+                     @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
+                     actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
+            
+            if (self.hintButton.enabled) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self hintButtonAction:nil];
+                });
+            } else {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    UIAlertView * alert = [[UIAlertView alloc]
+                                           initWithTitle:@"Not Available"
+                                           message:@"No mission info is currently available. Good luck!"
+                                           
+                                           // By setting delegate:self, dismissing this alert will run "alertView:clickedButtonAtIndex:"
+                                           delegate:nil
+                                           
+                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                });
+            }
+            
+            break;
+        }
+        case 4: {
             break;
         }
         default: {
@@ -179,7 +211,7 @@
     [super viewDidLoad];
 
     dispatch_once(&_initialized_token, ^{
-        [self initializeHints];
+        [self setupHints];
         [self showInitialLevelViewController];
         
         self.menuButton.badgeValue = @"HELLO?";

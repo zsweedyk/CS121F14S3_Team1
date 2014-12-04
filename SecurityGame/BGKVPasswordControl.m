@@ -31,7 +31,6 @@
     self.guess = guess;
     self.correct = guess && [guess isEqualToString:self.password];
     [self sendActionsForControlEvents:UIControlEventValueChanged];
-    [self reset];
 }
 
 

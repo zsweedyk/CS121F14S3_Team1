@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="SeQ-vW-RqB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="SeQ-vW-RqB">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Hint View Controller-->
-        <scene sceneID="WA3-ct-wPs">
-            <objects>
-                <viewController id="ydW-f9-yZN" customClass="BGKVHintViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nRn-hq-CMy"/>
-                        <viewControllerLayoutGuide type="bottom" id="uiL-n3-36R"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bAg-WU-475">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hzK-6c-Hnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-55" y="-890"/>
-        </scene>
         <!--Level Container-->
         <scene sceneID="gfd-OW-dwQ">
             <objects>
@@ -31,7 +12,6 @@
                     <connections>
                         <segue destination="Uey-xW-hlv" kind="unwind" unwindAction="goToMainMenu:" id="Nl7-sS-Hqa"/>
                         <segue destination="pGY-WJ-pig" kind="custom" identifier="initial" customClass="BGKVWithinLevelSegue" id="X32-Sr-6EL"/>
-                        <segue destination="ydW-f9-yZN" kind="custom" identifier="hint" customClass="BGKVWithinLevelSegue" id="zVT-Lu-52M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRr-u2-xWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,8 +56,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz8-4F-hYD">
-                                <rect key="frame" x="369" y="394" width="90" height="181"/>
-                                <state key="normal" image="Phone">
+                                <rect key="frame" x="348" y="495" width="111" height="102"/>
+                                <state key="normal" image="Level5iPhoneSlanted">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -104,9 +84,8 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="tHM-vn-2xz"/>
-                    <navigationItem key="navigationItem" title="Title" id="KEU-iW-NKg"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-pm-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,11 +132,6 @@
                                     <action selector="ejectButtonTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="cZA-Cd-pXG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX4-OM-5vk">
-                                <rect key="frame" x="471" y="139" width="180" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive inserted. Password is &quot;0110&quot;" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-s3-5nN">
                                 <rect key="frame" x="375" y="231" width="373" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -206,25 +180,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mBR-mM-wL6" customClass="BGKVTextFieldPasswordControl">
+                                <rect key="frame" x="471" y="144" width="180" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="C3l3brat3!"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enterPassword:" destination="3Xe-rb-phB" eventType="valueChanged" id="SUc-2x-lqc"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Afm-qc-aOo"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="ejectUsbDriveButton" destination="Kou-yt-R9e" id="Apb-Ok-aOB"/>
-                        <outlet property="passwordField" destination="zX4-OM-5vk" id="2dl-cx-VyR"/>
                         <outlet property="passwordInformationField" destination="vqB-s3-5nN" id="Hc2-Ol-lZO"/>
                         <outlet property="randomInformationField1" destination="aj4-VK-fQ6" id="yht-AG-31o"/>
                         <outlet property="randomInformationField2" destination="kzs-Ld-n4I" id="e6r-bb-Ay4"/>
                         <outlet property="usbDriveButton1" destination="tcJ-fa-ZKs" id="Glj-m4-bAO"/>
                         <outlet property="usbDriveButton2" destination="Q8G-df-U95" id="mZi-xZ-zb7"/>
                         <outlet property="usbDriveButton3" destination="da8-Xf-pdf" id="rzh-fF-vpP"/>
-                        <segue destination="yIi-ZG-xuq" kind="custom" identifier="SegueToLoadScreen" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>
-                        <segue destination="pGY-WJ-pig" kind="custom" identifier="back" customClass="BGKVWithinLevelSegue" id="xDF-U6-HcN"/>
+                        <segue destination="yIi-ZG-xuq" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,6 +249,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -277,7 +261,7 @@
             </objects>
             <point key="canvasLocation" x="3392" y="-369"/>
         </scene>
-        <!--Level19Link-->
+        <!--Storyboard Link - Level19Link-->
         <scene sceneID="dHe-eL-yoi">
             <objects>
                 <viewController title="Level19Link" id="jFV-zL-6BU" customClass="RBStoryboardLink" sceneMemberID="viewController">
@@ -289,6 +273,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
@@ -299,10 +284,10 @@
             </objects>
             <point key="canvasLocation" x="3664" y="525"/>
         </scene>
-        <!--Computer-->
+        <!--Phone-->
         <scene sceneID="xla-iE-0ab">
             <objects>
-                <viewController id="Iei-Aa-QcZ" userLabel="Computer" customClass="BGKVLevel18PasswordViewController" sceneMemberID="viewController">
+                <viewController id="Iei-Aa-QcZ" userLabel="Phone" customClass="BGKVLevel18PasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pxT-bZ-zkF"/>
                         <viewControllerLayoutGuide type="bottom" id="rbC-lI-WHa"/>
@@ -320,15 +305,6 @@
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXB-xW-qEZ">
-                                <rect key="frame" x="130" y="28" width="499" height="539"/>
-                                <state key="normal" image="Phone">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="computerTapped:" destination="Iei-Aa-QcZ" eventType="touchUpInside" id="xkQ-vc-2jl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-dL-o9j">
                                 <rect key="frame" x="696" y="362" width="188" height="168"/>
                                 <state key="normal" title="USB drive" image="USBDrive">
@@ -344,37 +320,46 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLx-hT-AFD">
-                                <rect key="frame" x="312" y="183" width="135" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juA-Mi-c0c">
                                 <rect key="frame" x="607" y="197" width="188" height="168"/>
                                 <state key="normal" title="USB drive" image="USBDrive">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your password is &quot;celebrate&quot;" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-MC-2uO">
-                                <rect key="frame" x="269" y="283" width="221" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-Ny-bDe" customClass="BGKVPhoneControl">
+                                <rect key="frame" x="71" y="-144" width="411" height="760"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="0110"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enterPassword:" destination="Iei-Aa-QcZ" eventType="valueChanged" id="4g5-mp-nX4"/>
+                                </connections>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3N-M5-YbE">
+                                <rect key="frame" x="126" y="6" width="306" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your password is &quot;alphabet&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iR9-6Z-Yto">
+                                        <rect key="frame" x="54" y="215" width="199" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="backSegueName" value="back"/>
-                        </userDefinedRuntimeAttributes>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="lGR-IK-G5D"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="phonePasswordField" destination="qLx-hT-AFD" id="QeZ-a3-DFH"/>
-                        <outlet property="phonePasswordInformationField" destination="9q7-MC-2uO" id="D4H-PZ-dhb"/>
-                        <segue destination="pGY-WJ-pig" kind="custom" identifier="back" customClass="BGKVWithinLevelSegue" id="TQ8-o5-HVR"/>
+                        <outlet property="phonePasswordField" destination="ynD-Ny-bDe" id="g50-bD-ZSg"/>
+                        <outlet property="phonePasswordInformationField" destination="B3N-M5-YbE" id="saW-wi-Sij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYg-iW-ODa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -386,10 +371,11 @@
         <image name="Level1Chair" width="212" height="300"/>
         <image name="Level1Computer" width="800" height="800"/>
         <image name="Level1WoodenTable" width="800" height="495"/>
+        <image name="Level5iPhoneSlanted" width="569" height="414"/>
         <image name="LibraryBackground1" width="1024" height="778"/>
-        <image name="Phone" width="308" height="618"/>
         <image name="USBDrive" width="638" height="444"/>
     </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -397,7 +383,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="nSy-gD-jIh"/>
-        <segue reference="xDF-U6-HcN"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

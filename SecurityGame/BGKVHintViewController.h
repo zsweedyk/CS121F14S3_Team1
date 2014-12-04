@@ -10,9 +10,13 @@
 
 // Some hackery going on here. This thing is its own delegate.
 // This is to facilitate use in storyboards.
-@interface BGKVHintViewController : UITabBarController <UITabBarControllerDelegate>
+@interface BGKVHintViewController : UIPageViewController <UIPageViewControllerDataSource>
 
-- (void)initialize;
-- (BOOL)makeHintAtIndexAvailable:(NSInteger)index;
+- (void)setup;
+
+- (void)addNewHintWithTitle:(NSString *)title andText:(NSString *)text;
+- (void)addNewHintWithController:(UIViewController *)controller;
+
+@property (nonatomic) NSMutableArray *pages;
 
 @end

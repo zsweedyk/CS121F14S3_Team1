@@ -8,6 +8,8 @@
 
 #import "BGKVLevelViewController.h"
 
+@class BGKVPhoneControl;
+
 @interface BGKVLevel18PasswordViewController : BGKVLevelViewController
 
 @property (weak, nonatomic) IBOutlet UITextField* passwordField;
@@ -19,10 +21,7 @@
 @property (weak, nonatomic) IBOutlet UITextField* randomInformationField2;
 @property (weak, nonatomic) IBOutlet UIButton* ejectUsbDriveButton;
 
-@property (weak, nonatomic) IBOutlet UITextField* phonePasswordField;
-@property (weak, nonatomic) IBOutlet UITextField* phonePasswordInformationField;
-
-- (BOOL)checkComputerPassword:(NSString *)guess;
-- (BOOL)checkPhonePassword:(NSString *)guess;
+@property (weak, nonatomic) IBOutlet BGKVPhoneControl* phonePasswordField;
+@property (weak, nonatomic) IBOutlet UIView* phonePasswordInformationField;
 
 @end
