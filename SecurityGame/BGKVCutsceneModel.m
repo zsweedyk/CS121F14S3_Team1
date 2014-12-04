@@ -15,7 +15,7 @@ NSArray* _levelDialogues;
 NSUInteger _maxDialogueLevel;
 }
 
-- (id) initWithLevel:(int)level
+- (id) initWithLevel:(NSUInteger)level
 {
     self = [super init];
     if (self){
@@ -34,12 +34,12 @@ NSUInteger _maxDialogueLevel;
     return self;
 }
 
--(NSString*) getStringForDialogue:(int)dialogue
+-(NSString*) getStringForDialogue:(NSUInteger)dialogue
 {
     return _levelDialogues[dialogue];
 }
 
--(NSUInteger)getMaxDialogueLevel:(int)level
+-(NSUInteger)getMaxDialogueLevel:(NSUInteger)level
 {
     return [_levelDialogues count];
 }

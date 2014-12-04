@@ -39,8 +39,8 @@
 {
     //NSLog(@"Pushed %d with current password %@. (Deactivated? %d)", sender.tag, _password, _deactivated);
     NSAssert(_password.length < 4, @"Tried to add to password when password already full!");
-    NSAssert(0 <= digit && digit <=9, @"Tried to add a number larger than a digit: %d", digit);
-    [_password appendFormat:@"%d", digit];
+    NSAssert(0 <= digit && digit <=9, @"Tried to add a number larger than a digit: %ld", (long)digit);
+    [_password appendFormat:@"%ld", (long)digit];
 }
 
 - (IBAction)pushIPhoneButton:(UIButton *)sender

@@ -13,13 +13,14 @@
 
 @end
 
-@implementation BGKVCutsceneViewController
+@implementation BGKVCutsceneViewController {
 
-BGKVCutsceneModel *_model;
-int _currentLevel;
-NSUInteger _dialogueNumber;
-int _currentDialogueLevel;
-NSArray* _textArray;
+    BGKVCutsceneModel *_model;
+    NSUInteger _currentLevel;
+    NSUInteger _dialogueNumber;
+    NSUInteger _currentDialogueLevel;
+    NSArray* _textArray;
+}
 
 - (IBAction)continueButton:(id)sender
 {
@@ -89,7 +90,7 @@ NSArray* _textArray;
 - (IBAction)goToNextLevel // for reference, see similar method in levelSelectViewController
 {
     NSString *identifier;
-    identifier = [NSString stringWithFormat: @"level%d", _currentLevel];
+    identifier = [NSString stringWithFormat: @"level%ld", (long)_currentLevel];
     [self performSegueWithIdentifier:identifier sender:self];
     
 }
@@ -109,7 +110,7 @@ NSArray* _textArray;
     
     //load the level and model.
     _currentLevel = [self.levelProperty integerValue];
-    _model = [[BGKVCutsceneModel alloc] initWithLevel: _currentLevel];
+    _model = [[BGKVCutsceneModel alloc] initWithLevel:_currentLevel];
     _dialogueNumber = [_model getMaxDialogueLevel:_currentLevel];
     
     // Initialize the background and text.

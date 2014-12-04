@@ -10,11 +10,11 @@
 
 @interface BGKVCutsceneModel : NSObject
 
-- (id) initWithLevel: (int) level;
+- (id) initWithLevel: (NSUInteger) level;
 
-- (NSUInteger) getMaxDialogueLevel: (int) level;
+- (NSUInteger) getMaxDialogueLevel: (NSUInteger) level;
 
-- (NSString*)getStringForDialogue: (int) dialogue;
+- (NSString*)getStringForDialogue: (NSUInteger) dialogue;
 
 @end
 

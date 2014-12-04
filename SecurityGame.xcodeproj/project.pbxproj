@@ -70,6 +70,11 @@
 		AC2B42B71A196FF200DE86B0 /* Level5Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */; };
 		AC2B42B91A197EDD00DE86B0 /* Level5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */; };
 		AC5543D81A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543D71A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m */; };
+		AC5543E21A2D83F2006F0BDA /* BGKVCrackerKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543E11A2D83F2006F0BDA /* BGKVCrackerKeyboard.m */; };
+		AC5543E51A2D8415006F0BDA /* BGKVCrackerKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5543E41A2D8415006F0BDA /* BGKVCrackerKeyboard.xib */; };
+		AC5543E91A2D8914006F0BDA /* BGKVCrackerControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543E81A2D8914006F0BDA /* BGKVCrackerControl.m */; };
+		AC598F651A2ED0C9007E0A0F /* BGKVSingleHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC598F641A2ED0C9007E0A0F /* BGKVSingleHintViewController.m */; };
+		AC598F671A2ED0DF007E0A0F /* BGKVSingleHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC598F661A2ED0DF007E0A0F /* BGKVSingleHintViewController.xib */; };
 		AC6534F01A2D84280010CB04 /* BGKVCutsceneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6534EE1A2D84280010CB04 /* BGKVCutsceneViewController.m */; };
 		AC6534F11A2D84280010CB04 /* BGKVCutsceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6534EF1A2D84280010CB04 /* BGKVCutsceneViewController.xib */; };
 		AC68BD061A2C0B860030A504 /* Level14Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC68BD051A2C0B860030A504 /* Level14Storyboard.storyboard */; };
@@ -203,6 +208,14 @@
 		AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level5Tests.m; sourceTree = "<group>"; };
 		AC5543D61A2D7380006F0BDA /* BGKVTextFieldPasswordControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVTextFieldPasswordControl.h; sourceTree = "<group>"; };
 		AC5543D71A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVTextFieldPasswordControl.m; sourceTree = "<group>"; };
+		AC5543E01A2D83F2006F0BDA /* BGKVCrackerKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCrackerKeyboard.h; sourceTree = "<group>"; };
+		AC5543E11A2D83F2006F0BDA /* BGKVCrackerKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCrackerKeyboard.m; sourceTree = "<group>"; };
+		AC5543E41A2D8415006F0BDA /* BGKVCrackerKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVCrackerKeyboard.xib; sourceTree = "<group>"; };
+		AC5543E71A2D8914006F0BDA /* BGKVCrackerControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCrackerControl.h; sourceTree = "<group>"; };
+		AC5543E81A2D8914006F0BDA /* BGKVCrackerControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCrackerControl.m; sourceTree = "<group>"; };
+		AC598F631A2ED0C9007E0A0F /* BGKVSingleHintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVSingleHintViewController.h; sourceTree = "<group>"; };
+		AC598F641A2ED0C9007E0A0F /* BGKVSingleHintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVSingleHintViewController.m; sourceTree = "<group>"; };
+		AC598F661A2ED0DF007E0A0F /* BGKVSingleHintViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVSingleHintViewController.xib; sourceTree = "<group>"; };
 		AC6534ED1A2D84280010CB04 /* BGKVCutsceneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCutsceneViewController.h; sourceTree = "<group>"; };
 		AC6534EE1A2D84280010CB04 /* BGKVCutsceneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCutsceneViewController.m; sourceTree = "<group>"; };
 		AC6534EF1A2D84280010CB04 /* BGKVCutsceneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVCutsceneViewController.xib; sourceTree = "<group>"; };
@@ -835,6 +848,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBB4AE51A2E76A2005A86F2 /* Level17Storyboard.storyboard in Resources */,
+				AC5543E51A2D8415006F0BDA /* BGKVCrackerKeyboard.xib in Resources */,
 				AC6534F11A2D84280010CB04 /* BGKVCutsceneViewController.xib in Resources */,
 				0A872EBA1A2011BC003C6BE2 /* BGKVLevel18PasswordViewController.h in Resources */,
 				0A1D06921A11DAD1005BB7BE /* BGKVLevel6PasswordViewController.h in Resources */,
