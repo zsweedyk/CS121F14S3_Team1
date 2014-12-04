@@ -7,7 +7,7 @@
         <!--Settings-->
         <scene sceneID="X0L-bH-Tta">
             <objects>
-                <viewController id="YW7-uq-bz1" userLabel="Settings" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" id="YW7-uq-bz1" userLabel="Settings" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dQ9-Nf-9zl"/>
                         <viewControllerLayoutGuide type="bottom" id="ofW-lp-Ltp"/>
@@ -24,7 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="q0v-av-8XT" kind="unwind" unwindAction="goToMainMenu:" id="PYX-Ft-qCe"/>
+                                    <segue destination="q0v-av-8XT" kind="unwind" unwindAction="dismissSelf:" id="PYX-Ft-qCe"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Settings coming soon!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-8i-CEh">
@@ -299,7 +299,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kNi-2v-X0T" kind="unwind" unwindAction="goToMainMenu:" id="sgt-UM-pWt"/>
+                                    <segue destination="kNi-2v-X0T" kind="unwind" unwindAction="dismissSelf:" id="u6w-o9-rAl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uA-Yj-JTs">
@@ -336,7 +336,7 @@
         <!--About-->
         <scene sceneID="XAT-Ow-hvh">
             <objects>
-                <viewController id="z1T-EG-Abm" userLabel="About" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="About" id="z1T-EG-Abm" userLabel="About" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uvT-8E-U3d"/>
                         <viewControllerLayoutGuide type="bottom" id="vVj-Kf-6tG"/>
@@ -369,7 +369,7 @@ Have fun!
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bco-o3-v1a" kind="unwind" unwindAction="goToMainMenu:" id="oWP-q3-the"/>
+                                    <segue destination="bco-o3-v1a" kind="unwind" unwindAction="dismissSelf:" id="tsS-v5-UNu"/>
                                 </connections>
                             </button>
                         </subviews>

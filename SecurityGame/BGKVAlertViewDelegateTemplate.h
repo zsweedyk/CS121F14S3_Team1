@@ -11,7 +11,9 @@
 @interface BGKVAlertViewDelegateTemplate : NSObject <UIAlertViewDelegate>
 
 + (void)setActionOfAlertView:(UIAlertView *)alert toAction:(void (^)())action;
++ (void)setActionOfAlertView:(UIAlertView *)alert toComplexAction:(void (^)(UIAlertView *, NSInteger))complexAction;
 
 - (instancetype)initWithAction:(void (^)())action;
+- (instancetype)initWithComplexAction:(void (^)(UIAlertView *, NSInteger))complexAction;
 
 @end

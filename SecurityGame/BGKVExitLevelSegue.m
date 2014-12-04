@@ -21,7 +21,7 @@
     
 
     [container presentViewController:destination animated:YES completion:nil];
-    [container resetCache];
+    [container reset];
 }
 
 @end

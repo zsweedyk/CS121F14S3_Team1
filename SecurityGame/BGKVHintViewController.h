@@ -12,7 +12,7 @@
 // This is to facilitate use in storyboards.
 @interface BGKVHintViewController : UIPageViewController <UIPageViewControllerDataSource>
 
-- (void)setup;
+- (BOOL)hasHints;
 
 // Returns YES if hint is added
 // Returns NO if it was already one of the hints, and is therefore not added

@@ -12,13 +12,15 @@
 
 @implementation BGKVHintViewController
 
+- (BOOL)hasHints
+{
+    return self.viewControllers && self.pages && [self.pages count] > 0;
+}
+
 - (void)setup
 {
     self.pages = [[NSMutableArray alloc] init];
     self.dataSource = self;
-    [self addNewHintWithTitle:@"MISSION" andText:@"Crack that password!"];
-    [self addNewHintWithTitle:@"New Information!" andText:@"Maybe the password hint could give you ideas!"];
-    [self setViewControllers:@[self.pages[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }
 
 - (instancetype)init

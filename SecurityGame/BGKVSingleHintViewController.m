@@ -25,8 +25,13 @@
 
 - (void)viewDidLoad
 {
-    self.hintTitleLabel.text = self.hintTitle;
-    self.hintTextTextView.text = self.hintText;
+    if (self.hintTitle) {
+        self.hintTitleLabel.text = self.hintTitle;
+    }
+    
+    if (self.hintText) {
+        self.hintTextTextView.text = self.hintText;
+    }
 }
 
 - (IBAction)returnToMission

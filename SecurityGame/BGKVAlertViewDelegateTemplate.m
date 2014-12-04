@@ -10,12 +10,20 @@
 #import <objc/runtime.h>
 
 @implementation BGKVAlertViewDelegateTemplate {
-    void (^_action)();
+    void (^_simpleAction)();
+    void (^_complexAction)(UIAlertView *, NSInteger);
 }
 
 + (void)setActionOfAlertView:(UIAlertView *)alert toAction:(void (^)())action
 {
     BGKVAlertViewDelegateTemplate *delegate = [[BGKVAlertViewDelegateTemplate alloc] initWithAction:action];
+    [delegate bindLifetimeToObject:alert];
+    alert.delegate = delegate;
+}
+
++ (void)setActionOfAlertView:(UIAlertView *)alert toComplexAction:(void (^)(UIAlertView *, NSInteger))complexAction
+{
+    BGKVAlertViewDelegateTemplate *delegate = [[BGKVAlertViewDelegateTemplate alloc] initWithComplexAction:complexAction];
     [delegate bindLifetimeToObject:alert];
     alert.delegate = delegate;
 }
@@ -29,14 +37,27 @@
 {
     self = [super init];
     if (self) {
-        _action = action;
+        _simpleAction = action;
+    }
+    return self;
+}
+
+- (instancetype)initWithComplexAction:(void (^)(UIAlertView *, NSInteger))complexAction
+{
+    self = [super init];
+    if (self) {
+        _complexAction = complexAction;
     }
     return self;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    _action();
+    if (_simpleAction) {
+        _simpleAction();
+    } else {
+        _complexAction(alertView, buttonIndex);
+    }
 }
 
 @end

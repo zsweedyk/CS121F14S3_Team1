@@ -10,6 +10,6 @@
 
 @interface BGKVViewController : UIViewController
 
-- (IBAction) goToMainMenu:(UIStoryboardSegue *)segue;
+- (IBAction)goToMainMenu:(UIStoryboardSegue *)segue;
 
 @end

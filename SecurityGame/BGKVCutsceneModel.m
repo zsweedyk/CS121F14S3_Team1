@@ -10,25 +10,39 @@
 
 @implementation BGKVCutsceneModel {
     NSArray* _levelDialogues;
-    NSUInteger _maxDialogueLevel;
 }
 
-+ (NSArray *)dialogueForLevel:(NSInteger)level
+- (instancetype)initForLevel:(NSInteger)level
 {
-    switch (level) {
+    self = [super init];
+    if (self) {
+        switch (level) {
             //fill in the dialogues
-        case 1:
-            return @[@"1", @"2",@"3"];
-            break;
-            
-        // 0 is the default value for "level". Thus, 0 corresponds to being unset,
-        // and not to the tutorial level which is otherwise considered Level 0.
-        // For that reason, here we consider the tutorial level to be Level -1.
-        case 0:
-        default:
-            return nil;
-            break;
+            case 1:
+                _levelDialogues = @[@"1", @"2",@"3"];
+                break;
+                
+            // 0 is the default value for "level". Thus, 0 corresponds to being unset,
+            // and not to the tutorial level which is otherwise considered Level 0.
+            // For that reason, here we consider the tutorial level to be Level -1.
+            // If the level is not set, then the model is nil.
+            case 0:
+            default:
+                return nil;
+                break;
+        }
     }
+    return self;
+}
+
+- (NSUInteger)count
+{
+    return [_levelDialogues count];
+}
+
+- (NSString *)dialogueAtIndex:(NSUInteger)dialogueIndex
+{
+    return _levelDialogues[dialogueIndex];
 }
 
 @end

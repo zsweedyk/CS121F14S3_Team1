@@ -16,7 +16,7 @@
 @end
 
 @implementation BGKVCutsceneViewController {
-    NSArray *_dialogue;
+    BGKVCutsceneModel *_dialogue;
     NSUInteger _dialogueIndex;
 }
 
@@ -24,7 +24,7 @@
 {
     self = [super init];
     if (self) {
-        _dialogue = [BGKVCutsceneModel dialogueForLevel:level];
+        _dialogue = [[BGKVCutsceneModel alloc] initForLevel:level];
         if (!_dialogue) {
             return nil;
         }
@@ -52,12 +52,13 @@
 - (void)updateDialogue
 {
     BOOL talkerIsHacker = (_dialogueIndex % 2 == 0);
+    NSString *dialogue = [_dialogue dialogueAtIndex:_dialogueIndex];
     
-    self.hackerTextField.text = talkerIsHacker ? _dialogue[_dialogueIndex] : @"";
+    self.hackerTextField.text = talkerIsHacker ? dialogue : @"";
     self.hackerImage.hidden = !talkerIsHacker;
     self.hackerTextField.hidden = !talkerIsHacker;
     
-    self.bossTextField.text = talkerIsHacker ? @"" : _dialogue[_dialogueIndex];
+    self.bossTextField.text = talkerIsHacker ? @"" : dialogue;
     self.bossImage.hidden = talkerIsHacker;
     self.bossTextField.hidden = talkerIsHacker;
     

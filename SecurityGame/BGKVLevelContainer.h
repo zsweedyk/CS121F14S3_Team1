@@ -11,11 +11,20 @@
 @class BGKVLevelViewController;
 @class BGKVLevelViewControllerCache;
 @class BGKVHintViewController;
+@class BGKVSingleHintViewController;
 
 @interface BGKVLevelContainer : UIViewController <UIActionSheetDelegate>
 
-// Set in Storyboard
+// Set in Storyboard via User Defined Runtime Attributes
 @property (nonatomic) NSInteger level;
+
+// Set in Storyboard using normal IBOutlet connection in order to have an
+// initial 'hint' (though it will usually be a mission description)
+@property (nonatomic) IBOutlet BGKVSingleHintViewController *initialHint;
+
+
+
+// Below should NOT be set in Storyboard
 
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic) BGKVHintViewController *hintVC;
@@ -26,6 +35,7 @@
 // It's possible this should be weak!
 @property (nonatomic) BGKVLevelViewController *currentLevelVC;
 
+// Set in xib
 @property (nonatomic, weak) IBOutlet UIView *levelView;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *menuButton;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *backButton;
@@ -33,7 +43,7 @@
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC;
 
-- (void)resetCache;
+- (void)reset;
 
 - (IBAction)returnToLevelContainer:(UIStoryboardSegue *)segue;
 

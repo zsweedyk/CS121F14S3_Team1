@@ -59,6 +59,7 @@
 		AC0B98FD1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0B98FC1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m */; };
 		AC1212B01A304F8500FEF6CA /* UIViewController+Unwind.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */; };
 		AC1212B31A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */; };
+		AC1212B61A3074EE00FEF6CA /* UIViewController+DismissSelf.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B51A3074EE00FEF6CA /* UIViewController+DismissSelf.m */; };
 		AC1C88501A186A2000CFA7B5 /* BGKVLevelContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C884E1A186A2000CFA7B5 /* BGKVLevelContainer.m */; };
 		AC1C88511A186A2000CFA7B5 /* BGKVLevelContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC1C884F1A186A2000CFA7B5 /* BGKVLevelContainer.xib */; };
 		AC1C88541A186A3100CFA7B5 /* BGKVHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88531A186A3100CFA7B5 /* BGKVHintViewController.m */; };
@@ -192,6 +193,8 @@
 		AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Unwind.m"; sourceTree = "<group>"; };
 		AC1212B11A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVAlertViewDelegateTemplate.h; sourceTree = "<group>"; };
 		AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVAlertViewDelegateTemplate.m; sourceTree = "<group>"; };
+		AC1212B41A3074EE00FEF6CA /* UIViewController+DismissSelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissSelf.h"; sourceTree = "<group>"; };
+		AC1212B51A3074EE00FEF6CA /* UIViewController+DismissSelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissSelf.m"; sourceTree = "<group>"; };
 		AC1C884D1A186A2000CFA7B5 /* BGKVLevelContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelContainer.h; sourceTree = "<group>"; };
 		AC1C884E1A186A2000CFA7B5 /* BGKVLevelContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelContainer.m; sourceTree = "<group>"; };
 		AC1C884F1A186A2000CFA7B5 /* BGKVLevelContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVLevelContainer.xib; sourceTree = "<group>"; };
@@ -473,6 +476,8 @@
 				AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */,
 				AC1212B11A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.h */,
 				AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */,
+				AC1212B41A3074EE00FEF6CA /* UIViewController+DismissSelf.h */,
+				AC1212B51A3074EE00FEF6CA /* UIViewController+DismissSelf.m */,
 			);
 			name = "General Utilities";
 			sourceTree = "<group>";
@@ -481,7 +486,6 @@
 			isa = PBXGroup;
 			children = (
 				AC1C884C1A186A0800CFA7B5 /* Badges */,
-				AC1C884B1A186A0000CFA7B5 /* Hints */,
 				AC1C884A1A1869F200CFA7B5 /* Segues */,
 				AC1C88491A1869EB00CFA7B5 /* Cache */,
 				AC1C88481A1869E400CFA7B5 /* Container */,
@@ -637,6 +641,7 @@
 				AC1212AD1A304F5400FEF6CA /* General Utilities */,
 				AC6534EC1A2D83F60010CB04 /* Cutscenes */,
 				ACFD18DD1A2C19330082D6DD /* PasswordControls */,
+				AC1C884B1A186A0000CFA7B5 /* Hints */,
 				AC1C88471A1869E100CFA7B5 /* LevelContainer */,
 				ACE3642019F75EB10088346D /* Main */,
 				0A98371C1A0C32DB00013F08 /* TutorialLevel */,
@@ -941,6 +946,7 @@
 				AC5543D81A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
 				93EED58F1A19952200F1B61B /* BGKVLevel7PasswordViewController.m in Sources */,
+				AC1212B61A3074EE00FEF6CA /* UIViewController+DismissSelf.m in Sources */,
 				AC71826F19F5F30D001EFA4B /* main.m in Sources */,
 				AC1C88631A186A5900CFA7B5 /* UIButton+Badge.m in Sources */,
 				5DA1723F1A18310500E63BD0 /* BGKVLevel10PasswordViewController.m in Sources */,
