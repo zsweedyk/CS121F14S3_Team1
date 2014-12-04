@@ -14,6 +14,8 @@
 
 @interface BGKVLevelContainer : UIViewController <UIActionSheetDelegate>
 
+@property (nonatomic) NSUInteger level;
+
 @property (nonatomic) BGKVLevelViewControllerCache *cache;
 @property (nonatomic) BGKVHintViewController *hintVC;
  

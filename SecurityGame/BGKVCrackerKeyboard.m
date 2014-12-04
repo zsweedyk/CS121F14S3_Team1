@@ -88,7 +88,7 @@
     if ([self.delegate conformsToProtocol:@protocol(UITextInput)]) {
         [self.delegate deleteBackward];
     } else {
-        int nLen = [_textField.text length];
+        NSUInteger nLen = [_textField.text length];
         if (nLen)
             _textField.text = [_textField.text substringToIndex:nLen-1];
     }

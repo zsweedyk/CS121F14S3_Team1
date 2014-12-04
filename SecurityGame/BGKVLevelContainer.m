@@ -10,7 +10,7 @@
 #import "BGKVLevelViewController.h"
 #import "BGKVLevelViewControllerCache.h"
 #import "BGKVHintViewController.h"
-#import "UIBarButtonItem+Badge.h"
+#import "BGKVCutsceneViewController.h"
 
 // Only to avoid 'undeclared selector "goToMainMenu"'
 #import "BGKVViewController.h"
@@ -23,6 +23,7 @@
 
 @implementation BGKVLevelContainer {
     dispatch_once_t _initialized_token;
+    dispatch_once_t _cutscene_token;
 }
 
 - (IBAction)returnToLevelContainer:(id)sender
@@ -213,8 +214,19 @@
     dispatch_once(&_initialized_token, ^{
         [self setupHints];
         [self showInitialLevelViewController];
-        
-        self.menuButton.badgeValue = @"HELLO?";
+        NSLog(@"%ld", (long)self.level);
+    });
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    dispatch_once(&_cutscene_token, ^{
+        BGKVCutsceneViewController *cutscene = [[BGKVCutsceneViewController alloc] initWithLevel:self.level];
+        if (cutscene) {
+            [self presentViewController:cutscene animated:YES completion:nil];
+        }
     });
 }
 

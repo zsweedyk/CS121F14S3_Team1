@@ -129,7 +129,7 @@
             }
         }
          
-        NSUInteger rand = arc4random_uniform([charSet length]);
+        NSUInteger rand = arc4random_uniform((u_int32_t)[charSet length]);
         NSString *repChar = [NSString stringWithFormat:@"%C", [charSet characterAtIndex:rand]];
         [random appendString:repChar];
     }
