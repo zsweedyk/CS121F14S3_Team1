@@ -22,10 +22,21 @@ NSUInteger _maxDialogueLevel;
         switch (level) {
                 //fill in the dialogues and how many elements there are here
             case 1:
-                _levelDialogues = @[@"1", @"2",@"3"];
+                _levelDialogues = @[@"One of the employees left his computer unlocked.",
+                                    @"Oh? Did you find anything interesting?",
+                                    @"I didn't find anything suspicious on his computer, but I found that one of the leaked documents had recently been accessed by Erica. I'm going to check her computer next."];
                 
                 break;
-                
+            case -1: // Tutorial Level
+                _levelDialogues = @[@"What are the details of my first assignment?",
+                                    @"You're going to be investigating concerns about employees sharing privileged information",
+                                    @"I understand."];
+                break;
+            case 2:
+                _levelDialogues = @[@"Erica used her password as her hint, so it was really easy to access her computer.",
+                                    @"What did you find on her computer?",
+                                    @"I found some weird deposits to her bank account. They all had the note 'Erica, Stephen, Taylor.' I'm going to look into Stephen and Taylor next."];
+                break;
             default:
                 return nil;
                 break;
