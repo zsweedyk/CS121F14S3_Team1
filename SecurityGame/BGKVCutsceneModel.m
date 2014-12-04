@@ -9,9 +9,11 @@
 #import "BGKVCutsceneModel.h"
 
 @implementation BGKVCutsceneModel
+{
 
 NSArray* _levelDialogues;
-int _maxDialogueLevel;
+NSUInteger _maxDialogueLevel;
+}
 
 - (id) initWithLevel:(int)level
 {
@@ -21,7 +23,7 @@ int _maxDialogueLevel;
                 //fill in the dialogues and how many elements there are here
             case 1:
                 _levelDialogues = @[@"1", @"2",@"3"];
-                _maxDialogueLevel = 3;
+                
                 break;
                 
             default:
@@ -37,9 +39,9 @@ int _maxDialogueLevel;
     return _levelDialogues[dialogue];
 }
 
--(int)getMaxDialogueLevel:(int)level
+-(NSUInteger)getMaxDialogueLevel:(int)level
 {
-    return _maxDialogueLevel;
+    return [_levelDialogues count];
 }
 
 @end

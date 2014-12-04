@@ -17,7 +17,7 @@
 
 BGKVCutsceneModel *_model;
 int _currentLevel;
-int _dialogueNumber;
+NSUInteger _dialogueNumber;
 int _currentDialogueLevel;
 NSArray* _textArray;
 
@@ -36,17 +36,14 @@ NSArray* _textArray;
 - (void) changeBackgroundImage
 {//colors for now, eventually will be the background images.
     if (_currentDialogueLevel%2 == 1){
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[self
-                                                                    resizeImage:[UIImage imageNamed:@"boss_background.png"]
-                                                                    newSize:self.view.frame.size]];
-                                                                   
-
+        
+        self.hackerImage.hidden = NO;
+        self.bossImage.hidden = YES;
     }
     else {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[self
-                                                                    resizeImage:[UIImage imageNamed:@"hackerBackground.png"]
-                                                                    newSize:self.view.frame.size]];
-
+        
+        self.hackerImage.hidden = YES;
+        self.bossImage.hidden = NO;
     }
     
 }

@@ -12,7 +12,7 @@
 
 - (id) initWithLevel: (int) level;
 
-- (int) getMaxDialogueLevel: (int) level;
+- (NSUInteger) getMaxDialogueLevel: (int) level;
 
 - (NSString*)getStringForDialogue: (int) dialogue;
 
