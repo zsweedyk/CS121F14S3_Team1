@@ -36,12 +36,42 @@ NSArray* _textArray;
 - (void) changeBackgroundImage
 {//colors for now, eventually will be the background images.
     if (_currentDialogueLevel%2 == 1){
-         [self.view setBackgroundColor:[UIColor blueColor]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[self
+                                                                    resizeImage:[UIImage imageNamed:@"boss_background.png"]
+                                                                    newSize:self.view.frame.size]];
+                                                                   
+
     }
     else {
-         [self.view setBackgroundColor:[UIColor redColor]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[self
+                                                                    resizeImage:[UIImage imageNamed:@"hackerBackground.png"]
+                                                                    newSize:self.view.frame.size]];
+
     }
     
+}
+
+//from stackoverflow
+- (UIImage *)resizeImage:(UIImage*)image newSize:(CGSize)newSize {
+    CGRect newRect = CGRectIntegral(CGRectMake(0, 0, newSize.width, newSize.height));
+    CGImageRef imageRef = image.CGImage;
+    
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+    CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, newSize.height);
+    
+    CGContextConcatCTM(context, flipVertical);
+    CGContextDrawImage(context, newRect, imageRef);
+    
+    CGImageRef newImageRef = CGBitmapContextCreateImage(context);
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
+    
+    CGImageRelease(newImageRef);
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 - (void) updateTextFields
@@ -61,18 +91,10 @@ NSArray* _textArray;
 
 - (IBAction)goToNextLevel // for reference, see similar method in levelSelectViewController
 {
-    int nextLevel = ++_currentLevel;
-    [self presentViewController:[BGKVCutsceneViewController initialVCForLevel:nextLevel] animated:YES completion:nil];
+    NSString *identifier;
+    identifier = [NSString stringWithFormat: @"level%d", _currentLevel];
+    [self performSegueWithIdentifier:identifier sender:self];
     
-}
-  
-+ (UIViewController *)initialVCForLevel:(NSInteger)level
-{
-    NSString *storyboardName;
-    storyboardName = [NSString stringWithFormat:@"Level%ldStoryboard", (long)level];
-        
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
-    return [storyboard instantiateInitialViewController];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
