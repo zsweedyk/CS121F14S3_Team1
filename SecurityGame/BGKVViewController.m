@@ -17,4 +17,10 @@
 
 - (IBAction)goToMainMenu:(UIStoryboardSegue *)segue { }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [[BGKVMusicPlayer sharedInstance] play];
+}
+
 @end
