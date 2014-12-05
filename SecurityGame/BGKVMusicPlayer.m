@@ -41,7 +41,7 @@
                                                                           error:nil];
         self.backgroundMusic.numberOfLoops = -1;
         _isPlaying = false;
-        _volume = 100;
+        _volume = 1;
     }
     
     return self;
@@ -51,6 +51,7 @@
 {
     if (!_isPlaying) {
         [self.backgroundMusic play];
+        [self.backgroundMusic setVolume:_volume];
         _isPlaying = true;
     }
 }

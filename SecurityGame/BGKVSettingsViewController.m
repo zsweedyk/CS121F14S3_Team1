@@ -22,6 +22,7 @@
     // Default is 0
     self.volumeLevel.value = 1 - [[NSUserDefaults standardUserDefaults] floatForKey:@"volumeLevel"];
     self.unlockLevels.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"unlockLevels"];
+    self.volumeLevel.enabled = !self.muteMusic.on;
 }
 
 - (IBAction)muteMusicChanged:(id)sender
