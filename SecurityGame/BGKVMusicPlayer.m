@@ -10,14 +10,11 @@
 
 @interface BGKVMusicPlayer () {
     BOOL _isPlaying;
+    float _volume;
 }
 @end
 
 @implementation BGKVMusicPlayer
-
-// FIX ME: How to handle not reinitializing the same view multiple times.
-// FIX ME: All of the views always persist. That doesn't seem right. Need to
-//         pop and push views on and off properly, or preload them.
 
 + (BGKVMusicPlayer*) sharedInstance
 {
@@ -44,6 +41,7 @@
                                                                           error:nil];
         self.backgroundMusic.numberOfLoops = -1;
         _isPlaying = false;
+        _volume = 1;
     }
     
     return self;
@@ -53,8 +51,25 @@
 {
     if (!_isPlaying) {
         [self.backgroundMusic play];
+        [self.backgroundMusic setVolume:_volume];
         _isPlaying = true;
     }
+}
+
+- (void) setVolume:(float) vol
+{
+    _volume = vol;
+    [self.backgroundMusic setVolume:vol];
+}
+
+- (void) mute
+{
+    [self.backgroundMusic setVolume:0];
+}
+
+- (void) unmute
+{
+    [self.backgroundMusic setVolume:_volume];
 }
 
 @end
