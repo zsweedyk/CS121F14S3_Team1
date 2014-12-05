@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView* bossImage;
 @property (weak, nonatomic) IBOutlet UIImageView* hackerImage;
 
+@property (nonatomic) BOOL isFinalCutscene;
+
 
 - (instancetype)initWithLevel:(NSInteger)level;
 - (IBAction)goToLevelContainer:(id)sender;
