@@ -125,6 +125,7 @@
             case 20:
                 _levelDialogues = @[@"How did that Vita Brevis case turn out?",
                                     @"Good job catching that crooked CTO! It looks like he was recruiting people at Vita Brevis to move over with him to Novam Vitam. Everyone who was involved has been arrested! You got a big bonus from Vita Brevis for your great work!"];
+                break;
             default:
                 return nil;
                 break;

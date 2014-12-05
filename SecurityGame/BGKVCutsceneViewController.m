@@ -75,6 +75,11 @@
     
     if (_dialogueIndex == [_dialogue count]-1) {
         self.continueButton.hidden = YES;
+        if (self.isFinalCutscene) {
+            self.playLevelButton.titleLabel.text = @"You Win!";
+            [self.playLevelButton removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
+            [self.playLevelButton addTarget:self action:@selector(endGame) forControlEvents:UIControlEventTouchUpInside];
+        }
         self.playLevelButton.hidden = NO;
     }
 }
@@ -85,9 +90,6 @@
     if (isFinalCutscene) {
         _dialogue = [[BGKVCutsceneModel alloc] initForLastLevel];
     }
-    self.playLevelButton.titleLabel.text = @"You Win!";
-    [self.playLevelButton removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
-    [self.playLevelButton addTarget:self action:@selector(endGame) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)endGame
