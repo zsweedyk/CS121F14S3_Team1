@@ -21,7 +21,6 @@
     self.muteMusic.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"muteMusic"];
     // Default is 0
     self.volumeLevel.value = 1 - [[NSUserDefaults standardUserDefaults] floatForKey:@"volumeLevel"];
-    self.unlockLevels.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"unlockLevels"];
     self.volumeLevel.enabled = !self.muteMusic.on;
 }
 
@@ -43,10 +42,6 @@
     [[BGKVMusicPlayer sharedInstance] setVolume:self.volumeLevel.value];
 }
 
-- (IBAction)unlockLevelsChanged:(id)sender
-{
-    [[NSUserDefaults standardUserDefaults] setBool:self.unlockLevels.on forKey:@"unlockLevels"];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

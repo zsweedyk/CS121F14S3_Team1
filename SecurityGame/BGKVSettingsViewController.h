@@ -12,6 +12,5 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch* muteMusic;
 @property (weak, nonatomic) IBOutlet UISlider* volumeLevel;
-@property (weak, nonatomic) IBOutlet UISwitch* unlockLevels;
 
 @end
