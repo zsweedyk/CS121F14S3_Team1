@@ -12,13 +12,18 @@
     NSArray* _levelDialogues;
 }
 
+- (instancetype)initForLastLevel
+{
+    return [self initForLevel:20];
+}
+
 - (instancetype)initForLevel:(NSInteger)level
 {
     self = [super init];
     if (self) {
         switch (level) {
             //fill in the dialogues
-            case -1: // Tutorial Level
+            case 0: // Tutorial Level
                 _levelDialogues = @[@"What are the details of my first assignment?",
                                     @"You're going to be investigating concerns about employees sharing privileged information",
                                     @"I understand."];
@@ -120,6 +125,7 @@
             case 20:
                 _levelDialogues = @[@"How did that Vita Brevis case turn out?",
                                     @"Good job catching that crooked CTO! It looks like he was recruiting people at Vita Brevis to move over with him to Novam Vitam. Everyone who was involved has been arrested! You got a big bonus from Vita Brevis for your great work!"];
+                break;
             default:
                 return nil;
                 break;

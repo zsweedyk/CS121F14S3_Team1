@@ -9,6 +9,7 @@
 #import "BGKVCutsceneViewController.h"
 #import "BGKVCutsceneModel.h"
 #import "BGKVLevelContainer.h"
+#import "BGKVViewController.h"
 #import "UIViewController+Unwind.h"
 
 @interface BGKVCutsceneViewController ()
@@ -74,10 +75,26 @@
     
     if (_dialogueIndex == [_dialogue count]-1) {
         self.continueButton.hidden = YES;
+        if (self.isFinalCutscene) {
+            self.playLevelButton.titleLabel.text = @"You Win!";
+            [self.playLevelButton removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
+            [self.playLevelButton addTarget:self action:@selector(endGame) forControlEvents:UIControlEventTouchUpInside];
+        }
         self.playLevelButton.hidden = NO;
     }
 }
 
+- (void)setIsFinalCutscene:(BOOL)isFinalCutscene
+{
+    _isFinalCutscene = isFinalCutscene;
+    if (isFinalCutscene) {
+        _dialogue = [[BGKVCutsceneModel alloc] initForLastLevel];
+    }
+}
 
+- (void)endGame
+{
+    [self unwind:@selector(goToMainMenu:)];
+}
 
 @end
