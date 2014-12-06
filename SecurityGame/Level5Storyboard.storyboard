@@ -17,20 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="mO5-QB-AIE">
-                                <rect key="frame" x="0.0" y="-53" width="1051" height="827"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabCounter" translatesAutoresizingMaskIntoConstraints="NO" id="mO5-QB-AIE">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Level1Chair" translatesAutoresizingMaskIntoConstraints="NO" id="Efr-Hl-rye">
-                                <rect key="frame" x="298" y="386" width="222" height="300"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="Yij-aY-HX2">
-                                <rect key="frame" x="263" y="447" width="560" height="362"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-vT-DUp">
+                                <rect key="frame" x="174" y="174" width="303" height="257"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="Level5Calendar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVWithinLevelSegue" id="eMh-nI-qxU"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-b8-985">
-                                <rect key="frame" x="560" y="454" width="106" height="108"/>
+                                <rect key="frame" x="536" y="442" width="270" height="247"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
@@ -39,16 +43,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="3Xe-rb-phB" kind="custom" customClass="BGKVWithinLevelSegue" id="nSy-gD-jIh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-vT-DUp">
-                                <rect key="frame" x="358" y="460" width="151" height="102"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="Level5Calendar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="TEc-oN-Tf9" kind="custom" customClass="BGKVWithinLevelSegue" id="eMh-nI-qxU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,17 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="hEy-Dm-hEo">
-                                <rect key="frame" x="-1000" y="-500" width="3000" height="1500"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1Chair" translatesAutoresizingMaskIntoConstraints="NO" id="dgI-Y0-85T">
-                                <rect key="frame" x="-51" y="77" width="440" height="592"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="sex-iS-Ohs">
-                                <rect key="frame" x="-285" y="163" width="1818" height="1270"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
-                                </accessibility>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabCounter" translatesAutoresizingMaskIntoConstraints="NO" id="hEy-Dm-hEo">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level5Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-NN-KAM">
                                 <rect key="frame" x="152" y="77" width="721" height="526"/>
@@ -123,14 +108,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-VO-Y8j">
-                                <rect key="frame" x="-471" y="-276" width="1495" height="1044"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="ruj-g5-ecr">
-                                <rect key="frame" x="-548" y="305" width="1890" height="1320"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
-                                </accessibility>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabCounter" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-VO-Y8j">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cFu-au-IPV" customClass="BGKVPhoneControl">
                                 <rect key="frame" x="359" y="-32" width="411" height="760"/>
@@ -181,14 +160,14 @@
                 <customObject id="uPM-e6-ha4" customClass="BGKVSingleHintViewController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="The Birthday"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Her birthday is November 21"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Her birthday is November 21."/>
                         <userDefinedRuntimeAttribute type="number" keyPath="attempts">
                             <integer key="value" value="6"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2276" y="47"/>
+            <point key="canvasLocation" x="1854" y="-54"/>
         </scene>
         <!--Load Screen View Controller-->
         <scene sceneID="0oL-Kc-BGb">
@@ -236,11 +215,9 @@ It's easy to learn and guess, even for people who don't know you!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Level1Chair" width="212" height="300"/>
-        <image name="Level1WoodenTable" width="800" height="495"/>
+        <image name="LabCounter" width="852" height="640"/>
         <image name="Level5Calendar" width="1600" height="1218"/>
         <image name="Level5iPhoneSlanted" width="569" height="414"/>
-        <image name="LibraryBackground1" width="1024" height="778"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
