@@ -50,8 +50,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-pm-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="IJN-84-gfQ" customClass="BGKVSingleHintViewController">
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="nil" keyPath="hintTitle"/>
-                        <userDefinedRuntimeAttribute type="nil" keyPath="hintText"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Go check out the computer!"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="attempts">
                             <integer key="value" value="-1"/>
                         </userDefinedRuntimeAttribute>
@@ -102,21 +102,38 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outletCollection property="hints" destination="l0X-F3-jlA" id="tIM-Se-Sai"/>
+                        <outletCollection property="hints" destination="PfN-XQ-XFX" id="uWd-Mb-4HO"/>
+                        <outletCollection property="hints" destination="HYK-Oa-vdd" id="cJF-du-s9Y"/>
                         <segue destination="yIi-ZG-xuq" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="l0X-F3-jlA" customClass="BGKVSingleHintViewController">
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="BLERG"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Take a hint!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Go check out the computer!"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="attempts">
-                            <integer key="value" value="4"/>
+                            <integer key="value" value="-1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="control" destination="Pay-vl-ldn" id="idL-3d-LkQ"/>
-                    </connections>
+                </customObject>
+                <customObject id="PfN-XQ-XFX" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Erika's Password"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Maybe Erika left her password laying around."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="HYK-Oa-vdd" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="The &quot;Password&quot;"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="The hint on the computer tells you her password is &quot;Password&quot;."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
             <point key="canvasLocation" x="2292" y="-1031"/>
