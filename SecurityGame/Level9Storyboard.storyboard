@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pGY-WJ-pig">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pGY-WJ-pig">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Initial-->
@@ -16,24 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="mO5-QB-AIE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabComputerNoNotebook" translatesAutoresizingMaskIntoConstraints="NO" id="mO5-QB-AIE">
                                 <rect key="frame" x="0.0" y="-53" width="1051" height="827"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Level1Chair" translatesAutoresizingMaskIntoConstraints="NO" id="Efr-Hl-rye">
-                                <rect key="frame" x="298" y="386" width="222" height="300"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="Yij-aY-HX2">
-                                <rect key="frame" x="263" y="447" width="560" height="362"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-b8-985">
-                                <rect key="frame" x="538" y="396" width="170" height="160"/>
+                                <rect key="frame" x="328" y="135" width="313" height="222"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
-                                <state key="normal" image="Level1Computer">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -41,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-vT-DUp">
-                                <rect key="frame" x="393" y="493" width="104" height="92"/>
+                                <rect key="frame" x="132" y="425" width="131" height="110"/>
                                 <state key="normal" image="USBDrive">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -51,7 +46,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="tHM-vn-2xz"/>
                     <navigationItem key="navigationItem" id="QnM-su-Wf5"/>
@@ -73,18 +67,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-VO-Y8j">
-                                <rect key="frame" x="-471" y="-276" width="1495" height="1044"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="ruj-g5-ecr">
-                                <rect key="frame" x="-377" y="105" width="1890" height="1320"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
-                                </accessibility>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ZoomedLabComputer" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-VO-Y8j">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-00-1LP">
-                                <rect key="frame" x="312" y="20" width="499" height="539"/>
-                                <state key="normal" image="Level1Computer">
+                                <rect key="frame" x="200" y="146" width="423" height="272"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -92,7 +80,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcJ-fa-ZKs">
-                                <rect key="frame" x="68" y="377" width="188" height="168"/>
+                                <rect key="frame" x="36" y="450" width="188" height="168"/>
                                 <state key="normal" title="USB drive" image="USBDrive">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -100,8 +88,24 @@
                                     <action selector="usbDriveTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="SgR-sV-1hD"/>
                                 </connections>
                             </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive: Password is &quot;CgF3n8x6&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-s3-5nN">
+                                <rect key="frame" x="283" y="316" width="319" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-OU-f2L" customClass="BGKVTextFieldPasswordControl">
+                                <rect key="frame" x="317" y="239" width="250" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="CgF3n8x6"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enterPassword:" destination="3Xe-rb-phB" eventType="valueChanged" id="Y8a-jR-i90"/>
+                                </connections>
+                            </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kou-yt-R9e">
-                                <rect key="frame" x="620" y="269" width="108" height="30"/>
+                                <rect key="frame" x="452" y="360" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Eject USB drive">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -109,23 +113,8 @@
                                     <action selector="ejectButtonTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="cZA-Cd-pXG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zX4-OM-5vk">
-                                <rect key="frame" x="494" y="139" width="135" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                <connections>
-                                    <action selector="enterPasswordFromTextField:" destination="3Xe-rb-phB" eventType="editingDidEnd" id="zzH-lv-wgx"/>
-                                    <outlet property="delegate" destination="3Xe-rb-phB" id="ZWR-D9-Hfe"/>
-                                </connections>
-                            </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="USB drive inserted. Password is &quot;CgF3n8x6&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-s3-5nN">
-                                <rect key="frame" x="409" y="231" width="319" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="0qb-6F-zT6"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -135,7 +124,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="ejectUsbDriveButton" destination="Kou-yt-R9e" id="Apb-Ok-aOB"/>
-                        <outlet property="passwordField" destination="zX4-OM-5vk" id="2dl-cx-VyR"/>
                         <outlet property="passwordInformationField" destination="vqB-s3-5nN" id="Hc2-Ol-lZO"/>
                         <outlet property="usbDriveButton" destination="tcJ-fa-ZKs" id="jgg-Ho-Lzh"/>
                         <segue destination="yIi-ZG-xuq" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>
@@ -177,7 +165,6 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -191,13 +178,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Level1Chair" width="212" height="300"/>
-        <image name="Level1Computer" width="800" height="800"/>
-        <image name="Level1WoodenTable" width="800" height="495"/>
-        <image name="LibraryBackground1" width="1024" height="778"/>
+        <image name="LabComputerNoNotebook" width="852" height="640"/>
         <image name="USBDrive" width="638" height="444"/>
+        <image name="ZoomedLabComputer" width="852" height="640"/>
     </resources>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -206,4 +190,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="pHw-9l-f2Z"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
