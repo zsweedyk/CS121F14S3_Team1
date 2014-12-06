@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pGY-WJ-pig">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pGY-WJ-pig">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -216,10 +216,20 @@
                     <connections>
                         <outlet property="usbDriveButton" destination="u9c-F3-KbF" id="v40-dO-uxU"/>
                         <outlet property="usbNotPluggedInField" destination="I9S-Md-3xi" id="rCl-jr-g3I"/>
+                        <outletCollection property="hints" destination="O7b-ki-Dwc" id="S2P-AU-m0h"/>
                         <segue destination="aeS-3l-eYk" kind="custom" identifier="SegueToEmailList" customClass="BGKVWithinLevelSegue" id="xlV-LZ-g4h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="O7b-ki-Dwc" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Use All Your Training"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="The USB stick is your password to get into the computer. Remember, HTTPS is always the secure choice."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2197" y="-226"/>
         </scene>
@@ -557,8 +567,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="lJK-f5-lr6"/>
-        <segue reference="Tpc-bY-5Ib"/>
+        <segue reference="nSy-gD-jIh"/>
+        <segue reference="Z7H-vO-4j9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
