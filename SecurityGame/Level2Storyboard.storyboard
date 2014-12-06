@@ -133,10 +133,40 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="frog"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outletCollection property="hints" destination="zVf-Id-MLg" id="S65-wc-XcG"/>
+                        <outletCollection property="hints" destination="Edx-8B-RHZ" id="CVn-yC-9GE"/>
+                        <outletCollection property="hints" destination="23a-OC-r9y" id="57s-CI-k8d"/>
                         <segue destination="yIi-ZG-xuq" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="zVf-Id-MLg" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Password"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="&quot;Frog&quot; rhymes with &quot;bog&quot;!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="Edx-8B-RHZ" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Password Hint"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Think of some animals that rhyme with &quot;bog&quot; to use as the password."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="23a-OC-r9y" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Animal Sounds"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Some animals go &quot;ribbit,&quot; some animals go &quot;ruff.&quot;"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2250" y="15"/>
         </scene>

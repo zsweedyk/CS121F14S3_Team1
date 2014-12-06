@@ -92,10 +92,40 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="Taylor"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outletCollection property="hints" destination="gnh-vN-jez" id="VGD-NB-5xs"/>
+                        <outletCollection property="hints" destination="mFQ-52-tpp" id="drG-md-xxw"/>
+                        <outletCollection property="hints" destination="HPM-v0-khy" id="Xea-fa-sq9"/>
                         <segue destination="7UU-Ky-p5v" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="lPj-eq-IfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY8-mo-W9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="gnh-vN-jez" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Go check out the note on the table!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="mFQ-52-tpp" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="The Name"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="The name on the note is important!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="HPM-v0-khy" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="The Owner"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="The owner of the computer is named &quot;Taylor&quot;."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="198" y="1733"/>
         </scene>
