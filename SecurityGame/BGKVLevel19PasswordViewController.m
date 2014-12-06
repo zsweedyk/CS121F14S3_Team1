@@ -98,7 +98,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    [self performSegueWithIdentifier:@"SegueToLoadScreen" sender:self];
+    [self performSegueWithIdentifier:@"correct" sender:self];
 }
 
 @end
