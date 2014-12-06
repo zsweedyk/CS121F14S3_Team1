@@ -121,15 +121,46 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="CgF3n8x6"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="cacheKey" value="computer"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="ejectUsbDriveButton" destination="Kou-yt-R9e" id="Apb-Ok-aOB"/>
                         <outlet property="passwordInformationField" destination="vqB-s3-5nN" id="Hc2-Ol-lZO"/>
                         <outlet property="usbDriveButton" destination="tcJ-fa-ZKs" id="jgg-Ho-Lzh"/>
+                        <outletCollection property="hints" destination="Dvf-c3-8Dh" id="odz-DI-TIw"/>
+                        <outletCollection property="hints" destination="NbC-D0-nE0" id="Igy-sv-0Zn"/>
+                        <outletCollection property="hints" destination="Gip-5p-fiP" id="F6i-qZ-N7s"/>
                         <segue destination="yIi-ZG-xuq" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Dvf-c3-8Dh" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="I wonder if there's anything stored on the USB drive!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="NbC-D0-nE0" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Instruction Manual"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Tap the USB stick and then tap the computer to plug it in."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="Gip-5p-fiP" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="The Password"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="The password is on the USB stick."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1002" y="-369"/>
         </scene>
