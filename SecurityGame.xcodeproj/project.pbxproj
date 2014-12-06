@@ -92,7 +92,6 @@
 		AC71828319F5F30D001EFA4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826219F5F30D001EFA4B /* Foundation.framework */; };
 		AC71828419F5F30D001EFA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826619F5F30D001EFA4B /* UIKit.framework */; };
 		AC71828C19F5F30D001EFA4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC71828A19F5F30D001EFA4B /* InfoPlist.strings */; };
-		AC71828E19F5F30D001EFA4B /* Level2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71828D19F5F30D001EFA4B /* Level2Tests.m */; };
 		AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */; };
 		ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640919F75C550088346D /* RBStoryboardLink.m */; };
 		ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640C19F75C550088346D /* RBStoryboardModalSegue.m */; };
@@ -102,7 +101,6 @@
 		ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3641419F75C550088346D /* UIViewController+RBStoryboardLink.m */; };
 		ACE3641D19F75CBA0088346D /* Level2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641C19F75CBA0088346D /* Level2Storyboard.storyboard */; };
 		ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */ = {isa = PBXBuildFile; fileRef = ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */; };
-		ACE3642319F77C520088346D /* BGKVLevel2PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3642219F77C520088346D /* BGKVLevel2PasswordViewController.m */; };
 		ACFD18DB1A2C18320082D6DD /* BGKVPhoneControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFD18D91A2C18320082D6DD /* BGKVPhoneControlController.m */; };
 		ACFD18DC1A2C18320082D6DD /* BGKVPhoneControlController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACFD18DA1A2C18320082D6DD /* BGKVPhoneControlController.xib */; };
 		ACFD18E01A2C1B510082D6DD /* BGKVPhoneControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFD18DF1A2C1B510082D6DD /* BGKVPhoneControl.m */; };
@@ -243,7 +241,6 @@
 		AC71828119F5F30D001EFA4B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AC71828919F5F30D001EFA4B /* SecurityGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecurityGameTests-Info.plist"; sourceTree = "<group>"; };
 		AC71828B19F5F30D001EFA4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AC71828D19F5F30D001EFA4B /* Level2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Level2Tests.m; sourceTree = "<group>"; };
 		AC71829719F5FDE7001EFA4B /* BGKVLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelViewController.h; sourceTree = "<group>"; };
 		AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelViewController.m; sourceTree = "<group>"; };
 		ACE3640819F75C550088346D /* RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLink.h; sourceTree = "<group>"; };
@@ -261,8 +258,6 @@
 		ACE3641419F75C550088346D /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
 		ACE3641C19F75CBA0088346D /* Level2Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level2Storyboard.storyboard; sourceTree = "<group>"; };
 		ACE3641E19F75E9F0088346D /* RBStoryboardLICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RBStoryboardLICENSE; sourceTree = "<group>"; };
-		ACE3642119F77C520088346D /* BGKVLevel2PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel2PasswordViewController.h; sourceTree = "<group>"; };
-		ACE3642219F77C520088346D /* BGKVLevel2PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel2PasswordViewController.m; sourceTree = "<group>"; };
 		ACFD18D81A2C18320082D6DD /* BGKVPhoneControlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVPhoneControlController.h; sourceTree = "<group>"; };
 		ACFD18D91A2C18320082D6DD /* BGKVPhoneControlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVPhoneControlController.m; sourceTree = "<group>"; };
 		ACFD18DA1A2C18320082D6DD /* BGKVPhoneControlController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVPhoneControlController.xib; sourceTree = "<group>"; };
@@ -689,7 +684,6 @@
 				AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */,
 				5D4E1CA61A11D9BC00C50D71 /* Level4Tests.m */,
 				0A1D068C1A11B4D4005BB7BE /* Level3Tests.m */,
-				AC71828D19F5F30D001EFA4B /* Level2Tests.m */,
 				5DD50EC71A084C700049B512 /* MusicTests.m */,
 				93D23E1E1A19D6AD00C82071 /* Level13Tests.m */,
 				AC71828819F5F30D001EFA4B /* Supporting Files */,
@@ -732,8 +726,6 @@
 			isa = PBXGroup;
 			children = (
 				ACE3641C19F75CBA0088346D /* Level2Storyboard.storyboard */,
-				ACE3642119F77C520088346D /* BGKVLevel2PasswordViewController.h */,
-				ACE3642219F77C520088346D /* BGKVLevel2PasswordViewController.m */,
 			);
 			name = Level2;
 			sourceTree = "<group>";
@@ -945,7 +937,6 @@
 				AC71826F19F5F30D001EFA4B /* main.m in Sources */,
 				AC1C88631A186A5900CFA7B5 /* UIButton+Badge.m in Sources */,
 				5DA1723F1A18310500E63BD0 /* BGKVLevel10PasswordViewController.m in Sources */,
-				ACE3642319F77C520088346D /* BGKVLevel2PasswordViewController.m in Sources */,
 				AC1C88541A186A3100CFA7B5 /* BGKVHintViewController.m in Sources */,
 				93A159E51A11EB7200118451 /* BGKVLevel1PasswordViewController.m in Sources */,
 				AC598F651A2ED0C9007E0A0F /* BGKVSingleHintViewController.m in Sources */,
@@ -971,7 +962,6 @@
 				93EED5911A19A42000F1B61B /* Level7Tests.m in Sources */,
 				93D23E1F1A19D6AD00C82071 /* Level13Tests.m in Sources */,
 				5DA172411A1859DC00E63BD0 /* Level10Tests.m in Sources */,
-				AC71828E19F5F30D001EFA4B /* Level2Tests.m in Sources */,
 				5DD50EC81A084C700049B512 /* MusicTests.m in Sources */,
 				5D4E1CA71A11D9BC00C50D71 /* Level4Tests.m in Sources */,
 			);
