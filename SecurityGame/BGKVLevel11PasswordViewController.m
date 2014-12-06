@@ -19,24 +19,5 @@
     self.continueButton.hidden = NO;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    [self performSegueWithIdentifier:@"SegueToLoadScreen" sender:self];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
 
 @end
