@@ -13,6 +13,7 @@
 @interface BGKVPhoneControlController : UIViewController
 
 - (IBAction)pushIPhoneButton:(UIButton *)sender;
+- (IBAction)resetPhone:(UIButton *)sender;
 - (void)reset;
 
 @property (nonatomic, weak) BGKVPasswordControl *parentControl;

@@ -35,6 +35,11 @@
     }
 }
 
+- (IBAction)resetPhone:(UIButton *)sender
+{
+    [self reset];
+}
+
 - (void)enterDigit:(NSInteger)digit
 {
     NSAssert(_password.length < 4, @"Tried to add to password when password already full!");
