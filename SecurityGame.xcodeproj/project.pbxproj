@@ -45,7 +45,6 @@
 		93FF564B1A10672500017536 /* BGKVLevelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FF564A1A10672500017536 /* BGKVLevelSelectViewController.m */; };
 		AC0B98F71A2CD60000E10F4B /* BGKVPasswordControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0B98F61A2CD60000E10F4B /* BGKVPasswordControl.m */; };
 		AC0B98FA1A2CD80F00E10F4B /* UIView+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0B98F91A2CD80F00E10F4B /* UIView+Scaling.m */; };
-		AC0B98FD1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0B98FC1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m */; };
 		AC1212B01A304F8500FEF6CA /* UIViewController+Unwind.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */; };
 		AC1212B31A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B21A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m */; };
 		AC1212B91A307A0500FEF6CA /* BGKVAddHintSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1212B81A307A0500FEF6CA /* BGKVAddHintSegue.m */; };
@@ -60,7 +59,6 @@
 		AC1C88631A186A5900CFA7B5 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88611A186A5900CFA7B5 /* UIButton+Badge.m */; };
 		AC1C88661A186BDA00CFA7B5 /* LevelContainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */; };
 		AC2B42B71A196FF200DE86B0 /* Level5Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */; };
-		AC2B42B91A197EDD00DE86B0 /* Level5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */; };
 		AC5543D81A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543D71A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m */; };
 		AC5543E21A2D83F2006F0BDA /* BGKVCrackerKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543E11A2D83F2006F0BDA /* BGKVCrackerKeyboard.m */; };
 		AC5543E51A2D8415006F0BDA /* BGKVCrackerKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC5543E41A2D8415006F0BDA /* BGKVCrackerKeyboard.xib */; };
@@ -160,8 +158,6 @@
 		AC0B98F61A2CD60000E10F4B /* BGKVPasswordControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVPasswordControl.m; sourceTree = "<group>"; };
 		AC0B98F81A2CD80F00E10F4B /* UIView+Scaling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Scaling.h"; sourceTree = "<group>"; };
 		AC0B98F91A2CD80F00E10F4B /* UIView+Scaling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Scaling.m"; sourceTree = "<group>"; };
-		AC0B98FB1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel5PasswordViewController.h; sourceTree = "<group>"; };
-		AC0B98FC1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel5PasswordViewController.m; sourceTree = "<group>"; };
 		AC1212AE1A304F8500FEF6CA /* UIViewController+Unwind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Unwind.h"; sourceTree = "<group>"; };
 		AC1212AF1A304F8500FEF6CA /* UIViewController+Unwind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Unwind.m"; sourceTree = "<group>"; };
 		AC1212B11A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVAlertViewDelegateTemplate.h; sourceTree = "<group>"; };
@@ -186,7 +182,6 @@
 		AC1C88611A186A5900CFA7B5 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
 		AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelContainerTests.m; sourceTree = "<group>"; };
 		AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level5Storyboard.storyboard; sourceTree = "<group>"; };
-		AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level5Tests.m; sourceTree = "<group>"; };
 		AC5543D61A2D7380006F0BDA /* BGKVTextFieldPasswordControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVTextFieldPasswordControl.h; sourceTree = "<group>"; };
 		AC5543D71A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVTextFieldPasswordControl.m; sourceTree = "<group>"; };
 		AC5543E01A2D83F2006F0BDA /* BGKVCrackerKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCrackerKeyboard.h; sourceTree = "<group>"; };
@@ -510,8 +505,6 @@
 			isa = PBXGroup;
 			children = (
 				AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */,
-				AC0B98FB1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.h */,
-				AC0B98FC1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m */,
 			);
 			name = Level5;
 			sourceTree = "<group>";
@@ -648,7 +641,6 @@
 			children = (
 				AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */,
 				5DA172401A1859DC00E63BD0 /* Level10Tests.m */,
-				AC2B42B81A197EDD00DE86B0 /* Level5Tests.m */,
 				5DD50EC71A084C700049B512 /* MusicTests.m */,
 				93D23E1E1A19D6AD00C82071 /* Level13Tests.m */,
 				AC71828819F5F30D001EFA4B /* Supporting Files */,
@@ -887,7 +879,6 @@
 				AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */,
 				ACE3641A19F75C550088346D /* UIViewController+RBStoryboardLink.m in Sources */,
 				AC1212B91A307A0500FEF6CA /* BGKVAddHintSegue.m in Sources */,
-				AC0B98FD1A2CEADC00E10F4B /* BGKVLevel5PasswordViewController.m in Sources */,
 				AC1C885C1A186A4E00CFA7B5 /* BGKVWithinLevelSegue.m in Sources */,
 				AC5543E21A2D83F2006F0BDA /* BGKVCrackerKeyboard.m in Sources */,
 				93FF564B1A10672500017536 /* BGKVLevelSelectViewController.m in Sources */,
@@ -916,7 +907,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC1C88661A186BDA00CFA7B5 /* LevelContainerTests.m in Sources */,
-				AC2B42B91A197EDD00DE86B0 /* Level5Tests.m in Sources */,
 				93D23E1F1A19D6AD00C82071 /* Level13Tests.m in Sources */,
 				5DA172411A1859DC00E63BD0 /* Level10Tests.m in Sources */,
 				5DD50EC81A084C700049B512 /* MusicTests.m in Sources */,
