@@ -114,9 +114,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZq-xz-OxM">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZq-xz-OxM" customClass="BGKVTextFieldPasswordControl">
                                 <rect key="frame" x="311" y="260" width="266" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="password" value="frog"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enterPassword:" destination="3Xe-rb-phB" eventType="valueChanged" id="pSu-WM-nZd"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
