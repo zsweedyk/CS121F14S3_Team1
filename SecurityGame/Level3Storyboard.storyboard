@@ -90,6 +90,7 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="Taylor"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="cacheKey" value="computer"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outletCollection property="hints" destination="gnh-vN-jez" id="VGD-NB-5xs"/>

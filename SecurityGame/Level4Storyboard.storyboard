@@ -121,6 +121,7 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="1234"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="cacheKey" value="phone"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outletCollection property="hints" destination="Vfb-Tu-9m2" id="0gR-m8-5UT"/>
