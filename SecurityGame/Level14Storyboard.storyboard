@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JoshDeskMain" translatesAutoresizingMaskIntoConstraints="NO" id="iDL-Vb-JyR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="joshDeskMain" translatesAutoresizingMaskIntoConstraints="NO" id="iDL-Vb-JyR">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1K-ts-kJy">
@@ -229,7 +229,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-je-J08">
                                 <rect key="frame" x="70" y="145" width="872" height="478"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Email Inbox:  Sign up here to support our company! Pay a small donation and recieve a portion of our profits!   Seeking help: I have a large sum of money in a suspended bank account, please send your account information so I can send you the money temporarily. Will compensate for your help!   To the respected Mr. Smith: Please send us your company account information here for our records:  http://vitabrevis.net/accountinformation   Mr. Smith: Vita Brevis' Computer services staff need your updated account information. Please sign up here (securely) to update our records: https://vitabrevis.com/accounts/resetinformation     </mutableString>
+                                <string key="text">Email Inbox:  Sign up here to support our company! Pay a small donation and recieve a portion of our profits!   Seeking help: I have a large sum of money in a suspended bank account, please send your account information so I can send you the money temporarily. Will compensate for your help!   To the respected Mr. Smith: Please send us your company account information here for our records:  http://vitabrevis.net/accountinformation   Mr. Smith: Vita Brevis' Computer services staff need your updated account information. Please sign up here (securely) to update our records: https://vitabrevis.com/accounts/resetinformation     </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -382,9 +382,9 @@
     </scenes>
     <resources>
         <image name="Antivirus-Bad" width="387" height="478"/>
-        <image name="JoshDeskMain" width="3264" height="2448"/>
         <image name="bigScreen" width="3264" height="2448"/>
         <image name="deskPaper1" width="3264" height="2448"/>
+        <image name="joshDeskMain" width="3264" height="2448"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
