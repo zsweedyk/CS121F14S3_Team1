@@ -12,7 +12,6 @@
 
 @interface BGKVLevel18PasswordViewController : BGKVLevelViewController
 
-@property (weak, nonatomic) IBOutlet UITextField* passwordField;
 @property (weak, nonatomic) IBOutlet UIButton* usbDriveButton1;
 @property (weak, nonatomic) IBOutlet UIButton* usbDriveButton2;
 @property (weak, nonatomic) IBOutlet UIButton* usbDriveButton3;

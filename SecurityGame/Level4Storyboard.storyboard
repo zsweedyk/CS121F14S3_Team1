@@ -17,16 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabComputer" translatesAutoresizingMaskIntoConstraints="NO" id="mO5-QB-AIE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabCounter" translatesAutoresizingMaskIntoConstraints="NO" id="mO5-QB-AIE">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-vT-DUp">
-                                <rect key="frame" x="136" y="438" width="237" height="133"/>
+                                <rect key="frame" x="222" y="428" width="244" height="216"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal">
+                                <state key="normal" image="NotebookAlone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-b8-985">
-                                <rect key="frame" x="813" y="377" width="201" height="206"/>
+                                <rect key="frame" x="559" y="428" width="236" height="224"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
@@ -101,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabComputer" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-VO-Y8j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LabCounter" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-VO-Y8j">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-XE-Iln" customClass="BGKVPhoneControl">
@@ -205,9 +205,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LabComputer" width="852" height="640"/>
+        <image name="LabCounter" width="852" height="640"/>
         <image name="LabNotebook" width="852" height="640"/>
         <image name="Level5iPhoneSlanted" width="569" height="414"/>
+        <image name="NotebookAlone" width="227" height="140"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
