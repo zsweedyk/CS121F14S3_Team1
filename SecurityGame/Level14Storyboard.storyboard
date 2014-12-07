@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iKq-lf-sX9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iKq-lf-sX9">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Initial-->
@@ -107,7 +107,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-sO-8Ha">
-                                <rect key="frame" x="376" y="203" width="86" height="30"/>
+                                <rect key="frame" x="347" y="175" width="145" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Check Email">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -116,30 +117,33 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXa-Mq-dnR">
-                                <rect key="frame" x="363" y="152" width="112" height="30"/>
+                                <rect key="frame" x="340" y="137" width="158" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Browse Youtube">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XRi-eJ-weU" kind="modal" id="u3z-RQ-rE7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-qo-1DR">
-                                <rect key="frame" x="357" y="246" width="125" height="30"/>
-                                <state key="normal" title="Play Minesweeper">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="XRi-eJ-weU" kind="modal" id="ncn-or-YhW"/>
+                                    <segue destination="bVK-11-c2E" kind="custom" customClass="BGKVWithinLevelSegue" id="21V-9t-Bdo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG5-lq-PjQ">
-                                <rect key="frame" x="373" y="103" width="93" height="30"/>
+                                <rect key="frame" x="353" y="99" width="133" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Watch Sports">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XRi-eJ-weU" kind="modal" id="2x6-2p-uDa"/>
+                                    <segue destination="bVK-11-c2E" kind="custom" customClass="BGKVWithinLevelSegue" id="ch3-zo-P1b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-qo-1DR">
+                                <rect key="frame" x="337" y="213" width="165" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Play Minesweeper">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bVK-11-c2E" kind="custom" customClass="BGKVWithinLevelSegue" id="eY4-EB-iOl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -153,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY8-mo-W9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="1733"/>
+            <point key="canvasLocation" x="58" y="1708"/>
         </scene>
         <!--Level View Controller-->
         <scene sceneID="FZa-pj-YBd">
@@ -248,53 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LrW-jL-qZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="1962"/>
-        </scene>
-        <!--Load Screen View Controller-->
-        <scene sceneID="hJS-sy-8iA">
-            <objects>
-                <viewController id="XRi-eJ-weU" customClass="BGKVLoadScreenViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hfB-I5-Kms"/>
-                        <viewControllerLayoutGuide type="bottom" id="eDq-My-ozJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5Yx-y4-VXt">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NNL-OQ-p0t">
-                                <rect key="frame" x="494" y="550" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOi-Fc-5h9">
-                                <rect key="frame" x="476" y="557" width="59" height="30"/>
-                                <state key="normal" title="Go back">
-                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="pIl-i3-vQP" kind="unwind" unwindAction="returnToLevelContainer:" id="HX5-4e-7Zb"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="You're at work right now! Playing games or watching videos is not a productive use of company time!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBG-bT-LSQ">
-                                <rect key="frame" x="340" y="339" width="345" height="127"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="nextLevelButton" destination="IOi-Fc-5h9" id="g3t-LX-Zth"/>
-                        <outlet property="spinner" destination="NNL-OQ-p0t" id="l3S-uT-Pcs"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FP7-p4-zZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="pIl-i3-vQP" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-1258" y="1988"/>
+            <point key="canvasLocation" x="1423" y="2821"/>
         </scene>
         <!--Computer-->
         <scene sceneID="Y9N-Dl-oYa">
@@ -332,18 +290,12 @@
                                 <state key="normal" title="-Respond-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="cEG-HX-S5A" kind="modal" id="a7A-Hv-eKO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ft-in-TvD">
                                 <rect key="frame" x="688" y="265" width="74" height="30"/>
                                 <state key="normal" title="-Respond-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="cEG-HX-S5A" kind="modal" id="9zV-HD-hy0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw9-Yc-PWY">
                                 <rect key="frame" x="793" y="453" width="74" height="30"/>
@@ -359,9 +311,6 @@
                                 <state key="normal" title="-Respond-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="cEG-HX-S5A" kind="modal" id="ztE-Z7-sn7"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -374,54 +323,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqN-7J-vjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="2635"/>
+            <point key="canvasLocation" x="194" y="2694"/>
         </scene>
-        <!--Load Screen View Controller-->
-        <scene sceneID="UW4-Md-5KA">
+        <!--Computer-->
+        <scene sceneID="2nm-bm-C8p">
             <objects>
-                <viewController id="cEG-HX-S5A" customClass="BGKVLoadScreenViewController" sceneMemberID="viewController">
+                <viewController id="bVK-11-c2E" userLabel="Computer" customClass="BGKVLevelViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AbH-3y-KS7"/>
-                        <viewControllerLayoutGuide type="bottom" id="6SI-u7-gqd"/>
+                        <viewControllerLayoutGuide type="top" id="ufA-8x-RxU"/>
+                        <viewControllerLayoutGuide type="bottom" id="zun-yN-g2B"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="P1N-tP-xZO">
+                    <view key="view" contentMode="scaleToFill" id="6lg-cd-KPQ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="K29-2M-NJg">
-                                <rect key="frame" x="494" y="550" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMO-ER-HDv">
-                                <rect key="frame" x="476" y="557" width="59" height="30"/>
-                                <state key="normal" title="Go back">
-                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="wZY-iS-pwe">
+                                <rect key="frame" x="-512" y="-385" width="2048" height="1538"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="qf0-ae-brV">
+                                <rect key="frame" x="-392" y="221" width="2000" height="1000"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-gA-fgZ">
+                                <rect key="frame" x="109" y="-11" width="621" height="591"/>
+                                <state key="normal" title="Button" image="Level1Computer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG1-1k-qBw">
+                                <rect key="frame" x="861" y="216" width="242" height="295"/>
+                                <state key="normal" image="SpiralNotebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="DNU-9e-epM" kind="unwind" unwindAction="returnToLevelContainer:" id="Nu5-LS-l4d"/>
+                                    <segue destination="kj9-OB-cLw" kind="custom" customClass="BGKVWithinLevelSegue" id="qMT-vo-G6m"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02a-HM-Z4v">
-                                <rect key="frame" x="340" y="339" width="345" height="127"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">That was a spam email! Be careful with these, some of them seem like good ideas. Always make sure you only open emails from a trusted source. </string>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwY-sH-1pZ">
+                                <rect key="frame" x="917" y="265" width="160" height="229"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Mr. Smith,   Please check your email, you have many unread messages, and have not responded to my request for your account information.  Sincerely, Your boss</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="BLOCKED UNABLE TO ACCESS AT WORK" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-xD-dbo">
+                                <rect key="frame" x="269" y="117" width="301" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8v-hh-F7t">
+                                <rect key="frame" x="337" y="216" width="164" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Return to Menu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="g4R-r6-UoW" kind="custom" customClass="BGKVWithinLevelSegue" id="yT5-CH-LWd"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="nextLevelButton" destination="ZMO-ER-HDv" id="mHS-p1-wdN"/>
-                        <outlet property="spinner" destination="K29-2M-NJg" id="oQx-Z4-C1k"/>
-                    </connections>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="password" value="password1!"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sv-Z5-TTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="DNU-9e-epM" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8b-dK-kEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-932" y="2918"/>
+            <point key="canvasLocation" x="-1143" y="1748"/>
         </scene>
     </scenes>
     <resources>
@@ -436,9 +406,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="XnW-IB-5eG"/>
-        <segue reference="cYM-Hd-HBo"/>
-        <segue reference="2x6-2p-uDa"/>
-        <segue reference="ztE-Z7-sn7"/>
+        <segue reference="Hc8-do-zyH"/>
+        <segue reference="hkB-7Z-UTB"/>
+        <segue reference="eY4-EB-iOl"/>
     </inferredMetricsTieBreakers>
 </document>
