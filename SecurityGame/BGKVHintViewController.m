@@ -10,44 +10,65 @@
 #import "BGKVSingleHintViewController.h"
 #import "UIBarButtonItem+Badge.h"
 
-@implementation BGKVHintViewController
+@interface BGKVHintViewController() <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@end
+
+@implementation BGKVHintViewController {
+    UIPageViewController *_pageViewController;
+}
 
 - (BOOL)hasHints
 {
-    return self.viewControllers && self.pages && [self.pages count] > 0;
+    return _pageViewController.viewControllers && self.pages && [self.pages count] > 0;
 }
 
 - (void)setup
 {
     self.pages = [[NSMutableArray alloc] init];
-    self.dataSource = self;
+    //self.dataSource = self;
+    _pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                                                                        options:@{UIPageViewControllerOptionSpineLocationKey: [NSNumber numberWithInteger:UIPageViewControllerSpineLocationMid]}];
+    _pageViewController.doubleSided = YES;
+    _pageViewController.dataSource = self;
+    _pageViewController.delegate = self;
+    [self.view addSubview:_pageViewController.view];
 }
 
 - (instancetype)init
 {
-    self = [super initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    //self = [super initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self = [super init];
     if (self) {
         [self setup];
     }
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
+- (void)viewDidLoad
 {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self setup];
-    }
-    return self;
+    [super viewDidLoad];
+    CGRect frame = self.pageView.frame;
+    // Double width-wise, because we have two pages.
+    _pageViewController.view.frame = CGRectMake(frame.origin.x-frame.size.width, frame.origin.y,
+                                                frame.size.width*2, frame.size.height);
 }
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)viewDidAppear:(BOOL)animated
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        [self setup];
-    }
-    return self;
+    [super viewDidAppear:animated];
+    [self updateIndicators];
+}
+
+- (void)updateIndicators
+{
+    [self updateIndicatorsForPage:[self currentPageVC]];
+}
+- (void)updateIndicatorsForPage:(UIViewController *)page
+{
+    NSInteger idx = [self indexOfController:page];
+    
+    // Show a page in the background if this isn't the last page
+    self.pageInBackground.hidden = (idx == [self.pages count]-1);
 }
 
 - (BOOL)addNewHintWithTitle:(NSString *)title andText:(NSString *)text
@@ -61,8 +82,19 @@
         return NO;
     }
     
+    UIViewController *previousPage = [[UIViewController alloc] init];
+    if ([self.pages count] == 0) {
+        previousPage.view.backgroundColor = [UIColor clearColor];
+    } else {
+        previousPage.view.backgroundColor = [UIColor whiteColor];
+        [self addShadow:previousPage.view];
+    }
+    
+    [self addShadow:controller.view];
+    
+    [self.pages addObject:previousPage];
     [self.pages addObject:controller];
-    [self setViewControllers:@[controller] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [_pageViewController setViewControllers:@[previousPage, controller] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     return YES;
 }
@@ -97,6 +129,11 @@
     return _pages[idx - 1];
 }
 
+- (NSInteger)indexOfController:(UIViewController *)controller
+{
+    return [self.pages indexOfObject:controller];
+}
+
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
     return [self.pages count];
@@ -104,7 +141,33 @@
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {
-    return [self.pages indexOfObject:self.viewControllers[0]];
+    return [self indexOfController:[self currentPageVC]];
+}
+
+- (UIViewController *)currentPageVC
+{
+    return [_pageViewController.viewControllers lastObject];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+    [self updateIndicators];
+}
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
+{
+    UIViewController *currentPage = [self currentPageVC];
+    UIViewController *pendingPage = [pendingViewControllers lastObject];
+    if ([self indexOfController:currentPage] < [self indexOfController:pendingPage]) {
+        [self updateIndicatorsForPage:[pendingViewControllers lastObject]];
+    }
+}
+
+- (void)addShadow:(UIView *)view
+{
+    view.clipsToBounds = NO;
+    view.layer.shadowRadius = 5;
+    view.layer.shadowOffset = CGSizeMake(5, 5);
+    view.layer.shadowOpacity = 0.5;
 }
 
 @end
