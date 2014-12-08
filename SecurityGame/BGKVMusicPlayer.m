@@ -11,6 +11,7 @@
 @interface BGKVMusicPlayer () {
     BOOL _isPlaying;
     float _volume;
+    BOOL _isMuted;
 }
 @end
 
@@ -41,7 +42,10 @@
                                                                           error:nil];
         self.backgroundMusic.numberOfLoops = -1;
         _isPlaying = false;
-        _volume = 1;
+        
+        // Set volume from user defaults
+        _volume = 1 - [[NSUserDefaults standardUserDefaults] floatForKey:@"volumeLevel"];
+        _isMuted = [[NSUserDefaults standardUserDefaults] boolForKey:@"muteMusic"];
     }
     
     return self;
@@ -52,6 +56,11 @@
     if (!_isPlaying) {
         [self.backgroundMusic play];
         [self.backgroundMusic setVolume:_volume];
+        if (_isMuted) {
+            [self mute];
+        } else {
+            [self unmute];
+        }
         _isPlaying = true;
     }
 }

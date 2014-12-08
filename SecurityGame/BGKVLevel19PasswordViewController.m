@@ -49,36 +49,6 @@
     [alert show];
 }
 
-- (IBAction)wrongEmailLinkTapped:(id)sender
-{
-    UIAlertView * alert = [[UIAlertView alloc]
-                           initWithTitle:@"Try again!"
-                           message:@"You clicked the wrong email link. Look for the one about software."
-                           delegate:nil
-                           cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-    [alert show];
-}
-
-- (IBAction)wrongHTTPTapped:(id)sender
-{
-    UIAlertView * alert = [[UIAlertView alloc]
-                           initWithTitle:@"Try again!"
-                           message:@"We wanted to download software over HTTPS!"
-                           delegate:nil
-                           cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-    [alert show];
-}
-
-- (IBAction)wrongDownloadLinkTapped:(id)sender
-{
-    UIAlertView * alert = [[UIAlertView alloc]
-                           initWithTitle:@"Try again!"
-                           message:@"You clicked a malicious download link! Good thing we have an anti-virus."
-                           delegate:nil
-                           cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-    [alert show];
-}
-
 // http://stackoverflow.com/questions/16352523/glow-effect-to-custom-uibutton-like-info-uibutton
 - (void) startButtonGlow
 {
