@@ -281,10 +281,42 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="password1!"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="hints" destination="t0T-89-Red" id="sHD-Xr-chQ"/>
+                        <outletCollection property="hints" destination="pXl-i4-NNg" id="ms7-6D-hMg"/>
+                        <outletCollection property="hints" destination="I9P-aN-U1a" id="X0C-VG-xrm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqN-7J-vjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="t0T-89-Red" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Spam Detection"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Find the instructions and follow them. Be careful of spam!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="pXl-i4-NNg" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Spam tip:"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Generally, if somethng is trying to get your password or give you money, its spam. Be careful of these!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="I9P-aN-U1a" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Secure websites!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Remember what you learned about http vs https!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="148" y="2665"/>
+            <point key="canvasLocation" x="99" y="2655"/>
         </scene>
         <!--Computer-->
         <scene sceneID="t3P-mK-hVE">

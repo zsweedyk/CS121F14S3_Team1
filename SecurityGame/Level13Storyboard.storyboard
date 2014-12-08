@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-pm-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="-216"/>
+            <point key="canvasLocation" x="228" y="4"/>
         </scene>
         <!--Paper-->
         <scene sceneID="nv6-48-O3z">
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZW-0e-ZuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="-1158"/>
+            <point key="canvasLocation" x="1843" y="-958"/>
         </scene>
         <!--Computer-->
         <scene sceneID="USE-fa-yOi">
@@ -145,6 +145,8 @@
                         <outletCollection property="hints" destination="7LZ-YS-4Q8" id="fci-0d-ezA"/>
                         <outletCollection property="hints" destination="c8o-5T-fHE" id="diy-ju-eLS"/>
                         <outletCollection property="hints" destination="YXC-67-3XR" id="n9U-oN-odp"/>
+                        <outletCollection property="hints" destination="c8o-5T-fHE" id="4Se-t6-xcl"/>
+                        <outletCollection property="hints" destination="YXC-67-3XR" id="6Y9-aQ-1dF"/>
                         <segue destination="yIi-ZG-xuq" kind="custom" identifier="correct" customClass="BGKVExitLevelSegue" id="KVE-rq-bVw"/>
                     </connections>
                 </viewController>
@@ -177,7 +179,7 @@
                     </userDefinedRuntimeAttributes>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2250" y="15"/>
+            <point key="canvasLocation" x="1894" y="15"/>
         </scene>
         <!--Load Screen View Controller-->
         <scene sceneID="hNu-KQ-i0b">
