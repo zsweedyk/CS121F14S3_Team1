@@ -81,6 +81,7 @@
 		AC71828419F5F30D001EFA4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71826619F5F30D001EFA4B /* UIKit.framework */; };
 		AC71828C19F5F30D001EFA4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC71828A19F5F30D001EFA4B /* InfoPlist.strings */; };
 		AC71829919F5FDE7001EFA4B /* BGKVLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */; };
+		ACB5CD461A354F710077E3DB /* BGKVHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5CD451A354F710077E3DB /* BGKVHintViewController.xib */; };
 		ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640919F75C550088346D /* RBStoryboardLink.m */; };
 		ACE3641619F75C550088346D /* RBStoryboardModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640C19F75C550088346D /* RBStoryboardModalSegue.m */; };
 		ACE3641719F75C550088346D /* RBStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ACE3640E19F75C550088346D /* RBStoryboardPopoverSegue.m */; };
@@ -213,6 +214,7 @@
 		AC71828B19F5F30D001EFA4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC71829719F5FDE7001EFA4B /* BGKVLevelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelViewController.h; sourceTree = "<group>"; };
 		AC71829819F5FDE7001EFA4B /* BGKVLevelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelViewController.m; sourceTree = "<group>"; };
+		ACB5CD451A354F710077E3DB /* BGKVHintViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGKVHintViewController.xib; sourceTree = "<group>"; };
 		ACE3640819F75C550088346D /* RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLink.h; sourceTree = "<group>"; };
 		ACE3640919F75C550088346D /* RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardLink.m; sourceTree = "<group>"; };
 		ACE3640A19F75C550088346D /* RBStoryboardLinkSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStoryboardLinkSource.h; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 			children = (
 				AC1C88521A186A3100CFA7B5 /* BGKVHintViewController.h */,
 				AC1C88531A186A3100CFA7B5 /* BGKVHintViewController.m */,
+				ACB5CD451A354F710077E3DB /* BGKVHintViewController.xib */,
 				AC598F631A2ED0C9007E0A0F /* BGKVSingleHintViewController.h */,
 				AC598F641A2ED0C9007E0A0F /* BGKVSingleHintViewController.m */,
 				AC1212BA1A30954E00FEF6CA /* BGKVSingleHintViewController.xib */,
@@ -803,6 +806,7 @@
 				AEBB4AE51A2E76A2005A86F2 /* Level17Storyboard.storyboard in Resources */,
 				AC5543E51A2D8415006F0BDA /* BGKVCrackerKeyboard.xib in Resources */,
 				AC6534F11A2D84280010CB04 /* BGKVCutsceneViewController.xib in Resources */,
+				ACB5CD461A354F710077E3DB /* BGKVHintViewController.xib in Resources */,
 				0A872EBA1A2011BC003C6BE2 /* BGKVLevel18PasswordViewController.h in Resources */,
 				5DA172301A181A4E00E63BD0 /* Level9Storyboard.storyboard in Resources */,
 				ACE3641D19F75CBA0088346D /* Level2Storyboard.storyboard in Resources */,

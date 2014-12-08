@@ -10,44 +10,53 @@
 #import "BGKVSingleHintViewController.h"
 #import "UIBarButtonItem+Badge.h"
 
-@implementation BGKVHintViewController
+@interface BGKVHintViewController() <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@end
+
+@implementation BGKVHintViewController {
+    UIPageViewController *_pageViewController;
+}
 
 - (BOOL)hasHints
 {
-    return self.viewControllers && self.pages && [self.pages count] > 0;
+    return _pageViewController.viewControllers && self.pages && [self.pages count] > 0;
 }
 
 - (void)setup
 {
     self.pages = [[NSMutableArray alloc] init];
-    self.dataSource = self;
+    //self.dataSource = self;
+    _pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationVertical options:nil];
+    _pageViewController.dataSource = self;
+    _pageViewController.delegate = self;
+    [self.view addSubview:_pageViewController.view];
 }
 
 - (instancetype)init
 {
-    self = [super initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    //self = [super initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    self = [super init];
     if (self) {
         [self setup];
     }
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
+- (void)viewDidLoad
 {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self setup];
-    }
-    return self;
+    _pageViewController.view.frame = self.pageView.frame;
+    [self updateIndicators];
 }
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)updateIndicators
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        [self setup];
-    }
-    return self;
+    NSInteger idx = [self presentationIndexForPageViewController:_pageViewController];
+    
+    // Show a page in the background if this isn't the last page
+    self.pageInBackground.hidden = (idx == [self.pages count]-1);
+    
+    // Show a page above if this isn't the first page
+    self.pageAbove.hidden = (idx == 0);
 }
 
 - (BOOL)addNewHintWithTitle:(NSString *)title andText:(NSString *)text
@@ -62,7 +71,7 @@
     }
     
     [self.pages addObject:controller];
-    [self setViewControllers:@[controller] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [_pageViewController setViewControllers:@[controller] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     return YES;
 }
@@ -104,7 +113,19 @@
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {
-    return [self.pages indexOfObject:self.viewControllers[0]];
+    return [self.pages indexOfObject:[self currentPageVC]];
+}
+
+- (UIViewController *)currentPageVC
+{
+    return [_pageViewController.viewControllers lastObject];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+    if (completed) {
+        [self updateIndicators];
+    }
 }
 
 @end

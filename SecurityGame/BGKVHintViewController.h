@@ -10,7 +10,11 @@
 
 // Some hackery going on here. This thing is its own delegate.
 // This is to facilitate use in storyboards.
-@interface BGKVHintViewController : UIPageViewController <UIPageViewControllerDataSource>
+@interface BGKVHintViewController : UIViewController // UIPageViewController <UIPageViewControllerDataSource>
+
+@property (nonatomic) IBOutlet UIView *pageView;
+@property (nonatomic) IBOutlet UIView *pageInBackground;
+@property (nonatomic) IBOutlet UIView *pageAbove;
 
 - (BOOL)hasHints;
 
