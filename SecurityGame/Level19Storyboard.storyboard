@@ -133,7 +133,7 @@
                                     <action selector="goToEmailTapped:" destination="3Xe-rb-phB" eventType="touchUpInside" id="REf-x9-nDC"/>
                                 </connections>
                             </button>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Make sure to put your USB drive in the computer." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9S-Md-3xi">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Make sure to put your USB drive in the computer." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I9S-Md-3xi">
                                 <rect key="frame" x="313" y="261" width="415" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -656,13 +656,13 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Tpc-bY-5Ib"/>
-        <segue reference="P3S-sf-5JN"/>
-        <segue reference="trG-My-1hk"/>
-        <segue reference="apy-hx-5yI"/>
-        <segue reference="q2b-nt-Yl5"/>
-        <segue reference="zav-fp-c8d"/>
         <segue reference="nSy-gD-jIh"/>
+        <segue reference="xlV-LZ-g4h"/>
+        <segue reference="Z7H-vO-4j9"/>
+        <segue reference="q2b-nt-Yl5"/>
+        <segue reference="trG-My-1hk"/>
+        <segue reference="P3S-sf-5JN"/>
+        <segue reference="apy-hx-5yI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
