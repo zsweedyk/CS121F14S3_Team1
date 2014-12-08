@@ -61,9 +61,11 @@
 
 - (void)updateIndicators
 {
-    NSInteger idx = [self presentationIndexForPageViewController:_pageViewController];
-    NSLog(@"%d", idx);
-    NSLog(@"%@", self.pages);
+    [self updateIndicatorsForPage:[self currentPageVC]];
+}
+- (void)updateIndicatorsForPage:(UIViewController *)page
+{
+    NSInteger idx = [self indexOfController:page];
     
     // Show a page in the background if this isn't the last page
     self.pageInBackground.hidden = (idx == [self.pages count]-1);
@@ -127,6 +129,11 @@
     return _pages[idx - 1];
 }
 
+- (NSInteger)indexOfController:(UIViewController *)controller
+{
+    return [self.pages indexOfObject:controller];
+}
+
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
     return [self.pages count];
@@ -134,7 +141,7 @@
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
 {
-    return [self.pages indexOfObject:[self currentPageVC]];
+    return [self indexOfController:[self currentPageVC]];
 }
 
 - (UIViewController *)currentPageVC
@@ -144,8 +151,14 @@
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
 {
-    if (completed) {
-        [self updateIndicators];
+    [self updateIndicators];
+}
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
+{
+    UIViewController *currentPage = [self currentPageVC];
+    UIViewController *pendingPage = [pendingViewControllers lastObject];
+    if ([self indexOfController:currentPage] < [self indexOfController:pendingPage]) {
+        [self updateIndicatorsForPage:[pendingViewControllers lastObject]];
     }
 }
 
