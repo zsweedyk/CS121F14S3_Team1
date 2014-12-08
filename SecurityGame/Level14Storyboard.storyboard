@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iKq-lf-sX9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="iKq-lf-sX9">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Initial-->
@@ -17,29 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="iDL-Vb-JyR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="joshDeskMain" translatesAutoresizingMaskIntoConstraints="NO" id="iDL-Vb-JyR">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BL-Tv-NIe">
-                                <rect key="frame" x="143" y="444" width="628" height="371"/>
-                                <state key="normal" image="Level1WoodenTable">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1K-ts-kJy">
-                                <rect key="frame" x="506" y="444" width="95" height="110"/>
+                                <rect key="frame" x="7" y="439" width="211" height="234"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Button" image="SpiralNotebook" backgroundImage="SpiralNotebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="kj9-OB-cLw" kind="custom" customClass="BGKVWithinLevelSegue" id="cYM-Hd-HBo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meS-rl-h3h">
-                                <rect key="frame" x="263" y="376" width="200" height="204"/>
-                                <state key="normal" title="Button" image="Level1Computer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="246" y="47" width="508" height="286"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="g4R-r6-UoW" kind="custom" customClass="BGKVWithinLevelSegue" id="XnW-IB-5eG"/>
@@ -78,36 +74,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="Fvb-OF-2UQ">
-                                <rect key="frame" x="-512" y="-385" width="2048" height="1538"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-f4-dyf">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="vka-7I-Xql">
-                                <rect key="frame" x="-392" y="221" width="2000" height="1000"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeZ-x8-8Ra">
-                                <rect key="frame" x="109" y="-11" width="621" height="591"/>
-                                <state key="normal" title="Button" image="Level1Computer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gt-dJ-p3C">
-                                <rect key="frame" x="861" y="216" width="242" height="295"/>
-                                <state key="normal" image="SpiralNotebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="kj9-OB-cLw" kind="custom" customClass="BGKVWithinLevelSegue" id="hkB-7Z-UTB"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mga-VY-hBY">
-                                <rect key="frame" x="917" y="265" width="160" height="229"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Mr. Smith,   Please check your email, you have many unread messages, and have not responded to my request for your account information.  Sincerely, Your boss</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-sO-8Ha">
-                                <rect key="frame" x="347" y="192" width="145" height="30"/>
+                                <rect key="frame" x="463" y="417" width="145" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Check Email">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -118,7 +89,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXa-Mq-dnR">
-                                <rect key="frame" x="340" y="154" width="158" height="30"/>
+                                <rect key="frame" x="456" y="316" width="158" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Browse Youtube">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,19 +99,8 @@
                                     <segue destination="bVK-11-c2E" kind="custom" customClass="BGKVWithinLevelSegue" id="21V-9t-Bdo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG5-lq-PjQ">
-                                <rect key="frame" x="353" y="116" width="133" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Watch Sports">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="bVK-11-c2E" kind="custom" customClass="BGKVWithinLevelSegue" id="ch3-zo-P1b"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-qo-1DR">
-                                <rect key="frame" x="337" y="230" width="165" height="30"/>
+                                <rect key="frame" x="453" y="505" width="165" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Play Minesweeper">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,6 +108,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="bVK-11-c2E" kind="custom" customClass="BGKVWithinLevelSegue" id="eY4-EB-iOl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG5-lq-PjQ">
+                                <rect key="frame" x="469" y="218" width="133" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Watch Sports">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bVK-11-c2E" kind="custom" customClass="BGKVWithinLevelSegue" id="ch3-zo-P1b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,38 +142,20 @@
                         <viewControllerLayoutGuide type="top" id="1VE-aU-tXi"/>
                         <viewControllerLayoutGuide type="bottom" id="xTS-YM-zTq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6Wf-mX-NZg">
+                    <view key="view" contentMode="scaleAspectFill" id="6Wf-mX-NZg">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="Kb7-41-HWD">
-                                <rect key="frame" x="-500" y="-500" width="2048" height="1538"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="deskPaper1" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-wZ-CmJ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="773"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="Cek-Jd-yvM">
-                                <rect key="frame" x="-724" y="207" width="2000" height="1206"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kT-ji-Y2J">
-                                <rect key="frame" x="463" y="267" width="242" height="295"/>
-                                <state key="normal" image="SpiralNotebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgp-ss-pCV">
-                                <rect key="frame" x="531" y="311" width="155" height="231"/>
+                                <rect key="frame" x="340" y="169" width="379" height="725"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Mr. Smith,   Please check your email, you have many unread messages, and have not responded to my request for your account information.  Sincerely, Your boss</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V4-pc-eHC">
-                                <rect key="frame" x="-157" y="147" width="429" height="519"/>
-                                <state key="normal" title="Button" image="Level1Computer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="g4R-r6-UoW" kind="custom" customClass="BGKVWithinLevelSegue" id="Hc8-do-zyH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -213,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsN-vx-Mk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="888"/>
+            <point key="canvasLocation" x="1193" y="820"/>
         </scene>
         <!--Load Screen View Controller-->
         <scene sceneID="0Mh-GJ-kLg">
@@ -270,27 +223,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="vH3-Kc-pah">
-                                <rect key="frame" x="-512" y="-385" width="2048" height="1538"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen" translatesAutoresizingMaskIntoConstraints="NO" id="snA-e7-RF4">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="gp0-dA-Geq">
-                                <rect key="frame" x="-394" y="471" width="2000" height="1000"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFb-vv-PfY">
-                                <rect key="frame" x="209" y="32" width="833" height="840"/>
-                                <state key="normal" title="Button" image="Level1Computer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-je-J08">
-                                <rect key="frame" x="301" y="102" width="633" height="408"/>
+                                <rect key="frame" x="70" y="145" width="872" height="478"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Email Inbox:  Sign up here to support our company! Pay a small donation and recieve a portion of our profits!  Seeking help: I have a large sum of money in a suspended bank account, please send your account information so I can send you the money temporarily. Will compensate for your help!  To the respected Mr. Smith: Please send us your company account information here for our records:  http://vitabrevis.net/accountinformation  Mr. Smith: Vita Brevis' Computer services staff need your updated account information. Please sign up here (securely) to update our records: https://vitabrevis.com/accounts/resetinformation     </mutableString>
+                                <string key="text">Email Inbox:  Sign up here to support our company! Pay a small donation and recieve a portion of our profits!   Seeking help: I have a large sum of money in a suspended bank account, please send your account information so I can send you the money temporarily. Will compensate for your help!   To the respected Mr. Smith: Please send us your company account information here for our records:  http://vitabrevis.net/accountinformation   Mr. Smith: Vita Brevis' Computer services staff need your updated account information. Please sign up here (securely) to update our records: https://vitabrevis.com/accounts/resetinformation     </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ff-OZ-w43">
-                                <rect key="frame" x="492" y="176" width="102" height="30"/>
+                                <rect key="frame" x="483" y="226" width="102" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="-Respond-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -300,7 +244,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ft-in-TvD">
-                                <rect key="frame" x="670" y="266" width="101" height="30"/>
+                                <rect key="frame" x="484" y="319" width="101" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="-Respond-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -309,24 +253,24 @@
                                     <segue destination="uDP-iP-cr4" kind="custom" customClass="BGKVWithinLevelSegue" id="dTT-7v-jx3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw9-Yc-PWY">
-                                <rect key="frame" x="727" y="448" width="103" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="-Respond-">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BcU-cE-9vE" kind="custom" customClass="BGKVExitLevelSegue" id="V1j-uI-az7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZH-QG-YOZ">
-                                <rect key="frame" x="643" y="357" width="101" height="30"/>
+                                <rect key="frame" x="484" y="421" width="101" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="-Respond-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="uDP-iP-cr4" kind="custom" customClass="BGKVWithinLevelSegue" id="80L-Y4-3hb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw9-Yc-PWY">
+                                <rect key="frame" x="482" y="545" width="103" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="-Respond-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BcU-cE-9vE" kind="custom" customClass="BGKVExitLevelSegue" id="V1j-uI-az7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -337,10 +281,42 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="back" value="YES"/>
                         <userDefinedRuntimeAttribute type="string" keyPath="password" value="password1!"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="hints" destination="t0T-89-Red" id="sHD-Xr-chQ"/>
+                        <outletCollection property="hints" destination="pXl-i4-NNg" id="ms7-6D-hMg"/>
+                        <outletCollection property="hints" destination="I9P-aN-U1a" id="X0C-VG-xrm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqN-7J-vjm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="t0T-89-Red" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Spam Detection"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Find the instructions and follow them. Be careful of spam!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="pXl-i4-NNg" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Spam tip:"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Generally, if somethng is trying to get your password or give you money, its spam. Be careful of these!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
+                <customObject id="I9P-aN-U1a" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Secure websites!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Remember what you learned about http vs https!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
-            <point key="canvasLocation" x="148" y="2665"/>
+            <point key="canvasLocation" x="99" y="2655"/>
         </scene>
         <!--Computer-->
         <scene sceneID="t3P-mK-hVE">
@@ -354,20 +330,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="GDb-3C-dSS">
-                                <rect key="frame" x="-512" y="-385" width="2048" height="1538"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen" translatesAutoresizingMaskIntoConstraints="NO" id="GIV-fs-5up">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="zem-eL-orN">
-                                <rect key="frame" x="-394" y="471" width="2000" height="1000"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYu-x2-fNM">
-                                <rect key="frame" x="209" y="32" width="833" height="840"/>
-                                <state key="normal" title="Button" image="Level1Computer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-uu-dqO">
-                                <rect key="frame" x="525" y="390" width="163" height="30"/>
+                                <rect key="frame" x="442" y="467" width="163" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Return to Email">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -378,13 +345,13 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="WARNING! Your anti-virus has detected that this email contains malicious content. This email should be removed." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNE-La-cph">
-                                <rect key="frame" x="424" y="237" width="365" height="125"/>
+                                <rect key="frame" x="322" y="191" width="402" height="202"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Antivirus-Bad" translatesAutoresizingMaskIntoConstraints="NO" id="Rzg-eX-ImG">
-                                <rect key="frame" x="719" y="160" width="225" height="128"/>
+                                <rect key="frame" x="714" y="182" width="225" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -411,42 +378,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LibraryBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="wZY-iS-pwe">
-                                <rect key="frame" x="-512" y="-385" width="2048" height="1538"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-kp-8ZF">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Level1WoodenTable" translatesAutoresizingMaskIntoConstraints="NO" id="qf0-ae-brV">
-                                <rect key="frame" x="-392" y="221" width="2000" height="1000"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyy-gA-fgZ">
-                                <rect key="frame" x="109" y="-11" width="621" height="591"/>
-                                <state key="normal" title="Button" image="Level1Computer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG1-1k-qBw">
-                                <rect key="frame" x="861" y="216" width="242" height="295"/>
-                                <state key="normal" image="SpiralNotebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="kj9-OB-cLw" kind="custom" customClass="BGKVWithinLevelSegue" id="qMT-vo-G6m"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwY-sH-1pZ">
-                                <rect key="frame" x="917" y="265" width="160" height="229"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Mr. Smith,   Please check your email, you have many unread messages, and have not responded to my request for your account information.  Sincerely, Your boss</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="BLOCKED UNABLE TO ACCESS AT WORK" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-xD-dbo">
-                                <rect key="frame" x="269" y="117" width="301" height="77"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8v-hh-F7t">
-                                <rect key="frame" x="337" y="216" width="164" height="30"/>
+                                <rect key="frame" x="457" y="497" width="164" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Return to Menu">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -456,6 +392,12 @@
                                     <segue destination="g4R-r6-UoW" kind="custom" customClass="BGKVWithinLevelSegue" id="yT5-CH-LWd"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="BLOCKED UNABLE TO ACCESS AT WORK" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-xD-dbo">
+                                <rect key="frame" x="310" y="287" width="494" height="169"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -472,10 +414,9 @@
     </scenes>
     <resources>
         <image name="Antivirus-Bad" width="387" height="478"/>
-        <image name="Level1Computer" width="800" height="800"/>
-        <image name="Level1WoodenTable" width="800" height="495"/>
-        <image name="LibraryBackground1" width="1024" height="778"/>
-        <image name="SpiralNotebook" width="1548" height="1849"/>
+        <image name="bigScreen" width="3264" height="2448"/>
+        <image name="deskPaper1" width="3264" height="2448"/>
+        <image name="joshDeskMain" width="3264" height="2448"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -483,10 +424,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yT5-CH-LWd"/>
-        <segue reference="eY4-EB-iOl"/>
-        <segue reference="hkB-7Z-UTB"/>
         <segue reference="jp1-Y1-0N8"/>
         <segue reference="dTT-7v-jx3"/>
+        <segue reference="XnW-IB-5eG"/>
+        <segue reference="eY4-EB-iOl"/>
     </inferredMetricsTieBreakers>
 </document>
