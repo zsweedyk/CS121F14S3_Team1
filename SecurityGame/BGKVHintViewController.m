@@ -26,7 +26,9 @@
 {
     self.pages = [[NSMutableArray alloc] init];
     //self.dataSource = self;
-    _pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationVertical options:nil];
+    _pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                                                                        options:@{UIPageViewControllerOptionSpineLocationKey: [NSNumber numberWithInteger:UIPageViewControllerSpineLocationMid]}];
+    _pageViewController.doubleSided = YES;
     _pageViewController.dataSource = self;
     _pageViewController.delegate = self;
     [self.view addSubview:_pageViewController.view];
@@ -44,19 +46,27 @@
 
 - (void)viewDidLoad
 {
-    _pageViewController.view.frame = self.pageView.frame;
+    [super viewDidLoad];
+    CGRect frame = self.pageView.frame;
+    // Double width-wise, because we have two pages.
+    _pageViewController.view.frame = CGRectMake(frame.origin.x-frame.size.width, frame.origin.y,
+                                                frame.size.width*2, frame.size.height);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     [self updateIndicators];
 }
 
 - (void)updateIndicators
 {
     NSInteger idx = [self presentationIndexForPageViewController:_pageViewController];
+    NSLog(@"%d", idx);
+    NSLog(@"%@", self.pages);
     
     // Show a page in the background if this isn't the last page
     self.pageInBackground.hidden = (idx == [self.pages count]-1);
-    
-    // Show a page above if this isn't the first page
-    self.pageAbove.hidden = (idx == 0);
 }
 
 - (BOOL)addNewHintWithTitle:(NSString *)title andText:(NSString *)text
@@ -70,8 +80,19 @@
         return NO;
     }
     
+    UIViewController *previousPage = [[UIViewController alloc] init];
+    if ([self.pages count] == 0) {
+        previousPage.view.backgroundColor = [UIColor clearColor];
+    } else {
+        previousPage.view.backgroundColor = [UIColor whiteColor];
+        [self addShadow:previousPage.view];
+    }
+    
+    [self addShadow:controller.view];
+    
+    [self.pages addObject:previousPage];
     [self.pages addObject:controller];
-    [_pageViewController setViewControllers:@[controller] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    [_pageViewController setViewControllers:@[previousPage, controller] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     return YES;
 }
@@ -126,6 +147,14 @@
     if (completed) {
         [self updateIndicators];
     }
+}
+
+- (void)addShadow:(UIView *)view
+{
+    view.clipsToBounds = NO;
+    view.layer.shadowRadius = 5;
+    view.layer.shadowOffset = CGSizeMake(5, 5);
+    view.layer.shadowOpacity = 0.5;
 }
 
 @end

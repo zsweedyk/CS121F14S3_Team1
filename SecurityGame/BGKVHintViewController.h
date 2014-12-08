@@ -14,7 +14,6 @@
 
 @property (nonatomic) IBOutlet UIView *pageView;
 @property (nonatomic) IBOutlet UIView *pageInBackground;
-@property (nonatomic) IBOutlet UIView *pageAbove;
 
 - (BOOL)hasHints;
 
