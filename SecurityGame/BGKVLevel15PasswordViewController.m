@@ -93,4 +93,12 @@
     self.informationField.selectable = NO;
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    _currentEmailLevel = 0;
+    _correctAnswers = @[@0,@1,@1,@0,@1];
+}
+
 @end

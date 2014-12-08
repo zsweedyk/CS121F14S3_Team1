@@ -60,6 +60,8 @@
     NSAssert([self.hintVC hasHints], @"Must have hints to view hints!");
     NSAssert(self.hintButton.enabled, @"Expected hint button to be enabled if hints are being viewed!");
     
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    
     [self presentViewController:self.hintVC animated:YES completion:^{
         self.newHintAvailable = NO;
     }];

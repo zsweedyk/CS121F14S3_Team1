@@ -79,7 +79,7 @@
             case 10:
                 _levelDialogues = @[@"Rebecca had a better password, but she left an unencrypted USB drive with her password on it.",
                                     @"What did her computer have?",
-                                    @"I'm not sure if it was important, but she has been emailing Emily a lot about the new secret project. She had a laptop in the office though. I'm going to check the laptop next."];
+                                    @"I'm not sure if it was important, but she has been emailing Emily a lot about the new secret project. There's another computer in the office though. I'm going to check it next."];
                 break;
             case 11:
                 _levelDialogues = @[@"The USB drive had her phone password on it as well. She had her password saved on her phone outside of a password manager.",
