@@ -39,8 +39,6 @@
 		93A159E21A11EAA700118451 /* Level1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A159E11A11EAA700118451 /* Level1Storyboard.storyboard */; };
 		93D23E111A19A8BB00C82071 /* Level8Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D23E101A19A8BB00C82071 /* Level8Storyboard.storyboard */; };
 		93D23E1A1A19CF2700C82071 /* Level13Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D23E191A19CF2700C82071 /* Level13Storyboard.storyboard */; };
-		93D23E1D1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D23E1C1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m */; };
-		93D23E1F1A19D6AD00C82071 /* Level13Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93D23E1E1A19D6AD00C82071 /* Level13Tests.m */; };
 		93FF564B1A10672500017536 /* BGKVLevelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FF564A1A10672500017536 /* BGKVLevelSelectViewController.m */; };
 		AC0B98F71A2CD60000E10F4B /* BGKVPasswordControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0B98F61A2CD60000E10F4B /* BGKVPasswordControl.m */; };
 		AC0B98FA1A2CD80F00E10F4B /* UIView+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0B98F91A2CD80F00E10F4B /* UIView+Scaling.m */; };
@@ -147,9 +145,6 @@
 		93A159E11A11EAA700118451 /* Level1Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level1Storyboard.storyboard; sourceTree = "<group>"; };
 		93D23E101A19A8BB00C82071 /* Level8Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level8Storyboard.storyboard; sourceTree = "<group>"; };
 		93D23E191A19CF2700C82071 /* Level13Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level13Storyboard.storyboard; sourceTree = "<group>"; };
-		93D23E1B1A19D5A400C82071 /* BGKVLevel13PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel13PasswordViewController.h; sourceTree = "<group>"; };
-		93D23E1C1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel13PasswordViewController.m; sourceTree = "<group>"; };
-		93D23E1E1A19D6AD00C82071 /* Level13Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level13Tests.m; sourceTree = "<group>"; };
 		93FF56491A10672500017536 /* BGKVLevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevelSelectViewController.h; sourceTree = "<group>"; };
 		93FF564A1A10672500017536 /* BGKVLevelSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevelSelectViewController.m; sourceTree = "<group>"; };
 		AC0B98F51A2CD60000E10F4B /* BGKVPasswordControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVPasswordControl.h; sourceTree = "<group>"; };
@@ -392,8 +387,6 @@
 			isa = PBXGroup;
 			children = (
 				93D23E191A19CF2700C82071 /* Level13Storyboard.storyboard */,
-				93D23E1B1A19D5A400C82071 /* BGKVLevel13PasswordViewController.h */,
-				93D23E1C1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m */,
 			);
 			name = Level13;
 			sourceTree = "<group>";
@@ -640,7 +633,6 @@
 				AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */,
 				5DA172401A1859DC00E63BD0 /* Level10Tests.m */,
 				5DD50EC71A084C700049B512 /* MusicTests.m */,
-				93D23E1E1A19D6AD00C82071 /* Level13Tests.m */,
 				AC71828819F5F30D001EFA4B /* Supporting Files */,
 			);
 			path = SecurityGameTests;
@@ -896,7 +888,6 @@
 				AC0B98FA1A2CD80F00E10F4B /* UIView+Scaling.m in Sources */,
 				ACE3641719F75C550088346D /* RBStoryboardPopoverSegue.m in Sources */,
 				AC1212B31A305D4A00FEF6CA /* BGKVAlertViewDelegateTemplate.m in Sources */,
-				93D23E1D1A19D5A400C82071 /* BGKVLevel13PasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,7 +896,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC1C88661A186BDA00CFA7B5 /* LevelContainerTests.m in Sources */,
-				93D23E1F1A19D6AD00C82071 /* Level13Tests.m in Sources */,
 				5DA172411A1859DC00E63BD0 /* Level10Tests.m in Sources */,
 				5DD50EC81A084C700049B512 /* MusicTests.m in Sources */,
 			);
