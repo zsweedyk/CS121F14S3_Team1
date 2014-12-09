@@ -62,7 +62,6 @@
     // No way to rotate a label in Interface Builder, so we do it here.
     // M_PI_2 is pi / 2
     self.missionNumberLabel.transform = CGAffineTransformMakeRotation(-M_PI_2);
-    [self.missionNumberLabel sizeToFit];
 }
 
 - (void)viewWillAppear:(BOOL)animated
