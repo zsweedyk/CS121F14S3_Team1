@@ -128,6 +128,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="password" value="3"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enterPassword:" destination="3Xe-rb-phB" eventType="valueChanged" id="VF2-Gs-104"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
