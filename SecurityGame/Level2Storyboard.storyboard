@@ -55,6 +55,15 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-pm-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Edx-8B-RHZ" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Go check out the notepad!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="964" y="-216"/>
         </scene>
@@ -147,15 +156,6 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="&quot;Frog&quot; rhymes with &quot;bog&quot;!"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="attempts">
                             <integer key="value" value="6"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </customObject>
-                <customObject id="Edx-8B-RHZ" customClass="BGKVSingleHintViewController">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Password Hint"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Think of some animals that rhyme with &quot;bog&quot; to use as the password."/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
-                            <integer key="value" value="-1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </customObject>
