@@ -2,7 +2,7 @@
 //  BGKVHintViewController.h
 //  SecurityGame
 //
-//  Created by Guest User on 11/13/14.
+//  Created by Matt Valentine on 11/13/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
@@ -12,8 +12,11 @@
 // This is to facilitate use in storyboards.
 @interface BGKVHintViewController : UIViewController // UIPageViewController <UIPageViewControllerDataSource>
 
-@property (nonatomic) IBOutlet UIView *pageView;
-@property (nonatomic) IBOutlet UIView *pageInBackground;
+@property (nonatomic, weak) IBOutlet UIView *pageView;
+@property (nonatomic, weak) IBOutlet UIView *pageInBackground;
+@property (nonatomic, weak) IBOutlet UILabel *missionNumberLabel;
+
+- (instancetype)initWithLevel:(NSInteger)level;
 
 - (BOOL)hasHints;
 
@@ -23,5 +26,6 @@
 - (BOOL)addNewHintWithController:(UIViewController *)controller;
 
 @property (nonatomic) NSMutableArray *pages;
+@property (nonatomic) NSInteger level;
 
 @end

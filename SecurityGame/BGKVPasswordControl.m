@@ -2,7 +2,7 @@
 //  BGKVPasswordControl.m
 //  SecurityGame
 //
-//  Created by Guest User on 12/1/14.
+//  Created by Matt Valentine on 12/1/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
@@ -31,7 +31,9 @@
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
-
+// Depending on whether the control is initialized programmatically
+// or by Interface Builder, the first or the second of these will end
+// up getting called, respectively
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

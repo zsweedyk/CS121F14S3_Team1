@@ -47,6 +47,15 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPa-6h-x7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="gnh-vN-jez" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Go check out the note on the table!"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="28" y="736"/>
         </scene>
@@ -100,15 +109,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZY8-mo-W9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="gnh-vN-jez" customClass="BGKVSingleHintViewController">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="Go check out the note on the table!"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
-                            <integer key="value" value="-1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </customObject>
                 <customObject id="mFQ-52-tpp" customClass="BGKVSingleHintViewController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="The Name"/>

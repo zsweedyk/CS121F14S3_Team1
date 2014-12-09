@@ -194,7 +194,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
                                 <rect key="frame" x="319" y="303" width="386" height="161"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">That changing capitalization of your password is a good idea, but make sure not to leave hints around that could clue people into your style of password. Alternatively, make your style more complicated to figure out!</string>
+                                <string key="text">Changing capitalization of your password is a good idea, but make sure not to leave hints around that could clue people into your style of password. Alternatively, make your style more complicated to figure out!</string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
