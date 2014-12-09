@@ -2,7 +2,7 @@
 //  UIView+Scaling.m
 //  SecurityGame
 //
-//  Created by Guest User on 12/1/14.
+//  Created by Matt Valentine on 12/1/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
@@ -34,6 +34,9 @@
 
 - (void)ensureLandscape
 {
+    // This is for Storyboard viewControllers, which are going to be in potrait
+    // before they are displayed.
+    // This transposes the frame IF the frame is taller than it is wide.
     CGRect frame = self.frame;
     if (CGRectGetWidth(frame) < CGRectGetHeight(frame)) {
         frame = CGRectMake(frame.origin.y, frame.origin.x,
@@ -45,6 +48,8 @@
 
 - (void)ensurePortrait
 {
+    // Only here for symmetry, is not used.
+    // Transposes the frame IF the frame is wider than it is tall.
     CGRect frame = self.frame;
     
     if (CGRectGetWidth(frame) > CGRectGetHeight(frame)) {

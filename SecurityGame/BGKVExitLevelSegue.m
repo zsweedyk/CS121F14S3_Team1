@@ -2,7 +2,7 @@
 //  BGKVExitLevelSegue.m
 //  SecurityGame
 //
-//  Created by Guest User on 11/11/14.
+//  Created by Matt Valentine on 11/11/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 

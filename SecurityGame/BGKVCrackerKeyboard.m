@@ -2,7 +2,7 @@
 //  BGKVCrackerKeyboard.m
 //  SecurityGame
 //
-//  Created by Guest User on 12/1/14.
+//  Created by Matt Valentine on 12/1/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
@@ -11,21 +11,6 @@
 
 
 @implementation BGKVCrackerKeyboard
-
-//Code from http://stackoverflow.com/questions/13205160/how-do-i-retrieve-keystrokes-from-a-custom-keyboard-on-an-ios-app/13351686#13351686
-
-/*
-- (void)willMoveToSuperview:(UIView *)newSuperview {
-    if ([newSuperview isKindOfClass:NSClassFromString(@"UIPeripheralHostView")]) {
-        UIView* aSiblingView;
-        for (aSiblingView in newSuperview.subviews) {
-            if ([aSiblingView isKindOfClass:NSClassFromString(@"UIKBInputBackdropView")]) {
-                aSiblingView.alpha = 0.0;
-            }
-        }
-    }
-}*/
-
     
 - (instancetype) initDefault {
     return [self initWithFrame:CGRectMake(0, 0, 1024, 352)];
