@@ -159,7 +159,7 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <string key="text">Never make your hint your password. Sometimes it's hard to remember your password, but there are definitely better ways to hint!</string>
+                                <string key="text">Never make your hint your password. Sometimes it's hard to remember your password, but you shouldn't leave your password in the open.</string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

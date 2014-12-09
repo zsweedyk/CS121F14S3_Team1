@@ -106,7 +106,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Monitorlvl13.png" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-VO-Y8j">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notepadBlank.png" translatesAutoresizingMaskIntoConstraints="NO" id="u4i-Od-Y2T">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notepad.png" translatesAutoresizingMaskIntoConstraints="NO" id="u4i-Od-Y2T">
                                 <rect key="frame" x="56" y="87" width="373" height="317"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" text="Enter real result number:" translatesAutoresizingMaskIntoConstraints="NO" id="9DO-oz-v9l">
@@ -228,7 +228,7 @@
         <image name="DeskFull.png" width="3264" height="2448"/>
         <image name="Monitorlvl13.png" width="3264" height="2448"/>
         <image name="deskPaperlvl13.png" width="3264" height="2448"/>
-        <image name="notepadBlank.png" width="784" height="600"/>
+        <image name="notepad.png" width="784" height="600"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

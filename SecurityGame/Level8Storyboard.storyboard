@@ -189,7 +189,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
                                 <rect key="frame" x="316" y="303" width="392" height="161"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">Just like changing capitalization, adding numbers to your password makes it much harder to guess. However, don't just make the replacements numbers that look like letters, since this makes it easier to figure out!</string>
+                                <string key="text">Just like changing capitalization, adding numbers to your password makes it harder to guess. However, don't just make the replacements numbers that look like letters, since this makes it easier to figure out!</string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
