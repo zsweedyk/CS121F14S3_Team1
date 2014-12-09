@@ -112,7 +112,7 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wHh-Ay-RdF">
                                 <rect key="frame" x="494" y="550" width="37" height="37"/>
                             </activityIndicatorView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Make sure that you always use HTTPS when you are submitting any personal information or passwords." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Don't use HTTP when submitting personal information or passwords, as it is insecure." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
                                 <rect key="frame" x="327" y="260" width="370" height="124"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

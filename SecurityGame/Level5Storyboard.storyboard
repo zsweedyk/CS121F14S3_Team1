@@ -187,7 +187,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEZ-7p-gyL">
                                 <rect key="frame" x="328" y="339" width="368" height="102"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">Don't use personal information like birthdays for passwords!
+                                <string key="text">Don't use personal information like you birthdays for a password!
 It's easy to learn and guess, even for people who don't know you!</string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>

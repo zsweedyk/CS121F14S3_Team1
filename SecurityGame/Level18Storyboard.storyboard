@@ -234,7 +234,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
                                 <rect key="frame" x="331" y="322" width="362" height="124"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">That was harder to figure out, wasn't it? Using various ways to remember your password along with capital letters, numbers, and special characters is best. </string>
+                                <string key="text">That was harder to figure out, wasn't it? Using various ways to remember your password along with capital letters, numbers, and special characters is a best practice. </string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -276,7 +276,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ynD-Ny-bDe" customClass="BGKVPhoneControl">
-                                <rect key="frame" x="71" y="-144" width="411" height="760"/>
+                                <rect key="frame" x="74" y="0.0" width="411" height="760"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="password" value="0110"/>
@@ -286,7 +286,7 @@
                                 </connections>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3N-M5-YbE">
-                                <rect key="frame" x="126" y="6" width="306" height="460"/>
+                                <rect key="frame" x="129" y="150" width="306" height="460"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your password is &quot;celebrate&quot;" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iR9-6Z-Yto">
                                         <rect key="frame" x="54" y="215" width="208" height="30"/>
