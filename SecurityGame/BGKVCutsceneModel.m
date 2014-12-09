@@ -17,6 +17,12 @@
     return [self initForLevel:20];
 }
 
+
+/*
+ This method stores all of the data for cutscenes. 
+ Each level's dialogue is initialized in this switch.
+ To add a new level with new dialogue, add another case here.
+ */
 - (instancetype)initForLevel:(NSInteger)level
 {
     self = [super init];
@@ -133,6 +139,8 @@
     }
     return self;
 }
+
+//Getter functions for the cutscene controller to access.
 
 - (NSUInteger)count
 {
