@@ -54,8 +54,6 @@
 		AC1C88571A186A3E00CFA7B5 /* BGKVLevelViewControllerCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88561A186A3E00CFA7B5 /* BGKVLevelViewControllerCache.m */; };
 		AC1C885C1A186A4E00CFA7B5 /* BGKVWithinLevelSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88591A186A4E00CFA7B5 /* BGKVWithinLevelSegue.m */; };
 		AC1C885D1A186A4E00CFA7B5 /* BGKVExitLevelSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C885B1A186A4E00CFA7B5 /* BGKVExitLevelSegue.m */; };
-		AC1C88621A186A5900CFA7B5 /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C885F1A186A5900CFA7B5 /* UIBarButtonItem+Badge.m */; };
-		AC1C88631A186A5900CFA7B5 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88611A186A5900CFA7B5 /* UIButton+Badge.m */; };
 		AC1C88661A186BDA00CFA7B5 /* LevelContainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */; };
 		AC2B42B71A196FF200DE86B0 /* Level5Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */; };
 		AC5543D81A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5543D71A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m */; };
@@ -174,10 +172,6 @@
 		AC1C88591A186A4E00CFA7B5 /* BGKVWithinLevelSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVWithinLevelSegue.m; sourceTree = "<group>"; };
 		AC1C885A1A186A4E00CFA7B5 /* BGKVExitLevelSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVExitLevelSegue.h; sourceTree = "<group>"; };
 		AC1C885B1A186A4E00CFA7B5 /* BGKVExitLevelSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVExitLevelSegue.m; sourceTree = "<group>"; };
-		AC1C885E1A186A5900CFA7B5 /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
-		AC1C885F1A186A5900CFA7B5 /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
-		AC1C88601A186A5900CFA7B5 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
-		AC1C88611A186A5900CFA7B5 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
 		AC1C88651A186BDA00CFA7B5 /* LevelContainerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelContainerTests.m; sourceTree = "<group>"; };
 		AC2B42B61A196FF200DE86B0 /* Level5Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level5Storyboard.storyboard; sourceTree = "<group>"; };
 		AC5543D61A2D7380006F0BDA /* BGKVTextFieldPasswordControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVTextFieldPasswordControl.h; sourceTree = "<group>"; };
@@ -435,7 +429,6 @@
 		AC1C88471A1869E100CFA7B5 /* LevelContainer */ = {
 			isa = PBXGroup;
 			children = (
-				AC1C884C1A186A0800CFA7B5 /* Badges */,
 				AC1C884A1A1869F200CFA7B5 /* Segues */,
 				AC1C88491A1869EB00CFA7B5 /* Cache */,
 				AC1C88481A1869E400CFA7B5 /* Container */,
@@ -486,17 +479,6 @@
 				AC1212B81A307A0500FEF6CA /* BGKVAddHintSegue.m */,
 			);
 			name = Hints;
-			sourceTree = "<group>";
-		};
-		AC1C884C1A186A0800CFA7B5 /* Badges */ = {
-			isa = PBXGroup;
-			children = (
-				AC1C885E1A186A5900CFA7B5 /* UIBarButtonItem+Badge.h */,
-				AC1C885F1A186A5900CFA7B5 /* UIBarButtonItem+Badge.m */,
-				AC1C88601A186A5900CFA7B5 /* UIButton+Badge.h */,
-				AC1C88611A186A5900CFA7B5 /* UIButton+Badge.m */,
-			);
-			name = Badges;
 			sourceTree = "<group>";
 		};
 		AC2B42B21A196F5A00DE86B0 /* Level5 */ = {
@@ -869,7 +851,6 @@
 				AC0B98F71A2CD60000E10F4B /* BGKVPasswordControl.m in Sources */,
 				AC6534F01A2D84280010CB04 /* BGKVCutsceneViewController.m in Sources */,
 				9328ED0F1A2E9A3A00F65BD0 /* BGKVCutsceneModel.m in Sources */,
-				AC1C88621A186A5900CFA7B5 /* UIBarButtonItem+Badge.m in Sources */,
 				0A0740E41A19A6B90087D770 /* BGKVLevel11PasswordViewController.m in Sources */,
 				AC71827319F5F30D001EFA4B /* BGKVAppDelegate.m in Sources */,
 				ACE3641919F75C550088346D /* RBStoryboardSegue.m in Sources */,
@@ -885,7 +866,6 @@
 				AC5543D81A2D7380006F0BDA /* BGKVTextFieldPasswordControl.m in Sources */,
 				ACE3641519F75C550088346D /* RBStoryboardLink.m in Sources */,
 				AC71826F19F5F30D001EFA4B /* main.m in Sources */,
-				AC1C88631A186A5900CFA7B5 /* UIButton+Badge.m in Sources */,
 				5DA1723F1A18310500E63BD0 /* BGKVLevel10PasswordViewController.m in Sources */,
 				AC1C88541A186A3100CFA7B5 /* BGKVHintViewController.m in Sources */,
 				AC598F651A2ED0C9007E0A0F /* BGKVSingleHintViewController.m in Sources */,
