@@ -25,6 +25,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     if (self.hintTitle) {
         self.hintTitleLabel.text = self.hintTitle;
     }

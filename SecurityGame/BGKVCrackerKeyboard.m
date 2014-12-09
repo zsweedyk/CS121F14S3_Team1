@@ -14,7 +14,7 @@
 
 //Code from http://stackoverflow.com/questions/13205160/how-do-i-retrieve-keystrokes-from-a-custom-keyboard-on-an-ios-app/13351686#13351686
 
-
+/*
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if ([newSuperview isKindOfClass:NSClassFromString(@"UIPeripheralHostView")]) {
         UIView* aSiblingView;
@@ -24,7 +24,7 @@
             }
         }
     }
-}
+}*/
 
     
 - (instancetype) initDefault {

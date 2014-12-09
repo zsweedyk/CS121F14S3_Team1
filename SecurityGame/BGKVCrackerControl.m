@@ -29,17 +29,24 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    textField.enabled = NO;
+    
     NSString *template = textField.text;
     NSNumber *correctTemplate = [NSNumber numberWithBool:[template isEqualToString:_passwordTemplate]];
     
-    double  crackTime = 2.0;
-    int guesses = 100;
-    
-    for (int i=0; i<guesses; i++) {
-        [textField performSelector:@selector(setText:) withObject:[BGKVCrackerControl randomFromTemplate:template] afterDelay:i*crackTime/guesses];
+    if (template && [template length] > 0) {
+        double  crackTime = 2.0;
+        int guesses = 100;
+        
+        for (int i=0; i<guesses; i++) {
+            [textField performSelector:@selector(setText:) withObject:[BGKVCrackerControl randomFromTemplate:template] afterDelay:i*crackTime/guesses];
+        }
+        [self performSelector:@selector(finallyCheckPasswordAndReturn:) withObject:correctTemplate afterDelay:crackTime+0.1];
+    } else {
+        [self finallyCheckPasswordAndReturn:correctTemplate];
     }
-    [self performSelector:@selector(finallyCheckPasswordAndReturn:) withObject:correctTemplate afterDelay:crackTime+0.1];
     
+    textField.enabled = YES;
     return NO;
 }
 

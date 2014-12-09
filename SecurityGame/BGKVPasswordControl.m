@@ -31,7 +31,9 @@
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
-
+// Depending on whether the control is initialized programmatically
+// or by Interface Builder, the first or the second of these will end
+// up getting called, respectively
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

@@ -20,6 +20,7 @@
 {
     [super setup];
     
+    // Simply a textfield with various options.
     UITextField *passwordField = [[UITextField alloc] initWithFrame:self.bounds];
     self.passwordField = passwordField;
     
@@ -43,7 +44,6 @@
 {
     [textField resignFirstResponder];
     [self enterPassword:textField.text];
-    //textField.text = @"";
     return NO;
 }
 
