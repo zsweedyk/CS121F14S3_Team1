@@ -65,6 +65,11 @@
 
 - (void)updateDialogue
 {
+    // http://stackoverflow.com/questions/19049917/uitextview-font-is-being-reset-after-settext
+    // For some silly reason, changing the content of a textfield always changes the font size and color
+    // Making it selectable fixes it. We then disable selectable after the update.
+    self.hackerTextField.selectable = YES;
+    self.bossTextField.selectable = YES;
     // Figure out who is talking, and then get the dialogue
     BOOL talkerIsHacker = (_dialogueIndex % 2 == 0);
     NSString *dialogue = [_dialogue dialogueAtIndex:_dialogueIndex];
@@ -77,6 +82,9 @@
     self.bossTextField.text = talkerIsHacker ? @"" : dialogue;
     self.bossImage.hidden = talkerIsHacker;
     self.bossTextField.hidden = talkerIsHacker;
+    
+    self.hackerTextField.selectable = NO;
+    self.bossTextField.selectable = NO;
     
     // Check if the current dialogue is the last in the cutscene
     if (_dialogueIndex == [_dialogue count]-1) {
