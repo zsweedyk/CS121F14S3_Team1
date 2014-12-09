@@ -9,6 +9,49 @@
 /* Begin PBXBuildFile section */
 		0A0740E41A19A6B90087D770 /* BGKVLevel11PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0740E31A19A6B90087D770 /* BGKVLevel11PasswordViewController.m */; };
 		0A1D06901A11DAB3005BB7BE /* Level6Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A1D068F1A11DAB3005BB7BE /* Level6Storyboard.storyboard */; };
+		0A29F2C61A36B4BD000C45EE /* bigScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F29B1A36B4BD000C45EE /* bigScreen.png */; };
+		0A29F2C71A36B4BD000C45EE /* couchMain.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F29C1A36B4BD000C45EE /* couchMain.png */; };
+		0A29F2C81A36B4BD000C45EE /* DeskFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F29D1A36B4BD000C45EE /* DeskFull.png */; };
+		0A29F2C91A36B4BD000C45EE /* deskPaper1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F29E1A36B4BD000C45EE /* deskPaper1.png */; };
+		0A29F2CA1A36B4BD000C45EE /* deskPaper2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F29F1A36B4BD000C45EE /* deskPaper2.png */; };
+		0A29F2CB1A36B4BD000C45EE /* deskPaperlvl13.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A01A36B4BD000C45EE /* deskPaperlvl13.png */; };
+		0A29F2CC1A36B4BD000C45EE /* JoshDeskMain.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A11A36B4BD000C45EE /* JoshDeskMain.png */; };
+		0A29F2CD1A36B4BD000C45EE /* Monitorlvl13.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A21A36B4BD000C45EE /* Monitorlvl13.png */; };
+		0A29F2CE1A36B4BD000C45EE /* notepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A31A36B4BD000C45EE /* notepad.png */; };
+		0A29F2CF1A36B4BD000C45EE /* Antivirus-Bad.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A41A36B4BD000C45EE /* Antivirus-Bad.png */; };
+		0A29F2D01A36B4BD000C45EE /* leftDownArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A51A36B4BD000C45EE /* leftDownArrow.png */; };
+		0A29F2D11A36B4BD000C45EE /* OfficeLaptop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A61A36B4BD000C45EE /* OfficeLaptop.png */; };
+		0A29F2D21A36B4BD000C45EE /* OfficeLaptopNotebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A71A36B4BD000C45EE /* OfficeLaptopNotebook.png */; };
+		0A29F2D31A36B4BD000C45EE /* rollercoaster.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A81A36B4BD000C45EE /* rollercoaster.png */; };
+		0A29F2D41A36B4BD000C45EE /* ZoomedOfficeLaptop.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2A91A36B4BD000C45EE /* ZoomedOfficeLaptop.png */; };
+		0A29F2D51A36B4BD000C45EE /* LabComputer2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2AA1A36B4BD000C45EE /* LabComputer2.png */; };
+		0A29F2D61A36B4BD000C45EE /* LabComputerNoNotebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2AB1A36B4BD000C45EE /* LabComputerNoNotebook.png */; };
+		0A29F2D71A36B4BD000C45EE /* LabCounter.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2AC1A36B4BD000C45EE /* LabCounter.png */; };
+		0A29F2D81A36B4BD000C45EE /* NotebookAlone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2AD1A36B4BD000C45EE /* NotebookAlone.png */; };
+		0A29F2D91A36B4BD000C45EE /* OfficeComputer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2AE1A36B4BD000C45EE /* OfficeComputer.png */; };
+		0A29F2DA1A36B4BD000C45EE /* OfficeNotebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2AF1A36B4BD000C45EE /* OfficeNotebook.png */; };
+		0A29F2DB1A36B4BD000C45EE /* ZoomedOfficeComputer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B01A36B4BD000C45EE /* ZoomedOfficeComputer.png */; };
+		0A29F2DC1A36B4BD000C45EE /* boss_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B11A36B4BD000C45EE /* boss_background.png */; };
+		0A29F2DD1A36B4BD000C45EE /* hackerBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B21A36B4BD000C45EE /* hackerBackground.png */; };
+		0A29F2DE1A36B4BD000C45EE /* boss_background_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B31A36B4BD000C45EE /* boss_background_small.png */; };
+		0A29F2DF1A36B4BD000C45EE /* hackerBackground_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B41A36B4BD000C45EE /* hackerBackground_small.png */; };
+		0A29F2E01A36B4BD000C45EE /* LabComputer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B51A36B4BD000C45EE /* LabComputer.png */; };
+		0A29F2E11A36B4BD000C45EE /* LabNotebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B61A36B4BD000C45EE /* LabNotebook.png */; };
+		0A29F2E21A36B4BD000C45EE /* ZoomedLabComputer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B71A36B4BD000C45EE /* ZoomedLabComputer.png */; };
+		0A29F2E31A36B4BD000C45EE /* DesktopBackgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B81A36B4BD000C45EE /* DesktopBackgroundImage.png */; };
+		0A29F2E41A36B4BD000C45EE /* DownloadLink.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2B91A36B4BD000C45EE /* DownloadLink.png */; };
+		0A29F2E51A36B4BD000C45EE /* exeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2BA1A36B4BD000C45EE /* exeIcon.png */; };
+		0A29F2E61A36B4BD000C45EE /* exitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2BB1A36B4BD000C45EE /* exitButton.png */; };
+		0A29F2E71A36B4BD000C45EE /* IEIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2BC1A36B4BD000C45EE /* IEIcon.png */; };
+		0A29F2E81A36B4BD000C45EE /* notesProgramIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2BD1A36B4BD000C45EE /* notesProgramIcon.png */; };
+		0A29F2E91A36B4BD000C45EE /* webPageBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2BE1A36B4BD000C45EE /* webPageBackground.png */; };
+		0A29F2EA1A36B4BD000C45EE /* Level5Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2BF1A36B4BD000C45EE /* Level5Calendar.png */; };
+		0A29F2EB1A36B4BD000C45EE /* Level5iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2C01A36B4BD000C45EE /* Level5iPhone.png */; };
+		0A29F2EC1A36B4BD000C45EE /* Level5iPhonePasswordScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2C11A36B4BD000C45EE /* Level5iPhonePasswordScreen.png */; };
+		0A29F2ED1A36B4BD000C45EE /* Level5iPhoneSlanted.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2C21A36B4BD000C45EE /* Level5iPhoneSlanted.png */; };
+		0A29F2EE1A36B4BD000C45EE /* WhiteCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2C31A36B4BD000C45EE /* WhiteCircle.png */; };
+		0A29F2EF1A36B4BD000C45EE /* USBDrive.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2C41A36B4BD000C45EE /* USBDrive.png */; };
+		0A29F2F01A36B4BD000C45EE /* Phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A29F2C51A36B4BD000C45EE /* Phone.png */; };
 		0A872EB81A2011AE003C6BE2 /* Level18Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A872EB71A2011AE003C6BE2 /* Level18Storyboard.storyboard */; };
 		0A872EBA1A2011BC003C6BE2 /* BGKVLevel18PasswordViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 0A872EB91A2011BC003C6BE2 /* BGKVLevel18PasswordViewController.h */; };
 		0A872EBC1A2011D0003C6BE2 /* BGKVLevel18PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A872EBB1A2011D0003C6BE2 /* BGKVLevel18PasswordViewController.m */; };
@@ -106,6 +149,49 @@
 		0A0740E21A19A6B90087D770 /* BGKVLevel11PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel11PasswordViewController.h; sourceTree = "<group>"; };
 		0A0740E31A19A6B90087D770 /* BGKVLevel11PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel11PasswordViewController.m; sourceTree = "<group>"; };
 		0A1D068F1A11DAB3005BB7BE /* Level6Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level6Storyboard.storyboard; sourceTree = "<group>"; };
+		0A29F29B1A36B4BD000C45EE /* bigScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigScreen.png; sourceTree = "<group>"; };
+		0A29F29C1A36B4BD000C45EE /* couchMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = couchMain.png; sourceTree = "<group>"; };
+		0A29F29D1A36B4BD000C45EE /* DeskFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeskFull.png; sourceTree = "<group>"; };
+		0A29F29E1A36B4BD000C45EE /* deskPaper1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deskPaper1.png; sourceTree = "<group>"; };
+		0A29F29F1A36B4BD000C45EE /* deskPaper2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deskPaper2.png; sourceTree = "<group>"; };
+		0A29F2A01A36B4BD000C45EE /* deskPaperlvl13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deskPaperlvl13.png; sourceTree = "<group>"; };
+		0A29F2A11A36B4BD000C45EE /* JoshDeskMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JoshDeskMain.png; sourceTree = "<group>"; };
+		0A29F2A21A36B4BD000C45EE /* Monitorlvl13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Monitorlvl13.png; sourceTree = "<group>"; };
+		0A29F2A31A36B4BD000C45EE /* notepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notepad.png; sourceTree = "<group>"; };
+		0A29F2A41A36B4BD000C45EE /* Antivirus-Bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Antivirus-Bad.png"; sourceTree = "<group>"; };
+		0A29F2A51A36B4BD000C45EE /* leftDownArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftDownArrow.png; sourceTree = "<group>"; };
+		0A29F2A61A36B4BD000C45EE /* OfficeLaptop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OfficeLaptop.png; sourceTree = "<group>"; };
+		0A29F2A71A36B4BD000C45EE /* OfficeLaptopNotebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OfficeLaptopNotebook.png; sourceTree = "<group>"; };
+		0A29F2A81A36B4BD000C45EE /* rollercoaster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rollercoaster.png; sourceTree = "<group>"; };
+		0A29F2A91A36B4BD000C45EE /* ZoomedOfficeLaptop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZoomedOfficeLaptop.png; sourceTree = "<group>"; };
+		0A29F2AA1A36B4BD000C45EE /* LabComputer2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LabComputer2.png; sourceTree = "<group>"; };
+		0A29F2AB1A36B4BD000C45EE /* LabComputerNoNotebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LabComputerNoNotebook.png; sourceTree = "<group>"; };
+		0A29F2AC1A36B4BD000C45EE /* LabCounter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LabCounter.png; sourceTree = "<group>"; };
+		0A29F2AD1A36B4BD000C45EE /* NotebookAlone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotebookAlone.png; sourceTree = "<group>"; };
+		0A29F2AE1A36B4BD000C45EE /* OfficeComputer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OfficeComputer.png; sourceTree = "<group>"; };
+		0A29F2AF1A36B4BD000C45EE /* OfficeNotebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OfficeNotebook.png; sourceTree = "<group>"; };
+		0A29F2B01A36B4BD000C45EE /* ZoomedOfficeComputer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZoomedOfficeComputer.png; sourceTree = "<group>"; };
+		0A29F2B11A36B4BD000C45EE /* boss_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boss_background.png; sourceTree = "<group>"; };
+		0A29F2B21A36B4BD000C45EE /* hackerBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hackerBackground.png; sourceTree = "<group>"; };
+		0A29F2B31A36B4BD000C45EE /* boss_background_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boss_background_small.png; sourceTree = "<group>"; };
+		0A29F2B41A36B4BD000C45EE /* hackerBackground_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hackerBackground_small.png; sourceTree = "<group>"; };
+		0A29F2B51A36B4BD000C45EE /* LabComputer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LabComputer.png; sourceTree = "<group>"; };
+		0A29F2B61A36B4BD000C45EE /* LabNotebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LabNotebook.png; sourceTree = "<group>"; };
+		0A29F2B71A36B4BD000C45EE /* ZoomedLabComputer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZoomedLabComputer.png; sourceTree = "<group>"; };
+		0A29F2B81A36B4BD000C45EE /* DesktopBackgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DesktopBackgroundImage.png; sourceTree = "<group>"; };
+		0A29F2B91A36B4BD000C45EE /* DownloadLink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DownloadLink.png; sourceTree = "<group>"; };
+		0A29F2BA1A36B4BD000C45EE /* exeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exeIcon.png; sourceTree = "<group>"; };
+		0A29F2BB1A36B4BD000C45EE /* exitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exitButton.png; sourceTree = "<group>"; };
+		0A29F2BC1A36B4BD000C45EE /* IEIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IEIcon.png; sourceTree = "<group>"; };
+		0A29F2BD1A36B4BD000C45EE /* notesProgramIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notesProgramIcon.png; sourceTree = "<group>"; };
+		0A29F2BE1A36B4BD000C45EE /* webPageBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webPageBackground.png; sourceTree = "<group>"; };
+		0A29F2BF1A36B4BD000C45EE /* Level5Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Level5Calendar.png; sourceTree = "<group>"; };
+		0A29F2C01A36B4BD000C45EE /* Level5iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Level5iPhone.png; sourceTree = "<group>"; };
+		0A29F2C11A36B4BD000C45EE /* Level5iPhonePasswordScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Level5iPhonePasswordScreen.png; sourceTree = "<group>"; };
+		0A29F2C21A36B4BD000C45EE /* Level5iPhoneSlanted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Level5iPhoneSlanted.png; sourceTree = "<group>"; };
+		0A29F2C31A36B4BD000C45EE /* WhiteCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteCircle.png; sourceTree = "<group>"; };
+		0A29F2C41A36B4BD000C45EE /* USBDrive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = USBDrive.png; sourceTree = "<group>"; };
+		0A29F2C51A36B4BD000C45EE /* Phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Phone.png; sourceTree = "<group>"; };
 		0A872EB71A2011AE003C6BE2 /* Level18Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level18Storyboard.storyboard; sourceTree = "<group>"; };
 		0A872EB91A2011BC003C6BE2 /* BGKVLevel18PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel18PasswordViewController.h; sourceTree = "<group>"; };
 		0A872EBB1A2011D0003C6BE2 /* BGKVLevel18PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel18PasswordViewController.m; sourceTree = "<group>"; };
@@ -600,6 +686,49 @@
 		AC71826919F5F30D001EFA4B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A29F29B1A36B4BD000C45EE /* bigScreen.png */,
+				0A29F29C1A36B4BD000C45EE /* couchMain.png */,
+				0A29F29D1A36B4BD000C45EE /* DeskFull.png */,
+				0A29F29E1A36B4BD000C45EE /* deskPaper1.png */,
+				0A29F29F1A36B4BD000C45EE /* deskPaper2.png */,
+				0A29F2A01A36B4BD000C45EE /* deskPaperlvl13.png */,
+				0A29F2A11A36B4BD000C45EE /* JoshDeskMain.png */,
+				0A29F2A21A36B4BD000C45EE /* Monitorlvl13.png */,
+				0A29F2A31A36B4BD000C45EE /* notepad.png */,
+				0A29F2A41A36B4BD000C45EE /* Antivirus-Bad.png */,
+				0A29F2A51A36B4BD000C45EE /* leftDownArrow.png */,
+				0A29F2A61A36B4BD000C45EE /* OfficeLaptop.png */,
+				0A29F2A71A36B4BD000C45EE /* OfficeLaptopNotebook.png */,
+				0A29F2A81A36B4BD000C45EE /* rollercoaster.png */,
+				0A29F2A91A36B4BD000C45EE /* ZoomedOfficeLaptop.png */,
+				0A29F2AA1A36B4BD000C45EE /* LabComputer2.png */,
+				0A29F2AB1A36B4BD000C45EE /* LabComputerNoNotebook.png */,
+				0A29F2AC1A36B4BD000C45EE /* LabCounter.png */,
+				0A29F2AD1A36B4BD000C45EE /* NotebookAlone.png */,
+				0A29F2AE1A36B4BD000C45EE /* OfficeComputer.png */,
+				0A29F2AF1A36B4BD000C45EE /* OfficeNotebook.png */,
+				0A29F2B01A36B4BD000C45EE /* ZoomedOfficeComputer.png */,
+				0A29F2B11A36B4BD000C45EE /* boss_background.png */,
+				0A29F2B21A36B4BD000C45EE /* hackerBackground.png */,
+				0A29F2B31A36B4BD000C45EE /* boss_background_small.png */,
+				0A29F2B41A36B4BD000C45EE /* hackerBackground_small.png */,
+				0A29F2B51A36B4BD000C45EE /* LabComputer.png */,
+				0A29F2B61A36B4BD000C45EE /* LabNotebook.png */,
+				0A29F2B71A36B4BD000C45EE /* ZoomedLabComputer.png */,
+				0A29F2B81A36B4BD000C45EE /* DesktopBackgroundImage.png */,
+				0A29F2B91A36B4BD000C45EE /* DownloadLink.png */,
+				0A29F2BA1A36B4BD000C45EE /* exeIcon.png */,
+				0A29F2BB1A36B4BD000C45EE /* exitButton.png */,
+				0A29F2BC1A36B4BD000C45EE /* IEIcon.png */,
+				0A29F2BD1A36B4BD000C45EE /* notesProgramIcon.png */,
+				0A29F2BE1A36B4BD000C45EE /* webPageBackground.png */,
+				0A29F2BF1A36B4BD000C45EE /* Level5Calendar.png */,
+				0A29F2C01A36B4BD000C45EE /* Level5iPhone.png */,
+				0A29F2C11A36B4BD000C45EE /* Level5iPhonePasswordScreen.png */,
+				0A29F2C21A36B4BD000C45EE /* Level5iPhoneSlanted.png */,
+				0A29F2C31A36B4BD000C45EE /* WhiteCircle.png */,
+				0A29F2C41A36B4BD000C45EE /* USBDrive.png */,
+				0A29F2C51A36B4BD000C45EE /* Phone.png */,
 				5D4E1C9B1A11CE9900C50D71 /* spy_music.mp3 */,
 				AC71826A19F5F30D001EFA4B /* SecurityGame-Info.plist */,
 				AC71826B19F5F30D001EFA4B /* InfoPlist.strings */,
@@ -778,39 +907,82 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEBB4AE51A2E76A2005A86F2 /* Level17Storyboard.storyboard in Resources */,
+				0A29F2DD1A36B4BD000C45EE /* hackerBackground.png in Resources */,
 				AC5543E51A2D8415006F0BDA /* BGKVCrackerKeyboard.xib in Resources */,
+				0A29F2DA1A36B4BD000C45EE /* OfficeNotebook.png in Resources */,
+				0A29F2E01A36B4BD000C45EE /* LabComputer.png in Resources */,
+				0A29F2EE1A36B4BD000C45EE /* WhiteCircle.png in Resources */,
+				0A29F2EA1A36B4BD000C45EE /* Level5Calendar.png in Resources */,
+				0A29F2EF1A36B4BD000C45EE /* USBDrive.png in Resources */,
+				0A29F2C81A36B4BD000C45EE /* DeskFull.png in Resources */,
+				0A29F2CC1A36B4BD000C45EE /* JoshDeskMain.png in Resources */,
 				AC6534F11A2D84280010CB04 /* BGKVCutsceneViewController.xib in Resources */,
 				ACB5CD461A354F710077E3DB /* BGKVHintViewController.xib in Resources */,
 				0A872EBA1A2011BC003C6BE2 /* BGKVLevel18PasswordViewController.h in Resources */,
+				0A29F2CD1A36B4BD000C45EE /* Monitorlvl13.png in Resources */,
 				5DA172301A181A4E00E63BD0 /* Level9Storyboard.storyboard in Resources */,
+				0A29F2E71A36B4BD000C45EE /* IEIcon.png in Resources */,
 				ACE3641D19F75CBA0088346D /* Level2Storyboard.storyboard in Resources */,
 				5DB443961A2D5B8C004BBC83 /* Level19Storyboard.storyboard in Resources */,
 				9325FDF51A18C0A0008E91D6 /* Level7Storyboard.storyboard in Resources */,
 				AC71827B19F5F30D001EFA4B /* Images.xcassets in Resources */,
+				0A29F2E41A36B4BD000C45EE /* DownloadLink.png in Resources */,
 				5D4E1C9C1A11CE9900C50D71 /* spy_music.mp3 in Resources */,
 				5DA1723C1A1830E800E63BD0 /* Level10Storyboard.storyboard in Resources */,
+				0A29F2E11A36B4BD000C45EE /* LabNotebook.png in Resources */,
+				0A29F2C61A36B4BD000C45EE /* bigScreen.png in Resources */,
 				93A159E21A11EAA700118451 /* Level1Storyboard.storyboard in Resources */,
+				0A29F2E81A36B4BD000C45EE /* notesProgramIcon.png in Resources */,
+				0A29F2CA1A36B4BD000C45EE /* deskPaper2.png in Resources */,
 				ACE3641F19F75E9F0088346D /* RBStoryboardLICENSE in Resources */,
+				0A29F2EC1A36B4BD000C45EE /* Level5iPhonePasswordScreen.png in Resources */,
 				AC68BD061A2C0B860030A504 /* Level14Storyboard.storyboard in Resources */,
+				0A29F2E91A36B4BD000C45EE /* webPageBackground.png in Resources */,
 				AC71826D19F5F30D001EFA4B /* InfoPlist.strings in Resources */,
 				AC1212BB1A30954E00FEF6CA /* BGKVSingleHintViewController.xib in Resources */,
+				0A29F2E51A36B4BD000C45EE /* exeIcon.png in Resources */,
+				0A29F2E21A36B4BD000C45EE /* ZoomedLabComputer.png in Resources */,
+				0A29F2C91A36B4BD000C45EE /* deskPaper1.png in Resources */,
 				0A8D738E1A19476E00E35321 /* BGKVLevel12PasswordViewController.h in Resources */,
+				0A29F2DE1A36B4BD000C45EE /* boss_background_small.png in Resources */,
+				0A29F2DF1A36B4BD000C45EE /* hackerBackground_small.png in Resources */,
+				0A29F2DC1A36B4BD000C45EE /* boss_background.png in Resources */,
+				0A29F2CB1A36B4BD000C45EE /* deskPaperlvl13.png in Resources */,
+				0A29F2C71A36B4BD000C45EE /* couchMain.png in Resources */,
+				0A29F2E61A36B4BD000C45EE /* exitButton.png in Resources */,
+				0A29F2E31A36B4BD000C45EE /* DesktopBackgroundImage.png in Resources */,
 				AC1C88511A186A2000CFA7B5 /* BGKVLevelContainer.xib in Resources */,
 				0A98371E1A0C32FB00013F08 /* TutorialLevelStoryboard.storyboard in Resources */,
+				0A29F2D81A36B4BD000C45EE /* NotebookAlone.png in Resources */,
 				AC71827619F5F30D001EFA4B /* Main.storyboard in Resources */,
 				0A8D738C1A19476300E35321 /* Level12Storyboard.storyboard in Resources */,
 				0A1D06901A11DAB3005BB7BE /* Level6Storyboard.storyboard in Resources */,
+				0A29F2D11A36B4BD000C45EE /* OfficeLaptop.png in Resources */,
 				93D23E111A19A8BB00C82071 /* Level8Storyboard.storyboard in Resources */,
+				0A29F2D51A36B4BD000C45EE /* LabComputer2.png in Resources */,
 				AC2B42B71A196FF200DE86B0 /* Level5Storyboard.storyboard in Resources */,
 				5D8857DF1A1B1592002069D2 /* Level15Storyboard.storyboard in Resources */,
 				AC68BD091A2C239B0030A504 /* Level16Storyboard.storyboard in Resources */,
+				0A29F2D91A36B4BD000C45EE /* OfficeComputer.png in Resources */,
+				0A29F2D01A36B4BD000C45EE /* leftDownArrow.png in Resources */,
+				0A29F2D31A36B4BD000C45EE /* rollercoaster.png in Resources */,
 				93D23E1A1A19CF2700C82071 /* Level13Storyboard.storyboard in Resources */,
 				0AA3C7B81A0DE780000B0E7C /* Level3Storyboard.storyboard in Resources */,
 				0AAF58CF1A199CB9005984BE /* Level11Storyboard.storyboard in Resources */,
 				0A872EB81A2011AE003C6BE2 /* Level18Storyboard.storyboard in Resources */,
+				0A29F2CF1A36B4BD000C45EE /* Antivirus-Bad.png in Resources */,
+				0A29F2D61A36B4BD000C45EE /* LabComputerNoNotebook.png in Resources */,
+				0A29F2D41A36B4BD000C45EE /* ZoomedOfficeLaptop.png in Resources */,
+				0A29F2ED1A36B4BD000C45EE /* Level5iPhoneSlanted.png in Resources */,
 				ACFD18DC1A2C18320082D6DD /* BGKVPhoneControlController.xib in Resources */,
+				0A29F2F01A36B4BD000C45EE /* Phone.png in Resources */,
 				5D908D2119F8BB7B0054DF2D /* (null) in Resources */,
+				0A29F2D71A36B4BD000C45EE /* LabCounter.png in Resources */,
+				0A29F2EB1A36B4BD000C45EE /* Level5iPhone.png in Resources */,
+				0A29F2DB1A36B4BD000C45EE /* ZoomedOfficeComputer.png in Resources */,
 				5D4E1CA51A11D9A100C50D71 /* Level4Storyboard.storyboard in Resources */,
+				0A29F2CE1A36B4BD000C45EE /* notepad.png in Resources */,
+				0A29F2D21A36B4BD000C45EE /* OfficeLaptopNotebook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

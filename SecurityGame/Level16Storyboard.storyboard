@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pGY-WJ-pig">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pGY-WJ-pig">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Initial-->
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Yko-uw-QeI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yko-uw-QeI">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNi-fd-sLI">
@@ -25,7 +25,7 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
-                                <state key="normal" title="Button" image="IEIcon">
+                                <state key="normal" title="Button" image="IEIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -34,7 +34,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYT-aO-5OL">
                                 <rect key="frame" x="140" y="75" width="160" height="140"/>
-                                <state key="normal" title="Button" image="notesProgramIcon">
+                                <state key="normal" title="Button" image="notesProgramIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -68,15 +68,16 @@
                                 <rect key="frame" x="494" y="550" width="37" height="37"/>
                             </activityIndicatorView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dla-LG-xCL">
-                                <rect key="frame" x="340" y="303" width="345" height="161"/>
+                                <rect key="frame" x="305" y="303" width="414" height="161"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <string key="text">Nice job, now you've installed a program to help investigate this computer. Always be careful downloading programs online, as they can do bad things to your computer.</string>
+                                <string key="text">Nice job, you've nowinstalled a program to help investigate this computer. Always be careful when downloading programs online, as they can damage your computer.</string>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWE-qn-ChN">
-                                <rect key="frame" x="476" y="557" width="73" height="30"/>
+                                <rect key="frame" x="462" y="557" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Next Level">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,10 +108,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-F9-qBv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="b6R-F9-qBv">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="webPageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-mZ-kLK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="webPageBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-mZ-kLK">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="733"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" text="Program Installer Download:    " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xym-5B-QvH">
@@ -121,25 +122,16 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAW-oc-2Ot">
                                 <rect key="frame" x="656" y="250" width="249" height="93"/>
-                                <state key="normal" title="Button" image="DownloadLink">
+                                <state key="normal" title="Button" image="DownloadLink.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="ECi-cg-CuI" kind="custom" customClass="BGKVWithinLevelSegue" id="R2E-9B-qZb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vec-KA-JYo">
-                                <rect key="frame" x="116" y="484" width="249" height="93"/>
-                                <state key="normal" title="Button" image="DownloadLink">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aRl-2i-F07" kind="custom" customClass="BGKVWithinLevelSegue" id="MPM-xJ-tZM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abq-V3-geZ">
                                 <rect key="frame" x="656" y="484" width="249" height="93"/>
-                                <state key="normal" title="Button" image="DownloadLink">
+                                <state key="normal" title="Button" image="DownloadLink.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -148,7 +140,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gu-9S-HtK">
                                 <rect key="frame" x="116" y="250" width="249" height="93"/>
-                                <state key="normal" title="Button" image="DownloadLink">
+                                <state key="normal" title="Button" image="DownloadLink.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -183,6 +175,15 @@
                                 </state>
                                 <connections>
                                     <segue destination="pGY-WJ-pig" kind="custom" customClass="BGKVWithinLevelSegue" id="Uvv-Hs-Ssc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vec-KA-JYo">
+                                <rect key="frame" x="116" y="484" width="249" height="93"/>
+                                <state key="normal" title="Button" image="DownloadLink.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aRl-2i-F07" kind="custom" customClass="BGKVWithinLevelSegue" id="MPM-xJ-tZM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -223,7 +224,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-PC-1S8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="6b9-PC-1S8">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e4-Ei-1yp">
@@ -231,14 +232,14 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
                                 </accessibility>
-                                <state key="normal" title="Button" image="IEIcon">
+                                <state key="normal" title="Button" image="IEIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="qP4-Yd-pra" kind="custom" customClass="BGKVWithinLevelSegue" id="F0b-7q-79L"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notepad" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-mr-z8H">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notepad.png" translatesAutoresizingMaskIntoConstraints="NO" id="oO0-mr-z8H">
                                 <rect key="frame" x="82" y="55" width="464" height="537"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gf-Tf-uoB">
@@ -250,7 +251,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt8-IL-XVM">
                                 <rect key="frame" x="476" y="55" width="72" height="69"/>
-                                <state key="normal" title="Button" image="exitButton">
+                                <state key="normal" title="Button" image="exitButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -280,18 +281,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-5A-zHz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-5A-zHz">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6q-Wi-d4L">
                                 <rect key="frame" x="140" y="75" width="160" height="140"/>
-                                <state key="normal" title="Button" image="notesProgramIcon">
+                                <state key="normal" title="Button" image="notesProgramIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3H-n7-lni">
                                 <rect key="frame" x="643" y="52" width="218" height="186"/>
-                                <state key="normal" title="Button" image="exeIcon">
+                                <state key="normal" title="Button" image="exeIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -327,18 +328,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="NTY-LB-d1G">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DesktopBackgroundImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="NTY-LB-d1G">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQe-kQ-AyS">
                                 <rect key="frame" x="140" y="75" width="160" height="140"/>
-                                <state key="normal" title="Button" image="notesProgramIcon">
+                                <state key="normal" title="Button" image="notesProgramIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7I-Ve-zQ7">
                                 <rect key="frame" x="652" y="52" width="218" height="186"/>
-                                <state key="normal" title="Button" image="exeIcon">
+                                <state key="normal" title="Button" image="exeIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -374,16 +375,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqb-eR-tSk">
-                                <rect key="frame" x="326" y="207" width="373" height="223"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Oh no! Looks like the file you downloaded was a virus, and it deleted all of the information on this computer. Make sure to be careful when running exe files you get online, as they can be dangerous. </string>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbT-bZ-vmB">
-                                <rect key="frame" x="481" y="498" width="62" height="30"/>
+                                <rect key="frame" x="462" y="498" width="100" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Try again">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -392,6 +386,14 @@
                                     <segue destination="pGY-WJ-pig" kind="custom" customClass="BGKVWithinLevelSegue" id="9aR-3G-IJJ"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tqb-eR-tSk">
+                                <rect key="frame" x="326" y="208" width="373" height="223"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Oh no! Looks like the file you downloaded was a virus, and it deleted all of the information on this computer. Make sure to be careful when running exe files you get online, as they can be dangerous. </string>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -405,14 +407,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DesktopBackgroundImage" width="600" height="339"/>
-        <image name="DownloadLink" width="920" height="322"/>
-        <image name="IEIcon" width="500" height="463"/>
-        <image name="exeIcon" width="512" height="512"/>
-        <image name="exitButton" width="256" height="256"/>
-        <image name="notepad" width="400" height="535"/>
-        <image name="notesProgramIcon" width="256" height="256"/>
-        <image name="webPageBackground" width="530" height="380"/>
+        <image name="DesktopBackgroundImage.png" width="600" height="339"/>
+        <image name="DownloadLink.png" width="920" height="322"/>
+        <image name="IEIcon.png" width="500" height="463"/>
+        <image name="exeIcon.png" width="512" height="512"/>
+        <image name="exitButton.png" width="256" height="256"/>
+        <image name="notepad.png" width="784" height="600"/>
+        <image name="notesProgramIcon.png" width="256" height="256"/>
+        <image name="webPageBackground.png" width="530" height="380"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -420,8 +422,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="F0b-7q-79L"/>
-        <segue reference="Uvv-Hs-Ssc"/>
+        <segue reference="5gC-br-5e8"/>
+        <segue reference="9aR-3G-IJJ"/>
         <segue reference="N7Q-wD-Zn3"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
