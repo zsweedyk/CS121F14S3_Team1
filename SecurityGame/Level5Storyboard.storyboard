@@ -53,6 +53,15 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rr-pm-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Eck-Wf-9yw" customClass="BGKVSingleHintViewController">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="There are two important dates on the calendar."/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
+                            <integer key="value" value="-1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="964" y="-216"/>
         </scene>
@@ -139,15 +148,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HHR-ZO-eof" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Eck-Wf-9yw" customClass="BGKVSingleHintViewController">
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Check it out!"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="hintText" value="There are two important dates on the calendar."/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="attempts">
-                            <integer key="value" value="-1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </customObject>
                 <customObject id="eZb-t0-2sa" customClass="BGKVSingleHintViewController">
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="hintTitle" value="Important Days"/>
