@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JoshDeskMain" translatesAutoresizingMaskIntoConstraints="NO" id="iDL-Vb-JyR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JoshDeskMain.png" translatesAutoresizingMaskIntoConstraints="NO" id="iDL-Vb-JyR">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1K-ts-kJy">
@@ -74,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-f4-dyf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="dFn-f4-dyf">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-sO-8Ha">
@@ -146,7 +146,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="deskPaper1" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-wZ-CmJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="deskPaper1.png" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-wZ-CmJ">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="773"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgp-ss-pCV">
@@ -223,7 +223,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen" translatesAutoresizingMaskIntoConstraints="NO" id="snA-e7-RF4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="snA-e7-RF4">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-je-J08">
@@ -330,7 +330,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen" translatesAutoresizingMaskIntoConstraints="NO" id="GIV-fs-5up">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="GIV-fs-5up">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-uu-dqO">
@@ -350,7 +350,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Antivirus-Bad" translatesAutoresizingMaskIntoConstraints="NO" id="Rzg-eX-ImG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Antivirus-Bad.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rzg-eX-ImG">
                                 <rect key="frame" x="714" y="182" width="225" height="128"/>
                             </imageView>
                         </subviews>
@@ -378,7 +378,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-kp-8ZF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-kp-8ZF">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8v-hh-F7t">
@@ -413,10 +413,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Antivirus-Bad" width="387" height="478"/>
-        <image name="JoshDeskMain" width="3264" height="2448"/>
-        <image name="bigScreen" width="3264" height="2448"/>
-        <image name="deskPaper1" width="3264" height="2448"/>
+        <image name="Antivirus-Bad.png" width="387" height="478"/>
+        <image name="JoshDeskMain.png" width="3264" height="2448"/>
+        <image name="bigScreen.png" width="3264" height="2448"/>
+        <image name="deskPaper1.png" width="3264" height="2448"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -426,7 +426,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="jp1-Y1-0N8"/>
         <segue reference="dTT-7v-jx3"/>
-        <segue reference="XnW-IB-5eG"/>
+        <segue reference="yT5-CH-LWd"/>
         <segue reference="eY4-EB-iOl"/>
     </inferredMetricsTieBreakers>
 </document>
