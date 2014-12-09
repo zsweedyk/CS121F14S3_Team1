@@ -182,7 +182,8 @@
 {
     switch (buttonIndex) {
         case 0: {
-            NSString *expectedButtonTitle = @"Quit Game";
+            NSString *expectedButtonTitle;
+            expectedButtonTitle = @"Quit Game";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
@@ -206,7 +207,8 @@
             break;
         }
         case 1: {
-            NSString *expectedButtonTitle = @"How to Play";
+            NSString *expectedButtonTitle;
+            expectedButtonTitle = @"How to Play";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
@@ -219,7 +221,8 @@
             break;
         }
         case 2: {
-            NSString *expectedButtonTitle = @"Restart Level";
+            NSString *expectedButtonTitle;
+            expectedButtonTitle = @"Restart Level";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
@@ -246,7 +249,8 @@
             break;
         }
         case 3: {
-            NSString *expectedButtonTitle = @"Mission Info";
+            NSString *expectedButtonTitle;
+            expectedButtonTitle = @"Mission Info";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
@@ -269,7 +273,8 @@
             break;
         }
         case 4: {
-            NSString *expectedButtonTitle = @"Settings";
+            NSString *expectedButtonTitle;
+            expectedButtonTitle = @"Settings";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
@@ -282,7 +287,8 @@
             break;
         }
         case 5: {
-            NSString *expectedButtonTitle = @"Replay Cutscene";
+            NSString *expectedButtonTitle;
+            expectedButtonTitle = @"Replay Cutscene";
             NSAssert([expectedButtonTitle isEqualToString:[actionSheet buttonTitleAtIndex:buttonIndex]],
                      @"Action sheet %@: index %ld was expected to be '%@', was actually '%@'",
                      actionSheet, (long)buttonIndex, expectedButtonTitle, [actionSheet buttonTitleAtIndex:buttonIndex]);
