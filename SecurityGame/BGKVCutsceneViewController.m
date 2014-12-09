@@ -23,6 +23,7 @@
 
 + (BOOL)playCutsceneOnViewController:(UIViewController *)vc ForLevel:(NSInteger)level
 {
+    // Initializes the cutscene with the level of the current viewController
     BGKVCutsceneViewController *cutscene = [[BGKVCutsceneViewController alloc] initWithLevel:level];
     if (cutscene) {
         [vc presentViewController:cutscene animated:YES completion:nil];
@@ -33,6 +34,7 @@
 
 - (IBAction)goToLevelContainer:(id)sender
 {
+    // Executed when the cutscene is done
     [self unwind:@selector(returnToLevelContainer:)];
 }
 
@@ -51,20 +53,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self updateDialogue];
+    [self updateDialogue]; // Makes sure the first dialogue is loaded
 }
 
 - (IBAction)continueButton:(id)sender
 {
+    // Progresses to the next level of cutscene
     _dialogueIndex++;
     [self updateDialogue];
 }
 
 - (void)updateDialogue
 {
+    // Figure out who is talking, and then get the dialogue
     BOOL talkerIsHacker = (_dialogueIndex % 2 == 0);
     NSString *dialogue = [_dialogue dialogueAtIndex:_dialogueIndex];
     
+    // Update the text and the images for the current talker
     self.hackerTextField.text = talkerIsHacker ? dialogue : @"";
     self.hackerImage.hidden = !talkerIsHacker;
     self.hackerTextField.hidden = !talkerIsHacker;
@@ -73,9 +78,10 @@
     self.bossImage.hidden = talkerIsHacker;
     self.bossTextField.hidden = talkerIsHacker;
     
+    // Check if the current dialogue is the last in the cutscene
     if (_dialogueIndex == [_dialogue count]-1) {
         self.continueButton.hidden = YES;
-        if (self.isFinalCutscene) {
+        if (self.isFinalCutscene) { //Game over
             self.playLevelButton.titleLabel.text = @"You Win!";
             [self.playLevelButton removeTarget:nil action:NULL forControlEvents:UIControlEventAllEvents];
             [self.playLevelButton addTarget:self action:@selector(endGame) forControlEvents:UIControlEventTouchUpInside];
