@@ -2,7 +2,7 @@
 //  BGKVLevelContainer.m
 //  SecurityGame
 //
-//  Created by Guest User on 11/9/14.
+//  Created by Matt Valentine on 11/9/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
@@ -45,10 +45,9 @@
 
 #pragma mark -
 #pragma mark Hints
-#pragma mark MAGIC STRING WARNING : hints
 - (void)setupHints
 {
-    self.hintVC = [[BGKVHintViewController alloc] init];
+    self.hintVC = [[BGKVHintViewController alloc] initWithLevel:self.level];
     
     self.hintButton.enabled = [self.hintVC hasHints];
     self.newHintAvailable = NO;
@@ -313,30 +312,6 @@
 #pragma mark -
 #pragma mark Initialization
 
-/*
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    dispatch_once(&_initialized_token, ^{
-        [self setupHints];
-        [self showInitialLevelViewController];
-    });
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    dispatch_once(&_cutscene_token, ^{
-        _disabledHintButtonTitleTextAttributes = [self.hintButton titleTextAttributesForState:UIControlStateNormal];
-        
-        [self playCutscene];
-    });
-}
-*/
-
-// Returns NO if there is no cutscene to play
 - (BOOL)playCutscene
 {
     return [BGKVCutsceneViewController playCutsceneOnViewController:self ForLevel:self.level];
@@ -371,6 +346,7 @@
 {
     [self reset];
     self.level = level;
+    
     [self setupHints];
     [self showInitialLevelViewController];
     if (cutscene) {
@@ -378,13 +354,10 @@
     }
 }
 
-#pragma mark MAGIC STRING WARNING : initial
-// "initial" is the identifier of the segue that links the LevelContainer to its first scene.
 - (void)showInitialLevelViewController
 {
     BGKVLevelViewController *initialVC = (BGKVLevelViewController *)[BGKVLevelSelectViewController initialVCForLevel:self.level];
     [self showLevelViewController:initialVC];
-    //[self performSegueWithIdentifier:@"initial" sender:self];
 }
 
 - (void)showLevelViewController:(BGKVLevelViewController *)newVC
@@ -410,28 +383,6 @@
     
     [self addAnyInitialHints];
 }
-
-/*
- ### Reference for Animation ###
- 
- -(void)moveToNewController:(BGKVLevelViewController *) newController
- {
- BGKVLevelViewController *currentVC = self.currentVC;
- NSLog(@"Moving to new controller!");
- BGKVLevelViewController *currentVC = self.currentVC;
- NSAssert(currentVC, @"Tried to switch views before having one");
- [currentVC willMoveToParentViewController:nil];
- [self resizeVCViewToContainer:newController];
- [self transitionFromViewController:currentVC toViewController:newController duration:.6 options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil
- completion:^(BOOL finished) {
- [currentVC removeFromParentViewController];
- currentVC.levelMaster = nil;
- [newController didMoveToParentViewController:self];
- newController.levelMaster = self;
- }];
- 
- }
- */
 
 - (void)resizeViewToFitLevelView:(UIView *)view
 {

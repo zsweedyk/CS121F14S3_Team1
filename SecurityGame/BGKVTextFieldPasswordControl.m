@@ -2,7 +2,7 @@
 //  BGKVTextFieldPasswordControl.m
 //  SecurityGame
 //
-//  Created by Guest User on 12/1/14.
+//  Created by Matt Valentine on 12/1/14.
 //  Copyright (c) 2014 BGKV. All rights reserved.
 //
 
@@ -20,6 +20,7 @@
 {
     [super setup];
     
+    // Simply a textfield with various options.
     UITextField *passwordField = [[UITextField alloc] initWithFrame:self.bounds];
     self.passwordField = passwordField;
     
@@ -43,7 +44,6 @@
 {
     [textField resignFirstResponder];
     [self enterPassword:textField.text];
-    //textField.text = @"";
     return NO;
 }
 
