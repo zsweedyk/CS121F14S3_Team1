@@ -34,7 +34,7 @@
     controller = [[UIStoryboard storyboardWithName:@"Level10Storyboard" bundle:nil]
                   instantiateViewControllerWithIdentifier:@"ComputerPasswordController"];
     XCTAssertFalse([controller checkPassword:@"taylor"]);
-    XCTAssertFalse([controller checkPassword:@"frog"]);
+    XCTAssertFalse([controller checkPassword:@"dog"]);
     XCTAssertFalse([controller checkPassword:@"1245"]);
     XCTAssertFalse([controller checkPassword:@"12345"]);
     XCTAssertFalse([controller checkPassword:@"CgF3n8x6"]);
@@ -48,7 +48,7 @@
     controller = [[UIStoryboard storyboardWithName:@"Level10Storyboard" bundle:nil]
                   instantiateViewControllerWithIdentifier:@"PhonePasswordController"];
     XCTAssertFalse([controller checkPassword:@"taylor"]);
-    XCTAssertFalse([controller checkPassword:@"frog"]);
+    XCTAssertFalse([controller checkPassword:@"dog"]);
     XCTAssertFalse([controller checkPassword:@"1245"]);
     XCTAssertFalse([controller checkPassword:@"12345"]);
     XCTAssertFalse([controller checkPassword:@"CgF3n8x6"]);
