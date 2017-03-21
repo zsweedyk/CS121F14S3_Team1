@@ -47,7 +47,7 @@
     self.informationField.selectable = YES;
     switch (_currentEmailLevel) {
         case 0:
-            self.informationField.text = @"Hello there, I see you just got this email! Please click \"Send Info\" to start up this service.";
+            self.informationField.text = @"Thank you for purchasing this software. Please send us your information so we can verify your account.";
             break;
         case 1:
             self.informationField.text = @"Hello there, I don't know you or your friends and would like to friend them all! Can you send me all of their email addresses?";

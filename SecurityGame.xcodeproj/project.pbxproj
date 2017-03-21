@@ -77,6 +77,7 @@
 		5DB443961A2D5B8C004BBC83 /* Level19Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DB443951A2D5B8C004BBC83 /* Level19Storyboard.storyboard */; };
 		5DB4439A1A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB443991A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m */; };
 		5DD50EC81A084C700049B512 /* MusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD50EC71A084C700049B512 /* MusicTests.m */; };
+		90973BE41E80CE2600A2BDEF /* LabComputerArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 90973BE31E80CE2600A2BDEF /* LabComputerArrow.png */; };
 		9325FDF51A18C0A0008E91D6 /* Level7Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9325FDF41A18C0A0008E91D6 /* Level7Storyboard.storyboard */; };
 		9328ED0F1A2E9A3A00F65BD0 /* BGKVCutsceneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9328ED0E1A2E9A3A00F65BD0 /* BGKVCutsceneModel.m */; };
 		93A159E21A11EAA700118451 /* Level1Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A159E11A11EAA700118451 /* Level1Storyboard.storyboard */; };
@@ -223,6 +224,7 @@
 		5DB443991A2D65F4004BBC83 /* BGKVLevel19PasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVLevel19PasswordViewController.m; sourceTree = "<group>"; };
 		5DB4439B1A2D6606004BBC83 /* BGKVLevel19PasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVLevel19PasswordViewController.h; sourceTree = "<group>"; };
 		5DD50EC71A084C700049B512 /* MusicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicTests.m; sourceTree = "<group>"; };
+		90973BE31E80CE2600A2BDEF /* LabComputerArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LabComputerArrow.png; sourceTree = "<group>"; };
 		9325FDF41A18C0A0008E91D6 /* Level7Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Level7Storyboard.storyboard; sourceTree = "<group>"; };
 		9328ED0D1A2E9A3A00F65BD0 /* BGKVCutsceneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGKVCutsceneModel.h; sourceTree = "<group>"; };
 		9328ED0E1A2E9A3A00F65BD0 /* BGKVCutsceneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGKVCutsceneModel.m; sourceTree = "<group>"; };
@@ -691,6 +693,7 @@
 				0A29F29D1A36B4BD000C45EE /* DeskFull.png */,
 				0A29F29E1A36B4BD000C45EE /* deskPaper1.png */,
 				0A29F29F1A36B4BD000C45EE /* deskPaper2.png */,
+				90973BE31E80CE2600A2BDEF /* LabComputerArrow.png */,
 				0A29F2A01A36B4BD000C45EE /* deskPaperlvl13.png */,
 				0A29F2A11A36B4BD000C45EE /* JoshDeskMain.png */,
 				0A29F2A21A36B4BD000C45EE /* Monitorlvl13.png */,
@@ -918,6 +921,7 @@
 				0A29F2CC1A36B4BD000C45EE /* JoshDeskMain.png in Resources */,
 				AC6534F11A2D84280010CB04 /* BGKVCutsceneViewController.xib in Resources */,
 				ACB5CD461A354F710077E3DB /* BGKVHintViewController.xib in Resources */,
+				90973BE41E80CE2600A2BDEF /* LabComputerArrow.png in Resources */,
 				0A872EBA1A2011BC003C6BE2 /* BGKVLevel18PasswordViewController.h in Resources */,
 				0A29F2CD1A36B4BD000C45EE /* Monitorlvl13.png in Resources */,
 				5DA172301A181A4E00E63BD0 /* Level9Storyboard.storyboard in Resources */,
@@ -1168,6 +1172,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
 				INFOPLIST_FILE = "SecurityGame/SecurityGame-Info.plist";
@@ -1181,6 +1186,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecurityGame/SecurityGame-Prefix.pch";
 				INFOPLIST_FILE = "SecurityGame/SecurityGame-Info.plist";
